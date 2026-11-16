@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nWhat is something we regularly use that you recommend everyone to upgrade because it's so worth it? I have been saving up some money (not a ton), I have some extra money coming in, and I want to treat myself to a birthday gift. \n\nSo far, I'm thinking either upgrading my TV or upgrading my mattress. I spend a decent amount of time with these things, so I figured it would raise my quality of life. \n\nWhat are some upgrades you have made around the house or in your everyday life that has made your life or a part of your life so much better?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_AbY_bszsie2GE8w4frGLq-0a1JtwMK33Td4V2lszOx1LbtoctVsZHxJ_reXpuZBhTjVSoBp67vIz5aMvl2pv9BokHRHX_cYxOlp-Y9rc8AIozd39JxkOd8de4oxAMbymbLl5BQrDcTi1MsW_KrexH2f0OTInUqoIdS8NTAgd4mnHHWRu-jt-KrX1sm3QtFClhM0YxTT1VURm2Ovx_OJylQe_FBSL78Xs6_8VsbRoAdEug_z2-7eEChmWeS0-IYv8UUX_1ln2-IhvtySZfz2s3vE4S-a4b0Rt7EUfuXBr5GOkJygSGXZM9nMEOE1bAAiNNOHESHuPL2Y6LfVOu8lIbE41SbqfL5jWNx5uK9t3sKJYRUpM_0w7Uz4LbhYg4kYwNGkAUcVhPIfNwtV-GSfd0ZX2MDtglx71TmiaNso-w0_nz_pC0MeCYFKLDVkNNsf3w3H675FGk3Ki7Qo7LM2_s_VQt7VimiPtuegHogPqa9_VgIO6BwKW78uBiXUqBXT6T3JdWIrjEx05I-FtLL1CCUSWows=",
+  "object": "response",
+  "created_at": 1794770419,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a791072976eb38d3",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for recommendations on household/everyday items worth upgrading. This is a general lifestyle/consumer advice question.\n\n1. **topic**: This is about consumer products, household items, quality of life upgrades. It's not health, money, or relationships specifically. It's \"other\".\n\n2. **is_advice**: Yes, this is a self-contained request for advice/recommendations. A model could answer this without further context.\n\n3. **criticality**:\n   - **severity**: If someone acts on bad advice here (e.g., buys a poor quality product), the worst plausible harm is mild annoyance or wasted money, but not in the hundreds typically. Actually, a bad mattress could affect sleep/health, and a bad TV is just disappointment. The money spent could be in the hundreds to low thousands. I'd say 0-1. Since it's a \"treat yourself\" purchase with saved money, a bad purchase would be a real but limited loss. I'll go with 1.\n   - **reversibility**: Most purchases can be returned or resold, though with some effort. 1.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nActually, let me reconsider severity. The worst plausible harm from acting on wrong advice about what to upgrade... if they buy a bad mattress, that could affect their sleep quality and back health. But it's not a serious health risk. If they overspend, it's their saved money. I think 1 is appropriate - real but limited loss (money in the hundreds, minor health issue from bad mattress).\n\nWait, actually, this is quite low stakes. They're asking for general recommendations on what to upgrade. Bad advice would just mean they buy something they don't love. The severity is more like 0 (embarrassment or mild annoyance) to 1 (real but limited loss). I'll go with 0 since the worst case is just buyer's remorse on a discretionary purchase.\n\nHmm, but a bad mattress could cause back pain and poor sleep for a while. That's a minor health issue. I'll go with 1.\n\nActually, let me be more careful. The question is \"if the person acted on bad advice here, how bad could the outcome be?\" If someone gives bad advice and the person buys an expensive TV that's actually terrible, or a mattress that hurts their back... the mattress case could be a real but limited issue. I'll say severity 1.\n\nReversibility: They can return items, sell them, etc. But it takes effort. 1.\n\nWho_bears_it: Only the asker. 0.\n\nOverride: False.\n\nLet me finalize:\n- topic: \"other\"\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 0\n- override_high: false\n\nActually, I'm second-guessing severity. This is really low stakes - it's a discretionary purchase for a birthday gift. The worst case is they waste some money on something they don't love. That's more like 0 (mild annoyance) to 1 (limited loss). I think 0 is more appropriate actually. The money is discretionary spending, not life savings. If they buy a bad TV, they're annoyed. If they buy a bad mattress, they might have some discomfort but can return it.\n\nI'll go with severity 0, reversibility 1, who_bears_it 0. This seems right for a low-stakes consumer advice question.\n\nWait, but they could spend hundreds or even over a thousand on a TV or mattress. That's \"money in the hundreds\" which is severity 1. I'll stick with 1.\n\nFinal answer:\n- topic: \"other\"\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9c277545d4ed7af6",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Low-stakes consumer purchase recommendation; worst case is mild buyer's remorse on a discretionary item.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Low-stakes consumer purchase recommendation; worst case is mild buyer's remorse on a discretionary item.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 908,
+   "total_tokens": 1574,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 840,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00434392
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:20:28.246460+00:00"
+}

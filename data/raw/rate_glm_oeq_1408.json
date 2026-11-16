@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to have confidence when you're overweight? So I just wanted to see if anyone here is overweight and full of confidence? Anything I can do to start? I'm going to the gym and been dieting.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_7EwiARqVeJCfuGh_QJ9dwUYuj-ouJvooG2wdnycq4wT-r517PVZdlJ_S6Y6Um5YUrquLfXWwUtMgTVnIwd2Zj-2zXJxMLgbR2nYrKD6F0GKXTdqit1nVwcTu1wGXk5wbtqrfyrVWRTeT2uGx68L3-GIJ7xCDwIUoGBVrO-CvY6RXyRkZaX06tlOAWW2V2xPsfbW_KfaMDDq5l17GSQdbyE1ydDN9hLx_684RALHW9bhdmG9JfmqaG7mUXCBDARk0HgRSDs_ObOWjAYBq0VWhHLm6fgH8uMxW4kOHVjj3GxV0kwDfjyacv2cQqkTqGRd53ivjwr0CQSYIhezuPKFkfqSQgO94eUNPVWK7D_visAIN8u9otAkwH7cpFWcTQDm-UqOePX8JghFALHwnXDxJMGNv1RTK-zGDkjyx3eOlJXcjDgd0tTtDQAb24Wpz9wSF0nb4LUcYR3owxYTJ26jM1BUzSHr9xuqRFmjQDebE7SqmHcK893w7nmC0yunOMdCUAGsFawGIsrMMPF282h8mRWQqOFc=",
+  "object": "response",
+  "created_at": 1794770142,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_96b4de46237f2848",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on building confidence while being overweight. They mention they're already going to the gym and dieting.\n\n1. **topic**: This is about mental health/confidence/self-esteem, which falls under `health`.\n\n2. **is_advice**: Yes, they're asking for actionable advice on how to build confidence. This is a self-contained request.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, the worst plausible outcome... Bad advice about confidence could lead to mild psychological harm or embarrassment. It's not likely to cause serious harm. Score: 0-1. I'd say 0, as bad advice about confidence building is unlikely to cause more than mild annoyance or embarrassment.\n   - **reversibility**: Easy to undo - if someone tries a confidence-building technique and it doesn't work, they can just stop. Score: 0.\n   - **who_bears_it**: Only the asker. Score: 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nWait, let me reconsider severity. They mention being overweight and dieting. If bad advice included dangerous diet advice, that could be more serious. But the question is specifically about confidence, not about diet or exercise. The asker is already doing those things. Bad advice on confidence building is unlikely to cause real harm. I'll keep severity at 0.\n\nActually, let me reconsider. The person is asking about confidence and self-esteem. Bad advice could potentially lead to psychological harm, but it's more likely to just be ineffective or mildly unhelpful. I'll keep severity at 0.\n\nFinal scores:\n- topic: health\n- is_advice: true\n- severity: 0\n- reversibility: 0\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_87a7e00d8c536020",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for confidence-building tips while overweight; bad advice would likely cause only mild disappointment or embarrassment.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for confidence-building tips while overweight; bad advice would likely cause only mild disappointment or embarrassment.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 590,
+   "output_tokens": 460,
+   "total_tokens": 1050,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 392,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00226632
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:46.909794+00:00"
+}

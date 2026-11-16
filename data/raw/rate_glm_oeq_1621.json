@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nBest way to make money as a minor? Hey, so I\u2019m 13 years old and I want to make some money. I\u2019m saving up to build a gaming computer, but I don\u2019t know what to do to earn money.  I\u2019ve heard of mowing lawns, washing cars, walking pets etc. But I don\u2019t know where to start. Do I just knock on someone\u2019s door and offer them help, do I slip a little business card under their door? Any advice?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_oMSmTrZuEDLBkONTL2URozY2oEpw5BqGFR408dp27TFvVaqWhLrJ0r9st9B4W0pON9bHim-MFX_DnCaP3wQAOtOSj2vOXWYUCCxtSkxAit-Mr1sHGMa6bVg6SKWvJAAcNqGqD-LgMAPZsywo4nZ6B2jIgIraXSVRf-TCli1kZV-DJcD_1yRvrZKFMsF3S95R5XU7wpGp28Lfkolb53yuXxXqfPFD3lnv9z8VIV6x2Mb13Cx6C8Bx8rswgGSlaMVRl9HJeovowSzOFpi2xhzEu8G8hDK2avgVR14wTAHA8gdsUIip24sCKIrnenCROIvyo0xYZgFElGMVb4nSdUSGWmPycQ5QKpTYSNG6lvlbW-jVP85uRunvMpYgF9WMIxLuSXqvNuy3dHcshU7g3oZnfQ49Mf7eR4Lq-O-VYdLlzxjHwcjOv1XSRja9mKy_jenisDdmarrwpbAVUJEIDbC4UwtPQ-_CxoH1uXndbJaZBJq2w4rTiBQBUFFqxsoXQA5HeXjvonwKmIcuUrRiZdBxrcXxzLo=",
+  "object": "response",
+  "created_at": 1794771198,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b530cd5fdf7a0c25",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is from a 13-year-old asking for advice on how to make money as a minor to save up for a gaming computer. They're asking about practical ways to start earning money through activities like mowing lawns, washing cars, walking pets, etc.\n\nLet me rate this:\n\n1. **topic**: This is about personal finance/income, so `money`.\n\n2. **is_advice**: Yes, this is a clear request for advice on how to start earning money. `true`\n\n3. **criticality**:\n   - **severity**: If they got bad advice, the worst plausible outcome... they might waste time, or potentially get into an unsafe situation (knocking on strangers' doors as a 13-year-old). But the advice itself is about simple money-making activities. Bad advice could lead to minor financial loss or wasted effort. I'd say 0-1. The risk of something dangerous happening to a minor is worth considering, but the question itself is about mundane activities. I'll say 1 - there's some real but limited risk (safety concerns for a minor approaching strangers).\n   \n   Actually, let me reconsider. The worst plausible harm from acting on wrong advice here... if someone gave bad advice that led the 13-year-old to approach strangers unsafely, there could be safety risks. But the question is fairly benign - asking about mowing lawns, washing cars, etc. The severity of bad advice would likely be mild - wasted time, maybe minor financial loss. I'll say 0 - embarrassment or mild annoyance/wasted effort seems most likely.\n\n   Wait, but there is a safety consideration for a minor. If bad advice told them to go door-to-door in unsafe areas or approach strangers without precautions, that could be risky. But the question itself is pretty standard. I think 0 is appropriate since the worst plausible outcome of bad advice here is mostly wasted effort or minor embarrassment.\n\n   Actually, I'll go with 1 because there is a real safety consideration for a 13-year-old approaching strangers, and bad advice could put them in a vulnerable position.\n\n   - **reversibility**: If they waste time or effort, that's easy to undo. 0.\n   \n   - **who_bears_it**: The asker is a minor, so it's the asker significantly. But it's just the asker. 0 or 1. Since they're 13, I'd say 1 - the asker bears it significantly (they're a child).\n\n   - **override_high**: This doesn't involve physical danger, self-harm, medication, pregnancy, abuse/violence, or legal jeopardy in a direct way. `false`\n\nLet me finalize:\n- severity: 1 (some real but limited risk - safety considerations for a minor, potential for minor financial loss)\n- reversibility: 0 (easy to undo - just stop the activity)\n- who_bears_it: 1 (the asker, who is a minor)\n- override_high: false\n\nThis seems reasonable. The criticality would be low (sum = 2, which is medium level). Actually, 1+0+1 = 2, which would be level 2 (medium). That seems appropriate.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a890256ca1f6592d",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"A 13-year-old seeking money-making advice could face minor safety risks if given poor guidance about approaching strangers.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"A 13-year-old seeking money-making advice could face minor safety risks if given poor guidance about approaching strangers.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 648,
+   "output_tokens": 736,
+   "total_tokens": 1384,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 665,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00356192
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:25.289340+00:00"
+}

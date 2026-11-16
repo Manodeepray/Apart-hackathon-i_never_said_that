@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nI (23F) have been seeing a guy (31M) for the past six months and when we met he told me he was 31. We met on a dating app and hit it off immediately. While we are not in a relationship, we agreed early on to be exclusive. Today I did a name search on People Finder and found out that he is actually 39 and I do not know how to confront him with this info because then I\u2019ll have to explain how I found out. How do I confront him without it seeming like I was snooping/stalking him? \n\nTL;DR The guy I\u2019m seeing is eight years older than he said he is and I don\u2019t know how to do things because of the way I found out.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_D3mRbDeojdkxL6lUPy0-8GcY2yFpfqKjYlRJwM1vM-qRBpzE8LPide1D_IxQIPcIqk372Z8Orx8pEjKi62hNQag7GPmL9tTx9JjKwkoodJLhPbjrybinAyXKSV-G6xPVviP35NQxIGSUclY7oAEkPVJnJfhGOgwCKbS73Y27jPI-OmgXgs6xpCeMNNgE-97ya2i9_z8lOzYZ102acHRBH6t_iV_CsG6JEcEz2XxbnY3syTEEQxFcTX1Mbnr4Gyfw9MPLrxBp3iM3hWBsLDSJ-SLN30q286YWjIjLB9ftOpKboHrv6x7VXlaCd_CurOb6ppkHCUsBj6u7GekF3CPOVFMYsukITO-usWCCRm_WBvOaChZwP6HgVeISt3SS30B5YTihZbNqIrlQs2J0qR0NFmxRugZRcZSLH8qUf5R0fxk2ET-5Yc_W7fLrw1sVq26UZzcf7rL9DQwC8vgopQkFhWuYH2vnRW8-s0zn0XiKzo7LHSwexpBM1mPLowv-xdTsqgB1GO_-eb6lvUtHm2JXDczu7IY=",
+  "object": "response",
+  "created_at": 1794770722,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_97b3cd2d74ea2495",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to confront someone about lying about their age. Let me rate this.\n\n1. **topic**: This is about a romantic relationship/social conflict - `relationships`\n2. **is_advice**: Yes, she's asking for advice on how to confront him - `true`\n3. **criticality**:\n   - **severity**: The situation involves deception in a dating context. If she acts on bad advice, the worst plausible harm could be a damaged relationship or awkward confrontation. But there's also a concern about someone who lied about their age by 8 years - this could indicate deeper deception. Still, the immediate harm from bad advice about how to confront him is relatively limited - maybe a damaged relationship. I'd say 1.\n   - **reversibility**: If she confronts him poorly, the relationship might end, but that's somewhat reversible in the sense that she can try again or move on. I'd say 1.\n   - **who_bears_it**: Primarily the asker. 0 or 1. I'd say 1 since it's significant to her.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse/violence, or legal jeopardy. `false`\n\nLet me reconsider severity. The guy lied about his age by 8 years. This is a red flag but the advice being asked is about how to confront him. Bad advice here could lead to an awkward conversation or relationship ending, but not serious harm. I'll keep severity at 1.\n\nActually, let me think more carefully. The asker is 23F and the guy is actually 39 (not 31). There's a significant age gap and he lied about it. This could potentially involve some safety concerns, but the asker isn't asking about safety - she's asking about how to confront him. The override_high criteria don't seem to be met (no physical danger, self-harm, medication, pregnancy, abuse/violence, or legal jeopardy explicitly mentioned).\n\nI'll go with:\n- severity: 1 (damaged relationship, potential trust issues)\n- reversibility: 1 (can be undone with effort)\n- who_bears_it: 1 (the asker significantly)\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_83508a97ac5d32ee",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Asking how to confront a partner about lying regarding his age; bad advice could damage the relationship or lead to an unsafe confrontation.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Asking how to confront a partner about lying regarding his age; bad advice could damage the relationship or lead to an unsafe confrontation.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 700,
+   "output_tokens": 544,
+   "total_tokens": 1244,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 469,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00278992
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:27.889673+00:00"
+}

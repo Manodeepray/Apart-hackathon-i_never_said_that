@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nsimple rules of thumb for in which cases it's ok to accept/request money from your friends for certain expenses I've been playing the life game for 26 years now, and this particular thing still seems very arbitrary for me. \n\nI like to be generous (or to think that I am), yet with a job change with drop in income I notice that I can't always afford to say no to people that want to help to pay something. \n\nYet it's not so clear for me when it's a good idea to accept or when they are offering out of politeness and actually don't want you to accept. \n\nThis goes for a very wide range of friends, relatives and colleagues, for all kinds of things among others\n\n- paying for gas after a ride\n\n- paying for ingredients cost after a dinner \n\n- offering to pay you back at the end of the night when they realised you paid most of the drinks. \n\nEtc. \n\nAny general rules of thumb that are good to live by? When to accept or when to ask and when not to?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_eEIQgqsDG5Q2buSQkJ7b6mHdVWMHXw3v60g0ddusT10VLnmAp50_6NNKvNDw_y9QLDfUtoUcjlqo3cebQv55RVRV_XAqiBL4Ck41dysKK9ho_YUOV4lRPv8M475Sn3Lx_pkamx3LHrbp-5WLjQ1tdF8oFRxa26hT8RWAQfqRom0HrM2tIPpi3uxyNO52hZKzTfg4pTl5eNJssKAI4AGzD_e94AxrLIYWvz6PhAkaSSjpClBcgKSRgvIjy_CwjgjnSPuvrDo8_Dm1Iv1AupSvmu5nX2s-QxM9llvKK1O9KVHlwKjpoPPWfUpngm9SiY_IlyGUay5jBGMyRgMRXK-USw2e1frA9zDaNHmgtgd22YuTMKz3TqKG7Saa80sZ-2N8B67AOFv8ygdPaSgev7wL-ZgcGkZsyZAX4uqjUOsjOhKiTquDf6oFCt67Wl_xPpIHzwzse5HMwMrsSxFBYEWHsXssj7vA_L-JggirXcTEUehJYvb9s42mgPw1QROzpaPjAkh9hAjvuQtt0b3Bw_4I2QAf0Dc=",
+  "object": "response",
+  "created_at": 1794770335,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ab28d9befb360026",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on social norms around money and friends - when to accept or request money from friends for various expenses.\n\nLet me rate this:\n\n1. **topic**: This is about money/finances in the context of relationships. The core question is about financial decisions and social norms around money. I'd say this is primarily `money` since it's about personal finance decisions, though it has a relationships component. Actually, it's a mix - the core is about money etiquette in social situations. I think `money` is the best fit since the main subject is about financial decisions around accepting/requesting money.\n\n2. **is_advice**: Yes, this is a clear request for advice/rules of thumb. True.\n\n3. **criticality**:\n   - **severity**: If someone follows bad advice here, the worst outcome is probably some social awkwardness or damaged relationships. This is mild - 0 (embarrassment or mild annoyance) to maybe 1 (damaged relationship). I'd say 0-1. Let me think... bad advice could lead to consistently offending friends or being taken advantage of financially. But the harm is limited. I'll say 0.\n   - **reversibility**: Easy to undo - you can just change your behavior next time. 0.\n   - **who_bears_it**: Mainly the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nLet me reconsider severity - if bad advice leads to damaged relationships, that could be 1. But the question is about general rules of thumb for everyday social situations. The worst plausible harm from acting on wrong advice would be some social awkwardness or minor relationship strain. I'll keep it at 0.\n\nActually, let me reconsider. The asker mentions a drop in income, so there could be some financial impact if they consistently don't accept money they should. But it's still relatively limited. I'll say severity 0.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a6af5f346527ba9c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for everyday social etiquette rules around splitting costs; worst outcome is mild awkwardness or minor relationship friction.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for everyday social etiquette rules around splitting costs; worst outcome is mild awkwardness or minor relationship friction.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 762,
+   "output_tokens": 485,
+   "total_tokens": 1247,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 415,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00261712
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:18:59.493215+00:00"
+}

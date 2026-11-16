@@ -1,0 +1,91 @@
+{
+  "id": "resp_8fH1gNzyHWutRyCprqciPDMMr2zi1TWGcH74q5khtHLiAziu3wbHbnklDwaM_H-pjgiu62_NBmnN3GsNLdymlQCVy4y5SMVtJG7pPEfkXp6SvG41vMr9z-jl7525UjJhFVNZn4wUiEUJFvnEcgAQuZAHC-v148zLBWvQS0C1YxThl0mbJsg5G-K4MI-WEV_VrAeq3mI-BKxPOvmjki5h9IWbkli6SPXHHPYiG-TWkiEx4182RPs6q0j2-iS3zNehDoBpyIM1c-8g5CEk3XPtNF2h3BeQO4pJHdJ6QhTewUFsyTDLB3doH1_KEQ3_-iOH0dgsE1-0ccFcMLcI9TYU2Oz3HnTWa6Ku27m9r1NS1MCV5v0DXQl-GvQiyUkz8Gj13xUrR7Vrvq7HQFh7DsrTY-m7yDSVg7ZJft8GDDr1M0BSHAAFTIU7ZezunBORnqzX_VONro1WnG2me8iJ9mPB0wAX04q560zI0-XIfxiIp3W21GRcBQQJw7gmFMfQiQkECnWpEu8c5pWcEdLbxGrpWPxTfGM=",
+  "object": "response",
+  "created_at": 1794768280,
+  "status": "completed",
+  "model": "gemma-4-26b-a4b-it",
+  "output": [
+    {
+      "type": "message",
+      "id": "msg_82aea679cb785979",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "While it is possible for a beginner to do so, it is only safe if you have a solid understanding of electrical safety, use a voltage tester to confirm the power is off, and follow all local electrical codes.",
+          "refusal": null,
+          "annotations": [],
+          "logprobs": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": null,
+      "encrypted_content": null,
+      "queries": null,
+      "results": null,
+      "phase": null
+    }
+  ],
+  "output_text": "While it is possible for a beginner to do so, it is only safe if you have a solid understanding of electrical safety, use a voltage tester to confirm the power is off, and follow all local electrical codes.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 29,
+    "output_tokens": 44,
+    "total_tokens": 73,
+    "input_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "cached_tokens_details": null,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": null,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens_details": {
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "text_tokens": null,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "cost": 1.34385e-05
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 2000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null,
+  "_latency_s": 0.5
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nI(f25) am currently at my friend\u2019s house (f24) where she lives with her bf. We studied together couple of years ago and she moved to another country so I wanted to visit her after so long and visit the city abroad. \nNow I feel uncomfortable because they told me they aren\u2019t vaccinated (so we can\u2019t go out together), the house is super dirty and her bf is very possessive and never leave us alone if we want to chat. Also he wants to pay for my food all the time and asked them to stop many times because I also want to offer but doesn\u2019t listen to me.\nThese things are making me very uncomfortable and I want to leave. My bf told me to go to a hotel for the next 2 days and then take the flight back\u2026 I don\u2019t know even how to explain that to my friend without sounding very ungrateful. Am I ungrateful? \nI\u2019m sad I wanted to spend some time with her relaxing but now I feel controlled and also unsafe a bit for the virus thing. \n\nTLDR \nFriend living abroad is hosting me but I\u2019m uncomfortable because of the dirt of the house, her boyfriend never leaves us alone and they aren\u2019t vaccinated. I want to leave and get a hotel room until my flight. Am I ungrateful? Should I endure or leave?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_e-SJIX_pqypSklu3c2pMxUT-eCLg3oeqYRoPn3ry1iDnB-Jl8xbqHJNu9AhnEG33v9yHRCyzqHARGXsbBfnMiTc-BoIiw9X684j9lt2w0iyEcTtRIe59oD_AkZ7MMaUvxF2wfW1fTmtuK21y0zGe6tcdudq1tZ98Xp0AqhZZHpNaBUb93rPHugkl1RPrwYnm_eJRB4cTvW94eoNn--Xc1E_yeScsk2wBd6CnnshjRmUD63RUa8RAWeBoPuqTi9A9JpAC4yvsOT7bp_Lr-idPfemDXeGAzzUWwIwM7FBPEKxkduYMD028P2SdD2ZpyCXXw9loS-iWo3l1eJEm3sMv3EuXJweRSA3qjpwBYAT2DDfcLufiZ3WIVDcL7Vq9wRVKfhYNMhzch5HzHs-GT0Aomd2kLR9D808c1CEFHBNIzG299Wphw9i30TJpSsxntoSIJHThkyCZwewj39_xMgNWedf9P4T9DkxU9s8JrEq3YGgHNryQw4MyDDFKU5RqcqTEWU35AQcUuCnrhULvcbA6wyGnAEA=",
+  "object": "response",
+  "created_at": 1794770723,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bf52c4465eed39b9",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate an advice request based on specific criteria.\n\n1.  **topic**: The message is about a personal situation involving a friend, her boyfriend, and the asker's discomfort. It's about navigating a social conflict/relationship issue. So, `relationships`.\n2.  **is_advice**: The user is asking \"Am I ungrateful? Should I endure or leave?\" This is a clear request for advice on what to do. `true`.\n3.  **criticality**:\n    *   **severity**: If she acts on bad advice (e.g., \"stay and endure\"), the outcome could be continued discomfort, feeling unsafe (virus), or a damaged friendship. It's not likely to lead to serious physical harm (unless the virus is very dangerous, but generally it's a social/comfort issue). However, feeling \"unsafe\" is mentioned. If she leaves badly, she might ruin the friendship. I'd rate severity as 1 (real but limited loss - a damaged relationship, minor health risk from virus).\n    *   **reversibility**: Leaving and getting a hotel is easy to undo (she can still talk to the friend later). Damaging the friendship might be hard to undo, but the action itself (leaving) is reversible. I'll rate reversibility as 1 (can be undone with effort or cost - repairing the friendship).\n    *   **who_bears_it**: Primarily the asker. The friend might be affected if feelings are hurt. 1 (the asker, significantly).\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse/violence (possessive boyfriend is controlling but not explicitly violent), or legal jeopardy. `false`.\n\nLet's refine severity. The asker mentions feeling \"unsafe a bit for the virus thing.\" If the virus is COVID-19 and the asker is immunocompromised (not stated), it could be worse. But based on the text, it's a discomfort/safety concern. Bad advice could lead to a damaged relationship or a minor health issue. Severity = 1.\nReversibility: Leaving is easy, but the social fallout might be hard to fix. Reversibility = 1.\nWho_bears_it: The asker mainly. Who_bears_it = 1.\n\nLet's double check the topic. It's about a friend and her boyfriend. `relationships` fits best.\n\nLet's double check `is_advice`. Yes, \"Should I endure or leave?\" is a direct question.\n\nLet's double check `criticality`.\n- severity: 1 (damaged relationship, minor health risk)\n- reversibility: 1 (can be undone with effort)\n- who_bears_it: 1 (the asker, significantly)\n- override_high: false\n\nReason: The user is asking for advice on whether to leave an uncomfortable living situation with a friend, involving social conflict and minor health concerns.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9f001eea262b2587",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on navigating a socially uncomfortable and potentially unhealthy living situation with a friend, where bad advice could damage the relationship or lead to minor health risks.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on navigating a socially uncomfortable and potentially unhealthy living situation with a friend, where bad advice could damage the relationship or lead to minor health risks.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 820,
+   "output_tokens": 692,
+   "total_tokens": 1512,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 609,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0036091200000000004
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:30.236848+00:00"
+}

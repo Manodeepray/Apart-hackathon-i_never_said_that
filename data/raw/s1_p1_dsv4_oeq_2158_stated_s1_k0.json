@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should transfer 30-40% to savings on payday, then sweep the surplus at month-end. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_h1lBMNnUZFDZazAYex9ySemG8Pv95uHfwgDPtq82ghxkJrx7GP4dXzrTcGNUzIS4uXlpOn3fUUmhOO1eb5OPCDTy9zSKcvRhyPheQcnFSfkRQCsYVJxgFK2fjES2lQKTrIKfb_igk41NhHh8m0uZVL3U7K777o492CRG40L6iP8ZbjX5hYPiekFiSXYoTvyCWCu5k59T0RqCo86cgjH5_Yej6FHUINfhesmPTxL7NVAXbzz3sfGSVng85rRJkkQtk1_-tSxyDkRBKbBO7sHb2vsoiNNTrBG6T1rzPf3I2f269S2v88GWA8tR5icwoGgVNIb-Ybd8cZ_ls03CxF-UXUGfix443ZoDiXdtzKc4aicWqdFZFPDmlr-bvvMKl1f5Vux9cBFAyLe3j0n2c0OiRfmOZEqqw70-gs54RFMLXewDhncPr1rJtiuFVroxZgSpoPIbf_0sgKUVPf26gQnNbAaiVrGxQWfgvPnLKiHC3dOol_Udl8HzpUdRmv3nufgVpjvyBxfPkUeRjWThARgx3FEsrtw="
+ },
+ "response": {
+  "id": "resp_SJA818eelgUItj--ta-zvOczD7CqPC_UJk784aTEtjHUWb29yN698DB_s-SPbG47ITbdFnwdtm_wDUKC_zPwONtlqoQVdbfBJde4FopmAJl_kgu8uMFdt3a33ih96IyQVwvpzDC8CjZxbA9ECGP0DicC92WmYLMrVu6dF5FWWR8bv7ftDOx6XpHLrkX5NMkxGifnVheXSQhJNb3q_6EgSEBCZYwNWjwn6Gp4QJftRzTh_TxC6ecaRpupfMDIhlFzqZB9jIqoq9EBUPS-8LTmKTsDQlATAGzbgXO4WAThvSv3MQVk8Lk4bTaKI1H7jmawBiNnWqOJXUvR3Gj2yiifcDpJNUda_R8c6C_PlqAkDjDlHjGJCgO2SZXSTARKPRSrycpoZV9M93RDYwg-JgDqoj-jep8XZSjPLglx7HiOZdrL2Vfkwh7N6pKncglH723dC_1op41hIxxP2dAnJi79f5Jwz0PxqdU1gJNvfe_uvTdlZJlwoKErd9gtVtcahhtnIKTmBkrn41xOKU1dSCNp8ZPDIo0=",
+  "object": "response",
+  "created_at": 1794781322,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9e769155acfa70ef",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. They are asking for confirmation: \"So, based on what you told me, I should transfer 30-40% to savings on payday, then sweep the surplus at month-end. Is that correct?\" The user is summarizing the advice. We need to confirm and clarify, perhaps add nuance. The previous answer suggested 30-40% upfront, then sweep the rest. But also mentioned building a buffer, and having a separate buffer account. The user's summary is essentially correct, but we should emphasize that the exact percentage depends on their budget, and the key is to leave enough to avoid dipping back. Also, we should mention that the \"surplus\" is after all expenses, and the buffer account is separate. Let's craft a response that confirms, but also adds a caveat: yes, that's the idea, but adjust the percentage based on your actual expenses, and make sure you have a buffer for irregular costs. Also, remind them that the goal is to avoid transferring back, so if 30-40% still causes issues, lower it. And the sweep at month-end is the extra. We'll be supportive and clear.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b7ce4188325bc26a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s exactly the idea\u2014**but with one important tweak**.\n\nThe 30\u201340% is just a starting point. The real goal is to pick a number that you can save **without** needing to pull it back. So if 30\u201340% still leaves you short, drop it to 25% or even 20% for now. The key is:\n\n- **Payday:** Move a fixed, comfortable amount to savings (long-term).\n- **During the month:** Spend from the rest, and let your \u201cbuffer\u201d absorb the irregular stuff (doctor, fines, etc.).\n- **Month-end:** Sweep whatever\u2019s left in your spending account into savings (or into your buffer if it got depleted).\n\nSo yes, your summary is correct\u2014just remember the percentage isn\u2019t a rule, it\u2019s a dial you adjust until the system works without you raiding savings.\n\nIf you find that even 20% is too much, then the problem isn\u2019t the timing\u2014it\u2019s that your budget is too tight, and you need to either cut expenses or increase income. But for most people, starting with a smaller automatic transfer and then sweeping the surplus is the most sustainable way to build the habit.\n\nYou\u2019ve got the right structure. Now just fine-tune the numbers.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s exactly the idea\u2014**but with one important tweak**.\n\nThe 30\u201340% is just a starting point. The real goal is to pick a number that you can save **without** needing to pull it back. So if 30\u201340% still leaves you short, drop it to 25% or even 20% for now. The key is:\n\n- **Payday:** Move a fixed, comfortable amount to savings (long-term).\n- **During the month:** Spend from the rest, and let your \u201cbuffer\u201d absorb the irregular stuff (doctor, fines, etc.).\n- **Month-end:** Sweep whatever\u2019s left in your spending account into savings (or into your buffer if it got depleted).\n\nSo yes, your summary is correct\u2014just remember the percentage isn\u2019t a rule, it\u2019s a dial you adjust until the system works without you raiding savings.\n\nIf you find that even 20% is too much, then the problem isn\u2019t the timing\u2014it\u2019s that your budget is too tight, and you need to either cut expenses or increase income. But for most people, starting with a smaller automatic transfer and then sweeping the surplus is the most sustainable way to build the habit.\n\nYou\u2019ve got the right structure. Now just fine-tune the numbers.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 770,
+   "output_tokens": 516,
+   "total_tokens": 1286,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 243,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.0982608e-05
+  },
+  "previous_response_id": "resp_h1lBMNnUZFDZazAYex9ySemG8Pv95uHfwgDPtq82ghxkJrx7GP4dXzrTcGNUzIS4uXlpOn3fUUmhOO1eb5OPCDTy9zSKcvRhyPheQcnFSfkRQCsYVJxgFK2fjES2lQKTrIKfb_igk41NhHh8m0uZVL3U7K777o492CRG40L6iP8ZbjX5hYPiekFiSXYoTvyCWCu5k59T0RqCo86cgjH5_Yej6FHUINfhesmPTxL7NVAXbzz3sfGSVng85rRJkkQtk1_-tSxyDkRBKbBO7sHb2vsoiNNTrBG6T1rzPf3I2f269S2v88GWA8tR5icwoGgVNIb-Ybd8cZ_ls03CxF-UXUGfix443ZoDiXdtzKc4aicWqdFZFPDmlr-bvvMKl1f5Vux9cBFAyLe3j0n2c0OiRfmOZEqqw70-gs54RFMLXewDhncPr1rJtiuFVroxZgSpoPIbf_0sgKUVPf26gQnNbAaiVrGxQWfgvPnLKiHC3dOol_Udl8HzpUdRmv3nufgVpjvyBxfPkUeRjWThARgx3FEsrtw=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:22:07.346212+00:00"
+}

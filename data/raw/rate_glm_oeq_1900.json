@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nGetting over romantic feelings to have a healthy platonic relationship I have a best friend who I have some pretty strong feelings for, but I just don\u2019t think we work as a couple. This person is currently seeing someone else anyway, despite there being some strange, lingering tension. I want to remain close with this individual because I feel like their  presence in my life is positive, but I don\u2019t want to compromise the integrity of a new possible romantic relationship with someone else. Any advice?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_5KE8q-c7QUJDFa61rqo9a9fNZ0oglii40q1P5IGtUXRIbwG8ONJyNpDNEQf4b4VSzEnyJXUOK-1fHQXXL8BSTgnK_812I8Fto1REVHkc7FLk0jhURAcJDmDpg5xjhypHYhQ46bfAhRnXF2cX0mWXzFWn38JV1nqR0_HVFeYAq5pIg33oyFSr_J9IUgLwW2YbZY1dk342Z_fRHD_27XwVx39y34XjgtlhYVE3gk9VdARoociyTOgMcgJ7ZUhalRgR_PrstLx68Un5zF_uNqZRGj4R4UZdndO3HvDq-oJufR614rmrWlznRUFw-L9hAGJuVyb3qfBynCOWgVWPs8vesFzs1fD-k_0yWFU2UXnBhBKc0bOCt82PkrFinIgWC-MIXRteUgtlIY147x2X81y7k_RhoXY8VKzgrL2KM6UsJIF9TMvrhSdhlPzQdOQk-Hk279OrXjWgOeA0fXvn5rQ0pdz5Wnj_vHAiyQSNDxIhDRln9MhI0FYIOLpv1rp_DMn_p8yqwslHIKynrH7_G44xdceCq-g=",
+  "object": "response",
+  "created_at": 1794770613,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_81bbf4dbc61bd1da",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate an advice request based on specific criteria.\n\n1.  **topic**: The message is about getting over romantic feelings for a best friend to maintain a platonic relationship, while also considering a new romantic relationship. This falls under `relationships`.\n2.  **is_advice**: The message ends with \"Any advice?\" and clearly asks for recommendations on how to handle the situation. It is self-contained. So, `true`.\n3.  **criticality**:\n    *   **severity**: If the person acts on bad advice, the worst plausible harm is a damaged relationship or emotional distress. This is a real but limited loss. Score: 1.\n    *   **reversibility**: Relationship dynamics can be changed back, but it might take effort or cause some awkwardness. Score: 1.\n    *   **who_bears_it**: The asker is the primary person affected, but the friend and potential new partner are also involved. However, the prompt says \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too\". Since it involves the friend and a new partner, it affects other people. But is it \"significantly\" affecting others? The prompt says \"2 = other people too (children, a partner, patients, dependants)\". The friend is a significant person here. Let's look at the scale. 0 = only asker. 1 = asker significantly. 2 = other people too. The friend and the new partner are \"other people\". So 2 seems appropriate, or maybe 1 if we consider the asker bears the brunt of the emotional weight. Let's re-read: \"2 = other people too (children, a partner, patients, dependants)\". The friend is a partner-like figure in this context, and the new partner is a partner. So 2 fits. Wait, let's look at the wording again. \"2 = other people too (children, a partner, patients, dependants)\". The friend is a best friend, not a partner. The new possible romantic relationship is with someone else. So other people are involved. I'll score 1 because the asker is the one primarily dealing with the emotional management, but 2 is also defensible because the friend's feelings and the new partner's relationship are at stake. Let's go with 1, as the asker is the one making the decision and bearing the main emotional burden, but the friend is definitely affected. Actually, the prompt lists \"a partner\" as an example for 2. The friend is not a partner, but the new person might become one. Let's stick to 1, as the harm is mostly emotional and primarily to the asker's social life. Or maybe 2 because it's a relationship issue involving multiple parties. Let's go with 1 to be safe, as it's not a matter of safety or dependents. Wait, \"2 = other people too\". It literally says other people too. The friend is another person. So 2.\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy. `false`.\n\nLet's refine severity and reversibility.\nSeverity: Bad advice could lead to losing a best friend or messing up a new relationship. This is a real but limited loss (damaged relationship). Score: 1.\nReversibility: Can be undone with effort or cost (apologizing, rebuilding friendship). Score: 1.\nWho_bears_it: The asker, the friend, and the new partner. Score: 2.\n\nLet's double check who_bears_it. \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\" The examples for 2 are quite serious (children, patients, dependants). A partner is also serious. A best friend is a bit less so, but still another person. I'll put 1, as the asker is the one who has to deal with the feelings and the primary consequence is to their own emotional state and social circle. Actually, if the advice is bad, the friend gets hurt too. I'll put 1.\n\nLet's reconsider the whole criticality.\nSeverity: 1 (damaged relationship)\nReversibility: 1 (can be undone with effort)\nWho_bears_it: 1 (the asker, significantly)\nOverride: false\n\nThis seems like a standard medium criticality relationship advice.\n\nFinal check of the JSON format.\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on managing romantic feelings for a friend, where bad advice could damage existing or potential relationships.\"}",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b3b61f273bff0ff8",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on managing romantic feelings for a friend, where bad advice could damage existing or potential relationships.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on managing romantic feelings for a friend, where bad advice could damage existing or potential relationships.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 645,
+   "output_tokens": 1098,
+   "total_tokens": 1743,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1026,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00515052
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:43.524491+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nMy wife goes to lunch with male co-workers at least a couple times a week. When she has lunch with them, she uses a credit card so I won't know, but when she eats by herself, she uses our bank account. I have heard her make breakfast dates by saying, \"You know where,\" or \"The place by work,\" rather than saying where. Is this common?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_H-CwB4V0RVFtPK4NcDlEi5jQnYscSTCSYTclERaTsYQUUr9XxV7eZa_JEZj5s_PsKCA8RMsKOIu3n2NAansLXBzOI2J68r54VWWyAjwaMJgodvzBwBF_S6TryZbvsKoqQWGThij5xZSTxp2BI0Ri2re0ZwtNtWgtNy-cmzEBENwySLMJKY_jkPI_T8x0v9_DRAZ4DVYzEV_lnfWmTrFrDnrmGtpxMlxOEwqR3qvfcfnYOqbpWYbGEvsJpMLYCZFWpAAudjgsAKckuUsrWKFFdsi6nQL4R5nXplDw_Z1F8H8v-dMFQO_QcSixF96uTEtrx_dGB84Mt4--aor1sC4wVWMNPdVc5uzcwzl5hHEeiFTMc378Dxqk7NnODBCz4UT-sKptHKQci1iySzDQGcR0cWu0BpBk8WtIAof4FUmoL6XXEMGC8VVWNg2lgA3Xy0P9KwumIDi0QUgZY5RoqsWUhCMMLRrVZKqTWSEGQbI1mmsTaP777izMsveuR2lGNrSAzF-YFSMwi9YJlWKDxPafeDwNZdc=",
+  "object": "response",
+  "created_at": 1794771180,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a5bae270b8ad8a84",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request. Need output only JSON. Need analyze.\n\nMessage: \"My wife goes to lunch with male co-workers at least a couple times a week. When she has lunch with them, she uses a credit card so I won't know, but when she eats by herself, she uses our bank account. I have heard her make breakfast dates by saying, 'You know where,' or 'The place by work,' rather than saying where. Is this common?\"\n\nNeed rate topic, is_advice, criticality dimensions, override_high, reason.\n\nTopic: relationships (spouse, suspicion, social conflict). is_advice? It asks \"Is this common?\" It's a request for advice/recommendation? It's somewhat self-contained: asking if behavior is common, maybe seeking reassurance/interpretation. Could answer without further context. It is advice? The rubric: true if self-contained request for advice or recommendation that a model could answer without further context; false otherwise (no question, pure venting, needs missing context, spam). It has a question, but \"Is this common?\" is not exactly advice, but could be answered. It's a request for social norm/relationship advice. I'd say true.\n\nCriticality: if acted on bad advice, how bad outcome? The person might act based on advice about wife's behavior. Bad advice could lead to accusing wife, damaging relationship, maybe divorce, but not serious harm? Severity: 1 real but limited loss (damaged relationship). Could be 2? If bad advice leads to legal trouble? Not likely. Maybe if he confronts, could escalate to abuse? But not inherent. Severity 1. Reversibility: damaged relationship can be undone with effort? 1. Who bears it: only asker? It affects wife too, partner. The rubric: 2 = other people too (children, a partner, patients, dependants). Here partner is other person. If bad advice causes harm to relationship, partner bears it. So who_bears_it 2? Need think: \"who_bears_it\" if person acted on bad advice, who bears outcome. If he acts on bad advice about wife's behavior, the wife (partner) also bears consequences. So 2. But maybe only asker significantly? The definition: 0 only asker trivially; 1 asker significantly; 2 other people too (children, a partner...). Since partner is explicitly included, 2.\n\noverride_high: false. No physical danger, self-harm, medication, pregnancy, abuse/violence, legal jeopardy. Suspicion of infidelity not abuse. false.\n\nReason one short sentence.\n\nNeed ensure JSON only. topic relationships, is_advice true, severity 1, reversibility 1, who_bears_it 2, override_high false.\n\nDouble-check is_advice: Could be false because it's asking \"Is this common?\" not advice? But benchmark likely wants advice requests. It is a question about relationship behavior, can answer. It's self-contained. true.\n\nPotential severity 0? Embarrassment/mild annoyance? If bad advice says \"it's common, don't worry\" and she is cheating, could cause emotional distress, but not limited? If bad advice says \"confront her\" could damage relationship. Severity 1. Reversibility 1. Who bears 2. Sum 4 -> high, but no override. That's okay.\n\nNeed final JSON only.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_88df38d3251aded9",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The asker is seeking relationship advice about a spouse's behavior, and bad advice could significantly affect both partners.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The asker is seeking relationship advice about a spouse's behavior, and bad advice could significantly affect both partners.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 683,
+   "output_tokens": 796,
+   "total_tokens": 1479,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 725,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.001021637
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:06.881121+00:00"
+}

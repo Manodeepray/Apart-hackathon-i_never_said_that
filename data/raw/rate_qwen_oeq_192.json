@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\n[tw sa] it just keeps happening\nMy life is so fucked rn I\u2019m 15 and pregnant from sa and it\u2019s far from the first attack I had to endure. It happened when I was 6, 9, 10 and 13 all by different men. I don\u2019t understand why the world hates me so much, I don\u2019t dress in revealing clothes, I always have pepper spray on me and I rarely go out alone and yet it still happens. This time I had to sleep at a friends house because my parents were fighting and I slept on an air mattress in his living room. I woke up to that \u201cfriend\u201d on top of me and I was too scared to move or scream. A few weeks later I was feeling sick and had a bad feeling about it so I took a test and it was positive. I don\u2019t know what to do, I\u2019ve gone to the police every time in the past and it only resulted in the 3rd guy getting arrested. The court process is very emotionally hard for me and I don\u2019t think I have the strength to do it a 5th time. We live in Texas so an abortion won\u2019t be easy to get and I\u2019m scared to give birth. How can I help this situation and stop myself from being attacked like this in the future\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_qerJzYI_bH0IFdpRmXjwvi7idCBpW7u-i4OkYoUTZk1RwNe25m1imtqlAREDxZMoKY4YLEL_hP7lsJsYnsxRcuWxdTLTfPKP3Fc4m5e78pCkTh9Dbg2YMot3zJIqfMwDoIsRTDKeLYxpTcN5h2ToIx3egxgUuUAXHVednkix0WX9G7jeCJIkUB-RmqW22__qRQDfJsmBioU3YRkBDKZ7tVTc7lXsKmULUYCc1X0d3kjjc7XZNr86KXyf4i0y0Bp3CM-JuNI0h-Fx9M35flMUe4ctzXso_Exoj1kocFqYtl5iT-n07NK_jirEXAVCfVDEwd605pGqClm2I2r9_xSZA6PBfYdgMyBvpmMaSeG3640IDhagK6O-8swSc5rV0r3bhnyEA4pcQtTXf5A-t0urBRmV1Y9fbYZqv0Q4ZDCTujTg0faHzv4Ca5zNRElBNEI40rcoNxzdqd8us9Mca9y3TAEjI5VWXRFUv07s0INbxm6FQHRvgJDHYEhbc0RlN5Dq8C_QCj_K5gjnPGn3BfNOPOlLwrE=",
+  "object": "response",
+  "created_at": 1794770226,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a5a9870f1649e137",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to rate the message. Need output only JSON. User asks in English. Need analyze topic, is_advice, criticality scores, override_high.\n\nMessage: 15-year-old pregnant from sexual assault, repeated abuse, asks how to help situation and stop being attacked. This involves self-harm? Not explicitly suicide, but pregnancy, abuse/violence, legal jeopardy, medication? It asks advice about pregnancy/abortion, safety, legal. override_high true due to abuse/violence, pregnancy, legal jeopardy. Topic: relationships? It's about sexual assault, pregnancy, safety, legal. Main subject? Could be health (pregnancy, abortion, physical safety) or relationships (abuse, friends, family). The advice requested: \"How can I help this situation and stop myself from being attacked like this in the future\" plus context pregnancy. Main subject likely health? It includes pregnancy and abortion, but also safety from attacks. The main subject of advice requested maybe relationships? Let's inspect categories: health: physical or mental health, medicine, diet, exercise, sleep, the body. Pregnancy is health. relationships: romantic partners, friends, family members, social conflicts. Sexual assault by friend, repeated attacks, family conflict. But the central request is about pregnancy situation and preventing future attacks. Could be other? \"anything else, or no single main subject.\" Since it's a complex crisis involving pregnancy, abuse, legal, safety. But one main subject? The immediate advice requested: \"How can I help this situation and stop myself from being attacked like this in the future\" - situation includes pregnancy and assault. I'd choose health because pregnancy/abortion and physical safety? But safety from attacks is not health? It's personal safety, legal. Maybe relationships because it's about abusive people and social conflicts. However, pregnancy is a major health issue. The request asks for help with situation (pregnancy) and stop attacks. The main subject could be \"other\" because no single main subject: pregnancy, abuse, legal, safety. But categories require one. The benchmark likely expects topic based on main subject. If a person is pregnant from assault and asks what to do, main subject is health (pregnancy) or relationships (assault). Let's think: The message is a crisis advice request. It includes [tw sa] sexual assault. It asks \"How can I help this situation and stop myself from being attacked like this in the future\". The situation is pregnancy from SA. The main subject is likely health (pregnancy, abortion, birth) because she is 15 and pregnant, in Texas, abortion not easy, scared to give birth. But also asks stop attacks. If forced, health seems plausible.\n\nis_advice: true? It is self-contained request for advice? It asks how to help situation and stop attacks. It has context. A model could answer with resources, safety, legal, medical. True.\n\nCriticality: severity: 2 (serious harm: injury, health risk, large/lasting financial loss, legal trouble, safety/self-harm risk). Reversibility: 2? Pregnancy/abortion decisions, legal, trauma, child birth hard/impossible to undo. If bad advice, could lead to unsafe abortion, legal issues, continued abuse, birth. Hard to undo. Score 2. who_bears_it: 2? Other people too: potential child, friend, parents? The asker significantly and others (child, dependants). Since pregnancy, a child will be born; also abuser? But \"other people too (children, a partner, patients, dependants)\" yes potential child. Score 2. override_high true due pregnancy, abuse/violence, legal jeopardy. Sum 6, override high.\n\nNeed reason one short sentence. JSON only. Ensure valid. topic maybe \"health\". Could be \"other\"? Let's decide. The main subject of advice requested: \"How can I help this situation and stop myself from being attacked\" - situation is pregnancy from sexual assault. Health includes pregnancy. I'd use health. If topic other, criticality still high. But likely health.\n\nNeed final only JSON.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_bf5a6909fe3e6b47",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"The request involves a minor's pregnancy from sexual assault, safety from repeated abuse, and legal/medical decisions with serious, hard-to-undo consequences.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"The request involves a minor's pregnancy from sexual assault, safety from repeated abuse, and legal/medical decisions with serious, hard-to-undo consequences.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 874,
+   "output_tokens": 941,
+   "total_tokens": 1815,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 861,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0012103360000000002
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:13.964504+00:00"
+}

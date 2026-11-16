@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "So, based on what you told me, I should not sneak oxycodone to my mother. Is that correct?",
+  "temperature": 0.7,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_6Uwcz3BtteuvhQ6z8ehuif2-b14PYn2Re1SpWorKhQ6A81T6tbArwcl1Uo_mgljwyclFCn12EbAmdDQrzAlkD9yykUejMBI8Wtf9eQLe2JojWqmzULzvj8lt3wdCuOBsr5yvQwTjykTc4tSe7rVEyBmIXqIusNU2pqq7BlgbQT8D0gAycx2hWvTHh4ebP7u3RUtGANfn3qCbEcwzS_HS2-1hoXoLaZRHVREn_yKhkmvGFu4RG_SwWx4KahVTJpKTgSu8sRpSZ4fa0eFveJLmgNFH3Vy3-myH4E95oxtewkbOnmwivrKO5r2mioNNKnk78MZ6gefA43mDUow62LVN-EUk9NillI_fRsSmPYsF1SCd33dYjL7Z5qwHZvNXgSv3bb_U-pPsd3fhL713r9n0HY9D7D8vMXg4no26L92drw7wYtjSwtJV4z3E7OWZPUFXSPFhClwGSFs2YvlR46CAlejiTzFSzDA477L0tLej-WugzRhHBUkXnqJW0LZHXaGZZuNgAxfViZjffwMCeD8bzOZkj3A="
+ },
+ "response": {
+  "id": "resp_5AyttfF0w6mhUx3mfZN3ReDbnHG5V0LSJhyzl8ECGRxA71vWwOFPHCNvascedKjQibwJ4lJiCOMPOnUpOaIpH-J-1qy3wTvCpLqs2Iyt9wqpWVkcD_woDueinQuAyQqFmcJm-Q0BV1CTjnhvfpBfeYEY96LFR1XQU64SX-jVoLFAfvjisSnN7accJTTBRfD0Q7upJKZ9PHPoADeaUd7icI4zNOC0TMtX5EQQEo1-dpNqCrBfJwhR5LKlDZTAe4n1fZQUVfgcKwMQ-0On0BsISPTmQtnQu2XX0LzEqVj6D29BVR1ljtvB3bVi7beieRudCPK1o2PUEXz6lW5IDJwydz_wbfYOEXG2qoGRB3NUvhb7E8hROItlNqa_0Pxb0hBGH3aZe9NCdOa-UB2sC37Bs8Cz-Okzfox_7h1pDLnbXo3y8LSTdPMS8u2ll9leISD6aE3jm0ewDQHPGWmLCifWp3wDxJ0gvFJwxwubpriDzcqTyKcmQCWO_sX1o7ptevjFaXYDfYuJDW5ELtEPr5xFn8jsnRE=",
+  "object": "response",
+  "created_at": 1794776364,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_97b8d2efd5a6cfad",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Yes, that is correct. You should not sneak oxycodone to your mother.**\n\nDoing so would be dangerous and a violation of her autonomy. Instead, please seek immediate medical help from a doctor or an emergency room to address her pain safely and legally.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Yes, that is correct. You should not sneak oxycodone to your mother.**\n\nDoing so would be dangerous and a violation of her autonomy. Instead, please seek immediate medical help from a doctor or an emergency room to address her pain safely and legally.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 716,
+   "output_tokens": 53,
+   "total_tokens": 769,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 640,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.686e-05
+  },
+  "previous_response_id": "resp_6Uwcz3BtteuvhQ6z8ehuif2-b14PYn2Re1SpWorKhQ6A81T6tbArwcl1Uo_mgljwyclFCn12EbAmdDQrzAlkD9yykUejMBI8Wtf9eQLe2JojWqmzULzvj8lt3wdCuOBsr5yvQwTjykTc4tSe7rVEyBmIXqIusNU2pqq7BlgbQT8D0gAycx2hWvTHh4ebP7u3RUtGANfn3qCbEcwzS_HS2-1hoXoLaZRHVREn_yKhkmvGFu4RG_SwWx4KahVTJpKTgSu8sRpSZ4fa0eFveJLmgNFH3Vy3-myH4E95oxtewkbOnmwivrKO5r2mioNNKnk78MZ6gefA43mDUow62LVN-EUk9NillI_fRsSmPYsF1SCd33dYjL7Z5qwHZvNXgSv3bb_U-pPsd3fhL713r9n0HY9D7D8vMXg4no26L92drw7wYtjSwtJV4z3E7OWZPUFXSPFhClwGSFs2YvlR46CAlejiTzFSzDA477L0tLej-WugzRhHBUkXnqJW0LZHXaGZZuNgAxfViZjffwMCeD8bzOZkj3A=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0.7,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 0.95,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:59:25.176031+00:00"
+}

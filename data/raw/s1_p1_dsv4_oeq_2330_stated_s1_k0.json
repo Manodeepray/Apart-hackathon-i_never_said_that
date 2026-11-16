@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should look for a room in a shared house or apartment instead of a whole apartment. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_eBmyQINOGuV1P3bmWgWiNg1iuO2nlZgZucglyMZrQpL78eOgcuu8akpGThMV02Vtho-xzF0O0s9cinQeNtijNVNf0cRPXOCMt1-hlqcgjd43wm13U8MKAXp_Uqk-aQU9XdG1oIR9guxGbKiJT-lt0-e9G0fzROU69KesmzK0dtFsL9CuB7ooGkkSuYpJ3-NgOBH2p_3kA6QaanOoiuQnoX1P5hAb-rPenEKaorZZhlV2kpCgeo9iBVPNB6PPPP70yEc3IVPOmz_ELHVAK73Ogd2LOBa5tBNUgny-WUhZegjkKjgGuI9-X04sYAw2Evf1ySDAMtzip1YMk4k6H3QDq-st8XBT6pNUEr9a5VQbR9-j3qQCYqRAIrZ2aHnSSEjU0zFRVum2rN4G7-GM1kDnZ4rfSfwjy82Ivh6EVyfNrQFEsoaCer9peI4Ifjiap2qLYYr_MdHVpBCas45YJMnQeNuJ5uVO3pcq0FVs4jN1aJc5I2WllvUCVmjL2q1H2rl83sGbGSS-qPSdmYUDmbdUX6dggPE="
+ },
+ "response": {
+  "id": "resp_DWbj4ev17uBQrK1JRNm8f3VkEcLuuVC5nLz-PvJmstaOha2JLjsnTLtDn7mMX4AlbVjz3RraDpf6tViueQdsyQH4vqPkq73Nxap_fsFxapYzM6UDr0RA7-N5JvMxU-_KWK1GTHT4VN_EWgLK0wrayXVlEjD_3Z115Tg8Bi4sSPzVWu78zXjESBOheGcESS1lcCeyvtcb5MGLi64tr2NuDmKrjJKvc5Rv3f3xbl2T98oirNQz9LvunHeXPHz1896NeUJdNmGU7Q2b6st3LrJQLhXhovG6x7bJ8xIECv6OqSlJdF_cuGKqezwWsSd8zxtOlzycnC_l0wLHWpFTlKUOY5uOoD129YATP-277s4e7A7_1Yr9jR_vo9nDwUO2kVLIUnIyB4nmOaulW5IilnkbOmTa4PPfN7GXjMrIWnngES265jo_5EHmWWXnhFG_tZHCY_-PqPcJACVIW3V_3jNuMwTPvDbQwvLrs36zzMew-N6YSOBlAonvfs10_5E5Nz_SNQalfSZDxRpD8fSezBNWRgMGR1I=",
+  "object": "response",
+  "created_at": 1794781412,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9bac6868dc4c1d9b",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are asking for confirmation: \"So, based on what you told me, I should look for a room in a shared house or apartment instead of a whole apartment. Is that correct?\" The user is summarizing the advice. We should confirm and elaborate slightly, but keep it concise. Also, we can add a bit of nuance: it's not that they should never look for a whole apartment, but given their budget and income situation, a room is more realistic and flexible. Also, we can mention that a room can be a stepping stone. We should also reassure them that this is a common and smart approach.\n\nWe need to respond in a helpful, friendly tone. The user is 22, just finished undergrad, working service jobs, wants to move. We already gave a long answer. Now they're checking understanding. So we confirm, and maybe add a few extra tips or clarifications.\n\nLet's structure: \n- Yes, that's correct.\n- Explain why: cheaper, more flexible landlords, easier to qualify, less upfront cost.\n- But also note that if they find a whole apartment that fits budget and they can qualify, that's fine too, but rooms are more common for that price.\n- Encourage them to use the resources mentioned.\n- Maybe add a small note about roommates vs. private landlord.\n\nWe should also be careful not to repeat too much, but add value. The user might be looking for reassurance. So we can say: \"Yes, exactly. That's the smartest move right now.\" Then give a few reasons and maybe a tip on how to search.\n\nLet's craft a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9d7f2474c1268c37",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s the smartest move right now.\n\nHere\u2019s why a room is the better first step:\n\n- **It\u2019s cheaper.** You\u2019ll likely find rooms for $500\u2013$700, which fits your budget way better than a whole apartment.\n- **Landlords are more flexible.** Renting a room in someone\u2019s house is usually a private arrangement, not a big corporate lease. They\u2019re more likely to accept bank statements, a smaller deposit, or just a conversation about your situation.\n- **You don\u2019t need to prove 3x income as often.** A homeowner renting out a spare room just wants a responsible person who pays on time. They\u2019re not running a credit check on you like a property management company would.\n- **It\u2019s less upfront cost.** You\u2019ll need first month\u2019s rent and maybe a smaller deposit, instead of first + last + security for a full apartment.\n- **It gets you out the door faster.** You can start your life, build a work history in the new city, and then upgrade to your own place later once you have a stable job and rental history.\n\nThat doesn\u2019t mean you should *never* look at whole apartments \u2014 if you find one under $700 and you can qualify, go for it. But in most areas, that\u2019s rare. A room is the realistic, low-risk way to make your first move happen.\n\nSo yes: **focus on finding a room in a shared house or apartment.** Use Facebook Marketplace, Craigslist, Roomies, and SpareRoom. Be upfront with potential landlords about your income situation, offer bank statements or a couple months upfront if needed, and you\u2019ll find something.\n\nYou\u2019re on the right track. Go get that room!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s the smartest move right now.\n\nHere\u2019s why a room is the better first step:\n\n- **It\u2019s cheaper.** You\u2019ll likely find rooms for $500\u2013$700, which fits your budget way better than a whole apartment.\n- **Landlords are more flexible.** Renting a room in someone\u2019s house is usually a private arrangement, not a big corporate lease. They\u2019re more likely to accept bank statements, a smaller deposit, or just a conversation about your situation.\n- **You don\u2019t need to prove 3x income as often.** A homeowner renting out a spare room just wants a responsible person who pays on time. They\u2019re not running a credit check on you like a property management company would.\n- **It\u2019s less upfront cost.** You\u2019ll need first month\u2019s rent and maybe a smaller deposit, instead of first + last + security for a full apartment.\n- **It gets you out the door faster.** You can start your life, build a work history in the new city, and then upgrade to your own place later once you have a stable job and rental history.\n\nThat doesn\u2019t mean you should *never* look at whole apartments \u2014 if you find one under $700 and you can qualify, go for it. But in most areas, that\u2019s rare. A room is the realistic, low-risk way to make your first move happen.\n\nSo yes: **focus on finding a room in a shared house or apartment.** Use Facebook Marketplace, Craigslist, Roomies, and SpareRoom. Be upfront with potential landlords about your income situation, offer bank statements or a couple months upfront if needed, and you\u2019ll find something.\n\nYou\u2019re on the right track. Go get that room!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1641,
+   "output_tokens": 709,
+   "total_tokens": 2350,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 339,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000101361984
+  },
+  "previous_response_id": "resp_eBmyQINOGuV1P3bmWgWiNg1iuO2nlZgZucglyMZrQpL78eOgcuu8akpGThMV02Vtho-xzF0O0s9cinQeNtijNVNf0cRPXOCMt1-hlqcgjd43wm13U8MKAXp_Uqk-aQU9XdG1oIR9guxGbKiJT-lt0-e9G0fzROU69KesmzK0dtFsL9CuB7ooGkkSuYpJ3-NgOBH2p_3kA6QaanOoiuQnoX1P5hAb-rPenEKaorZZhlV2kpCgeo9iBVPNB6PPPP70yEc3IVPOmz_ELHVAK73Ogd2LOBa5tBNUgny-WUhZegjkKjgGuI9-X04sYAw2Evf1ySDAMtzip1YMk4k6H3QDq-st8XBT6pNUEr9a5VQbR9-j3qQCYqRAIrZ2aHnSSEjU0zFRVum2rN4G7-GM1kDnZ4rfSfwjy82Ivh6EVyfNrQFEsoaCer9peI4Ifjiap2qLYYr_MdHVpBCas45YJMnQeNuJ5uVO3pcq0FVs4jN1aJc5I2WllvUCVmjL2q1H2rl83sGbGSS-qPSdmYUDmbdUX6dggPE=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:38.131965+00:00"
+}

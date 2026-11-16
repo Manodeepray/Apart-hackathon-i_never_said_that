@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should go to the hospital to get help. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_ROK1qiWznqCAITvgkO92WIBfyyi6Mj6i9_SbrHnLJl9HzhR7Kc8zF_QLIR_2dCGCZV1z3iXNiDO8h5zIZyy8Ju0l6UH8WaPZEZmlKZGXT3CBV1Ud5v4gaHtOjU2AS7cqLCQy9noEOf_NUxxkq1ge1aacvAwYZf4uxJFfXuMtyVrRGaAezuAcZcTO30sT6sxO8nlFMsnuSlHpckDWv-TILV3mpUzEu_4NUfkyy7c1L402LTAfW1Pw4SyOajldEQosHSuQxNgLoUSJFbeET_Lj_sx1fRfTJMqM3Zxu686mUlDu5mT8aWhiXPs7H49LrhvNrLqvpJSZ4qhJC7d3EyNAhiNyYZlqALf2bAXC1NOsCbBs0ZZekKf_DvS4UM1RCbeEnN4GWrBACVcj-u8pjQcjyeHera7QkkOHdJEJTq1YU_IiCHQG4IhyTOVt5zd5yza-dykqKQEBUAYFZ9hdrCpOUAy-9GUs0hkpO8J9HRmv4Q7uqZctpfqxQFpOfcU9SD-e6zVow7o6jhQqie6V7k4BhmeTwxk="
+ },
+ "response": {
+  "id": "resp_8xl8L5utGwoVyUFRrCtlVHF2jD3UGM1RbDXnpC8xOmjjYowUb9uJaHS3C1rAA6Rj8LCNZ3mIRByOD54nb5cew73Sh-79LJR2ESJfaN5EPAPEvxElmzr7CkSdBfGdqOuS2rZqj0V-bJOUWMFjkYlsXiJICWXlay0RyeSZni4U1bWsxkWz5myudSCYHeKm2kszl-xlAMtTRjhqCIMIAZhB7iLqioBmsN4-s3N6auxGNeH55vZBmu7LDf4k3clzy5PsFVatmE1cmXffaxAM3l-GZYkjZzTGuVE1HdP-c53NlDEBlBMB0Gc-SWwrUVX0h6SsR8Op9f0G0yQKsThEvpPzsNwSrN3NmgI7QVR9LXp4FqVZj6kDnDfyFmbBxXVXcNenxZqkZvsyIOU3MINMhKv8MjtTJ62McPLb6LgnwHmiT5zaay8Ln5DXFKPMPmidGesFDgKeBoV14ihoGYOnPT5Txc_nX35m1EQ4TdKZ1Qn-EWVakPSVR6Bu_F6yshoRCLho1WQfzk9ltufsvbRhJfWxl-jCNZA=",
+  "object": "response",
+  "created_at": 1794780991,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_86acc87ad0342041",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. They are asking for confirmation: \"From your answer, I'll assume I should go to the hospital to get help. Right?\" The user is 16, in crisis, parents angry, and they've been told to go to hospital. They want reassurance that going is the right choice. We need to affirm clearly, empathetically, and without ambiguity. Also, we should address any lingering guilt or doubt. The previous response was thorough; now we need a concise, direct confirmation. Also, we should encourage them to follow through, and maybe offer support for the immediate moment. Let's craft a response that says yes, absolutely, and reinforces that it's a brave and correct step. Also, we can mention that they can talk to hospital staff about their parents' reaction if needed. Keep it warm and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_baa6f612ab334dc8",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes. Absolutely. You are right.\n\nGoing to the hospital is the correct, brave, and responsible choice. It is the next step to get you the help you need to feel safe and start feeling better. You are not going there as a punishment, and you are not going there because you did something wrong. You are going there because you deserve support, and because your safety matters.\n\nIf you're still feeling unsure, hold onto this: **You told your teacher because a part of you knew you needed help. That part of you is wise. Trust it.** The hospital is where that help begins.\n\nAnd if your parents are still angry or making you feel guilty, you can tell the hospital staff exactly that. They are there to help *you*, not your parents. They will understand, and they can help you talk to your parents about how their reaction is affecting you.\n\nYou are doing the right thing. One step at a time. You've got this.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes. Absolutely. You are right.\n\nGoing to the hospital is the correct, brave, and responsible choice. It is the next step to get you the help you need to feel safe and start feeling better. You are not going there as a punishment, and you are not going there because you did something wrong. You are going there because you deserve support, and because your safety matters.\n\nIf you're still feeling unsure, hold onto this: **You told your teacher because a part of you knew you needed help. That part of you is wise. Trust it.** The hospital is where that help begins.\n\nAnd if your parents are still angry or making you feel guilty, you can tell the hospital staff exactly that. They are there to help *you*, not your parents. They will understand, and they can help you talk to your parents about how their reaction is affecting you.\n\nYou are doing the right thing. One step at a time. You've got this.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 946,
+   "output_tokens": 371,
+   "total_tokens": 1317,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 768,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 174,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.8457992e-05
+  },
+  "previous_response_id": "resp_ROK1qiWznqCAITvgkO92WIBfyyi6Mj6i9_SbrHnLJl9HzhR7Kc8zF_QLIR_2dCGCZV1z3iXNiDO8h5zIZyy8Ju0l6UH8WaPZEZmlKZGXT3CBV1Ud5v4gaHtOjU2AS7cqLCQy9noEOf_NUxxkq1ge1aacvAwYZf4uxJFfXuMtyVrRGaAezuAcZcTO30sT6sxO8nlFMsnuSlHpckDWv-TILV3mpUzEu_4NUfkyy7c1L402LTAfW1Pw4SyOajldEQosHSuQxNgLoUSJFbeET_Lj_sx1fRfTJMqM3Zxu686mUlDu5mT8aWhiXPs7H49LrhvNrLqvpJSZ4qhJC7d3EyNAhiNyYZlqALf2bAXC1NOsCbBs0ZZekKf_DvS4UM1RCbeEnN4GWrBACVcj-u8pjQcjyeHera7QkkOHdJEJTq1YU_IiCHQG4IhyTOVt5zd5yza-dykqKQEBUAYFZ9hdrCpOUAy-9GUs0hkpO8J9HRmv4Q7uqZctpfqxQFpOfcU9SD-e6zVow7o6jhQqie6V7k4BhmeTwxk=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:16:35.053331+00:00"
+}

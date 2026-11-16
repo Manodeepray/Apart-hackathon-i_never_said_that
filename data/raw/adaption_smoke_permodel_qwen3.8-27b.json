@@ -1,0 +1,117 @@
+{
+  "id": "resp_YStTIVcQE99u-OZeIRz5scojhx3xxdRG6b8CdSdy48cG7CZA7KXL-DGtfU4MYREwfUC1gETcn7zKLCmhTcWEsiNUlVFEvDOXOWSyCA-bU0gnXhhBynXuXXmcAIERsvO8zGYB8dLm55_JAqVWYxQq_UU6YYGD-V9U9wSg0J2Qx_Gtyg7kT2i0ior6vSOcTewBL7SI9bklWgDsKZDlYdeU8M42yRz4uVIL4jizEtN55Et8q0DPRi1jMhD0TCN2lsH9UOV3ZYLV5VOI5Wb7RaSA3cQDxFFrJB8J1jaciZbsZQnzGaxYDi9XTPKiqTnnC5atMy017_7RbneRx5bq7KA5AkDyTbu2t66X7MQ9xwEcnTBClQBPcpDhpTtObdoo7q_oOucvd7zvu9l5cGucG29kzNe2UW1AxikWVDwx3lIRHAG5q7wM57pcqEqTtE9L_aJWuyte6DjiYQedvGT4USGTKZzQRRlDfaeVGp7Ev4vNRHPGuCegd_54OQtYSs3HttofIUnaACdXsxYV85EtGWTWiyaiMxY=",
+  "object": "response",
+  "created_at": 1794768281,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+    {
+      "type": "reasoning",
+      "id": "rs_adcb5e3029e7fc52",
+      "status": null,
+      "role": null,
+      "content": [
+        {
+          "type": "reasoning_text",
+          "text": "We need to answer user: \"In one sentence: is it safe for a beginner to rewire a light switch?\" Need one sentence. Need likely safety advice. Could say: No, not unless you're comfortable with electrical safety, know how to turn off power, test for voltage, and follow local code, otherwise hire a licensed electrician. But one sentence. Need concise. Ensure not too long? One sentence. Final only one sentence.\n",
+          "refusal": null,
+          "annotations": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": [],
+      "encrypted_content": null,
+      "queries": null,
+      "results": null
+    },
+    {
+      "type": "message",
+      "id": "msg_a6ac8c6b181eaee4",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "\n\nIt\u2019s generally not safe for a beginner to rewire a light switch unless they are confident in turning off and verifying the power, understand basic wiring, and follow local electrical codes; otherwise, a licensed electrician should do it.",
+          "refusal": null,
+          "annotations": [],
+          "logprobs": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": null,
+      "encrypted_content": null,
+      "queries": null,
+      "results": null,
+      "phase": null
+    }
+  ],
+  "output_text": "\n\nIt\u2019s generally not safe for a beginner to rewire a light switch unless they are confident in turning off and verifying the power, understand basic wiring, and follow local electrical codes; otherwise, a licensed electrician should do it.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 69,
+    "output_tokens": 140,
+    "total_tokens": 209,
+    "input_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "cached_tokens_details": null,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": null,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens_details": {
+      "audio_tokens": null,
+      "reasoning_tokens": 91,
+      "text_tokens": null,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "cost": 0.00017769100000000003
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 2000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null,
+  "_latency_s": 1.4
+}

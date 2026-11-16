@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should buy a money order and deposit it using the Capital One app. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0="
+ },
+ "response": {
+  "id": "resp_0BVOoy-YT0bnkWKyehMUeC5zv3or6SENQyb0vyrqrNkil50U452CAvQ9fCSLMCRSfzxxYkB6bvNEMlS_HgnORIUT30Imv-bcoMTKgxuWt3o0yeJlvmhi-yPmh5nR25j4oFjD6_L-LK9m5lZCfaBAn7O66k2De6RzzNr29PMFdlrxP-c5hOz2Xcl1urXd35nIAmYvqp2N1HxldqJPBWkugvw86g7VUiCZ6siN7dNF37wS7pWxiGlzpkjqI9G99StDAJHEGF8nyTfp9cuQRSXeFgLdhM3nLwHm9074x-63jbBmm4adgS0Csj_DVMY9N1OV7atCTqpKM5JzP32Mkl122_kChcApVgbEDQbZBwIRTaI3jFl2NZ_OgsyzDz945lgW_Vr7jRKWc7lhQIBMWSdpUlKn32cKrKNR3lXt0oi_8JldQKZuJPoRuOqujgQ4snCyA2b-RCYyuQEw_QzaNJAEEqFt-z8wpFKvZc_n4z1Zsr-HWYSjubAZEcdJ2ce75Jb34pxXYtN9FVliz04WA7oDc9nRyjw=",
+  "object": "response",
+  "created_at": 1794781193,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8e68497c32c05f68",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "1.  **Analyze the User's Query**:\n    *   User is confirming the previous advice: \"So, based on what you told me, I should buy a money order and deposit it using the Capital One app. Is that correct?\"\n    *   The user is in Key Largo, FL, wants to deposit cash into a Capital One savings account, has a debit card, and no nearby Capital One branches/ATMs that accept deposits.\n\n2.  **Evaluate the Previous Response**:\n    *   The previous response correctly identified the issue (Capital One ATMs are mostly fee-free withdrawal, not deposit).\n    *   It suggested three methods: 1) Money order + mobile deposit, 2) Local bank middleman, 3) Friend/family Zelle.\n    *   The user is specifically asking to confirm Method 1.\n\n3.  **Formulate the Response**:\n    *   Directly answer the question: Yes, that is correct.\n    *   Reiterate the exact steps clearly and concisely to ensure they don't mess it up (buy money order, make it payable to self, endorse, mobile deposit).\n    *   Add a crucial caveat: *Check the Capital One app's mobile deposit limits* (daily/monthly limits) to ensure the amount they are depositing is within the limit.\n    *   Mention the processing time (usually 1-2 business days, sometimes longer for money orders).\n    *   Reiterate that this is the most practical option for their location.\n    *   Keep it friendly and supportive.\n\n4.  **Final Polish** (Self-Correction during drafting): Make sure to explicitly state \"Yes\" first. Also, remind them to *sign* the back of the money order and write \"For Mobile Deposit Only\" to prevent fraud. Also, note that Capital One might place a hold on the funds since it's a money order, but it's still the best way.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b1e5fba6302f3614",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Yes, that is exactly correct.** That is the most practical and reliable way to get your cash into your Capital One savings account from Key Largo. \n\nJust to make sure you have the exact steps down, here is the quick checklist:\n\n1. **Buy the money order** at a Publix, Winn-Dixie, Walmart, or the post office using your cash. (Make sure to keep the receipt from the money order just in case).\n2. **Fill it out**: Make it payable to **yourself** (your exact legal name).\n3. **Endorse the back**: Sign your name on the back of the money order, and write **\"For Mobile Deposit Only\"** underneath your signature. This is very important\u2014it prevents anyone else from cashing it if it gets lost.\n4. **Deposit via the app**: Open the Capital One mobile app, log in, tap \"Deposit,\" select your savings account, and take clear photos of the front and back of the money order.\n5. **Keep the money order** until the funds show up in your account (usually 1\u20132 business days), just in case there is an issue.\n\n**One quick heads-up:** Capital One has daily and monthly mobile deposit limits. If you are depositing a large amount of cash (like over $5,000 or $10,000), you might need to buy multiple money orders over a few days, or use the local bank middleman method instead. But for everyday cash deposits, this will work perfectly. \n\nGo ahead and do that\u2014it will get the job done!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Yes, that is exactly correct.** That is the most practical and reliable way to get your cash into your Capital One savings account from Key Largo. \n\nJust to make sure you have the exact steps down, here is the quick checklist:\n\n1. **Buy the money order** at a Publix, Winn-Dixie, Walmart, or the post office using your cash. (Make sure to keep the receipt from the money order just in case).\n2. **Fill it out**: Make it payable to **yourself** (your exact legal name).\n3. **Endorse the back**: Sign your name on the back of the money order, and write **\"For Mobile Deposit Only\"** underneath your signature. This is very important\u2014it prevents anyone else from cashing it if it gets lost.\n4. **Deposit via the app**: Open the Capital One mobile app, log in, tap \"Deposit,\" select your savings account, and take clear photos of the front and back of the money order.\n5. **Keep the money order** until the funds show up in your account (usually 1\u20132 business days), just in case there is an issue.\n\n**One quick heads-up:** Capital One has daily and monthly mobile deposit limits. If you are depositing a large amount of cash (like over $5,000 or $10,000), you might need to buy multiple money orders over a few days, or use the local bank middleman method instead. But for everyday cash deposits, this will work perfectly. \n\nGo ahead and do that\u2014it will get the job done!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 617,
+   "output_tokens": 731,
+   "total_tokens": 1348,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 402,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00010284708800000001
+  },
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:00.521087+00:00"
+}

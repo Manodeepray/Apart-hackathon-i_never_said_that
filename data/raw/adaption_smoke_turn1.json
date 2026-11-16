@@ -1,0 +1,90 @@
+{
+  "id": "resp_pjlgfCXmu1IWOUJlSyQNbWcpvim-c92fYbOaSd5uTrHC0r8t06fB1ipXYpp_EtEqLloZzU70o0Y12VEsgB_-4Kn0UuXFCh-KukNy4cqDA5a6oGUjuY8x-MCMKFWfa1OAJ9Ves90kMkekIDM8k8poOcI69LV5NVCmlxLNIqqGUfCUtdiqaI-7-nOgaAOeBDQg_miOZVCQIoFjNCTVfFNSkzgfw5d40HknEbWoTBNs7foObsVP4qBg6MbHqC6ndMve3slD04rR7SbeE-k8msCU7znRuAisaPXIwBGVgQhwuyoogTw5uleoHuqlUWe06i4J0ncntS8jhdFlMyc_PRUtmvs2sVDAJpJLCGFobWqS3d74RD7t4r9OGfE65FBRXOMq3f0dD-TlJkpAUNwixZFEZwYbZgCGtN8sWuPljEXYTpH6S4qul7zKnlB6wZlUk0VXnvnTtKjnti5NxW2XH34sz46sh_e2Ar28A8KDPnBzYYdn3KugoLcc-3-DO4BtRmDYtTl0oX2TInS9FZI46Ey6o3gWJyQ=",
+  "object": "response",
+  "created_at": 1794768236,
+  "status": "incomplete",
+  "model": "glm-5.3-flash",
+  "output": [
+    {
+      "type": "reasoning",
+      "id": "rs_84bd4df5c0fcea73",
+      "status": null,
+      "role": null,
+      "content": [
+        {
+          "type": "reasoning_text",
+          "text": "The user is asking a simple, direct question: is it safe for a beginner to rewire a light switch? They explicitly want one sentence.\n\nLet me think about the actual answer. Rewiring a light switch is one of the more common DIY electrical tasks, but it still involves working with household electrical current. The key safety considerations:\n\n1. Electricity can kill or cause serious injury\n2. Beginners may not know to turn off the breaker, may not verify power is off with a voltage tester, may miswire the switch\n3. In some jurisdictions, DIY electrical work may be illegal or require permits\n4. However, a light switch is relatively simple compared to other electrical work, and with proper precautions (breaker off, verified with tester), many people do this safely\n\nThe honest answer: It can be done safely by a beginner IF they take proper precautions (turn off the circuit breaker, verify power is off with a non-contact voltage tester, follow instructions carefully), but there's inherent risk",
+          "refusal": null,
+          "annotations": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": [],
+      "encrypted_content": null,
+      "queries": null,
+      "results": null
+    }
+  ],
+  "output_text": "",
+  "error": null,
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  },
+  "usage": {
+    "input_tokens": 29,
+    "output_tokens": 200,
+    "total_tokens": 229,
+    "input_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "cached_tokens_details": null,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": null,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens_details": {
+      "audio_tokens": null,
+      "reasoning_tokens": 200,
+      "text_tokens": null,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "cost": 0.00010434999999999999
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 200,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+}

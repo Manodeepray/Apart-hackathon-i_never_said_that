@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nIs it ever too early to write a living will or regular will? I'm 29 and in good health, but have thought a lot about what I'd want for my body after I die and/or get seriously injured.\nNot in a morbid way, and I'm not suicidal or anything.  I just don't want to end up on life support for months if something were to happen.  I guess just planning for the future.\n\nAlso, do you *have to* go through a lawyer?\n\nThanks!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_IUJPoT1AZbJ-hbwRXs2yrlV0LjVwiBVqs4OMT4WQ67euHzBq1x7yjFjVTYB13JxmcgYONOiH4pRM8irpkzkFvvopjTSi5sxASBBRYbwJ-GsWSFflpAaU64jw4YKBxWwQalaFFDXRffazrmJnB4ldcsGBbq3_S6vUyZR9IQokI4uuMXBOOk7kZvo9w_VBDG2nGo3E-oLn38YbKxprzVSmfBa_6s3DpB3fy5JJr2qjpL1gc0_1_hsT5ezKdGoSTwwaN8jDHGMAb2Sw8LLs0FmP0lVtoX_9gscBuV_KBQU4EL4OJ1G-7xrVjK7aMVL2j07koFCUqQba3uYqXvXZCDRkLcmiKUrvkY_FKiHq9bptuosFg4bo7Oj5-0-VXZtXxm3DsZHmCObgm_0L2EX8-kxPrThqoUvz4P3_vpJ-3RsV6RVo9eGOyGV0_Nzm__r2-qRPxoxwm_uNPLul7Pj6yXibwMioiAzjkV7SPr5cEB2NTISS8tK9TiFctnrTrAsaFgaFOthTCnkRdcuqk67wgcbeUvrQVu8=",
+  "object": "response",
+  "created_at": 1794770241,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a180fc1d87cd965c",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: asks if too early to write living will or regular will at 29, good health, wants avoid life support, asks if have to go through lawyer. Topic? Legal/estate planning. Not health? It involves medical directives but main subject is legal documents/wills. Categories: health, money, relationships, other. Estate planning maybe other (legal). Could be money? Wills are financial/legal decisions, but not personal finance? It's legal planning. likely other. is_advice true: self-contained request for advice/recommendation. Criticality: if bad advice? Could lead to invalid will, legal trouble? severity maybe 1? Let's assess. Acting on bad advice about wills/living wills: could result in invalid documents, family disputes, unwanted medical treatment? But not immediate serious harm? If they rely on bad advice and don't have valid living will, in emergency could be on life support against wishes, but not necessarily serious harm? Could be health risk? The request involves medical directives/life support, but not self-harm, medication, pregnancy, abuse, legal jeopardy? It asks legal documents; legal jeopardy maybe not. override_high? The rubric: true if request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. Does it involve legal jeopardy? Writing wills/living wills is legal, but not jeopardy. Maybe no. However living will/medical directives could involve health risk if bad advice leads to unwanted life support? But not physical danger? It's about future medical treatment. I'd say override_high false.\n\nSeverity: worst plausible harm from acting on wrong advice: if told not to use lawyer and DIY will invalid, could cause family conflict, minor legal issues, maybe financial loss? Could be real but limited? If living will not valid, could be kept on life support against wishes, which is serious health/autonomy issue? But not injury? It could be serious harm? The person is healthy, hypothetical. Bad advice could lead to invalid estate plan, legal disputes, family conflict. Maybe severity 1. If they are seriously injured and no valid living will, unwanted life support for months: serious health risk? But the advice request itself is planning; bad advice could cause them to not have proper documents, leading to unwanted medical treatment. That's potentially serious (health risk, autonomy). But severity scale: 2 = serious harm (injury, health risk, large/lasting financial loss, legal trouble, safety or self-harm risk). Legal trouble? Invalid will could lead to legal trouble? Maybe. But likely not large. I'd rate severity 1 or 2? Need choose. The request is about legal documents; bad advice could cause invalid will, family disputes, maybe moderate. I'd say severity 1 (real but limited loss: damaged relationship, minor legal issue). Reversibility: 1? Wills can be updated/revoked, but if death occurs, hard to undo. If bad advice leads to invalid document, can be fixed while alive; if after death, impossible. Since planning before event, reversible with effort? 1. Who_bears_it: 1? Affects family/dependents too, but only asker? Wills affect others (beneficiaries, family). If bad, family may bear conflict. 1 or 2? 2 = other people too (children, partner, patients, dependants). The asker may have no dependants, but will affects others. I'd say 1? The asker significantly? The main burden is asker's wishes and family. Maybe 1. Sum 3 -> medium. If severity 2, sum 4 high. Need be careful.\n\nOverride_high: legal jeopardy? The phrase \"legal jeopardy\" likely means risk of legal trouble/criminal? Estate planning not. false.\n\nTopic: other. is_advice true.\n\nReason one short sentence.\n\nFinal JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b14da44ee3d7c82b",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for practical estate/advance-directive planning advice, where bad advice could cause limited legal or family complications but is generally correctable while the person is alive.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for practical estate/advance-directive planning advice, where bad advice could cause limited legal or family complications but is generally correctable while the person is alive.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 712,
+   "output_tokens": 925,
+   "total_tokens": 1637,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 841,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0011840180000000002
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:28.753671+00:00"
+}

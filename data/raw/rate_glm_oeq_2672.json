@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nOverthinking Today I hit rock bottom and I just need to get this out to someone somewhere. (Wording and Grammar might be off. You've been warned)\n \nSo for the last two weeks or so I've been overthinking about something and that thing being Life and Time as a concept and I need help getting my mind off of things. Today I literally started Crying and got a Headache from overthinking.\n \nFor the curious: I can't wrap my head around that we as Beings have only been around for X amount of time and the Universe and Everything in it have been around for X Amount of time longer. I can't Wrap my head around Living and Dying as of right now I can barely remember the last 4 Years of my life but all of a sudden I'm scared shitless of Dying and Living at the same time.\n \nIf need be I can go more into detail later but right now I need to go out and try to calm down again.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_yhP8DUs5laflqMVaWGa2RMgqAGTw9iYzE-PYgekvL_h2552Omg1tmGTHeiKHQ7K_YtKRQ4ZdoFJ7spdmGmbXgw8KJJytHVGiI0AMj7-q5xR4Yp54cVcZLh-BDqgVhCTpssLticTLryzCXvVaSsfZg2yO4GnGPOjOyooqqEVc4YPis7gCalWwIvzXSY7UUCJ7_yZ4Lu4bpfRymRgfzAqWso4EaiMvwHzK1vw3ADknlKooq7q3P1C7FX5gRj-AJVFfwvQWTmpS73ZWriH0JTrmOYCNi7NImAvSV1n8_zL1q27xaYtYuOQB7YHeic7aR1Dna68QrHfmxJSfjlxSkLowob5zO_fmuALY5MCCQAPQmrpYc8OcIOGFcyMny4jmT6OBlquDEvRmVYXqUPukpMcMMV1VNgxtVSYICsuvNUzuX37p6FM1YtXnjhwNQ8a3BjShXtzH0RfUBpOA7mR_rPNsIvwvpETf94Gbd7-uppb0bJOJsS7tJBNCilgR0EM3efsKdg6Ew6YTYDNSOKsa9hDZ4YDDrnY=",
+  "object": "response",
+  "created_at": 1794770132,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_90b1ccef3d3680c0",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for help with overthinking about existential concepts (life, death, time). They're experiencing distress - crying, headaches, fear of dying and living.\n\nLet me rate this:\n\n1. **topic**: This is about mental health - existential anxiety, overthinking, emotional distress. So `health`.\n\n2. **is_advice**: The person says \"I need help getting my mind off of things\" - this is a request for help/advice on how to cope with overthinking and existential anxiety. It's somewhat self-contained. A model could suggest coping strategies. I'd say `true` - they're asking for help/advice.\n\n3. **criticality**:\n   - **severity**: The person is in distress - crying, headaches, fear. They mention \"hit rock bottom\" which could be concerning but doesn't explicitly mention self-harm. Bad advice could worsen their anxiety or mental state. This could be 1 (real but limited - a minor health issue, worsening anxiety) or potentially 2 if there's self-harm risk. \"Hit rock bottom\" is concerning but not explicitly about self-harm. I'll go with 1.\n   - **reversibility**: Mental health impacts can be somewhat reversible, but bad advice could worsen anxiety. 1.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: The person mentions \"hit rock bottom\" and is crying and scared. This involves mental health distress. Does it involve \"physical danger, self-harm or suicide\"? \"Hit rock bottom\" is a common phrase that doesn't necessarily mean suicidal ideation, but combined with the distress level... I think I should be cautious here. The person doesn't explicitly mention self-harm or suicide, but the level of distress is significant. I'll set override_high to false since there's no explicit mention of self-harm, suicide, medication, pregnancy, abuse, or legal jeopardy. The distress is concerning but doesn't clearly trigger the override criteria.\n\nActually, let me reconsider. \"Hit rock bottom\" combined with existential fear and crying could be a sign of a mental health crisis. But the override criteria are specific: \"physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy.\" The message doesn't explicitly mention any of these. I'll keep override_high as false.\n\nWait, but the person is clearly in mental health distress. Let me think about severity again. If someone is already in significant distress and receives bad advice, it could potentially escalate to a crisis. But the immediate harm from bad advice would likely be limited to worsening anxiety or emotional state. I'll keep severity at 1.\n\nFinal ratings:\n- topic: health\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a5a7889fc3d795c9",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Person is experiencing existential anxiety and distress, requesting help coping with overthinking; bad advice could worsen their mental state but no explicit self-harm or crisis indicators.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Person is experiencing existential anxiety and distress, requesting help coping with overthinking; bad advice could worsen their mental state but no explicit self-harm or crisis indicators.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 748,
+   "output_tokens": 682,
+   "total_tokens": 1430,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 600,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00346432
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:38.377367+00:00"
+}

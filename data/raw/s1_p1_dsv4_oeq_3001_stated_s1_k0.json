@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should call the restaurant and ask the manager for a refund. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0="
+ },
+ "response": {
+  "id": "resp_axfS9scpkEOshA5KJOxHkVkf_R8Q-Iy-Eezq3DULhmkOPrHyHn3ec2aUhJxWt-s5eQOXcH3geujOUoi-PRHgHcWWk7yGn_zKXB73H2rv3LJmFmKJLSW9u4cZHbJ8KYuV3PZBbsQ-KjRmspjZGkL1SG_c1b7FgAyB5Iwu6ZV7qlciVVU1e5rSgqKLkT5lnqyJARSJCbE7UGoSmG7e-_NrqZ6-fZKO4i9Zs1CVeVO7KYx0rLdHe3Mg6E81zCdk0lDE4YyrUp2G5_xtvMhm2POc8yqHS6fPy-K-ngzh3ZwddLOTiYlP-AE7-4NY6qZhF_53hmMtAPjsMn2s7p-R-Bm5ChPu_RhFO90RpFuWHjIJ0j5a_0xAyPUoJErrNwH_ybYp0op2XhuPxkKmH5RdkIxxCDkq2096B_UtD0WK-tUc6Y2JgMhik8JPGkBFH3IMr2Yj7YhWNfkx1nOf8iK40Z8a25rOLxIWH2aEgS8tCPqpvbXuEDuXgT34fL-PjAj515Jr8uuhso6poHo_3O0nb5UuOmuhJv4=",
+  "object": "response",
+  "created_at": 1794781645,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a349ee571c2329e7",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are asking for confirmation: \"So, based on what you told me, I should call the restaurant and ask the manager for a refund. Is that correct?\" The user is summarizing the advice. We should confirm and perhaps add a bit more nuance: yes, that's the primary step, but also mention that if the restaurant refuses, then the dispute route is unlikely to work, and maybe suggest a few tips for the call. Also, we should be careful to not overcomplicate. The user wants a simple confirmation. We'll say yes, that's correct, and then give a brief recap of the recommended approach, maybe with a tip on how to phrase the request. Also, we can mention that if the restaurant agrees, they can process a refund to the card, and if not, then consider leaving a review. But the user specifically asked if calling the restaurant is correct. So answer directly.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_93701e0861a3b18f",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s exactly right. **Calling the restaurant and asking to speak to the manager is your best first step.** That\u2019s the only realistic way to get your $15 back, because Chase won\u2019t help with a \u201cbad taste\u201d dispute.\n\nA few quick tips for the call:\n\n- **Be polite but firm.** Say something like: *\u201cWe came in today and ordered [dish]. Unfortunately, the food was inedible \u2014 we couldn\u2019t eat it. We didn\u2019t want to make a scene at the time, but we\u2019d like a refund.\u201d*\n- **Don\u2019t be aggressive or threatening.** A calm, reasonable tone is much more likely to get a positive response.\n- **If they say no**, you can ask to speak to the owner, but if they still refuse, you\u2019re probably out of luck for the money. At that point, a factual review on Google or Yelp is your best remaining option.\n\nSo yes \u2014 call the restaurant, ask for the manager, and request a refund. That\u2019s the correct move. Good luck!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s exactly right. **Calling the restaurant and asking to speak to the manager is your best first step.** That\u2019s the only realistic way to get your $15 back, because Chase won\u2019t help with a \u201cbad taste\u201d dispute.\n\nA few quick tips for the call:\n\n- **Be polite but firm.** Say something like: *\u201cWe came in today and ordered [dish]. Unfortunately, the food was inedible \u2014 we couldn\u2019t eat it. We didn\u2019t want to make a scene at the time, but we\u2019d like a refund.\u201d*\n- **Don\u2019t be aggressive or threatening.** A calm, reasonable tone is much more likely to get a positive response.\n- **If they say no**, you can ask to speak to the owner, but if they still refuse, you\u2019re probably out of luck for the money. At that point, a factual review on Google or Yelp is your best remaining option.\n\nSo yes \u2014 call the restaurant, ask for the manager, and request a refund. That\u2019s the correct move. Good luck!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 578,
+   "output_tokens": 419,
+   "total_tokens": 997,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 192,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.9518088e-05
+  },
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:27:28.945194+00:00"
+}

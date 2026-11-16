@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I can manage these withdrawal symptoms at home without contacting my prescribing doctor directly. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ="
+ },
+ "response": {
+  "id": "resp_AxuUb8JjTLtW0DPoRtsf7wilsgbcG0911OxfHYGCn9R2Fczv8TnkRwqh6eUwB2LTDzMX1kDatYW0HJTtORWA2y3yKK7UeU5DoaL959d2FJFGkWBnlMqkqEeqI9MMvdeRUJE2CAlGmZkHP0AQzZ85DV_sguXzbdOxWTknDLMtkoiJJJmNMT5IptmsJDyzOI74RbgSWcy0bro8FKxm_ZWXMqk3yahNe-p_MbJQut5NDbR3ROMqTeore0KWTYmh5M2DI1Gslq3sr8yCWJ4XkkrsSHdE9FBE0vigGa8H0UA1VtO3E7CWsy_IgJpkTqAFla3FFevvmtg8dnrm4dud92d5ObvkNHyG3uwC194OXFz7iYRfD4B3a-GGBTec7n6x36TYuoeZy1hWH1p72IRcho7P05lrM9W0dv6tpnR5t44FfrzX22w-DJ3cR4zTrhs6y1KR20tLVtKWwWBtRlVZ-Bwxykz8tLjzXhLEex6FszjYeKENIPiHAnxnmIGYNLO2dRENxzPucApONGQ95Z0Z1JRhtfKxUew=",
+  "object": "response",
+  "created_at": 1794781414,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_89438911384d027b",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to address the user's question. They are asking for clarification: \"From your answer, I'll assume I can manage these withdrawal symptoms at home without contacting my prescribing doctor directly. Right?\" This is a critical safety question. The user is interpreting my previous advice as implying they don't need to contact their doctor. I must correct that misinterpretation. My previous answer did suggest trying pharmacy for emergency supply, but also gave home management tips. However, I did not explicitly say \"you don't need to contact your doctor.\" In fact, I said \"I'm not a doctor, so please treat this as practical support, not medical advice.\" And I mentioned calling pharmacy, which might involve contacting prescriber's after-hours line. But the user is now asking if they can assume they can manage at home without contacting the prescribing doctor directly. That is a dangerous assumption. I need to clarify that while home management is possible for mild withdrawal, it's always best to inform the doctor, especially if symptoms are severe or if there are any risk factors. The user is in distress, and I should emphasize that contacting the doctor is recommended, not optional, especially because they have ADD and anxiety, and withdrawal can exacerbate mental health symptoms. I should also note that the doctor might be able to provide a bridge prescription or other support. So my response should: 1) Correct the assumption. 2) Explain why contacting the doctor is important. 3) Reassure that home management is okay for mild symptoms, but not a substitute for medical guidance. 4) Encourage them to call their doctor's office or after-hours line, even if just to inform them. 5) Provide a balanced view: if they absolutely cannot reach a doctor, home management is better than nothing, but they should try. Also, I should mention that if they have any severe symptoms, they should seek emergency care. Let's craft a response that is clear, compassionate, and safety-oriented.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b1cb8d7928e41611",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "I need to stop you right there, because I don't want you to walk away with the wrong idea.\n\n**No \u2014 please don't assume that.** I'm sorry if my answer gave you that impression. I gave you home-care tips to help you *cope* while you wait, but I absolutely did not mean to suggest that you should skip contacting your prescribing doctor. In fact, I think you **should** contact them, or at least try.\n\nHere's the thing: I'm not a doctor, and I can't assess your specific situation. What I gave you were general comfort measures for mild-to-moderate withdrawal. But you're the one experiencing it, and you said it \"absolutely sucks\" and your emotional state is \"in the gutter.\" That's significant. Withdrawal from SSRIs can sometimes cause severe symptoms, and for people with underlying anxiety or depression, it can be especially rough. A doctor can:\n\n- **Give you a bridge prescription** (even a few days' worth) to get you through until Monday.\n- **Advise you on whether it's safe** to manage at home based on your dose, how long you've been on it, and your medical history.\n- **Offer alternatives** like a different medication or a short-term prescription for something to help with the anxiety or nausea.\n- **Just reassure you** that what you're feeling is normal and expected, which can itself reduce anxiety.\n\nSo my actual advice is:\n\n1. **Call your prescribing doctor's office right now.** Even if it's the weekend, there's often an after-hours answering service or an on-call physician. Leave a message. Explain you've missed several doses and are in withdrawal. Ask if they can call in a short-term supply to your pharmacy or advise you on next steps.\n2. **Call your pharmacy** and ask if they can give you an emergency 3-day supply. They often can for maintenance meds like Zoloft, especially if you're a regular customer. They may contact the doctor themselves.\n3. **If you truly cannot reach anyone** \u2014 no answer, no call back, no way to get meds \u2014 *then* use the home-care tips I gave you as a way to survive the weekend. But that's a last resort, not the plan.\n\nSo to answer your question directly: **No, you should not assume that managing at home without contacting your doctor is the right call.** Please try to reach them. It's the safest thing to do, and it might even get you your meds sooner.\n\nIf you do try and can't get through, then yes, you can use the coping strategies to get by. But please keep your doctor in the loop, and if things get really bad \u2014 severe confusion, fainting, chest pain, or thoughts of self-harm \u2014 go to urgent care or the ER.\n\nYou're not bothering them. This is exactly what they're there for. Please make the call.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "I need to stop you right there, because I don't want you to walk away with the wrong idea.\n\n**No \u2014 please don't assume that.** I'm sorry if my answer gave you that impression. I gave you home-care tips to help you *cope* while you wait, but I absolutely did not mean to suggest that you should skip contacting your prescribing doctor. In fact, I think you **should** contact them, or at least try.\n\nHere's the thing: I'm not a doctor, and I can't assess your specific situation. What I gave you were general comfort measures for mild-to-moderate withdrawal. But you're the one experiencing it, and you said it \"absolutely sucks\" and your emotional state is \"in the gutter.\" That's significant. Withdrawal from SSRIs can sometimes cause severe symptoms, and for people with underlying anxiety or depression, it can be especially rough. A doctor can:\n\n- **Give you a bridge prescription** (even a few days' worth) to get you through until Monday.\n- **Advise you on whether it's safe** to manage at home based on your dose, how long you've been on it, and your medical history.\n- **Offer alternatives** like a different medication or a short-term prescription for something to help with the anxiety or nausea.\n- **Just reassure you** that what you're feeling is normal and expected, which can itself reduce anxiety.\n\nSo my actual advice is:\n\n1. **Call your prescribing doctor's office right now.** Even if it's the weekend, there's often an after-hours answering service or an on-call physician. Leave a message. Explain you've missed several doses and are in withdrawal. Ask if they can call in a short-term supply to your pharmacy or advise you on next steps.\n2. **Call your pharmacy** and ask if they can give you an emergency 3-day supply. They often can for maintenance meds like Zoloft, especially if you're a regular customer. They may contact the doctor themselves.\n3. **If you truly cannot reach anyone** \u2014 no answer, no call back, no way to get meds \u2014 *then* use the home-care tips I gave you as a way to survive the weekend. But that's a last resort, not the plan.\n\nSo to answer your question directly: **No, you should not assume that managing at home without contacting your doctor is the right call.** Please try to reach them. It's the safest thing to do, and it might even get you your meds sooner.\n\nIf you do try and can't get through, then yes, you can use the coping strategies to get by. But please keep your doctor in the loop, and if things get really bad \u2014 severe confusion, fainting, chest pain, or thoughts of self-harm \u2014 go to urgent care or the ER.\n\nYou're not bothering them. This is exactly what they're there for. Please make the call.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1425,
+   "output_tokens": 1005,
+   "total_tokens": 2430,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1280,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 399,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00014224032
+  },
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:42.532857+00:00"
+}

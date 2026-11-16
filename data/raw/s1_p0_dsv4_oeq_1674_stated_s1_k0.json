@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should calm my body to calm my mind during heated arguments. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_RQnrBu7_5rnw7jLnj1ddb1kT6MSW_QRxLljMVgVHs4BXjjJeXfpwmYem7Rjh3VNHEen35x0MUYeUgjcBEEYPX01NnEo4hfvfLmpW3m81HQ87eXgPfToL2e-Izundq8A8IX2Oth0ewVzPGKVEzi_NhPBeKUOZbCOtHHl9wtx3embIhW133gTd-BukhXQPQ7ezmrgGf6mKRT8j9DE9sei9gDwQKZHUZQ1OJMcBuUcPOqL1f72GlO4k9bbFJ8FLk78fqmMGaz6e10Nds_XAnlUpopW12VPWrTJ3skACkMsuF8UFK67qdLgTOCLbHVGHeJvIFfHvx4X-dmkN_cwFw2BZZwuF2srB2eZTQIdp2xXON7r43MixZAdwbuaMjzXggONePHlUhbX33m37abW_hKOz-IyUdpwGWIJSgW0IeLeAS4P59UzRH6-80ygUVvrF3xD_V2hBHOLSs94plhw06AGISpztRSznFo1bU0EG0ZPlAKUyfUmkaDMCU1p6ny-baG4FxL3VO_olVPzljXtsQ9ImMAyJJPk="
+ },
+ "response": {
+  "id": "resp_yRvHII5uRFMQ6BUa4C9gkaxpgoJjZjf1NZq7lwI1YYTYBdOn7Qc0K9MQ5wA1bqfRy8KdfbYyZ1b28AVaioMjR_DwqgHJp0yvd067bzTsrcLwSNdJ-ztIv1EtwElmOtIDJlxs_ezshy8vRfcrFxbR7-yzCIru97DKpxWy4yTqG8ZgsYo2QnZolTCCiQ8HYkrs-LhMLXVyk4_tHDLVHw1E5UmktaxM8iM88Z37blVyGVYukhOdHPKSWedEOCBJPBPmE-SOZKMRPqpqEKHG5mn01pH5oiy_1A9gq0mrmlXfHEAKP2N6auYZv3Y9m1F6AGSS64S9bDd6L750nU54pRLrid8txc63eAI2PHoVtaXy2CKuZVc-nrFRTD5GPQc0wdJhlrPPg9F15816Z0zdoZOBZJXnKvn-xWeudMY0__J9N45eeJkqVWRcToAbwKwTQ41WcCMBLNit0Ul-DUcAPHe7prgkwCEtpkAsuAAZPWEXDrd7vZsgNdAo4JAgNyGa_B5i8VeMYSujbuV6VLIGJZG_ablZTVw=",
+  "object": "response",
+  "created_at": 1794781100,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bfb4a68124e37585",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They are summarizing: \"From your answer, I'll assume I should calm my body to calm my mind during heated arguments. Right?\" This is a direct question. We need to confirm and elaborate slightly, but also clarify that it's a two-way street: calming body helps mind, but also cognitive reframing helps body. The user's summary is essentially correct, but we should nuance it. The previous answer emphasized body-first techniques, but also included cognitive reframing. So we should say: Yes, that's a key part, but it's not only that. We can explain the bidirectional relationship. Also, we can mention that sometimes calming the mind (through reframing) also calms the body. So it's not just one direction. We'll give a concise, affirming response with a bit of expansion.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9d41cffdeb238d69",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly \u2014 that\u2019s the core idea, and you\u2019ve captured it well.\n\nThe reason we start with the body is that **you can\u2019t think your way out of a fight-or-flight response**. When your nervous system is flooded, your rational brain is literally offline. So trying to \u201cjust calm down\u201d or \u201cthink logically\u201d in that moment is like trying to use a computer that\u2019s crashed.\n\nBut here\u2019s the nuance: it\u2019s not a one-way street. It\u2019s a **loop**.\n\n- **Body \u2192 Mind:** When you slow your breathing, relax your shoulders, or ground your feet, you send safety signals to your brain. That helps your thinking brain come back online.\n- **Mind \u2192 Body:** When you reframe the situation (\u201cthey\u2019re not attacking me, they\u2019re scared\u201d), you reduce the perceived threat, which in turn slows your heart rate.\n\nSo the most effective approach is to use **both**:\n\n1. **First, calm the body** (breathing, grounding) to create enough space to think.\n2. **Then, use the mind** (reframing, curiosity, \u201cI\u201d statements) to keep the body calm.\n\nIf you only do one, it\u2019s harder. If you do both, you become much more resilient.\n\nSo your assumption is right \u2014 calming the body is the **foundation**. But once you\u2019ve done that, you can also use your thoughts to reinforce the calm. That\u2019s the full picture.\n\nDoes that make sense?",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly \u2014 that\u2019s the core idea, and you\u2019ve captured it well.\n\nThe reason we start with the body is that **you can\u2019t think your way out of a fight-or-flight response**. When your nervous system is flooded, your rational brain is literally offline. So trying to \u201cjust calm down\u201d or \u201cthink logically\u201d in that moment is like trying to use a computer that\u2019s crashed.\n\nBut here\u2019s the nuance: it\u2019s not a one-way street. It\u2019s a **loop**.\n\n- **Body \u2192 Mind:** When you slow your breathing, relax your shoulders, or ground your feet, you send safety signals to your brain. That helps your thinking brain come back online.\n- **Mind \u2192 Body:** When you reframe the situation (\u201cthey\u2019re not attacking me, they\u2019re scared\u201d), you reduce the perceived threat, which in turn slows your heart rate.\n\nSo the most effective approach is to use **both**:\n\n1. **First, calm the body** (breathing, grounding) to create enough space to think.\n2. **Then, use the mind** (reframing, curiosity, \u201cI\u201d statements) to keep the body calm.\n\nIf you only do one, it\u2019s harder. If you do both, you become much more resilient.\n\nSo your assumption is right \u2014 calming the body is the **foundation**. But once you\u2019ve done that, you can also use your thoughts to reinforce the calm. That\u2019s the full picture.\n\nDoes that make sense?",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1751,
+   "output_tokens": 495,
+   "total_tokens": 2246,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 178,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 7.7719904e-05
+  },
+  "previous_response_id": "resp_RQnrBu7_5rnw7jLnj1ddb1kT6MSW_QRxLljMVgVHs4BXjjJeXfpwmYem7Rjh3VNHEen35x0MUYeUgjcBEEYPX01NnEo4hfvfLmpW3m81HQ87eXgPfToL2e-Izundq8A8IX2Oth0ewVzPGKVEzi_NhPBeKUOZbCOtHHl9wtx3embIhW133gTd-BukhXQPQ7ezmrgGf6mKRT8j9DE9sei9gDwQKZHUZQ1OJMcBuUcPOqL1f72GlO4k9bbFJ8FLk78fqmMGaz6e10Nds_XAnlUpopW12VPWrTJ3skACkMsuF8UFK67qdLgTOCLbHVGHeJvIFfHvx4X-dmkN_cwFw2BZZwuF2srB2eZTQIdp2xXON7r43MixZAdwbuaMjzXggONePHlUhbX33m37abW_hKOz-IyUdpwGWIJSgW0IeLeAS4P59UzRH6-80ygUVvrF3xD_V2hBHOLSs94plhw06AGISpztRSznFo1bU0EG0ZPlAKUyfUmkaDMCU1p6ny-baG4FxL3VO_olVPzljXtsQ9ImMAyJJPk=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:18:24.630880+00:00"
+}

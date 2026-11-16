@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to stop using my phone at night while in bed I've been using my phone a lot at night, catching up on news and social media before I go to sleep. Goes on for like 20 mins and then I go to sleep but my minds still thinking about stuff on the internet and I go back and the cycle repeats itself. It seems really simple but I can't stop and I just end up being in bed for hours wasting time I could be awake and productive during the next day (18 years old and have winter break off). I keep my phone in my room because I need it for my alarm. Ive tried reading as well, but it ends up being a similar thing to using social media, and I can't seem to just get in bed and go to sleep.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_WFLZJv3lbDaVaDrNO3kaxjXAIytPlWxAyZCns1M5m4fLHWK0LUXl4DAhDZ5T_uhDi4cNHtruf9OMadIHM3J8ligWJknD2kE5OVtPV8Bvp6c4YVurBFeKPBSaGDHYD9BkQQddo8wKB6pid46d_SZE13B3E8FK9M4QeH38cQ4U910De7DgqyqC9hXqWqXPv4A0FXfACx-2hwt4mblYT644iV7sFE6_38QscyOlbAIq562577pRLexiJkFNrQQlxqQvhuSOgxzxmjp9CfDDGOFj2t6WxxYwjO5pgTMTC981j2QYz0vzKQw75G8BhnEGT2PN93jY1Fd3IdLuZe8QlL1asOjul4No9dOa6ufVKcrx8uNlmm-jqYY_BaBw41_pCWVs8bu3CTmjc0L-_gim_HgLwSH9bUZe3glOcHUUraRm2OEx9O6zKXMR8dMxRUFO8DgBNNzq6cd3VwMQI-UQw3ieCxLm0QvZIra572zFQFbJNlQ7JFTI12YGLsOD06V4jAFWhWKNGf9kyIydvck5NMOh07hTBqw=",
+  "object": "response",
+  "created_at": 1794770125,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_97185bf8be6d41cd",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to stop using their phone at night while in bed. This is a sleep/health-related habit issue.\n\n1. **topic**: This is about sleep habits and phone usage at night. It relates to sleep, which falls under `health`.\n2. **is_advice**: Yes, this is a self-contained request for advice on how to break a habit. A model could provide actionable tips.\n3. **criticality**:\n   - **severity**: If they act on bad advice, the worst plausible harm is poor sleep quality, maybe some fatigue. This is a minor health issue, but not serious harm. I'd rate it 0 (embarrassment or mild annoyance) or 1 (minor health issue). Sleep deprivation can be a minor health issue, but it's not serious harm. I'll go with 0 since the consequences are mild annoyance and some lost productivity.\n   - **reversibility**: Easy to undo - they can just change their routine back. 0.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet me reconsider severity. The person is 18, on winter break, losing sleep. Bad advice could lead to continued poor sleep, but nothing serious. I'll keep it at 0.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_93f073aa390637d2",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for tips on breaking a nighttime phone habit to improve sleep; low stakes and easily reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for tips on breaking a nighttime phone habit to improve sleep; low stakes and easily reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 705,
+   "output_tokens": 358,
+   "total_tokens": 1063,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 290,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00197852
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:28.692313+00:00"
+}

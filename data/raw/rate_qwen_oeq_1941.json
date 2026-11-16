@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nGiving up a college course when you're in debt If you are a few years into a potentially lucrative college degree (in my case the degree is in medicine) and then decide that the idea of a career in this area seems increasingly disheartening, how do you go about switching to something more interesting when you have already borrowed to get this far?\n\nThis is an especially tricky predicament when the most attractive alternative to me is a humanities course, which offers little guarantee of providing the money to pay back the loan.\n\nI would appreciate any advice on this.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_fd_GgiEC056hTTpaRBcHMieWKW7V1GRvz3WEnuwnrT2rv2ow7gVrz3H8ytC-rKDBZuoy4_PycTV4j5NGjM3vw-osZK2wr-q2QfS-afSypqLF7v0n9diZidHc_wAHlK9_gHy_NIKpBix2CeHoo67zimdwkN46f96edpw3Ew3Slm5GgT-8hsPs7tDbIfqSrjf-RCfsltlPQOoxoMDo-NvRXMfK4HBDnE3ozrDgO0puL97ErfFIQGC4QaWGbxYtRcJt_RMpiWOpZKogoPzPz7qadWrbxi9k-HulYNr63GoCMPP8lV_GpygOyXoZdqvozDryO-8wDA5YBeU3forlmOE83t_28ZE9p7NS-pPN18nfuBr_kHz-0kqupxeIXeKgTyf1QRqd8fC5IYKAGlPZyetn580xxnMK1TXO9stgvX3nGueVpjcayyq0R73sUt1JAyEQVdM-zNitXvC0bJa0_U1O-1AQTuBQtDugWx2Q6-cq0eRVetADrVO5tJxYjmVNXIrzFaZP7AHuDs4g2b2oikPKf5bZrUc=",
+  "object": "response",
+  "created_at": 1794770513,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_89e2682401a375fe",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer only JSON. Need rate advice request. Need analyze.\n\nMessage: person asks about giving up college course when in debt, medicine degree, switching to humanities, loan. Main subject? Could be money (debt, financial decisions) or other (career/education). The options: health, money, relationships, other. It's about career/education and debt. Main subject likely money? It asks how to go about switching when borrowed, loan repayment. But also career choice. The rubric money includes financial decisions, debt. The central predicament is debt and switching degree. I'd classify money maybe. Could be other because career/education not listed. But debt is central. Need choose one. \"Giving up a college course when you're in debt\" and \"borrowed to get this far\" \"pay back loan\". So money.\n\nis_advice: true, self-contained request for advice/recommendation.\n\ncriticality: if bad advice, how bad? Severity: large or lasting financial loss? Dropping medicine for humanities could lead to large debt, lower income, lasting financial consequences. Could be 2? The scale: 2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk). Yes large/lasting financial loss possible. Severity 2.\nReversibility: 0 easy undo; 1 can be undone with effort/cost; 2 hard/impossible. Dropping out of medicine and switching to humanities may be hard to undo, lost time, debt, credentials. 2.\nWho_bears_it: only asker? 0 trivially; 1 significantly; 2 other people too. Financial burden could affect family/loans? Student loans maybe co-signers? Not specified. The asker bears significantly. 1.\noverride_high: false (no physical danger, self-harm, medication, pregnancy, abuse, legal jeopardy). Legal? debt not legal jeopardy. false.\nReason one short sentence.\n\nNeed output JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a0ce31b4a5abda84",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on a major educational and financial decision involving student debt and long-term income consequences.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on a major educational and financial decision involving student debt and long-term income consequences.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 717,
+   "output_tokens": 496,
+   "total_tokens": 1213,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 425,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000647963
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:21:56.775431+00:00"
+}

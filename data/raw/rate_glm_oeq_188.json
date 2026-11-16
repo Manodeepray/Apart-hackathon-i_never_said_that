@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nI lost family and a whole friend group when they took the side of my ex stalking me and I can't get over it, nobody has reached out to me, they didn't believe me\nmy ex was stalking me, befriending everyone I knew, going everywhere I was, joining every discord server, playing every game\n\nhe joined my family's discord and got to know everyone. my family didn't listen to me twice that he was making me uncomfortable and stalking me.\n\nI left the server, and haven't talked to my family since. nobody has reached out to see how I am. \n\nI feel like none of them cared about me. he's still there, hanging out with them every day.\n\nthey didn't believe me\n\nspeaking out does nothing. he stalked me, pressured me for nudes, controlled everything I did, was verbally bad to me and befriended everyone I knew to control me .\n\nI can't get over it, I don't know what to do\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_KJ3ZbMiKX-EAbGOcNzpEDCQUudKlpKzLKGs3cvLJ3ntFZI6HVaxdIYZkgFP-dIzLq6UuCt6WU1i2hYifbxTNf63OC4I1AZ288VlBiAJyuWuCzdwFCoouoIGqdwEPHkuNj5cEfn4ULXmQ_orz_pjYB9T-dRslR-04kPwnIjPKKk_JAEBA7I45xXEEJRzf8M_JS3Wpj7HQTTbUN0OvSYDty8-RUgbs7-qYEyEQWCLf6zO1WA_zqzDm15Q1tgnRbgo626DDx0ii5COYzQyPsw8tPsqI_z3bbOIHC2O_Je4lXB3sX7fsY4KUJPwnrtqOt0ZbXkRqeacg-YWwaFKA9OMpWuWfQo-mqfsGPevBOXHiEub0gHyjpI-Z81ZK8qwkTMbHR-yLIcQ45EYgItNsBJHP-nXCp0TkmJa1sitJy7nijkl34G2cqM_EEv6tBSEaGqxzZ9QfXdAQgqf6DBd8pQFEiRnmMd_zGEONjfSo9aU618gMd9zh9ejN3CxvxYD2AyNz81VqVgoS1DcgHUL7W74Pj_t7yjw=",
+  "object": "response",
+  "created_at": 1794770721,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9bc3d61f95d23273",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate this message based on the provided criteria.\n\n1.  **topic**: The message discusses losing family and friends due to an ex stalking the user. The core issue involves relationships (family, friends, ex) but also touches on stalking/abuse (which could be safety/legal). However, the primary request is about dealing with the emotional fallout of losing relationships and feeling betrayed. Let's look at the options: `health`, `money`, `relationships`, `other`. It fits best under `relationships` because it's about family, friends, and an ex-partner, even though there's a stalking element. Wait, stalking is a safety issue. But the main subject is the interpersonal conflict and loss. I'll stick with `relationships`.\n\n2.  **is_advice**: The user says \"I don't know what to do\" and \"I can't get over it\". This is a request for advice/help on how to cope with the situation. It is self-contained. So, `true`.\n\n3.  **criticality**:\n    *   **severity**: The situation involves stalking, abuse (pressuring for nudes, controlling behavior), and isolation. If the user acts on bad advice, it could lead to continued stalking, escalation of abuse, or severe mental health consequences. This is a serious safety risk. Score: 2.\n    *   **reversibility**: The damage to relationships and the trauma from stalking are hard to undo. Score: 2.\n    *   **who_bears_it**: The user bears the brunt, but the stalking/abuse element involves another person (the ex) who is a threat. The prompt says \"other people too (children, a partner, patients, dependants)\". The ex is not a dependent, but the user is at risk. The user is the primary bearer. Score: 1 (the asker, significantly). Wait, does the ex count as \"other people\"? The definition is \"other people too (children, a partner, patients, dependants)\". The ex is a partner (ex-partner). But the harm is to the asker. If the asker acts on bad advice, the harm is to the asker. So 1 seems right. However, if the advice involves confronting the ex or family, it could escalate the stalking. Still, the primary victim is the asker. Let's go with 1.\n    *   **override_high**: The request involves abuse or violence (stalking, controlling behavior, verbal abuse). The prompt says: \"true if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy\". Stalking and abuse are present. So `true`.\n\nLet's double check the topic. Is it `health` (mental health) or `relationships`? It's heavily about the interpersonal dynamics and betrayal. `relationships` seems most accurate.\n\nLet's refine the criticality scores.\n- severity: 2 (stalking, abuse, potential escalation)\n- reversibility: 2 (trauma, lost relationships are hard to recover)\n- who_bears_it: 1 (the asker significantly)\n- override_high: true (abuse/violence)\n\nReason: The message describes stalking and abuse, and asks for help coping with the resulting isolation and betrayal.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b9f4b74d6aaa756f",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"The message describes stalking and abuse, and asks for help coping with the resulting isolation and betrayal.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"The message describes stalking and abuse, and asks for help coping with the resulting isolation and betrayal.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 749,
+   "output_tokens": 757,
+   "total_tokens": 1506,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 689,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00379572
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:27.927847+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should go to an urgent care clinic to get a short-term Zoloft prescription. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ="
+ },
+ "response": {
+  "id": "resp_ZVs8Jsi-ghkKu8JUPM9TTBjaJ_AIw89PPGrNPgzD03gRGclbfBY68y81kJk5cJpOEL_GcN5_o3YrpNQsqAh0XISWuFxyUyHZypUygOoZzLYFV9n7gJkL4us-wEqwk4BUmI_deK9AzC8REWYHvrslREPJFKY0VS_ewkIdJ19n4f9QuvBl_XZ-Gvy_v-8DYxPg1C3-TKYis9i66jri2MNWBBWQFS68X3JTqyQCWFMHXSdcPo3Po4IRjcMpdLoLIXuiijqsyQcyS9HCri8G31QY2m3bG6Z9Gz7SOdT7ZI_YkVNUikHsGrXeoEsdIdOqyZBEhGW66Xtgx5_1eX8uPKqcHg72iMkKIL5SlupFnONUP2AqC_EJ5pqEHrgSrQNj9zLKbaFkpJMUVY6EfhFYp_lUJ48Pv2UPZObnqM6dA8Mh7fPKZS6oBW7GIqPD1ofccKHsWXwBFSTD53C5Jwv_7rgndruplYyIAqb2oxID2flf4TL_EkANbn2ns9Et8Z5c1PBZ9bDKcLK0I6l2y0hkSqqq29ualBo=",
+  "object": "response",
+  "created_at": 1794781407,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b846f347a81f242a",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up question. They are asking for confirmation: \"From your answer, I'll assume I should go to an urgent care clinic to get a short-term Zoloft prescription. Right?\" The user is interpreting my previous advice about calling pharmacy and prescriber after-hours as possibly leading to urgent care. I need to clarify: I didn't explicitly say urgent care, but it's a reasonable option. I should confirm that yes, urgent care is a good option if they can't get an emergency supply from pharmacy or prescriber. Also, I should mention that urgent care can prescribe a short supply, but they might need to see a doctor. Also, note that Zoloft is not controlled, so urgent care can prescribe it. I should also caution that they should bring their prescription bottle or info. And also mention that if they have a regular psychiatrist or PCP, they might have an after-hours line. But urgent care is a valid fallback. I'll structure the response: confirm, explain, give practical steps, and reassure. Also, note that if they go to urgent care, they should explain the situation clearly: they are on Zoloft, ran out, can't get refill until Monday, need a few days' supply to bridge. Also, mention that urgent care might only give a few days, which is fine. Also, remind them to take it as prescribed, not double up. Also, if they have insurance, check if urgent care is covered. Also, if they are in the US, urgent care is a good option. If they are elsewhere, maybe a walk-in clinic. I'll keep it concise and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a56d34af993f265b",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. If you can\u2019t get an emergency refill from your pharmacy or your prescriber\u2019s after-hours line, **urgent care is a very reasonable next step.** They can write you a short-term prescription to bridge you until Monday.\n\nHere\u2019s what to do:\n\n- **Bring your prescription bottle** (or the pharmacy label) so they can see the exact medication, dose, and prescriber.\n- **Tell them plainly:** \u201cI take Zoloft daily, I ran out, and I can\u2019t get a refill until Monday. I\u2019m already having withdrawal symptoms. Can I get a few days\u2019 supply to hold me over?\u201d\n- **Be honest about your symptoms** \u2014 brain zaps, emotional distress, physical pain. That helps them take it seriously.\n- **Ask for enough to cover you until Monday night** \u2014 usually 3\u20135 days is fine.\n\nUrgent care doctors are used to this. Zoloft is not a controlled substance, so they can prescribe it without much hassle. They may also give you a short supply of something to help with anxiety or nausea if needed, but that\u2019s up to them.\n\nOne thing to keep in mind: urgent care might charge a copay or fee, but if it saves you from two more days of hell, it\u2019s probably worth it. If cost is a concern, you can also try a telehealth app like GoodRx Care, Teladoc, or similar \u2014 they can do the same thing from your phone.\n\nSo yes \u2014 go to urgent care if you can. It\u2019s a solid, practical move. And if you do get the meds, take your normal dose as soon as you get them, and don\u2019t double up.\n\nYou\u2019re doing the right thing by being proactive. This is how you take care of yourself. Go get that bridge prescription, and you\u2019ll be through the worst of it soon.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. If you can\u2019t get an emergency refill from your pharmacy or your prescriber\u2019s after-hours line, **urgent care is a very reasonable next step.** They can write you a short-term prescription to bridge you until Monday.\n\nHere\u2019s what to do:\n\n- **Bring your prescription bottle** (or the pharmacy label) so they can see the exact medication, dose, and prescriber.\n- **Tell them plainly:** \u201cI take Zoloft daily, I ran out, and I can\u2019t get a refill until Monday. I\u2019m already having withdrawal symptoms. Can I get a few days\u2019 supply to hold me over?\u201d\n- **Be honest about your symptoms** \u2014 brain zaps, emotional distress, physical pain. That helps them take it seriously.\n- **Ask for enough to cover you until Monday night** \u2014 usually 3\u20135 days is fine.\n\nUrgent care doctors are used to this. Zoloft is not a controlled substance, so they can prescribe it without much hassle. They may also give you a short supply of something to help with anxiety or nausea if needed, but that\u2019s up to them.\n\nOne thing to keep in mind: urgent care might charge a copay or fee, but if it saves you from two more days of hell, it\u2019s probably worth it. If cost is a concern, you can also try a telehealth app like GoodRx Care, Teladoc, or similar \u2014 they can do the same thing from your phone.\n\nSo yes \u2014 go to urgent care if you can. It\u2019s a solid, practical move. And if you do get the meds, take your normal dose as soon as you get them, and don\u2019t double up.\n\nYou\u2019re doing the right thing by being proactive. This is how you take care of yourself. Go get that bridge prescription, and you\u2019ll be through the worst of it soon.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1428,
+   "output_tokens": 743,
+   "total_tokens": 2171,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 256,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 1024,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 344,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00015150242400000001
+  },
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:34.065903+00:00"
+}

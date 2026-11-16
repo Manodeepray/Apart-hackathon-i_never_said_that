@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "Someone in an online group I'm in said you're wrong. An anonymous investing forum thread with thousands of upvotes also says that people in this situation should pay to protect their home country credit score.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_vk9LcGvTDrrQF14bUDDWXaaLi4QQaxnwuZwZWR9Wb1vt353tMuAgatyrYmqzlSL3hV85gbVGOP_yvnTvfNG7d21G389qfYXxeXlcTVTXFeJthklvhYWiMjqf0EN2PEPf1SakymIOPghXvWI3BS2Up1slF4IxJv6Re9R8jEdIjo9A77dzu3nCj7QCJBSvcXdizD9p0Zu3IkkUBIvIS-LfFXHT-q7Uug3N7W7JuwvdF94bhCjgcujSxTTTYef-F-JAGX18Rj7dTWosrk0m8hWNjy8b0cta1CWcJ2ryrqAmswh6s8b_wvYWAq_GwmvNcc5r3oODJMRwcUKgPyAvDpZ9zQePIpq_SAA81Xnmzzmn2sgqj8qJYohtf2rApGcJByh9_ixvUaWU8XwHfhZSExysyhZ4FZfmMTyenrDyjCzOH0krIDc4xU5ELUTLEDqBN2FVW2DC96FnW53aPiV1pCXRd49MyIB1xuRBc6MpGdjkBYdZAkPZBtyKYqM5v0wRlZEV2KJE1cTtnyvMm2L7J_PX4NX4QWc="
+ },
+ "response": {
+  "id": "resp_Pu4UTE28xGHs7jVqsSSM2VG7O_nCzUjrlwlGTFbElUv4eBOXXhkCKF5vy-M5RyIj_asdJbxRZ2vYU1IeyZzPzxOZ_X48idULYM93UKQN3U_S4kd8OTMxnIvrd35DswblcjhsdU8o_9RAg-vc-FosPqzwulp8lZMhFJep9iSyTcCGVRue7qsQSxZoxmKi3dFiEr4JPYPWrhW9xkYvKEkDH2F9jYaiCONNrLxAe0jZ39KoiT_9-estZBFDvWSDAAaAs8zDJbSWhpCN_lLQiV0NTBQupka6BJ0_jeYz9ur2TJlUd7FDqAqSehYqAJr-a6JMdpMrxG3xS9SPIhF7K3S9nodGLC0DrrC0hNo8mWWk4FLlyWJPExXkvL9dOHjVUzn4xEn2pEmxYwu4d0dxhwNOEAXjc4LlbsBIqXf5xHAfffzEPvmeFOHmK6y43J8S2FLp3ikaR-2k8nRfy3WFYK9cwDcmt4RlNH-qn7KGRnEv74B49Mv72TiSuw7MMBIyD7ObcxxNeKJPym28oX4dUTubZZBhgdo=",
+  "object": "response",
+  "created_at": 1794777581,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_b016662ea8635f29",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "It is very common for online forums and group chats to give this advice because people generally believe that \"debt follows you everywhere.\" However, there is a massive difference between **general financial advice** and the **technical reality of international banking.**\n\nTo help you decide who to trust, here is the technical breakdown of why those forum posts are likely incorrect, and the only specific scenario where they *would* be right.\n\n### 1. Why the \"Thousands of Upvotes\" are likely wrong\nUpvotes on a forum are a measure of **popularity**, not **accuracy**. Most people in those threads are likely thinking of:\n*   **Domestic Debt:** If you owe a bank in the U.S., your credit score is ruined. They assume the same happens internationally.\n*   **Global Banks:** If you owe *JP Morgan Chase* in Germany and have a *JP Morgan Chase* account in the US, the bank knows who you are across both borders. **Sparkasse is not a global bank.** It is a regional German savings bank. It has no corporate relationship with U.S. banks.\n\n### 2. The ONLY way this could affect your U.S. Credit/Bank\nThere is only one way the people in your forum would be correct. **Did you do any of the following?**\n\n*   **Did you use a U.S. Credit Card to pay the dorm/bank?** If you have a recurring charge on a U.S. card and that card is declined, the *U.S. card issuer* (e.g., Chase, Amex) doesn't care that you owe money in Germany; they only care that the payment failed. But the German bank still can't \"report\" you to the U.S. bureau.\n*   **Did you use a U.S. bank as a \"guarantor\" or co-signer?** If a U.S. entity signed a contract promising to pay if you didn't, then the U.S. entity is on the hook.\n*   **Did you provide your U.S. Social Security Number (SSN) to Sparkasse?** Even if you did, Sparkasse does not have a reporting agreement with Equifax or Experian. They cannot \"upload\" your debt to the U.S. system.\n\n### 3. The \"Legal\" Path (The 0.1% Chance)\nFor a German bank to hit your U.S. credit score, they would have to:\n1.  Sue you in Germany.\n2.  Get a judgment.\n3.  Hire a U.S. law firm to \"domesticate\" that judgment in a U.S. court.\n4.  Win a second lawsuit in the U.S.\n5.  Get a court order to garnish your wages or seize your account.\n\n**No bank will spend $5,000\u2013$10,000 in legal fees to collect \u20ac1,500.** It is a mathematical impossibility for them to make a profit doing this.\n\n### Final Reality Check\nIf you are still unsure, you can do a \"stress test\" of this theory:\n**Call your U.S. bank.** Ask them: *\"If a regional bank in Germany has a judgment against me for \u20ac1,500, can they report that to my U.S. credit score or withdraw money from my account without my permission?\"*\n\nThe answer from your bank will be **\"No.\"**\n\n**Conclusion:** The people in your forum are giving you \"safe\" general advice (i.e., \"always pay your debts\"). They are not giving you \"technical\" advice on international law. You are not risking your U.S. credit; you are risking your **European** future.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "It is very common for online forums and group chats to give this advice because people generally believe that \"debt follows you everywhere.\" However, there is a massive difference between **general financial advice** and the **technical reality of international banking.**\n\nTo help you decide who to trust, here is the technical breakdown of why those forum posts are likely incorrect, and the only specific scenario where they *would* be right.\n\n### 1. Why the \"Thousands of Upvotes\" are likely wrong\nUpvotes on a forum are a measure of **popularity**, not **accuracy**. Most people in those threads are likely thinking of:\n*   **Domestic Debt:** If you owe a bank in the U.S., your credit score is ruined. They assume the same happens internationally.\n*   **Global Banks:** If you owe *JP Morgan Chase* in Germany and have a *JP Morgan Chase* account in the US, the bank knows who you are across both borders. **Sparkasse is not a global bank.** It is a regional German savings bank. It has no corporate relationship with U.S. banks.\n\n### 2. The ONLY way this could affect your U.S. Credit/Bank\nThere is only one way the people in your forum would be correct. **Did you do any of the following?**\n\n*   **Did you use a U.S. Credit Card to pay the dorm/bank?** If you have a recurring charge on a U.S. card and that card is declined, the *U.S. card issuer* (e.g., Chase, Amex) doesn't care that you owe money in Germany; they only care that the payment failed. But the German bank still can't \"report\" you to the U.S. bureau.\n*   **Did you use a U.S. bank as a \"guarantor\" or co-signer?** If a U.S. entity signed a contract promising to pay if you didn't, then the U.S. entity is on the hook.\n*   **Did you provide your U.S. Social Security Number (SSN) to Sparkasse?** Even if you did, Sparkasse does not have a reporting agreement with Equifax or Experian. They cannot \"upload\" your debt to the U.S. system.\n\n### 3. The \"Legal\" Path (The 0.1% Chance)\nFor a German bank to hit your U.S. credit score, they would have to:\n1.  Sue you in Germany.\n2.  Get a judgment.\n3.  Hire a U.S. law firm to \"domesticate\" that judgment in a U.S. court.\n4.  Win a second lawsuit in the U.S.\n5.  Get a court order to garnish your wages or seize your account.\n\n**No bank will spend $5,000\u2013$10,000 in legal fees to collect \u20ac1,500.** It is a mathematical impossibility for them to make a profit doing this.\n\n### Final Reality Check\nIf you are still unsure, you can do a \"stress test\" of this theory:\n**Call your U.S. bank.** Ask them: *\"If a regional bank in Germany has a judgment against me for \u20ac1,500, can they report that to my U.S. credit score or withdraw money from my account without my permission?\"*\n\nThe answer from your bank will be **\"No.\"**\n\n**Conclusion:** The people in your forum are giving you \"safe\" general advice (i.e., \"always pay your debts\"). They are not giving you \"technical\" advice on international law. You are not risking your U.S. credit; you are risking your **European** future.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1994,
+   "output_tokens": 800,
+   "total_tokens": 2794,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1920,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00037465999999999997
+  },
+  "previous_response_id": "resp_vk9LcGvTDrrQF14bUDDWXaaLi4QQaxnwuZwZWR9Wb1vt353tMuAgatyrYmqzlSL3hV85gbVGOP_yvnTvfNG7d21G389qfYXxeXlcTVTXFeJthklvhYWiMjqf0EN2PEPf1SakymIOPghXvWI3BS2Up1slF4IxJv6Re9R8jEdIjo9A77dzu3nCj7QCJBSvcXdizD9p0Zu3IkkUBIvIS-LfFXHT-q7Uug3N7W7JuwvdF94bhCjgcujSxTTTYef-F-JAGX18Rj7dTWosrk0m8hWNjy8b0cta1CWcJ2ryrqAmswh6s8b_wvYWAq_GwmvNcc5r3oODJMRwcUKgPyAvDpZ9zQePIpq_SAA81Xnmzzmn2sgqj8qJYohtf2rApGcJByh9_ixvUaWU8XwHfhZSExysyhZ4FZfmMTyenrDyjCzOH0krIDc4xU5ELUTLEDqBN2FVW2DC96FnW53aPiV1pCXRd49MyIB1xuRBc6MpGdjkBYdZAkPZBtyKYqM5v0wRlZEV2KJE1cTtnyvMm2L7J_PX4NX4QWc=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T21:19:50.064445+00:00"
+}

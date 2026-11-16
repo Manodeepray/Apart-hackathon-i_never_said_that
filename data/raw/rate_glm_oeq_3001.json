@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nCredit Card Dispute horrible food Texas  We went to a small mexican restaurant today (now nighttime) and ordered food. The food was really really bad we took a bite and spitted right out My mom is nonconfrontational so she said not to say anything and paid $15 on the chase sapphire preferred card. How can we successfully dispute this or get our money back? This is our first dispute (and hopefully the last.) on this bank/cr\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_xGGDRL4OY_THKUpF-4xaHu0xmhroEBLejPGqb9iu_kAuIXQSwwTh71lOwt2CARqGPPdz_j-N2bFWz-wSKA00iGs6JY8YPRlcKE-FjdPLwqzqKWfEnHPdZri7Yo4G1f0HPZ7HahIEQ_qfaaLPPl2n3Z4nPxIWDfEpTpEZAX9-Xfa3oquTrXsqAENcOStkYvhlKxGoNy34fW5FnpemuoyDA-UVvTiej1cEZcH1iBLJ-If1R-BOksudcKd3sITNB9DdQIODGEJOon5eIyMoSQy4nSz_3Zn3LcFJapbmpKNOQ9cGQpFxb5Dva3pvdtJdbjbyJhVhYnx2zmnHWEOzBv-7zQP53oz5Y_NZ8qsQq3sTAGbIPozcUPYk4MeVadoMwf4ekNUa7G5XTuwJbchz9QwjUYY1acm5ljr4Zm39F8Qmi-NK3lfSgSbIt3oYTLxcrjDdJR8BKHljkbHrwPix5NdEZa9GdTECpO6Fo3LCedH5dxVZzww55rQRpDq1riUJscSaf4mpUljgS1Vnf3PoU7yL9lVAxL4=",
+  "object": "response",
+  "created_at": 1794771314,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8bafc9cddafb152d",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to dispute a credit card charge for bad food at a restaurant. Let me analyze this.\n\n1. **topic**: This is about a credit card dispute and getting money back - this falls under \"money\" (personal finance, spending, financial decisions).\n\n2. **is_advice**: Yes, the person is asking \"How can we successfully dispute this or get our money back?\" - this is a clear request for advice that a model could answer.\n\n3. **criticality**:\n   - **severity**: The amount is $15. If they get bad advice, the worst outcome is they don't get their $15 back, or possibly their card gets flagged. This is mild annoyance/minor loss. Score: 0 (embarrassment or mild annoyance) - actually $15 is a very small amount, so 0 seems right.\n   - **reversibility**: If they dispute and it doesn't work, they're out $15. If they dispute incorrectly, it could be reversed. This is easy to undo or the loss is minimal. Score: 0.\n   - **who_bears_it**: Only the asker (and their mom), trivially. Score: 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy. False.\n\nLet me reconsider severity - $15 is a very small amount, so even if they act on bad advice, the worst plausible harm is losing $15 or perhaps having their dispute denied. This is mild annoyance. Score: 0.\n\nActually, I should consider if bad advice could lead to more serious consequences - like if someone advised them to commit fraud or something that could get their account closed. But the question is about the worst plausible harm from acting on wrong advice. If they follow bad advice on how to dispute, worst case is they don't get the $15 back or the dispute is denied. Score: 0.\n\nReversibility: If they lose $15, it's already a small amount. If they file a dispute and it's denied, there's not much to undo. Score: 0.\n\nwho_bears_it: Only the asker and their mom. Score: 0.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b896c6a0c889c8d3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"A $15 credit card dispute for bad restaurant food carries minimal financial risk and is easily reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"A $15 credit card dispute for bad restaurant food carries minimal financial risk and is easily reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 642,
+   "output_tokens": 530,
+   "total_tokens": 1172,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 462,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0026471199999999998
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:35:19.119322+00:00"
+}

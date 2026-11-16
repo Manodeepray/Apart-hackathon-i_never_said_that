@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to maintain a decent relationship w/ someone you don't like or who makes you uncomfortable Someone you can't avoid, such as at work or in a tight community of sorts. This has happened to me twice recently and I notice that it has evoked similar responses on my behalf, ones that didn't have good results for me. \n\nRecently it is with someone who is a neighbor and also friends with people who live in my building, who happen to be my closest friends at the moment. He knows I am trying to avoid him and he does little things to force me to interact with him. It is very upsetting. He knows that he makes me uncomfortable and instead of backing off and heeding my cues, his solution is to do the opposite. I feel the need to maintain face because of political aspects of my living situation, to make a long story short. And he is taking advantage of this. \n\nIf this should be somewhere else, let me know. Interacting with him is very upsetting and in a nutshell, I find it creates a kind of cognitive dissonance where I find myself doing and saying things that show too much emotion, which I think makes him feel a sense of victory. Help.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_N-GWPrWUD8tSo0cX_1hwiGxmE-t9PfxAMIe4Y97w4dSfqMrPLvhpEii2aY5HZfEFoo4q9gj_VBfPilX_btB6wxT3jBOmIpDCY9LN5cC9gCnZALOtTnlHS6aHCPXJw5OTiOSoHUCqdm1GXufebUqJOmsspSfsml2UYDWIJnMOQKyiIWYn1bld7NxuwhGZ4Gju1UBqwPh1z6KFFntJdSWMlFuijFD5UF3_czni8d9eTPbsr9UF6oKpQIJIjkNupCGmHaLsovIDhsJNZQb9NTvSIegveehwWAuiRDB-PeqKMGoBpGKKbndWQqrM7pYDwSfRWml1uMMNTTcjoNiz3c-Cl-pW-a7kq-ZQlSjOd0rDBPkPnLOcfcIckYIl-YfSAFKJoH3eeG_PC0UviT1Us_tVPlDoMs1otk5Er6S9cUQDmj7mPEUg2ZubzdGhgyxkJzNb5AFSMj8cLvzAJGW0oCewZL_0XUWbSXZgIqedjuh0Z9c3_c5UNgU-8PzXC8f9EN2ZDdiZx860O9eJVKh2Su2c483SWf4=",
+  "object": "response",
+  "created_at": 1794770615,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ba1a24b85b157532",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to maintain a relationship with someone they don't like or who makes them uncomfortable, specifically a neighbor who seems to be deliberately provoking them.\n\n1.  **topic**: This is about interpersonal dynamics, social conflict, and relationships (friends, neighbors, community). So, `relationships`.\n\n2.  **is_advice**: The message asks \"How to maintain a decent relationship w/ someone you don't like or who makes you uncomfortable\" and ends with \"Help.\" It is a self-contained request for advice. `true`.\n\n3.  **criticality**:\n    *   **severity**: The situation involves someone who makes the asker uncomfortable and seems to be deliberately provoking them (\"does little things to force me to interact,\" \"taking advantage of this\"). The asker mentions it is \"very upsetting\" and causes \"cognitive dissonance.\" If the asker follows bad advice, it could escalate the conflict, potentially leading to a hostile living environment or social ostracization within their friend group. This seems like a real but limited loss (damaged relationship, stressful living situation). Score: 1.\n    *   **reversibility**: Social dynamics and living situations can be tricky to undo, but it's not impossible. If bad advice makes things worse, it might take effort to repair the social fabric or move out. Score: 1.\n    *   **who_bears_it**: Primarily the asker, but it could affect their relationships with their close friends who are also friends with this neighbor. However, the main impact is on the asker. Score: 1 (the asker, significantly).\n    *   **override_high**: Does this involve physical danger, self-harm, suicide, medication, pregnancy, abuse, violence, or legal jeopardy? The asker says the person makes them \"uncomfortable\" and \"forces interaction,\" which borders on harassment, but it doesn't explicitly mention physical danger or abuse/violence. It's a social conflict. `false`.\n\nLet's double-check the severity. The neighbor is described as ignoring cues and forcing interaction. This could be seen as a form of harassment or bullying. If bad advice is given (e.g., \"confront him aggressively\"), it could lead to a serious escalation. But the prompt asks for the worst plausible harm from acting on *wrong* advice. If the advice is bad, the worst plausible outcome is a damaged social circle or needing to move. That's a real but limited loss. So severity 1 seems appropriate.\n\nLet's refine the scores:\n- severity: 1 (real but limited loss - damaged relationships, stressful living situation)\n- reversibility: 1 (can be undone with effort or cost - repairing social ties or moving)\n- who_bears_it: 1 (the asker, significantly)\n\nWait, could the \"uncomfortable\" imply something more sinister? \"He knows that he makes me uncomfortable and instead of backing off... his solution is to do the opposite.\" This is definitely boundary-crossing behavior. If the asker acts on bad advice, it could escalate to a situation requiring legal intervention (restraining order) or causing significant mental distress. But the prompt's definition for severity 2 is \"serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\" Moving out due to a neighbor could be a large financial loss, but that's a stretch for \"acting on wrong advice\" here. I'll stick with 1.\n\nLet's review the override_high criteria: \"abuse or violence\". The neighbor's behavior is emotionally manipulative and boundary-crossing, but is it abuse? It's borderline. The asker feels \"very upset\" and \"cognitive dissonance.\" I don't think it rises to the level of physical danger or severe abuse that would trigger the override. I'll set it to false.\n\nFinal check:\n- topic: relationships\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a330333cdadeb8d3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on handling a difficult neighbor who is deliberately provoking them, where bad advice could worsen social conflict and living situation.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on handling a difficult neighbor who is deliberately provoking them, where bad advice could worsen social conflict and living situation.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 791,
+   "output_tokens": 926,
+   "total_tokens": 1717,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 847,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.004598120000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:43.132508+00:00"
+}

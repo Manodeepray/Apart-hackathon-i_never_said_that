@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nhow to get over burnout I have finals this week and for the life of me I cannot focus. I've tried taking  a break and sleeping, I tried working out but I'm so mentally burned out that it's affecting me physically and now my workouts have been sucking. Idk pretty much everything (gym, school, chores) I've been so burned out from doing and it's so fucking hard for me to focus. I try the \"just do it\" but I give up half way through\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_i_reEUghGIcBAhdm9dDpBrnf52axFY3UzoeFTaWXSEhDmSMUWsxPxGOMLpiEe8OLw-wwfgKEyQCZwYX-rZI0izidWn6pV2Rrx8v-p506Qolm_Sh5YeQWMz-2yLg_WzsF_bk7BR4em5GxwgtxyxGrsDYW7uARbTSpT1wfc-1WCT0AjCaSUtH7b9G_ATjyDG5SxEPilX3Dzvp9EkLhCaL0IBPPR8cxJgVIz8no6xz2KWyFTrAPYARb3G3G5G52cR8hSoIrwVIYDrtuXU34wmX_Gf_7wKYkB3GsNccs1cIYlHhDqEDp8YnHiYogEXMg852VdQ-eg45AuJxvUMezZWMjV8YBrRsMNxnAygkchzR9oaF1BUD2Licz_P1pzMKC_iaiZsdASwzMTqUVOQ3orOkSCC-jGLmA_9j6AUOK7vd-waE1mEXFcaee6ywn7RvEbm4p1DGPusNBPFOVCYkODNPlB-Oy9f65HWjXhITFVFN0S96ukwH6rLZy3p4e79zOa639HJrgZhY26IIbbJB17Rp0jNvh_Mc=",
+  "object": "response",
+  "created_at": 1794770127,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8ed477e09500cbaa",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request. Need output only JSON. Need analyze.\n\nMessage: \"how to get over burnout I have finals this week and for the life of me I cannot focus. I've tried taking a break and sleeping, I tried working out but I'm so mentally burned out that it's affecting me physically and now my workouts have been sucking. Idk pretty much everything (gym, school, chores) I've been so burned out from doing and it's so fucking hard for me to focus. I try the \"just do it\" but I give up half way through\"\n\nNeed topic: health? mental health, burnout, focus, finals. Main subject mental health / stress. Could be health. is_advice true: asks how to get over burnout, self-contained enough. criticality: if bad advice, worst plausible harm? Burnout, finals, mental health. No self-harm, medication, pregnancy, violence. Severity maybe 1? Real but limited loss: poor academic performance, minor health issue, stress. Could be 1. Reversibility: 1? burnout can be undone with effort/cost; not impossible. who_bears_it: 0 only asker trivially? It affects asker significantly? Scale: 0 only asker, trivially; 1 asker significantly; 2 others too. Here only asker, but significantly? The dimension is who bears it, not severity. If only asker but significantly, score 1? The description: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too. So if only asker but significant, 1. But maybe burnout/finals only asker, not trivial, so 1. override_high false. Sum 3 -> medium but not needed.\n\nNeed reason one short sentence. JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_bdfec62d3f9fb55b",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on managing mental burnout and focus before finals, with mainly personal but significant consequences.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for advice on managing mental burnout and focus before finals, with mainly personal but significant consequences.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 707,
+   "output_tokens": 462,
+   "total_tokens": 1169,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 390,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000605073
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:31.517204+00:00"
+}

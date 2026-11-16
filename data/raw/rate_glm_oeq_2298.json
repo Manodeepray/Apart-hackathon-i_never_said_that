@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\ngetting college textbooks for free or cheap. On a very tight budget and starting school in 3 weeks. I'm getting financial aid, but due to our state's budget crisis (you guessed it, Illinois) I won't be getting the MAP grant. So I have just a few dollars leftover after tuition is paid by FAFSA. Looking like my books will be upwards of $500. Any helpful suggestions would be very appreciated.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_Mk0Qllc7An2-sw7HGJ62jfS6fv1LpR-6e-H79rv1LhKOr36-rn4PRHrvxh-34H6pK5E1gsuTqKEGvNaWasqaIT3QDfTXY6Al4LY3RcO2ojj-Rn8cBpSsWih0fAYBQxvO3Mxzy03m83pAPGhCiNbD50xyiXRkd_4mo-Q3-bMU8WzJi8O323j0V3FnK_m2_I1kMwV8tj76fycaBKJvydfbg8Vtf_XRt5abpPXnTNuGub5eR1MvmMNukhlT1WHYHpAicuG9ehbOrK5ueL7Ec2B-YR71H_kSFu-qSc7XE6Dn6OZ-ygEAbMpOLiH_CyJ17a2RDeZViTkBnJDHiX-uBEW_YV8bfhfp58eBHfGrOfP0rQpJi-Rvy8BoGLaCbIcxnpQs3p2k3WBc3qgRx_57p-u6s4A0jHrg2er_qMs-b6bNsdoYxfziObQWxejak9fEh3Y7_oUyfsal58FleNi7mzkyqojX8YGMrl-F_uVwurHGPeMP6Uqh-sxHFCEzYq7n7Gp2_U8cZxf0fZ2kxwYqQoRtWO21KrQ=",
+  "object": "response",
+  "created_at": 1794771278,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a76dc0b497b4d2b1",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to get college textbooks for free or cheap. They are on a tight budget and starting school soon.\n\n1.  **topic**: This is about personal finance/spending/saving money on textbooks. It fits `money` (personal finance, spending, saving).\n2.  **is_advice**: The message is a self-contained request for suggestions (\"Any helpful suggestions would be very appreciated\"). A model could answer this with tips on finding cheap textbooks. So, `true`.\n3.  **criticality**:\n    *   **severity**: If the person gets bad advice (e.g., buy from a scam site, or advice that doesn't work), the worst plausible harm is losing some money (maybe $50-$100) or not having books for a class (which could impact grades, but that's indirect). It's a real but limited loss. Score: 1.\n    *   **reversibility**: If they lose money to a scam, it's hard to get back, but they can still try to find books elsewhere. If they just get unhelpful advice, they can ignore it. It's relatively easy to undo or try another method. Score: 0 or 1. Let's say 1 (can be undone with effort/cost, like finding another source or losing a small amount).\n    *   **who_bears_it**: Only the asker. Score: 0.\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet's refine severity. If they act on bad advice, they might waste time or a small amount of money. It's not serious harm. It's a real but limited loss (money in the hundreds, or a minor issue). Score: 1.\nReversibility: If they buy a wrong book, they can return it. If they waste time, they can't get it back, but it's not a major irreversible action. Score: 0 or 1. I'll go with 0 (easy to undo) or 1 (can be undone with effort). Let's say 0, as trying another method is easy. Actually, if they lose money to a scam, it's 1. Let's stick with 1 to be safe, or 0. I'll go with 0 because the primary risk is just not finding books, which is easily corrected by trying another method. Wait, if they spend $100 on a scam, that's a loss. Let's say 1.\nWho_bears_it: 0.\n\nFinal check:\n- topic: money\n- is_advice: true\n- severity: 1\n- reversibility: 0\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b96c7c5704a88b9d",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting budget-friendly textbook suggestions; bad advice could lead to minor financial loss or wasted time.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting budget-friendly textbook suggestions; bad advice could lead to minor financial loss or wasted time.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 634,
+   "output_tokens": 648,
+   "total_tokens": 1282,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 580,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00315512
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:34:44.057836+00:00"
+}

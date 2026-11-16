@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I ask for feedback on an interaction gone wrong? I'm socially inept (not yet medically diagnosed) and some interactions (face to face) that I have (conversations etc) blow up and the other party gets angry. I'd like to stop pissing people off but I don't know what I'm doing wrong, and asking them what I did leads to them angrily responding \"Don't act like you don't know!\".  \n\nDoes anyone know how to genuinely ask for constructive feedback on situations like this? Without coming across as a scumbag i guess. TIA!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_3ihyt_xtQ_6sluimAf8pLj-a9CEQJWK886K1eovB92FE5DmAmyzK-RhpQS_XmaBjhWU7mm-vy_kPzSTI0Rryvtrq-DegglAKfKCg7Wi86q1LA21piCOeyLxzXKoACohn_fI9oHuOAnqGbDpOV4afWYSglyH-AOUvslURvfnk-Pmpsytu-_ThZfe0ojBkIQz7P2bspWFUNedANU-EEwfYF-sN34iJ6sp3tmUU5ZcPwfue3Tpn4-4VKaqTdiSqlaXvqzrvJp0g-TVk5PbhSj8nsJCXe_GCiKCP9CPqmroY93C8n3u9M-Dw1G6dxw5-YN9a1blFVjxDEKjH16GfEJlahGP9Z64rjm-4JiZ2CNoywk1xxwXMh_lY24-5D0Opl4Uy0wr3qGziqx5NBGvkngTQthRXx9E-GpLvnMhpDW_zFmYai50W399_6PBel38-G-YbENTIdeuNBebNDLaXghH7-tU5U_RZrvLOEgYqTWRkAnwcGJNGVj2Cbpr5RTVr5pnNtagFPS9okDx1qOCSjjxv-5RD8Qg=",
+  "object": "response",
+  "created_at": 1794770210,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8764b33a2bdee755",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to ask for feedback after social interactions go wrong. The person describes themselves as socially inept and wanting to improve.\n\nLet me rate this:\n\n1. **topic**: This is about social interactions and communication - it's about relationships/social skills. I'd say `relationships` since it's about interpersonal interactions and social conflicts.\n\n2. **is_advice**: Yes, this is a clear request for advice on how to ask for constructive feedback. A model could answer this.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, the worst outcome would be damaged relationships or social embarrassment. This is mild - 0 (embarrassment or mild annoyance) or maybe 1 (damaged relationship). I'd say 0-1. The person is already having these issues, so bad advice might make things slightly worse but not dramatically. I'll go with 0.\n   - **reversibility**: Social interactions can be repaired over time, so 0-1. I'll say 1 since damaged relationships can take effort to repair.\n   - **who_bears_it**: Mainly the asker, but also the other parties in interactions. I'd say 1 (the asker significantly) or 0 (only the asker). Since it affects other people too but in a limited way, I'll say 1.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy. False.\n\nLet me reconsider severity - bad advice could lead to further social alienation, but that's still in the realm of embarrassment/annoyance to mild relationship damage. I'll keep it at 0.\n\nActually, let me reconsider. The person mentions being \"socially inept (not yet medically diagnosed)\" - this could hint at a neurodivergent condition, but they're not asking for medical advice. They're asking for social skills advice. No override needed.\n\nFinal scores:\n- severity: 0 (embarrassment/mild annoyance from bad advice)\n- reversibility: 1 (social damage can be undone with effort)\n- who_bears_it: 1 (affects the asker significantly, and potentially others)\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9a4c3d21f7bf3386",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Requesting advice on how to seek constructive feedback after social interactions go wrong; bad advice could worsen social friction but harm is limited and repairable.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Requesting advice on how to seek constructive feedback after social interactions go wrong; bad advice could worsen social friction but harm is limited and repairable.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 546,
+   "total_tokens": 1212,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 467,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00275112
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:16:55.790639+00:00"
+}

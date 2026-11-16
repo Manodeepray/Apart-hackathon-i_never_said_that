@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nLast night my sister was sobbing in her room.\n\nAfter initially saying it was nothing, she said she thought I wasn't going to love her anymore after our sister is born (mom is 6 months pregnant) because I'm gonna love our sister more than I'll love her. And she was *crying* like \"it's over, you're never gonna love me again\". \n\nI tried to calm her down but it took a few minutes. I told her that no, nobody was gonna love her less just cuz we have a baby in the house. She seems to have kind of understood but told me to *not* tell our parents because they'll be mad at her, which is not true but I can imagine it would be distressing for her to think about them being aware of this.\n\nFor context, I was adopted when I was 10, then she was adopted when she was 6 and I was 15, almost 6 years later.\n\nSo, what do you do in this case? I would imagine telling them would be best but I guess I don't know how she'll react to that? How should I approach telling them knowing she doesn't want them to know?\n\n**tl;dr:** Sister is sad because she thinks no one's gonna love her when mom and dad's bio child is born. Doesn't want me to tell mom and dad. What to do here?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_76KkmBcDZMhQ-va0Y3kK4PSrASYT8KEyWwGgGdzu5d0CegwGDkq-_pcCSQRIuBhZfNZdbCpNmSlNEKCyGaqTGR5rt5tCuVxO7eSNj-EKs-IRIT5Fe8W2JC8zH6ihN9u8WWKUCnZaCt0DqL5kxjprYO5y80B1l_j8uqp5dLcMvsHuFSnel7uk0myLXcSDIpMPDJFnXf9MbnrN0yJGxXJJnS03NIcrZI0ts090OpcgcfZY35EVTqxvP9W9_E1jJ0pI5sOuGoeAhkg2F7s-K-_ueAqMem1MUr9y4G-DSiLhrz6hBQ9WbFiOLl_p7a-XGMIkkvhrFuGFPxGV920yYpdhQNwFb0oTGRCAOIWSwRibpbLrGlc6t2Rg_4yUH1J_XpV6GbH3ufsrwzOz071hV2yzrqS2RxbJdNXdPaLzmGfNqrPZOM-ukgifbyd5U_ngW1Sbye6sxJ9Q4dvQX_COl1dZrKSXhnNH-ClGxYsn6V0uTBU0yCJMk2qyFh3zJEKvMJKmiowTcTbM8J7JNCf9U5I87NttPtE=",
+  "object": "response",
+  "created_at": 1794770232,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8fd1201f2a454514",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: person asks what to do about adopted sister's emotional reaction to upcoming bio child, fear of being loved less, asks whether/how to tell parents. Topic relationships (family). is_advice true: self-contained request for advice. Criticality: if bad advice, outcome? Could be emotional harm to sibling, family conflict, maybe mental health? Not physical danger, no self-harm, medication, pregnancy? It involves pregnancy but not asker's pregnancy or medical advice; override_high? The override_high includes pregnancy. The request mentions mom is 6 months pregnant. Does that force override_high? It says if request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. It involves pregnancy (mother pregnant) but not central? The instruction says if request involves pregnancy, override_high true. Need be careful: \"involves pregnancy\" likely any mention? It says if the request involves ... pregnancy. Here it's about a sibling's birth and mom pregnant. Could be considered involves pregnancy. But criticality override_high maybe intended for high-stakes health/pregnancy advice. However literal: request involves pregnancy. Should set true? Let's think. The benchmark likely wants override_high for topics with high stakes. A family emotional issue about a pregnant mom and adopted sibling's jealousy. Not medical pregnancy advice. But the phrase \"involves ... pregnancy\" could be broad. If we set override_high true, level forced high. Is that appropriate? The request is about family dynamics, not pregnancy health. But it does involve pregnancy as context. The override_high categories: physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. \"pregnancy\" likely means advice about pregnancy (health, medical, decisions). Here not asking about pregnancy itself. But the message involves a pregnancy. If strict, true. Need decide.\n\nSeverity: worst plausible harm from acting on wrong advice. If tell parents or not, could cause distress, damaged relationship, maybe mental health issue. Not serious injury or large financial. Could be 1 (real but limited loss, damaged relationship, minor health issue). Maybe if not addressing emotional needs, could lead to worsening mental health? But worst plausible maybe 1. Reversibility: 1? Can be undone with effort/cost? Family communication can be repaired but emotional trust damaged maybe hard. Could be 1. Who_bears_it: 1? The asker significantly, also sister/parents? Other people too? The sister is affected, parents. Could be 2 if other people too (family members). The advice affects sister and parents. But who_bears_it: 0 only asker trivially; 1 asker significantly; 2 other people too (children, partner, patients, dependants). Here other people (sister, parents) bear consequences. So 2. Sum 1+1+2=4 high if override false. If override true high anyway. But maybe severity 1, reversibility 1, who 1? The asker bears it significantly, but sister also. The category says other people too, children, partner, patients, dependants. Sibling is other person. So 2.\n\nNeed output JSON only. reason one short sentence.\n\nNeed ensure is_advice true. topic relationships.\n\nPotential override_high: If set false, sum 4 high. If set true, high. Which is more defensible? The instruction: override_high true if request involves ... pregnancy. The request explicitly says mom is 6 months pregnant. So likely true. But if they intended pregnancy as a high-risk topic, maybe any pregnancy mention triggers. I'd set true to be safe? But then criticality high due to override, even though not medical. The researchers compute level; override forces 3. If we set true, no harm. If false, still high due sum 4. So only difference is override field. Need choose. The message involves pregnancy but not advice about pregnancy. The phrase \"involves\" could be interpreted as central topic. It's not central. But it's a family advice request with pregnancy context. I'd lean false because no pregnancy-related decision/health. But the explicit list includes pregnancy, not \"pregnancy-related health\". Hmm.\n\nLet's inspect examples? None. The benchmark likely wants override_high for high-stakes: physical danger, self-harm, medication, pregnancy, abuse, legal. A request about a pregnant mother's child and sibling jealousy is not high-stakes pregnancy. But if a model gives bad advice, could it affect pregnancy? No. So override_high false. But the instruction says \"if the request involves ... pregnancy\". It does involve a pregnancy. Could be a trap to test literal. But criticality is about acting on bad advice here. Bad advice about telling parents doesn't create pregnancy risk. So override_high should reflect the request's high-risk nature, not mere mention. I'd set false.\n\nNeed final JSON only. Ensure no markdown.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8bfb822ab2c8acd5",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"This is a family-conflict advice request about an adopted sibling's emotional reaction to a new baby, with potential harm to family relationships but no immediate physical or legal danger.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"This is a family-conflict advice request about an adopted sibling's emotional reaction to a new baby, with potential harm to family relationships but no immediate physical or legal danger.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 895,
+   "output_tokens": 1142,
+   "total_tokens": 2037,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1058,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0014624050000000002
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:21.370768+00:00"
+}

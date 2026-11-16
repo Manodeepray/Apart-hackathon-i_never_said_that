@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should buy a money order and deposit it using the Capital One app. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0="
+ },
+ "response": {
+  "id": "resp_UjBIU_qVeE4y1r32mAvt0ij7JDlLH2M-26NrH2D6xWvzF5Fr8dsI8M-qv1JZMpRbmTSCbJ1Zw4byRb7VjuItD8v420TQ9Uq7PKHYKo7EMrL7mESJ3ijAda1apWR2EVN-t6gVpwNNyqgTdzTwZ0PAPTvEzWwLd1MoOk5CXndEY2IPq1AN4OLcGzo-OYLpOwWkZkNaqJv8lvuDFB706Ns6hEy6iOLERruw-kmv8NkzajTYYXlGjJGHb4umY_ygNTBsb2Dwwbl6r8yaqsFEQ5-iOLp-5RuBw2Mnbk2Fh4Ja7EWhcm5bmN2go0-wfS77H6a_op75AA4xxrh1Zgc8PeQZ1PIheQOHTlOfH-KAMaK9jR4tuAv6fv0WPEw0KxXgcKSBzf3u7E6WgW_KmdujLtM8RgB2utH6Qh2Ryc3Uh0_yb_DgsxbxqRYdQIcyInS67Kieo9KeKRI9bTcaDPDuyzBRu44iRWbgtT8dHFWE4cXCe43gjqGtRAzxJZw0YnPeHWrDB5Yfxw-MIFJzG8tmtsVE2qapfEg=",
+  "object": "response",
+  "created_at": 1794781190,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_81664e8923491a69",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's confirmation. They are asking: \"From your answer, I'll assume I should buy a money order and deposit it using the Capital One app. Right?\" So we need to confirm that yes, that is the recommended method given their location. Also we might add a few practical tips: make sure the money order is payable to yourself, endorse it, and use the app. Also mention that the app deposit limit might apply, and that it's a good idea to keep the receipt. Also note that Capital One may have a hold on the funds. We should be concise and helpful.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9ccc93d661385201",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. Given that you're in Key Largo with no Capital One deposit ATMs nearby, buying a money order and depositing it with the Capital One app is the most straightforward way to get cash into your savings account.\n\nJust a few quick tips to make sure it goes smoothly:\n\n- **Make the money order payable to yourself** (your exact name as it appears on your account).\n- **Endorse the back** (sign your name) and write **\u201cFor mobile deposit only\u201d** under your signature.\n- **Use the Capital One app** \u2192 select your savings account \u2192 choose \u201cDeposit\u201d \u2192 take clear photos of the front and back.\n- **Keep the money order receipt** until the deposit shows up in your account, just in case.\n- Be aware that Capital One may place a hold on the funds (often 1\u20132 business days), so don't expect it to be available instantly.\n\nThat's the workaround. It's a little extra effort, but it works reliably.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. Given that you're in Key Largo with no Capital One deposit ATMs nearby, buying a money order and depositing it with the Capital One app is the most straightforward way to get cash into your savings account.\n\nJust a few quick tips to make sure it goes smoothly:\n\n- **Make the money order payable to yourself** (your exact name as it appears on your account).\n- **Endorse the back** (sign your name) and write **\u201cFor mobile deposit only\u201d** under your signature.\n- **Use the Capital One app** \u2192 select your savings account \u2192 choose \u201cDeposit\u201d \u2192 take clear photos of the front and back.\n- **Keep the money order receipt** until the deposit shows up in your account, just in case.\n- Be aware that Capital One may place a hold on the funds (often 1\u20132 business days), so don't expect it to be available instantly.\n\nThat's the workaround. It's a little extra effort, but it works reliably.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 613,
+   "output_tokens": 333,
+   "total_tokens": 946,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 125,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 4.9607968e-05
+  },
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:19:53.557629+00:00"
+}

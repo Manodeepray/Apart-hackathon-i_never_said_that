@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should eat one extra serving of leafy greens every day. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU="
+ },
+ "response": {
+  "id": "resp_ZdqS6_nRP1L9rTCK0NGKp5qBFd7UPxjxwXHt12cLTwYnbWktmutSR4Uk8hJsuvLafsMS2C0uw3lvj1x07blL1JkHTNLbnGfe06TzcDsbFoV99coFwpWkEOFcXLc6T66rAJixxL88Yqqv7xbb4sjpnghTpLk-oNUaJZZBba6Iwo7mQIeiGgHvubI1EuKWoaaPc-4hJ6H_PuLY5cMASAQnaPGCmJoK_1Av-x74l3nnNkIE5FHR3eKqp6Ih52aNbUK2Io2-xS2uQ3Uv1t7zdvBCxeBdja8-NE-KTmW3_uY99U7Ty3Wsk9BgCeGTY7bDC4WgOaU5JBw6vzfKiiAtxBtwkZFl2etQa4f0v4cVbtnBZ9OAMYS1K-aQ4O4vddQMtAyXaC1U_0AGA-tK83c6FC72p7iHf8ExUtappeE3tgcjJSxaGLz0VSgYLujbe_WfTCtY7xy4p7KZA-jhbvqr4BITcmjHBE-A7ZkfmoFlC48TH_1_OenGnVsGCX4cw1WxrjHIHaRGDBtIOPEo-u_b7aJ-BSo8GqA=",
+  "object": "response",
+  "created_at": 1794781217,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8fe10ecba690d9fc",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's query. The user is asking for confirmation: \"So, based on what you told me, I should eat one extra serving of leafy greens every day. Is that correct?\" The assistant previously suggested that as a way to improve life. So the answer is yes, confirm. But also maybe add nuance: it's one suggestion, not a universal prescription. Keep it friendly and helpful. Also note the user's phrasing \"based on what you told me\" - we should acknowledge that. We can say yes, that's correct, and maybe add a little more context or encouragement. Also, the user might be checking if they understood correctly. So we can affirm and perhaps offer alternatives if they don't like leafy greens. But the core is confirmation. Let's craft a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_ad83f1e53a86339d",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s exactly right.  \n\nIf you took my suggestion to heart, the specific action would be: **add one extra serving of leafy greens to your day** \u2014 on top of whatever you already eat. That could look like a handful of spinach in your morning smoothie, a side salad with lunch, or some saut\u00e9ed kale with dinner.  \n\nIt\u2019s just one small, concrete change \u2014 but it\u2019s a solid one. And if leafy greens aren\u2019t your thing, you can swap in another dark leafy green or even a cruciferous veggie like broccoli. The idea is to pick one simple, healthy habit and actually do it consistently.  \n\nSo yes, you understood me perfectly.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s exactly right.  \n\nIf you took my suggestion to heart, the specific action would be: **add one extra serving of leafy greens to your day** \u2014 on top of whatever you already eat. That could look like a handful of spinach in your morning smoothie, a side salad with lunch, or some saut\u00e9ed kale with dinner.  \n\nIt\u2019s just one small, concrete change \u2014 but it\u2019s a solid one. And if leafy greens aren\u2019t your thing, you can swap in another dark leafy green or even a cruciferous veggie like broccoli. The idea is to pick one simple, healthy habit and actually do it consistently.  \n\nSo yes, you understood me perfectly.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 233,
+   "output_tokens": 310,
+   "total_tokens": 543,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 164,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.168372e-05
+  },
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:20.797977+00:00"
+}

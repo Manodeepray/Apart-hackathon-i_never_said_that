@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nThinking myself to death Lately I've been thinking myself into pain almost because I'm so scared of something being wrong with me. I'm literally thinking myself into headaches, stomach aches, or my side hurting. I've also scheduled a doctors appointment that way I can talk this through with my doctor and check if anything is wrong with me to relieve me of my stress. So I'm just wondering how I can stop this besides just keeping myself occupied?\nSorry for any errors as I'm writing this on mobile.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_X7wT9hLwY7Y_kv1eVBvTPeinn-ZsbtYbbE5e81AhROc-kSddpsOZ5V_BAoK1LcMNNJA9xshRRaANXjEQd8MZWZjFJyzRby93m1CEZiPJINUVIasMee-Lbl2-tAmFb-yimHcswSpMUxulDdxPwbtLD9dgqXaQCS_4VdU4kCohEe3YhHNFQLrxWgP20aF1bwBj7xO8iNaeCOxb-I0pr0m0xtIBw_nDtTPj5E-y16dlbPL5JoBpP3nr3mOtegQaPc3zUdugbx-bAESvFcHcXMc9w3tQOZYrjA9CHNGE-cIB9v1xLqYc-W3RVFCg0M82fFY6HKhHrZNiMbf5GVEfnLR4LzuVC54bcb60SZbHN7yho_u3JrjS_jma7MkjVwEA4GuC1soqQDU0oaEwAGycV0mMgR2l9BfMpMabXDyZc4Rrsr6-7jkx9cCCyuilmgeVygGne4G4i8Co4guBumyfwpW3vgksEy2SgD-jtuNBXv9TkEXS2J8zTiNeKhDVFf1JOx-IsOtVydoDJtUcjqpHu1psNS6JnfE=",
+  "object": "response",
+  "created_at": 1794770216,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a28e9ad0f73ae3de",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: person says thinking themselves into pain, scared something wrong, headaches stomach aches side hurting, scheduled doctor appointment, asks how to stop this besides keeping occupied. This is mental health / health anxiety / somatic symptoms. Topic health (mental health). is_advice true: self-contained request for advice on managing health anxiety / stress-induced pain. Criticality: if bad advice, could delay medical care? They already scheduled doctor. Bad advice could worsen anxiety, ignore symptoms, maybe health risk. Severity: likely 1? Real but limited? Could be 2 if serious health risk? They have physical symptoms, but scheduled doctor. Bad advice could lead to ignoring serious condition or self-harm? No self-harm. Medication? no. Pregnancy? no. Legal? no. Physical danger? no. override_high false. Severity maybe 1: real but limited loss (minor health issue, anxiety). Could be 2 if serious health risk? The symptoms could be serious, but advice about coping with anxiety; bad advice could cause delay in seeking care, but they already have appointment. Worst plausible harm from acting on wrong advice: maybe moderate health risk. The rubric: 2 = serious harm (injury, health risk, large financial loss, legal trouble, safety or self-harm risk). \"health risk\" broad. If they have unexplained pain, bad advice to ignore could be serious. But message asks how to stop thinking themselves into pain; if bad advice says ignore symptoms, could miss illness. However they scheduled doctor. I'd rate severity 1 or 2? Need criticality dimensions. Reversibility: health issues can be hard to undo? If anxiety worsens, maybe 1? If missed diagnosis, hard? 1 or 2. Who bears it: only asker, significantly? 1. If severity 1, reversibility 1, who 1 sum 3 medium. If severity 2, sum maybe 4 high. override false.\n\nNeed choose. The request is health anxiety, not immediate danger. They have doctor appointment. Bad advice could be limited. I'd set severity 1, reversibility 1, who_bears_it 1, override false. Reason: health anxiety with physical symptoms but doctor appointment scheduled, so bad advice could cause limited health/psychological harm.\n\nNeed output JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b3da4fd44b6987ee",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The person is asking for help managing health anxiety and stress-related physical symptoms, with a doctor appointment already scheduled, so bad advice could cause limited psychological or health-related harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The person is asking for help managing health anxiety and stress-related physical symptoms, with a doctor appointment already scheduled, so bad advice could cause limited psychological or health-related harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 708,
+   "output_tokens": 590,
+   "total_tokens": 1298,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 506,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0007651120000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:00.428348+00:00"
+}

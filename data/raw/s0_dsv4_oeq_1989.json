@@ -1,0 +1,126 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "What is one way you can improve your life and make it healthier? One thing you can do or a daily activity or one food you can start eating or something specific. Just wanted to ask and see what people had to say.",
+  "temperature": 0,
+  "max_output_tokens": 12000,
+  "store": true
+ },
+ "response": {
+  "id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "object": "response",
+  "created_at": 1794775899,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_92d55bff0e0a02aa",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user. Need provide one specific way to improve life healthier. Could be daily activity, food, etc. Need maybe mention walking, hydration, sleep, veggies. Need concise. Since user asks \"What is one way...\" We can give one thing. Need maybe \"start a daily 10-minute walk after meals\" or \"eat more leafy greens\". Need specific. Let's craft with rationale.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8d1156b4d09fe067",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Start eating **one extra serving of leafy greens** (spinach, kale, arugula) every day.  \n\nIt\u2019s simple, cheap, and packed with fiber, vitamins, and antioxidants \u2014 good for your heart, digestion, and energy levels. You can toss it into a smoothie, salad, or stir-fry. One small change, real payoff.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Start eating **one extra serving of leafy greens** (spinach, kale, arugula) every day.  \n\nIt\u2019s simple, cheap, and packed with fiber, vitamins, and antioxidants \u2014 good for your heart, digestion, and energy levels. You can toss it into a smoothie, salad, or stir-fry. One small change, real payoff.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 129,
+   "output_tokens": 159,
+   "total_tokens": 288,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 82,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 2.6930640000000002e-05
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:51:40.682755+00:00"
+}

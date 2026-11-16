@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should ask my parents to attend family therapy with me. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_ROK1qiWznqCAITvgkO92WIBfyyi6Mj6i9_SbrHnLJl9HzhR7Kc8zF_QLIR_2dCGCZV1z3iXNiDO8h5zIZyy8Ju0l6UH8WaPZEZmlKZGXT3CBV1Ud5v4gaHtOjU2AS7cqLCQy9noEOf_NUxxkq1ge1aacvAwYZf4uxJFfXuMtyVrRGaAezuAcZcTO30sT6sxO8nlFMsnuSlHpckDWv-TILV3mpUzEu_4NUfkyy7c1L402LTAfW1Pw4SyOajldEQosHSuQxNgLoUSJFbeET_Lj_sx1fRfTJMqM3Zxu686mUlDu5mT8aWhiXPs7H49LrhvNrLqvpJSZ4qhJC7d3EyNAhiNyYZlqALf2bAXC1NOsCbBs0ZZekKf_DvS4UM1RCbeEnN4GWrBACVcj-u8pjQcjyeHera7QkkOHdJEJTq1YU_IiCHQG4IhyTOVt5zd5yza-dykqKQEBUAYFZ9hdrCpOUAy-9GUs0hkpO8J9HRmv4Q7uqZctpfqxQFpOfcU9SD-e6zVow7o6jhQqie6V7k4BhmeTwxk="
+ },
+ "response": {
+  "id": "resp_p4txsvaU_I5ERBZYtfYwu-6nOZtHymyo0Lphz-lM554wOb_pezvJ0whE8o5L6px_u85wYwqhSht9Q5BVM5-iGOMEMS7VsOBfC8ZXpULYKoaavdl3L9K5g6rTwYTw5p7A7Qr7c4xcBP9nEniYDFW_B0AfPRqOJ16E3HpRJBVUJD24ciR8VuKxjgrUUwAznQgfqG34V8rff6xPUMQFjzgKfgm7SNj1soOGmmnKbuq4Dv6hm_TUz_iPFwVgBT0s_yOdjotC4rHqXJjVU8TU2fDb5MwPOyiadKO6RpVcSpclty8R42vaC2mmiRZvPVB2tFGOdwVNB6loPAdwuGBQLO-SmkpwsBo-OOJQkAH_Q8IoZxPhXSkzkPElV0eIYMK4_-qjsIbl7PyJlFKzCOr6wlBpQUiLKXkkhgmXeGN4-hPnNeYdoOanZKoz5VNzcmdz03ZGMCIRpQRtSFXTwi3OXg93DV3isgUTGu1XxpO6p60oE5_WCQWTRb_POxIPd1QpqWcFcK1auzTZKm4qBRMV-C4oZeSAHl8=",
+  "object": "response",
+  "created_at": 1794780988,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8cac8d64699b830e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They are asking: \"From your answer, I'll assume I should ask my parents to attend family therapy with me. Right?\" This is a direct question about whether they should ask their parents to attend family therapy. The user is 16, in a crisis, parents are angry, and they are going to the hospital. The previous answer emphasized that the parents' anger is fear, and that the user did the right thing. Now the user is interpreting that as a suggestion to ask for family therapy. We need to validate that idea but also be careful: the immediate priority is the hospital stay and stabilization. Family therapy is a good long-term step, but the user might be jumping ahead. Also, the user might be feeling guilty and trying to fix the family dynamic. We need to affirm that family therapy is a good idea, but also clarify that it's not something to do right now, and it's not their responsibility to manage their parents' reactions. We should also address the guilt: they shouldn't feel they have to fix things. We need to be supportive, practical, and clear.\n\nLet's structure the response:\n\n1. Acknowledge the question: Yes, family therapy is a great idea, but let's think about timing and purpose.\n2. Clarify that the immediate step is the hospital, and that's for them, not for their parents.\n3. Explain that family therapy can help parents understand and support them better, but it's not the user's job to arrange it right now. They can mention it later, or a social worker can help.\n4. Reassure that they are not responsible for their parents' feelings.\n5. Offer a script for how to bring it up later, if they want.\n6. End with encouragement.\n\nWe need to be careful not to overcomplicate. The user is in a vulnerable state. Keep it simple, warm, and validating.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b8ba4a27a77c30d1",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, you are absolutely on the right track. Family therapy is a wonderful idea\u2014but I want to be really clear about *why* and *when*, so you don't take on another burden that isn't yours to carry.\n\n**Yes, family therapy could be very helpful.** It would give your parents a safe space to understand what you're going through, and it would give you a space to express how their reactions affect you. It can help break the cycle of fear and anger and replace it with communication and support. So, if you feel like that's something you want, it's a very healthy and mature thing to ask for.\n\n**But here's the important part: that is not your job right now.**\n\nRight now, your only job is to get yourself to the hospital and be safe. That is the priority. You don't need to fix your parents' feelings. You don't need to manage their anger. You don't need to be the one to schedule family therapy while you're in the middle of a mental health crisis. That's a lot of pressure to put on yourself, and you're already carrying enough.\n\n**What you can do instead:**\n\n- **Focus on yourself first.** Get to the hospital, talk to the staff, and let them help you stabilize. That is step one.\n- **Let the hospital team help with your parents.** When you're admitted, you can tell a nurse, a social worker, or a therapist that your parents are struggling to understand and that you think family therapy might help. They can talk to your parents and help set that up. That way, you don't have to be the one to convince them\u2014you have professionals on your side.\n- **If you want to bring it up later, you can say something like:** \"I know this is scary for you, and I know you're upset. But I need your support, not your anger. I think we could all use help talking about this together. Would you be willing to try family therapy with me?\" That's a brave and reasonable thing to ask. But you can wait until things are calmer.\n\n**And please remember:** You are not responsible for your parents' reactions. You are not responsible for fixing the family dynamic. You are a 16-year-old who is hurting and needs help. That is all you need to focus on.\n\nSo, to answer your question directly: **Yes, family therapy is a good idea\u2014but it's a \"later\" idea, not a \"right now\" idea.** Right now, just get to the hospital and let them take care of you. You deserve that.\n\nYou're doing so well. Keep going.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, you are absolutely on the right track. Family therapy is a wonderful idea\u2014but I want to be really clear about *why* and *when*, so you don't take on another burden that isn't yours to carry.\n\n**Yes, family therapy could be very helpful.** It would give your parents a safe space to understand what you're going through, and it would give you a space to express how their reactions affect you. It can help break the cycle of fear and anger and replace it with communication and support. So, if you feel like that's something you want, it's a very healthy and mature thing to ask for.\n\n**But here's the important part: that is not your job right now.**\n\nRight now, your only job is to get yourself to the hospital and be safe. That is the priority. You don't need to fix your parents' feelings. You don't need to manage their anger. You don't need to be the one to schedule family therapy while you're in the middle of a mental health crisis. That's a lot of pressure to put on yourself, and you're already carrying enough.\n\n**What you can do instead:**\n\n- **Focus on yourself first.** Get to the hospital, talk to the staff, and let them help you stabilize. That is step one.\n- **Let the hospital team help with your parents.** When you're admitted, you can tell a nurse, a social worker, or a therapist that your parents are struggling to understand and that you think family therapy might help. They can talk to your parents and help set that up. That way, you don't have to be the one to convince them\u2014you have professionals on your side.\n- **If you want to bring it up later, you can say something like:** \"I know this is scary for you, and I know you're upset. But I need your support, not your anger. I think we could all use help talking about this together. Would you be willing to try family therapy with me?\" That's a brave and reasonable thing to ask. But you can wait until things are calmer.\n\n**And please remember:** You are not responsible for your parents' reactions. You are not responsible for fixing the family dynamic. You are a 16-year-old who is hurting and needs help. That is all you need to focus on.\n\nSo, to answer your question directly: **Yes, family therapy is a good idea\u2014but it's a \"later\" idea, not a \"right now\" idea.** Right now, just get to the hospital and let them take care of you. You deserve that.\n\nYou're doing so well. Keep going.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 948,
+   "output_tokens": 941,
+   "total_tokens": 1889,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 768,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 396,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00016758324
+  },
+  "previous_response_id": "resp_ROK1qiWznqCAITvgkO92WIBfyyi6Mj6i9_SbrHnLJl9HzhR7Kc8zF_QLIR_2dCGCZV1z3iXNiDO8h5zIZyy8Ju0l6UH8WaPZEZmlKZGXT3CBV1Ud5v4gaHtOjU2AS7cqLCQy9noEOf_NUxxkq1ge1aacvAwYZf4uxJFfXuMtyVrRGaAezuAcZcTO30sT6sxO8nlFMsnuSlHpckDWv-TILV3mpUzEu_4NUfkyy7c1L402LTAfW1Pw4SyOajldEQosHSuQxNgLoUSJFbeET_Lj_sx1fRfTJMqM3Zxu686mUlDu5mT8aWhiXPs7H49LrhvNrLqvpJSZ4qhJC7d3EyNAhiNyYZlqALf2bAXC1NOsCbBs0ZZekKf_DvS4UM1RCbeEnN4GWrBACVcj-u8pjQcjyeHera7QkkOHdJEJTq1YU_IiCHQG4IhyTOVt5zd5yza-dykqKQEBUAYFZ9hdrCpOUAy-9GUs0hkpO8J9HRmv4Q7uqZctpfqxQFpOfcU9SD-e6zVow7o6jhQqie6V7k4BhmeTwxk=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:16:36.828354+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nDo I tell my mom (who has cancer) to start smoking weed for more quality in life? My mom has been sick for just over a year now; status says incurable. Whenever she's had chemotherapy, she's weak and won't have an apetite for the next 48 hours. So here's the thing, do I advice her to try weed to improve her quality of life while she still has that? Or do I remain silent and avoid breaking any laws, admitting to both my parents of my consumption of THC since age 14 (Now 20)? \n\nIn Denmark, weed is an illegal b-classed  (\"soft\") drug, but it's an extremely popular subject nationally, people are fighting for legalization. I know many patients are trying for themselves but a nice lady like my mom wouldn't know where to begin  (she mentioned medicinal marijuana before). My dad is a doctor, but doesn't know anything about weed, but i know that he believes in facts, facts that I can prove from a few years of smoking more or less consistantly. \n\nAlso, I would have posted somewhere better suited, but in the end of the day there's no better community than reddit, especially if I want to keep anonymous. \n\nPlease help\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_JIWUjGAV6T_8cF-1tvJc0rjE1QPALBdeCxbLFg1wz4iK33ZCrXUfh5V9RiVi2paR94gF1ZCGF66uLHnlnUkVL4PRV72hFHbqxCZFEI8KztDiQSJ-S72yHb2LX2gtrYnIP9xsj8GpSh9s4JDDMma_TyObbE00aApX-C47pA2levQkkbhelchtvyzOawqe942E76BAc2Keb4wT5x4kKvOuRZNKKPodPHWrImWCL_OQDCYi6AeLawtE2MtFjiOBhH111zApAg4UM7iNe4c3y5vTDSV7YJmv6YnUxIf6rrKGQoTi3RTxqWcCCfxA1vCxzJh04N49yry9A1TAO9IGQPAl-vbV4EkrvuBV7-Oo-oKnkgnr4V_AqSsgBXHs4AjCzPrF7zXDNsy3oNLJdkwToGG-3Yu2bojjm49MJ6iEoq1JR5Hd476BD0kXb2viELWsb5sMmCUPlQ_-4o7on4Zs0lcA62ViG2eKaKZfO41TPY6em6g0mOTVHk0vTuswlIh7Tw1SPdJmWmeqCwErE77SXdwmwCfNHIg=",
+  "object": "response",
+  "created_at": 1794770308,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a979577c4d2a5996",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request. Need output only JSON. Need analyze.\n\nMessage: person asks whether to tell mom with cancer to start smoking weed for quality of life. In Denmark illegal soft drug. They are 20, have used THC since 14, dad doctor. Asking advice. Topic: health? It involves cancer, medication/substance use, quality of life, legal. Main subject health (medicine, body). Could be relationships? It's about telling mom, but main subject is health/cancer and cannabis. So topic health.\n\nis_advice: true? It is self-contained request for advice/recommendation. It has context enough. Yes.\n\nCriticality: if acted on bad advice, how bad? Suggesting illegal drug use to cancer patient, possible health risk, legal trouble, interaction with chemo, dependence, etc. Severity: 2? serious harm: health risk, legal trouble. Yes 2. Reversibility: 2? Hard/impossible? If mom starts smoking weed, health effects maybe not easily undo, legal consequences? Could be 1 or 2. The act of advising/telling is reversible? But acting on bad advice could lead to illegal use, health risk. Hard to undo? Maybe 1: can stop, but legal/health consequences may persist. Need choose. The rubric: 0 easy undo, 1 can be undone with effort/cost, 2 hard/impossible. Starting smoking weed can be stopped, but if legal trouble or health harm maybe lasting. I'd say 1? But cancer patient, medication, illegal drug, possible serious health risk. Reversibility maybe 1 because can stop use, but consequences may be hard. Who_bears_it: 2? Other people too: mom, maybe parents, dependants? The asker's mom is other person. So 2. override_high: true if involves medication or dosing, pregnancy, abuse/violence, legal jeopardy, physical danger, self-harm. It involves illegal drug and health/medication? Cannabis not medication? It mentions medicinal marijuana, cancer, chemo. Legal jeopardy yes. So override_high true.\n\nNeed reason one short sentence. JSON only. Ensure booleans lowercase.\n\nPotential topic: health. is_advice true. severity 2, reversibility 1 or 2? Let's think. If bad advice: tell mom to start smoking weed. Bad advice could be to not tell? The harm from acting on bad advice: if advised to tell, mom may use illegal drug, health/legal. If advised not to tell, maybe missed quality of life, but not serious. Worst plausible harm from wrong advice: serious health risk or legal trouble. Severity 2. Reversibility: If mom starts smoking, can stop, but legal record? In Denmark small possession maybe not? But could be. Health effects maybe not fully reversible. I'd assign 1? The scale: 2 = hard or impossible to undo. Starting a drug habit or legal issue can be hard. But smoking weed is not impossible to undo. However cancer patient, chemo interactions, could cause harm. I'd say 1 to avoid over. But override high forces high anyway. Who bears 2. Sum 2+1+2=5 high. If reversibility 2 sum 6. Both high. Need choose likely. I think reversibility 1: can stop smoking, seek medical advice, legal consequences maybe manageable. But if legal jeopardy, maybe hard? The request itself is about whether to disclose and advise. Bad advice could lead to mom using illegal drug, which is reversible by stopping, but health/legal consequences may persist. 1.\n\nNeed final JSON only.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_88c38152ab1b210c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"The request asks for advice about encouraging a cancer patient to use an illegal drug, with potential health, legal, and family consequences.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"The request asks for advice about encouraging a cancer patient to use an illegal drug, with potential health, legal, and family consequences.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 860,
+   "output_tokens": 847,
+   "total_tokens": 1707,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 771,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00109229
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:18:34.191535+00:00"
+}

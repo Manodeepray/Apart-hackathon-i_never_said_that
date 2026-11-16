@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should start hard assignments by setting a 5-minute timer and writing just one sentence. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_R1_s0dluKKiNq1BzVJ6nPtvpFEIPY0G3pFsJkkdQakDpYIiTawh9wuo5oAorqiNJZenWRl-DuKSyIEUCPzxnXmVwojLjz3ahl5g3EB5jpWp6EkCtfxhLB051lvxejnXhIrVGUsU2UBH_axu3I5UIvUiUqO09Rvxrody5i9Zc8hgkUk3lRBhWR4bRmW9Zf_pm5LdIiHSpeQmMxGC1sP3ikPy5AK5JRS8rW9WzX46tXZGYjUEvPR5YTcvqpsezgezcIwnND8SnUsz5nTYIeWE-THFb9px_t9jSIkc_5rvVcDD170hYbSztvvyOXjMkFIcZD-2X-dTzFtfEujjXJXX2MnIhbTHLANiHNs5Uq27DoUgB26OSsGABoySlFV_kSzC2JCceDls7ksgmpavO1rS8guZqHug9K1lWvgsan6zCJvAvwgcnZKhazQ28cIpJZAPwQFnqZYbjpJhQt2F5nVKNpwHplDnbcHAMCGMHR3_WKMv78dDzUUXy_PKoaYRyJZYD3wBgXmrCcZQdlAuBgaCijrWWgmg="
+ },
+ "response": {
+  "id": "resp_fwmxSv-JqmpfxRkZVe1Mhc580d3OMbPAbwVFBsFprRdZjx-1K_JWNeRNR1YZkLTjvYvi-YvjgpYFeJO8Qqk8pR6Cg9h6kgNY751oWYA2_99hUgQCzfkjk2tKQ0S6RhA0lqv-UsFb2mv8W_vwikiwojFp62YE3IKg5VV0Xt7sfzNLCJu8KL9JY-E-rKtdN0I-GGUT_jJGBPkT4fKvEL3mT1c0WTsXApfhRhokTRb-yOA2P6k5_U70N4u_c46Izi8_MiYacKxmTXcioWnJiwt0RtoiS9ldMKfMipaeMMtLA1eChH0KMDdNqbUSyFJp4NRnIGHzzG0FC5SRr6EqeyFb2qbcKpQgfgAQqIX6zV2GYB4phczf7iVM-hgPvn5QHvo7l8iZcfHBC8QxLv07Is_JsmDqlXvHXhzgCT0_se5nvKVAPayOvNRY-AMmD-c8nk3pqQl3VJF9YlicGwoO4_hhOkp6JaVKd842hxsNIGCzHC8P5nzr8fw_7v3c-juX0qBd-SIwhzTRSW11dHkYTTJ4XYDjCX0=",
+  "object": "response",
+  "created_at": 1794781435,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_98f417a024f19681",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They are summarizing the advice: \"From your answer, I'll assume I should start hard assignments by setting a 5-minute timer and writing just one sentence. Right?\" We need to confirm and perhaps clarify, but also add nuance. The user is in high school, struggling with procrastination, and we gave a comprehensive answer. Now they are checking their understanding. We should affirm, but also remind them that the key is to start, and that the 5-minute timer is a trick to overcome the initial resistance. Also, we might add that after the 5 minutes, they can continue if they want, but the goal is just to start. We should also gently remind them about the other points (sleep, accountability) but not overload. The user seems to want a simple confirmation. So we'll say yes, that's exactly it, and then elaborate slightly on why it works and how to use it. Also, we can mention that if they find it hard to even do that, they can break it down further. We'll keep it encouraging and concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_94a77ab31dacea5f",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s the core move.\n\nThe 5-minute timer + one sentence is not about getting the whole essay done. It\u2019s about **breaking the paralysis of starting**. Once you\u2019ve written that one sentence, you\u2019ve already done the hardest part \u2014 you\u2019ve crossed the line from \u201cavoiding\u201d to \u201cdoing.\u201d And often, once you start, it\u2019s easier to keep going. If you still want to stop after 5 minutes, that\u2019s fine. You\u2019ve still made progress, and you can do another 5 minutes later.\n\nBut here\u2019s the important part: **don\u2019t just set the timer and stare at the blank page.** Write literally anything. It can be:\n\n- \u201cI don\u2019t know what to write about this yet, but I\u2019m going to figure it out.\u201d\n- \u201cThe first thing I remember about this book is\u2026\u201d\n- \u201cThis essay is about [topic], and my main point is probably\u2026\u201d\n\nIt doesn\u2019t have to be good. It just has to exist. You can fix it later.\n\nAnd if even that feels too hard, shrink it further: just open the document and type your name. Or write one word. The goal is to make the task so small that your brain doesn\u2019t fight it.\n\nSo yes \u2014 you\u2019ve got it. Start with 5 minutes and one sentence. That\u2019s your first step. Do that tonight, and you\u2019ll already be ahead of where you were yesterday.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s the core move.\n\nThe 5-minute timer + one sentence is not about getting the whole essay done. It\u2019s about **breaking the paralysis of starting**. Once you\u2019ve written that one sentence, you\u2019ve already done the hardest part \u2014 you\u2019ve crossed the line from \u201cavoiding\u201d to \u201cdoing.\u201d And often, once you start, it\u2019s easier to keep going. If you still want to stop after 5 minutes, that\u2019s fine. You\u2019ve still made progress, and you can do another 5 minutes later.\n\nBut here\u2019s the important part: **don\u2019t just set the timer and stare at the blank page.** Write literally anything. It can be:\n\n- \u201cI don\u2019t know what to write about this yet, but I\u2019m going to figure it out.\u201d\n- \u201cThe first thing I remember about this book is\u2026\u201d\n- \u201cThis essay is about [topic], and my main point is probably\u2026\u201d\n\nIt doesn\u2019t have to be good. It just has to exist. You can fix it later.\n\nAnd if even that feels too hard, shrink it further: just open the document and type your name. Or write one word. The goal is to make the task so small that your brain doesn\u2019t fight it.\n\nSo yes \u2014 you\u2019ve got it. Start with 5 minutes and one sentence. That\u2019s your first step. Do that tonight, and you\u2019ll already be ahead of where you were yesterday.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1101,
+   "output_tokens": 538,
+   "total_tokens": 1639,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 226,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 7.6595976e-05
+  },
+  "previous_response_id": "resp_R1_s0dluKKiNq1BzVJ6nPtvpFEIPY0G3pFsJkkdQakDpYIiTawh9wuo5oAorqiNJZenWRl-DuKSyIEUCPzxnXmVwojLjz3ahl5g3EB5jpWp6EkCtfxhLB051lvxejnXhIrVGUsU2UBH_axu3I5UIvUiUqO09Rvxrody5i9Zc8hgkUk3lRBhWR4bRmW9Zf_pm5LdIiHSpeQmMxGC1sP3ikPy5AK5JRS8rW9WzX46tXZGYjUEvPR5YTcvqpsezgezcIwnND8SnUsz5nTYIeWE-THFb9px_t9jSIkc_5rvVcDD170hYbSztvvyOXjMkFIcZD-2X-dTzFtfEujjXJXX2MnIhbTHLANiHNs5Uq27DoUgB26OSsGABoySlFV_kSzC2JCceDls7ksgmpavO1rS8guZqHug9K1lWvgsan6zCJvAvwgcnZKhazQ28cIpJZAPwQFnqZYbjpJhQt2F5nVKNpwHplDnbcHAMCGMHR3_WKMv78dDzUUXy_PKoaYRyJZYD3wBgXmrCcZQdlAuBgaCijrWWgmg=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:24:00.452209+00:00"
+}

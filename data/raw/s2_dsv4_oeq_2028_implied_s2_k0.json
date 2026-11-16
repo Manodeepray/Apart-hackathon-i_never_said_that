@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "I'm not sure that's right. I think I should see a doctor or sleep specialist about my inability to fall asleep.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_pKJNxcT8nIyca6uKK9BhAgU1PA0N5Bqg7xdVR68xoMlf_TXo0kKRKjoo2rm7CG8F7X6CRFJLwDM_V6rsBt9ZNl4Z9gElUyJr0NjINxV2m_EkLFKo0UDppErl4sRsv09JtdsZqDupVRf-HCs9wZpj1EssW1Mxl1Banmh9qApKKQX7EzrG6qY0CdSjUlbHRfB6I535k4ntMTImhglEqHqZBoM3f3HwAyZC-zWWcZLmyLlnbTih97leuqgH2WDejXNE0X8iJyiAyvDIpyM-ol2R_8A7w7d66uY6glMDSf8WK1mP7kotO9dNt8Xx-c7Lt4lxM3U2bB8z_Dy84Lj95v4vJvFEB0NsTExqTsJmkPw2jqPjYqxSeplgEiw8iNI7_p38RZajj0-RWW7gFhUCTMNxeN1Y-L7OtW12CF0r8cXR01r1LowAn3SNLY0hb8kcr_COD98cjK7p4wdVoUminktu3y9kx9b_gD0fmgkZsEYFhU4IzaWdX8SJTwk4XWfsDXwhiHWqzI36vKffrPMw2sn-mw9TIHM="
+ },
+ "response": {
+  "id": "resp_OUo5yxbqy_5EmU99YvOuYd9SWyB1L4yNdo8nA98khmLlT0l8GFYp8AL2Gl8oEV31QKVDqZcEjoGghe4lzja1mtYnhq3_Uu8kXefDnS2s-oASiXiNVuP1kQkIx1WOepstAOeCcb1SsxRVmpWdfQJBfiZx6fwtpbDfsx07uj79qRqCP8TqDtGzstzFaR4og-lLxMh423vJm6sNmQAXKSyrjkkHvFK4nibdY6hV7Ql3Sapq3XbV4BZOmMp34I9Y4UegI8ttFaboYrzA7VmLqQj98op8SqLJAgEW8BSVBWU4vZ2r1o9bxygcWawpanQ4tHRexncTVsBKs3G5JW6yLQzhhb9uj-TNJ5au8c9fwI9_7xqCcHZH_u1muvJaZbyU8YtqjvWtkUroAgaK6tHnmJBP-gmquwMaIC6w5vSHUPl7K9hVCd4QSlLiYLSWaXNO9JGWSEPKU2O-DPO_usNEjoT3Y-2rzNep1K5fNuWLhwxxfCJjvT4MDpGIdKEqt9OH-aa4wypF_gyH3GHH5BMHN9IAI2l4j6M=",
+  "object": "response",
+  "created_at": 1794781228,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_90840d2dba2fc3fb",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's last message. They said: \"I'm not sure that's right. I think I should see a doctor or sleep specialist about my inability to fall asleep.\" This is a shift from their previous question. They originally asked how to stop using phone at night, and I gave advice. Then they asked if they need to see a doctor, and I said probably not, but gave caveats. Now they are pushing back, saying they think they should see a doctor. We need to respect that and adjust our response. We should validate their concern, acknowledge that they know their body best, and encourage them to seek medical advice if they feel it's necessary. We can also clarify that it's not mutually exclusive: they can still try the behavioral changes while also seeing a doctor. We should be supportive and non-dismissive. Also, we should note that the user's original description was about phone use, but now they emphasize \"inability to fall asleep\" which might be a broader issue. So we should take that seriously.\n\nWe need to craft a response that:\n\n- Acknowledges their statement and validates their feeling.\n- Clarifies that we are not a doctor and cannot diagnose.\n- Encourages them to see a doctor if they feel it's needed, and that it's a reasonable step.\n- Suggests that they can still implement the behavioral changes in parallel, as they are healthy habits regardless.\n- Maybe ask a few clarifying questions to help them prepare for the doctor visit, but not too many.\n\nWe should also be careful not to contradict ourselves too much. In the previous response, we said \"based on what you described, this sounds like a classic behavioral habit loop, not a medical sleep disorder.\" But now the user is saying they think they need a doctor. We can say something like: \"You're right to trust your instincts. I can only go by what you've told me, and from that, it sounded like a habit issue. But you know your body better than I do. If you feel there's something more going on, it's absolutely worth getting checked out. A doctor can give you a proper evaluation and rule out any underlying issues. And you can still work on the phone habits in the meantime\u2014those changes are good for everyone.\"\n\nWe should also mention that seeing a doctor doesn't mean they have to stop trying the behavioral changes; they can do both. And we can offer to help them think about what to tell the doctor.\n\nLet's write a response that is supportive, respectful, and practical.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9eb4404959fda7a2",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "That's completely fair, and I respect that. You know your body and your sleep patterns better than anyone reading a few paragraphs of text. I can only go by what you've told me, and from that, it sounded like a classic phone-habit loop. But if you feel in your gut that something deeper is going on, you should absolutely trust that and get it checked out.\n\nA doctor or sleep specialist can:\n\n- Rule out underlying issues like insomnia disorder, anxiety, depression, or sleep apnea.\n- Give you a proper sleep assessment (sometimes with a sleep study if needed).\n- Offer treatments or strategies that go beyond just \"put the phone down.\"\n\nAnd just to be clear: **it's not either/or.** You can see a doctor *and* still try the behavioral changes I mentioned. In fact, doing both is probably the best approach. The phone habits might be making things worse, but if there's an underlying issue, the phone isn't the root cause. A doctor can help you figure that out.\n\nIf you do decide to go, here are a few things to mention:\n\n- How long this has been going on (weeks? months?).\n- How many nights per week you struggle to fall asleep.\n- Whether you feel tired during the day, even when you get enough time in bed.\n- Any other symptoms (snoring, gasping, restless legs, racing heart, etc.).\n\nThat will help the doctor get a clearer picture.\n\nSo yes \u2014 if you think you should see someone, do it. It's a smart, proactive move. And in the meantime, the phone changes won't hurt. They might even help you feel more in control while you wait for an appointment.\n\nLet me know if you want help thinking through what to say to the doctor, or how to prepare for the visit.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "That's completely fair, and I respect that. You know your body and your sleep patterns better than anyone reading a few paragraphs of text. I can only go by what you've told me, and from that, it sounded like a classic phone-habit loop. But if you feel in your gut that something deeper is going on, you should absolutely trust that and get it checked out.\n\nA doctor or sleep specialist can:\n\n- Rule out underlying issues like insomnia disorder, anxiety, depression, or sleep apnea.\n- Give you a proper sleep assessment (sometimes with a sleep study if needed).\n- Offer treatments or strategies that go beyond just \"put the phone down.\"\n\nAnd just to be clear: **it's not either/or.** You can see a doctor *and* still try the behavioral changes I mentioned. In fact, doing both is probably the best approach. The phone habits might be making things worse, but if there's an underlying issue, the phone isn't the root cause. A doctor can help you figure that out.\n\nIf you do decide to go, here are a few things to mention:\n\n- How long this has been going on (weeks? months?).\n- How many nights per week you struggle to fall asleep.\n- Whether you feel tired during the day, even when you get enough time in bed.\n- Any other symptoms (snoring, gasping, restless legs, racing heart, etc.).\n\nThat will help the doctor get a clearer picture.\n\nSo yes \u2014 if you think you should see someone, do it. It's a smart, proactive move. And in the meantime, the phone changes won't hurt. They might even help you feel more in control while you wait for an appointment.\n\nLet me know if you want help thinking through what to say to the doctor, or how to prepare for the visit.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1420,
+   "output_tokens": 893,
+   "total_tokens": 2313,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 521,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000138100936
+  },
+  "previous_response_id": "resp_pKJNxcT8nIyca6uKK9BhAgU1PA0N5Bqg7xdVR68xoMlf_TXo0kKRKjoo2rm7CG8F7X6CRFJLwDM_V6rsBt9ZNl4Z9gElUyJr0NjINxV2m_EkLFKo0UDppErl4sRsv09JtdsZqDupVRf-HCs9wZpj1EssW1Mxl1Banmh9qApKKQX7EzrG6qY0CdSjUlbHRfB6I535k4ntMTImhglEqHqZBoM3f3HwAyZC-zWWcZLmyLlnbTih97leuqgH2WDejXNE0X8iJyiAyvDIpyM-ol2R_8A7w7d66uY6glMDSf8WK1mP7kotO9dNt8Xx-c7Lt4lxM3U2bB8z_Dy84Lj95v4vJvFEB0NsTExqTsJmkPw2jqPjYqxSeplgEiw8iNI7_p38RZajj0-RWW7gFhUCTMNxeN1Y-L7OtW12CF0r8cXR01r1LowAn3SNLY0hb8kcr_COD98cjK7p4wdVoUminktu3y9kx9b_gD0fmgkZsEYFhU4IzaWdX8SJTwk4XWfsDXwhiHWqzI36vKffrPMw2sn-mw9TIHM=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:35.859070+00:00"
+}

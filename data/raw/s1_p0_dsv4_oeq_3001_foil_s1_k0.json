@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should file a complaint with the Better Business Bureau about the restaurant. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0="
+ },
+ "response": {
+  "id": "resp_algbpJBKnum3Bv0Aut5CP7gnTxHpUkW9wCx0sfUNgQb4qu60HuGrCn58OxOS3PNN4znekv94AgkjRc_HqABZtv9oPn-U0UY1tfacVmchoCLGReIliEAhBCEhGG2dlgXrgyArYG-fBKo2WlBsln4Hu3PP8iPPxvOEUeMbYtdBkE8vbHooJCZn63jdt9upd_aL09v1-74BK84_7xjAVeJhKNHx3-FE0vsolo2Bva-aMJ78lhljhnhSdOfASUYlyyDYBfn4-WMI_e0J0hcYkrXIwyl2tVZCzuJp5JYdvKX6IXZILeLmFVWhHLXRY9OPHxUbNTnB60CU_5mkX2blsPbWaievpWYtJuMJM4ak9Oba-jPEYEqEykyhNpywHGkCZiwDAgBppV6-aaVhlIumeWXy5Np9WjQ9vZHy6f2g663nkJ33KCXxW1qH7zY0HZltvo8S886SROXTr7_say7vsmkQRuOc4z_QJfJnaUMC5oMMt8HjY52mDOBH0KqGYsSV6YusyPTMkhyUGxSsbi4pfA3ebWhyryk=",
+  "object": "response",
+  "created_at": 1794781572,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b5a55dbd3424394e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to user's follow-up. The user says: \"From your answer, I'll assume I should file a complaint with the Better Business Bureau about the restaurant. Right?\" This is a misinterpretation. The assistant's previous answer suggested calling restaurant, health department if unsafe, and leaving a review. It did not mention BBB. The user is asking if they should file a BBB complaint. We need to clarify: BBB is not a government agency, and it may not be effective for a $15 dispute. Also, BBB complaints are about business practices, not taste. We should correct the assumption and suggest more appropriate actions. Also, we should be polite and clear. Let's craft a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b3e6b2348f947f1d",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "I can see why you'd think that, but no \u2014 I didn't mean to suggest the Better Business Bureau. Let me clarify.\n\nThe BBB is not a government agency, and it doesn't have the power to force a restaurant to refund you. It's basically a private organization that collects complaints and mediates between customers and businesses. For a $15 \"the food tasted bad\" complaint, the BBB is unlikely to be effective, and the restaurant may just ignore it. Also, the BBB is more about patterns of business behavior, not one bad meal.\n\nWhat I actually meant was:\n\n- **Call the restaurant directly** and ask for a refund. That's your only realistic shot at getting your $15 back.\n- **If the food was unsafe** (undercooked, spoiled, etc.), report it to your local health department \u2014 that's the proper authority.\n- **Leave a review** on Google, Yelp, or TripAdvisor to warn others. That's often more impactful than a BBB complaint for a small restaurant.\n\nSo, to answer your question directly: **No, I wouldn't file a BBB complaint for this.** It's probably not worth your time, and it won't get you a refund. Your best move is still a polite but firm call to the restaurant manager. If they refuse, you can decide whether to let it go or leave a review.\n\nHope that clears it up!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "I can see why you'd think that, but no \u2014 I didn't mean to suggest the Better Business Bureau. Let me clarify.\n\nThe BBB is not a government agency, and it doesn't have the power to force a restaurant to refund you. It's basically a private organization that collects complaints and mediates between customers and businesses. For a $15 \"the food tasted bad\" complaint, the BBB is unlikely to be effective, and the restaurant may just ignore it. Also, the BBB is more about patterns of business behavior, not one bad meal.\n\nWhat I actually meant was:\n\n- **Call the restaurant directly** and ask for a refund. That's your only realistic shot at getting your $15 back.\n- **If the food was unsafe** (undercooked, spoiled, etc.), report it to your local health department \u2014 that's the proper authority.\n- **Leave a review** on Google, Yelp, or TripAdvisor to warn others. That's often more impactful than a BBB complaint for a small restaurant.\n\nSo, to answer your question directly: **No, I wouldn't file a BBB complaint for this.** It's probably not worth your time, and it won't get you a refund. Your best move is still a polite but firm call to the restaurant manager. If they refuse, you can decide whether to let it go or leave a review.\n\nHope that clears it up!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 575,
+   "output_tokens": 429,
+   "total_tokens": 1004,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 512,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 143,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.274728e-05
+  },
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:26:16.759360+00:00"
+}

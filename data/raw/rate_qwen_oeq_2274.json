@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nHow to Move Out Hello Life Pro's of Reddit! \n\nI'm in a bit of a pickle here and I'm hoping you guys can give me some tips for getting out on my own and on my feet. \n\nCurrently, my gf and I live at my parents' house. The home is a duplex, but the kitchen and living room are at the bottom of the house, or our half. When she first moved in, the others barely ever came downstairs, but after getting comfortable they have began to come downstairs invading our privacy and waking us up from naps (we both work constantly changing schedules and are both in school) so we sleep whenever we can. \n\nWhile these people have been annoying me for 20 years, they don't bother me much but I can see the disappointment in my gf's eyes. She sometimes mentions it would be nice to have our own place, and at a time that was our plan before my Father offered us a place for free. \n\nShe barely ever says anything, but I can tell she wants us to get our own place. What are your tips for two 20-year old college students working part time and looking to get their own place? \n\nThanks in advance!!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_CdncUIcx-h-KSAIx_nmOXO1o_Uiu_4mn6pDMPnYjKa-eYPmLU9KeZOK6RRwtsne4K6Xf4xzVmAuf_bIcZzOhhnoa47mNRIXla2dR3AmG2bnA112-4C1c0RH5Zo0l0ptO-sEyvswkfVpTkJhgK9A-k-H2okjaQ9zbpYhJ1CoTEjr4mvsFqhq5lAPcSbnneXASQ_LhCHTk6npwS2Vz-4bGxTRKgmFC8w3KEU8J2utm_evq_ri4T8BEwW60URjJUogkb9k4-ffRxyB0JRhtBVXKVtSr_b83ZFnCN_o0v53rLtwzjfthIONpdj5ySxja-SzVink2t6Dl9CfAjWk4JURbd3R2BLeD3gg16Uep4PGBAyaRSKyVMUZGK8n9fHbo247TuDmnQFdsz6R1Xecc_sx-6Cf3IxGU_KEzYMWZmYC7LCE8CuzA7bX03oOyPV9dn62Jm_4sXUq7HNF-obTWAmI3_Q3QUE8pKZQrqPuqSVUyZOdmsgfgT7vBg-ybJMlV_7pKpxjog4FCGMcItxUaUjRjsQCwXOU=",
+  "object": "response",
+  "created_at": 1794770126,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9f72f44ba1cfe2d2",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: asks tips for two 20-year-old college students working part-time to get own place, living with parents, privacy issues. Main subject? Could be relationships? It's about moving out, housing, finances. Topic options: health, money, relationships, other. Main subject advice requested: getting own place, likely money/personal finance? It involves housing, saving, moving out. Could be relationships because girlfriend wants own place and living with parents, but main subject is moving out / housing / finances. I'd classify money? Personal finance, income, financial decisions. Or other? \"How to move out\" is life/housing, not strictly money but includes financial planning. The options: money: personal finance, debt, spending, saving, income, investing, financial decisions. Getting own place as students part-time is financial decision/housing. So topic money likely.\n\nis_advice: true, self-contained request for tips.\n\nCriticality: if bad advice, how bad? Moving out prematurely could cause financial loss, eviction, relationship stress, but not serious harm. Severity: 1? real but limited loss (money in hundreds? maybe more, but not large/lasting? Could be large financial loss if bad advice leads to debt? But likely limited). Maybe 1. Reversibility: 1? Moving out can be undone with effort/cost (move back, break lease). Who_bears_it: 1? asker and girlfriend significantly? Other people too? The girlfriend is a partner, but who_bears_it 2 says other people too (children, partner, patients, dependants). Here advice affects girlfriend too, but not dependant? It says other people too (children, a partner, patients, dependants). So if bad advice, partner bears it too. Could be 2. But maybe only asker? The request is for two people, so partner. Score 2. Sum 1+1+2=4 high? But override false. Is that too high? Need calibrate. If bad advice to move out could cause financial strain for both, but not serious. who_bears_it 2 because partner. Could be 1 if only asker significantly? The girlfriend is affected, but not dependant. The rubric explicitly includes partner. So 2.\n\nOverride_high: false (no danger, self-harm, medication, pregnancy, abuse, legal jeopardy). Legal? lease maybe not legal jeopardy. false.\n\nNeed output JSON only. reason one short sentence.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_89401dc22d7432ff",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for practical advice on moving out and housing, with potential financial and relationship consequences for both partners.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for practical advice on moving out and housing, with potential financial and relationship consequences for both partners.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 850,
+   "output_tokens": 606,
+   "total_tokens": 1456,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 534,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0007906500000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:31.188797+00:00"
+}

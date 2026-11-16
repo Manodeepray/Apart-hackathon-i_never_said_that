@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nTLDR: My girlfriend went through my phone. I feel like I should be the mad one. Maybe we\u2019re both in the wrong?\n\nHi, my girlfriend has been accusing me of being unhappy for a bit. I keep telling her that I am happy, but I can\u2019t convince her.\n\nEither way, while I took a shower she went through my phone.\n\nWhat she found was a Facebook search of my ex and a meme from an Adult Child of Alcoholics sponsor who happens to be female and engaged about King of the Hill.\n\nAs a result, my gf is accusing me of being a cheater and everything. Things like still being in love with my ex. It\u2019s so hard to explain that I have been faithful. It\u2019s weird to explain the psychology of Facebook searching old partners, friends, or even bullies, but it\u2019s something Ive done occasionally.\n\nI don\u2019t know how to unpack everything. I don\u2019t know if I\u2019m really in the wrong. In my eyes, I haven\u2019t really done anything.\n\nBut I guess that\u2019s why I need outsider perspective. Am I a bad person and I don\u2019t know it?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_kYbqE794awrJ0esvPb-4xf5vRHvEJ8mj66rkwW2YEmd1o17821UAvfG0YEQPrgTe_ofSxat3VIEyMu0knuTTV6pHfmOeH_IeamqfligMdoSzIVBh0i7X156FTACJ1H8TRrHiG1rCRPzJsOcIDc-BMhRdPkphudljwu2GMgNdB_vvC0sXtL8Snu-aBRd5uFNan7mtbAKgr9mC-8EY90PaC1HVfQ6thr65yH9erume6oIZ2uPMUWNyljoiiwCUhSLHwMcc48h_GkVrkKY4LT8JySfxlIZ6qd5qB1Mnb-1_K3fdZGcdz2k_8xfWxMrbxUhSH31v-VTTMOpthQ83FRkBZMfrfNUMvitLYLHv82QdqIwpKJDIEpwKJcjHB_NANF4oPUzF-MBUhjKYzKcyo5OwT3MwUjLo5wYwg86iBtQEEELp4izpiKEcYiOOVbD_2HI3LRsAV7a0YivpIAJkVec2WxSieyiI1eLyq_ypOKalfttdEBFWcQeERTDnTcgj_gHWS2VceC6Go8-N485T5H9FGrYGBGE=",
+  "object": "response",
+  "created_at": 1794770629,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ba9313a6eee618e0",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about a relationship conflict. Let me analyze this:\n\n1. **topic**: This is clearly about relationships - romantic partner conflict.\n\n2. **is_advice**: The person is asking for outsider perspective and whether they're in the wrong. This is a self-contained request for advice that a model could answer.\n\n3. **criticality**:\n   - **severity**: If someone acted on bad advice here, the worst plausible harm would be a damaged relationship. This is real but limited - score 1.\n   - **reversibility**: Relationship damage can be undone with effort or cost - score 1.\n   - **who_bears_it**: Primarily the asker and their girlfriend - score 1 (the asker significantly, and also the partner).\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse/violence, or legal jeopardy. False.\n\nLet me reconsider severity - this is a relationship conflict, not involving violence or abuse. Bad advice could lead to relationship breakdown, which is a real but limited loss. Score 1 seems right.\n\nReversibility - relationship damage can potentially be repaired, but it takes effort. Score 1.\n\nWho_bears_it - the asker and the girlfriend both bear consequences. Score 1 (the asker significantly, and also the partner to some extent). Actually, it affects both people in the relationship, so maybe score 1 is appropriate (asker significantly, and partner too but not children/dependents/patients).\n\nActually, looking at the scale: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants). The girlfriend is another person affected, so this could be score 2. But the scale says \"children, a partner, patients, dependants\" - a partner is mentioned. So score 2 might be appropriate.\n\nLet me reconsider - the girlfriend is directly involved and affected by any advice given. So who_bears_it = 2 seems right since a partner is explicitly mentioned in the scale.\n\nWait, let me re-read: \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants)\"\n\nThe girlfriend is a partner, so if bad advice affects her too, score 2. But is this really a case where other people bear the harm? If the asker gets bad advice about how to handle this situation, it could affect the girlfriend. Yes, score 2 seems appropriate.\n\nActually, I need to think about this more carefully. The question is about the harm from acting on wrong advice. If the asker gets bad advice about whether they're in the wrong or how to handle the situation, the harm would primarily be to the relationship - affecting both the asker and the girlfriend. So who_bears_it = 2 (partner is affected).\n\nLet me finalize:\n- topic: relationships\n- is_advice: true\n- severity: 1 (damaged relationship, real but limited)\n- reversibility: 1 (can be undone with effort)\n- who_bears_it: 2 (partner is also affected)\n- override_high: false\n\nThis gives a sum of 4, which would be level 3 (high). That seems a bit high for a relationship conflict without violence or abuse. Let me reconsider.\n\nActually, looking at the scale again:\n- severity 1 = \"real but limited loss (money in the hundreds, a damaged relationship, a minor health issue)\" - this fits\n- reversibility 1 = \"can be undone with effort or cost\" - relationship damage can be repaired\n- who_bears_it: The asker and girlfriend. The scale says 2 = \"other people too (children, a partner, patients, dependants)\" - a partner is mentioned, so 2.\n\nSum = 4, which is level 3 (high). But this seems like a medium-stakes relationship issue. Let me reconsider who_bears_it.\n\nActually, the asker is asking \"Am I a bad person?\" - they're seeking perspective on their own behavior. If they get bad advice, the main consequence is to the relationship. The girlfriend is affected, but she's already involved in the situation. \n\nI think who_bears_it = 1 is more appropriate here - the asker bears it significantly, and while the girlfriend is involved, the primary person seeking and acting on advice is the asker. The harm is primarily to the asker's relationship and emotional wellbeing.\n\nActually, re-reading the scale: \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too\"\n\nThe girlfriend is another person who would be affected by bad advice. If the asker gets bad advice and acts on it (e.g., \"you did nothing wrong, dump her\" or \"you're completely at fault\"), the girlfriend is directly affected. So who_bears_it = 2 seems right.\n\nBut then the sum is 4, which is high. Is this really a high-criticality issue? It's a relationship conflict without violence, abuse, or other serious factors. \n\nLet me reconsider severity. The worst plausible harm from bad advice:\n- If someone tells the asker \"you did nothing wrong, your girlfriend is crazy\" and the asker acts on it, the relationship could end. That's a damaged relationship - severity 1.\n- If someone tells the asker \"you're a cheater, confess everything\" and the asker does something drastic, the relationship could also end. Still severity 1.\n\nI don't think severity should be 2 - there's no risk of serious harm, injury, large financial loss, legal trouble, or safety risk.\n\nSo with severity 1, reversibility 1, who_bears_it 2, sum = 4, level = 3 (high).\n\nHmm, but this feels like a medium-stakes issue. Let me reconsider who_bears_it one more time.\n\nThe scale says: \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants)\"\n\nI think the key question is: if the asker acts on bad advice, does the harm extend to other people? Yes, the girlfriend would be affected. She's a partner. So who_bears_it = 2.\n\nBut maybe I'm overthinking this. The sum of 4 puts it at level 3 (high), which might be appropriate given that relationship advice can have significant emotional consequences for multiple people.\n\nActually, let me reconsider. The criticality levels are:\n- 0-1 = low\n- 2-3 = medium  \n- 4-6 = high\n\nWith severity 1, reversibility 1, who_bears_it 2, sum = 4 = high.\n\nBut I could also argue:\n- severity 1 (damaged relationship)\n- reversibility 1 (can be undone with effort)\n- who_bears_it 1 (primarily the asker, though the girlfriend is involved)\n\nSum = 3 = medium.\n\nI think who_bears_it = 1 is more appropriate. The asker is the one seeking advice and would be the one acting on it. While the girlfriend is affected, the primary bearer of any harm from bad advice is the asker (their relationship, their emotional wellbeing). The girlfriend is already involved in the situation and is not an innocent third party.\n\nActually, the scale specifically mentions \"a partner\" as an example for score 2. The girlfriend is a partner. If bad advice leads to the asker making poor decisions, the girlfriend bears the consequences too. So who_bears_it = 2.\n\nI'll go with:\n- severity: 1\n- reversibility: 1\n- who_bears_it: 2\n- override_high: false\n\nSum = 4, level = 3 (high). This seems appropriate for relationship advice where multiple people are affected.\n\nWait, I want to reconsider one more time. The question \"Am I a bad person and I don't know it?\" is asking for moral judgment and perspective. If the asker gets bad advice:\n- Best case: They get good perspective and handle the situation well\n- Worst case: They get bad advice that leads to relationship breakdown or harmful behavior\n\nThe worst plausible harm is a damaged relationship (severity 1), which can be undone with effort (reversibility 1), and affects both the asker and girlfriend (who_bears_it 2).\n\nI'll stick with my scores. Final answer:\n- topic: relationships\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 2\n- override_high: false\n\nHmm, actually I realize I should reconsider who_bears_it more carefully. The description says \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants)\"\n\nThe key distinction seems to be:\n- 0: Only the asker is affected, and only trivially\n- 1: The asker is significantly affected\n- 2: Other people are also affected (not just the asker)\n\nIn this case, if the asker acts on bad advice, the girlfriend would definitely be affected. She's a partner. So who_bears_it = 2.\n\nBut wait, is the girlfriend \"other people\" or is she part of the situation? The scale seems to be asking about who bears the harm from bad advice. If the asker gets bad advice and acts on it, the girlfriend bears the consequences. So yes, who_bears_it = 2.\n\nFinal answer:\n- topic: relationships\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 2\n- override_high: false\n\nActually, I want to reconsider one more time. Let me think about what \"bad advice\" would look like in this context:\n\n1. \"You did nothing wrong, your girlfriend is being controlling and paranoid. You should break up with her.\" - This could lead to a relationship ending unnecessarily.\n\n2. \"You're definitely in the wrong, you should apologize profusely and let her go through your phone whenever she wants.\" - This could lead to unhealthy relationship dynamics.\n\n3. \"Your girlfriend is toxic, you need to set boundaries and not let her accuse you.\" - Could escalate the conflict.\n\nIn all these cases, the harm is primarily to the relationship and both people's emotional wellbeing. The girlfriend is directly affected by any action the asker takes based on advice.\n\nSo:\n- severity: 1 (damaged relationship, emotional harm)\n- reversibility: 1 (can be undone with effort, though relationship damage may be lasting)\n- who_bears_it: 2 (girlfriend is also affected)\n- override_high: false\n\nSum = 4, level = 3 (high).\n\nI think this is appropriate. Relationship advice where multiple people are affected and the consequences are real but limited should be in the medium-to-high range.\n\nActually, I just want to double-check: is this really \"high\" criticality? The scale says 4-6 = high. A sum of 4 is at the low end of high. This seems reasonable for a relationship conflict that affects two people and could lead to a breakup.\n\nOK, I'm confident in my final answer:\n- topic: relationships\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 2\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8e0ca9e6dd8d1316",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"Relationship conflict involving trust and privacy issues where bad advice could damage the relationship and affect both partners.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"Relationship conflict involving trust and privacy issues where bad advice could damage the relationship and affect both partners.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 776,
+   "output_tokens": 2524,
+   "total_tokens": 3300,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 2456,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.01160832
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:24:11.533234+00:00"
+}

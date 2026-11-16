@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nAsking for Money I'm Owed by an Employer I babysit regularly for a boy who lives next door to me; I pick him up from the nanny and bring him to tutoring and back. I don't see the parents when I do this, nor do I arrange times with them anymore because I do this every week. They, as a result, haven't paid me for four weeks. They now owe me $120. I asked when a good time would be to arrange payment and they gave me a date but when I followed up the day of, they said they were busy. I said if it was easier they could just drop the money off in my mailbox, so they said they would do that. It's been a week since that conversation and still no follow up. I texted again asking when a good time would be to meet and no response. I need to buy clothing and books for college soon, and I don't know how to forcefully ask for this money without coming off as pushy or burning bridges. What's the polite way to do this??\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_qFa-mwg1uDeVd6L4IDsM0XQdbABucOwE0M6FhEgim-qfsGpbUUPyxdEBzT05_XATt_efcWc3JtTi1eapWM4paarhEAUhDnwy4SEIh0B-W2rD9UDmZ11cjcnnM6swaiVyRksskNB-8IvGthFOavGzwW7YlGz__QDTWrOMtOOL2Edbwa_R-vkjOzOzswAY9Edu7QZzCSmi4N7RSauyOlARP3UvFFSs4YMoaqkhLVa9FXRKPj8bMdluNb42gHHQIZQ6lOJ9hEevFatm2re-5bH6jzHv8g0-65DsxxH6yoYIBGX5PSHw8_n6pRWPyP78VSWgNcRTmBQBPeoUanU41gWKNXG22-nNPPmqIQeHsaqd58rRWu9wQeR3dkncr6dm6RNyCffyGXrHwMLKYJwEwe8ZqwLMqEgyrztGbJGnmKU6CQP2r7hHiDRZ13P6zbxP078ReK1Nc_KqZM3nCJQ5SpYhP_7cE7_1VcjRIthrn-or3dRSaEONQbp1pFzb96zlW9W0n3mT36p0o7rQZ3QzST17sOgndBM=",
+  "object": "response",
+  "created_at": 1794771188,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bcc441953402e2a4",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate an advice request based on specific criteria.\n\n1.  **topic**: The main subject is asking for money owed by an employer (babysitting). This falls under `money` (personal finance, income) or `relationships` (neighbor/employer conflict). Since it's about getting paid for work done, `money` seems the most appropriate primary topic, though it has relationship elements. Let's go with `money`.\n\n2.  **is_advice**: The message asks \"What's the polite way to do this??\" regarding asking for owed money. This is a self-contained request for advice. `true`.\n\n3.  **criticality**:\n    *   **severity**: If the person acts on bad advice (e.g., being too aggressive and burning bridges, or not getting paid), the worst plausible harm is losing the $120 and the job. This is a real but limited loss. Score: 1.\n    *   **reversibility**: If they burn bridges with the neighbor/employer, it might be hard to undo the relationship, but the financial loss itself is just $120. Let's say 1 (can be undone with effort or cost, or just a limited loss).\n    *   **who_bears_it**: Only the asker. Score: 0.\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy (small claims might be involved but not serious legal trouble). `false`.\n\nLet's double check the topic. It's about personal finance/income. `money` is correct.\n\nLet's refine the criticality scores.\nSeverity: 1 (real but limited loss - $120 and potentially a babysitting gig).\nReversibility: 1 (relationship damage might be hard to fix, but not impossible).\nWho_bears_it: 0 (only the asker).\n\nJSON format required.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9885d8c5598fd23a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The user is asking for advice on how to politely request owed wages without damaging a neighborly relationship.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The user is asking for advice on how to politely request owed wages without damaging a neighborly relationship.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 765,
+   "output_tokens": 462,
+   "total_tokens": 1227,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 393,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0025201200000000003
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:13.011824+00:00"
+}

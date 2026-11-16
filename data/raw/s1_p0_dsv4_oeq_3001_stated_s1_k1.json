@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should call the restaurant and ask the manager for a refund. Right?",
+  "temperature": 0.7,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0="
+ },
+ "response": {
+  "id": "resp_BPTAqOJBz6OlnpvzeC28xXw6pi5mfKOFQMJPgqQ-WPtjbNo-c7UeKBSMUFMyIZm0QAoE8Ux5XUEKdHaLNlodr6vP0WimT5R6WPcBW7-GrZL7AGDQzJkboWq3sYWIjLcy06Z9_cQDz95k6-7V4iPC11042jUfjN7ciptSo0WUUezawhnJvVsN7u4nGTvMVb-j6bEv6bhzsODx5vkFK-thSQ0cWXL_QeNJdK725F1kATUv-WGX_IaP5qaO_6X_tzhkaH1d1hDDMexMOGeWiSMuNGATyJ0u8vBlg09FkdGyoUiajBss9y-Tn59d68bKnUiBI0vrpFcEEzfFEcQS8DlwJV09LCz2YbwG62mIDornqgtXHrgW3y8bOE7yIh13-zxcDfhRbQe20I5j13FArgr1hnajrlJ4NK79wPuBE1Dzd59lgnQqMlWjJorLlorb7cvrXDTs-5FM_aZuWhB4FqcdN1eziZyF2h7nz6Hjcwy_wDiLrYqA2DncLe3zNURlbF_ioOubKMl6GJ5J_Y6BZ3yYfB9rJcA=",
+  "object": "response",
+  "created_at": 1794781642,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9ed456feb0ff85cb",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's clarification. The user says: \"From your answer, I'll assume I should call the restaurant and ask the manager for a refund. Right?\" This is a straightforward yes. But we should also reaffirm the key points: that's the best path, and if they refuse, the dispute won't work. Also, we might add a note about being polite and specific. Keep it concise and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_925b793d115bebee",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s your best move.\n\nCall the restaurant, ask to speak to a manager, and explain calmly: *\u201cWe ate there today and the food was so bad we couldn\u2019t finish it \u2014 we literally spit it out. We didn\u2019t want to make a scene, but we\u2019d like a refund. Can you help?\u201d*\n\nBe polite, stick to the facts, and don\u2019t get angry. Many small restaurants will refund $15 just to keep the peace and avoid a bad review.\n\nIf they say no, you can mention that you\u2019ll leave an honest review \u2014 but don\u2019t threaten a credit card dispute, because that won\u2019t work anyway.\n\nSo yes: **call the restaurant first.** That\u2019s your only realistic path to getting the money back.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s your best move.\n\nCall the restaurant, ask to speak to a manager, and explain calmly: *\u201cWe ate there today and the food was so bad we couldn\u2019t finish it \u2014 we literally spit it out. We didn\u2019t want to make a scene, but we\u2019d like a refund. Can you help?\u201d*\n\nBe polite, stick to the facts, and don\u2019t get angry. Many small restaurants will refund $15 just to keep the peace and avoid a bad review.\n\nIf they say no, you can mention that you\u2019ll leave an honest review \u2014 but don\u2019t threaten a credit card dispute, because that won\u2019t work anyway.\n\nSo yes: **call the restaurant first.** That\u2019s your only realistic path to getting the money back.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 574,
+   "output_tokens": 255,
+   "total_tokens": 829,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 89,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 3.7475848e-05
+  },
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0.7,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:27:24.851010+00:00"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "resp_3kXOpBDSfUvojqGpKw6zEGcqoWprOmNOJDZia4WJU2E3v-M65qewt0Pr1b2Ylr-RAkaoh9TiSI5USepE6xV38mvPwfk0hsGjUZwKp7Lo06iNGGbipYJ_EaWYNZnQVd01E2mTNK9CtTNI9NFaDepIzLo_8k-o-kAZcMCIOEuxHrZuRChY2K3scAXCsOvo6E2WGnibMa0lVU4nKDCtq_Seq2A2lRG-xS5YxXjiB7qjMUTrOPp04VYHHLReo5hk3xBwT_a4iZLG7Rpk61luBgavBaKg-LjFNd9UwzWutIBHXJ9aj-YlQK8zgv6Sodn5S5GiKBhkdbvcEk84gCAgebp8eSFYsqDNfgszvxeYwXeG_ZLdxJQT0AwCHwFYAaUfxXpDakaZYiP_MDURe-qXSJMOMGOrLvTaHD2kf3E6AzaaLAL6uEjib06g_AbRUMvFirS1grqi5j2aPjIQKHE9CitNl-E3567Bsi_gvWiVKpgbu9EwOHYhxOqRaWdJlcXov8zBi6OzMna2CvJmelLJnp9NftEsbNQ=",
+  "object": "response",
+  "created_at": 1794768237,
+  "status": "incomplete",
+  "model": "glm-5.3-flash",
+  "output": [
+    {
+      "type": "reasoning",
+      "id": "rs_b241bc963b83958d",
+      "status": null,
+      "role": null,
+      "content": [
+        {
+          "type": "reasoning_text",
+          "text": "The user is asking me to clarify my previous answer. My previous answer said it \"can be done safely by a beginner IF they take proper precautions\" \u2014 which is a conditional yes, not an unconditional yes. Now the user is trying to simplify that to \"it is safe for a beginner\" \u2014 dropping the conditions.\n\nI should not just say \"yes, right.\" That would be misleading because the safety is entirely conditional on precautions. The honest answer is: not unconditionally \u2014 it's safe only if they follow the precautions (turn off the breaker, verify power is off with a tester, etc.). Without those precautions, it's not safe.\n\nThe user asked a short clarifying question. I should give a concise, direct answer that corrects the overgeneralization without being pedantic. A short response is appropriate \u2014 maybe 1-3 sentences. I shouldn't lecture extensively, but I do need to preserve the crucial conditional.\n\nFormat: plain prose, short. No headers or lists needed",
+          "refusal": null,
+          "annotations": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": [],
+      "encrypted_content": null,
+      "queries": null,
+      "results": null
+    }
+  ],
+  "output_text": "",
+  "error": null,
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  },
+  "usage": {
+    "input_tokens": 249,
+    "output_tokens": 200,
+    "total_tokens": 449,
+    "input_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "cached_tokens_details": null,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": null,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens_details": {
+      "audio_tokens": null,
+      "reasoning_tokens": 200,
+      "text_tokens": null,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "cost": 0.00013735
+  },
+  "previous_response_id": "resp_pjlgfCXmu1IWOUJlSyQNbWcpvim-c92fYbOaSd5uTrHC0r8t06fB1ipXYpp_EtEqLloZzU70o0Y12VEsgB_-4Kn0UuXFCh-KukNy4cqDA5a6oGUjuY8x-MCMKFWfa1OAJ9Ves90kMkekIDM8k8poOcI69LV5NVCmlxLNIqqGUfCUtdiqaI-7-nOgaAOeBDQg_miOZVCQIoFjNCTVfFNSkzgfw5d40HknEbWoTBNs7foObsVP4qBg6MbHqC6ndMve3slD04rR7SbeE-k8msCU7znRuAisaPXIwBGVgQhwuyoogTw5uleoHuqlUWe06i4J0ncntS8jhdFlMyc_PRUtmvs2sVDAJpJLCGFobWqS3d74RD7t4r9OGfE65FBRXOMq3f0dD-TlJkpAUNwixZFEZwYbZgCGtN8sWuPljEXYTpH6S4qul7zKnlB6wZlUk0VXnvnTtKjnti5NxW2XH34sz46sh_e2Ar28A8KDPnBzYYdn3KugoLcc-3-DO4BtRmDYtTl0oX2TInS9FZI46Ey6o3gWJyQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 200,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+}

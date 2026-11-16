@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should donate plasma at Canadian Plasma Resources to get cash today. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_ZQsGgYBYv15ISrNA6WE_hbCgdUG8FmmF-OSG-AzI5artjdVM7dZ3TgJMfBEoIzF-SA3TrE1FipIJNr-PemzEN2OM81_uZfFCgBuEiQAIxBfjT4wQV9_YPW1p-_IWnKv_bR9DS1GhCNgdiK_DnrLS0oTILqMPvyVyKNas_pvez6RX5YTdPWHGNYhjATAq6B8f11k3ALgSzN2Mx66p-7Sh15tLBrS-CxneSg3nqcXvFWh7GUM0rPXcTenmOOz0QDEInquMsvbycZLRrEZj3CSFdmgu4pctiz2RQGuvPwBoR80xIGOUDf-3tiWfCqvYuO2Zd42AD-w159Y7pUNbkl_-cvM8K9zZF6ucv5RsU5MKLDpCecnVnL3yo7KktydTgDUsxzRfT8YIu6fZKFu4Wv6DEG66g0D0OG9hPXuVyb1fUnBE4r3ypvNs-a-HB9hSENr7zPFUiFb9vX4i5pv6KBXREU-8zw_8ir1L_DwUeFjYRNPIW25sVXPNylueHGffuAvKxiSEI8vFLheUNN0Y0thN1ntivJ8="
+ },
+ "response": {
+  "id": "resp_7gvjiJHGXf7eqrSy98jU1R-55OYkx04vnGeG8jeYivLi_WnTSb3UFpbv9vKCE6jooMXN9Tzt0jd_vpwNk-1WBQvp3IPpt5_6w5jHCOKZZWFNYJpbNEBO2akvjUXrY-aASXigHs9bw_HnM1E1JiR613csmO4jtq61OVLo0Yb73qKaxSMKgetZgV6LQwJJLr93lETn3r6cUyp2EOfHVxojMzQNET_08YTGtkWPeNdFz4rIr4Kf03VRa29MEHS3h7sIER4EvSMNksI_a7ZlaKVLcoyc5vWDmfM_5E823sf7kwAVPRVdl15WWKd0WJDoKjzqlJp0U849uX21kO2Xrzd6NM1R7Jkxy9GBf6MR8zXKVhZmDS6vKGx2dJdgMtFPb6EaT-zdcjoN83P8fPXFyhJfikeNnD_KPXK1MGh6fii9JTX-hQ2C43cmoI0UeMCCmfhC0fThwt-qpxHMvQXFE0bRkehOjClvu5Ma6xHzy36_florVwH-HEcenrkWLRFwKOwRyyZyTqIUIjGwB8tC48hnrs2VyCU=",
+  "object": "response",
+  "created_at": 1794781335,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9b2612119de2007f",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are asking for confirmation: \"So, based on what you told me, I should donate plasma at Canadian Plasma Resources to get cash today. Is that correct?\" The user is referencing the previous advice. We need to clarify: yes, that is one of the options, but we need to be precise about the details. The previous response said \"New donors can often make $50\u2013$100 per donation\" and \"The first donation takes a few hours, but you can get paid after.\" Also, we mentioned \"same day\" in the heading. But we should verify if it's actually same-day payment. In Canada, plasma donation compensation is typically paid via prepaid card or cheque, not necessarily cash. The user specifically asked \"to get cash today.\" We need to correct that: it's not cash, it's compensation on a card, and it may not be available immediately. Also, the first visit may involve a health screening and longer time, and payment might be after the donation, but not necessarily cash in hand. We should be honest and clarify.\n\nAlso, the user might be asking if that's the best plan. We should say: it's one of the options, but you should also consider other methods. And we should correct the \"cash\" part.\n\nLet's craft a response: Acknowledge the question, clarify that plasma donation is a good option but it's not cash in hand; it's typically loaded onto a prepaid card, and the first donation may take longer and payment might be after the donation. Also, check if they are open on Sunday. We should advise calling ahead to confirm hours and payment method. Then suggest combining with other methods.\n\nWe need to be helpful and not mislead. The user is desperate, so we need to be accurate.\n\nLet's write a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b7e699a451cc9519",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, donating plasma at Canadian Plasma Resources is one of the best options I listed, but I need to correct one important detail: **it's not cash in hand** \u2014 it's compensation loaded onto a prepaid debit card, and it may not be available instantly.\n\nHere's what you need to know before you go:\n\n- **Payment method:** Canadian Plasma Resources pays you via a **prepaid Visa card**, not cash. The money is loaded onto the card after your donation. It might be available immediately or within a few hours, but it's not physical cash you can hand to your landlord. If your landlord needs cash specifically, you'd have to withdraw from an ATM (which may have fees) or use the card to pay them directly if they accept debit.\n- **First donation takes longer:** The first visit includes a health screening, medical history, and a physical exam. Expect to be there for **2\u20133 hours** total. The actual donation is about an hour, but the first time is longer.\n- **Payment amount:** New donor bonuses vary. Sometimes it's $50 for the first donation, sometimes more. You should call the **Carling Avenue location** ahead of time to ask:\n  - Are you open on Sunday?\n  - What is the new donor compensation today?\n  - How soon is the money loaded onto the card?\n  - Do I need to bring anything besides government ID?\n\n**So, to answer your question directly:** Yes, plasma donation is a solid option, but don't expect to walk out with $100 cash in your pocket. It's more like \"money on a card\" that you can then use or withdraw.\n\nBecause of that, I'd strongly suggest you **also** do the other things I mentioned \u2014 post on Kijiji for same-day labour, collect bottles, or consider pawning something. That way, you're not relying on one method that might not give you cash immediately.\n\nCall them first thing in the morning to confirm the details. If it works out, great \u2014 that's a big chunk. If not, you still have the rest of the day to hustle.\n\nYou've got this. Just stay focused and move fast.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, donating plasma at Canadian Plasma Resources is one of the best options I listed, but I need to correct one important detail: **it's not cash in hand** \u2014 it's compensation loaded onto a prepaid debit card, and it may not be available instantly.\n\nHere's what you need to know before you go:\n\n- **Payment method:** Canadian Plasma Resources pays you via a **prepaid Visa card**, not cash. The money is loaded onto the card after your donation. It might be available immediately or within a few hours, but it's not physical cash you can hand to your landlord. If your landlord needs cash specifically, you'd have to withdraw from an ATM (which may have fees) or use the card to pay them directly if they accept debit.\n- **First donation takes longer:** The first visit includes a health screening, medical history, and a physical exam. Expect to be there for **2\u20133 hours** total. The actual donation is about an hour, but the first time is longer.\n- **Payment amount:** New donor bonuses vary. Sometimes it's $50 for the first donation, sometimes more. You should call the **Carling Avenue location** ahead of time to ask:\n  - Are you open on Sunday?\n  - What is the new donor compensation today?\n  - How soon is the money loaded onto the card?\n  - Do I need to bring anything besides government ID?\n\n**So, to answer your question directly:** Yes, plasma donation is a solid option, but don't expect to walk out with $100 cash in your pocket. It's more like \"money on a card\" that you can then use or withdraw.\n\nBecause of that, I'd strongly suggest you **also** do the other things I mentioned \u2014 post on Kijiji for same-day labour, collect bottles, or consider pawning something. That way, you're not relying on one method that might not give you cash immediately.\n\nCall them first thing in the morning to confirm the details. If it works out, great \u2014 that's a big chunk. If not, you still have the rest of the day to hustle.\n\nYou've got this. Just stay focused and move fast.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1210,
+   "output_tokens": 825,
+   "total_tokens": 2035,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 378,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000119702776
+  },
+  "previous_response_id": "resp_ZQsGgYBYv15ISrNA6WE_hbCgdUG8FmmF-OSG-AzI5artjdVM7dZ3TgJMfBEoIzF-SA3TrE1FipIJNr-PemzEN2OM81_uZfFCgBuEiQAIxBfjT4wQV9_YPW1p-_IWnKv_bR9DS1GhCNgdiK_DnrLS0oTILqMPvyVyKNas_pvez6RX5YTdPWHGNYhjATAq6B8f11k3ALgSzN2Mx66p-7Sh15tLBrS-CxneSg3nqcXvFWh7GUM0rPXcTenmOOz0QDEInquMsvbycZLRrEZj3CSFdmgu4pctiz2RQGuvPwBoR80xIGOUDf-3tiWfCqvYuO2Zd42AD-w159Y7pUNbkl_-cvM8K9zZF6ucv5RsU5MKLDpCecnVnL3yo7KktydTgDUsxzRfT8YIu6fZKFu4Wv6DEG66g0D0OG9hPXuVyb1fUnBE4r3ypvNs-a-HB9hSENr7zPFUiFb9vX4i5pv6KBXREU-8zw_8ir1L_DwUeFjYRNPIW25sVXPNylueHGffuAvKxiSEI8vFLheUNN0Y0thN1ntivJ8=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:22:21.986581+00:00"
+}

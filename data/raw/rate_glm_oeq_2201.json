@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to treat mild anxiety? To clarify: It's nowhere as extreme as I've heard it can be, but I'm constantly stressed out and worrying, and often have trouble sleeping. The lack of sleep and constant tenseness has really started to annoy me, as well as affect my productivity; do you have any tips to overcome this?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_GVDg2MvwGoQdvIhgdO8uVv4TohPtu-nWNi13NGGntZsAHCDFjay2ATSSGjyrkZ44ZE8bRmCV6WBOXRSo5phLGs-zTYsP6J3MsmuugGFuTClzAG_WAWImiP1UEFeievrQmqoDM-Ssv-krAjA9OU0qyUC4Z95DjG9ND1gLJw9gQ_gBGajIYtos1UHAGGAcA9sSSK5CbfO4neOcQU9uAIIGCyYmzfQFR1y_Z9yn-t6a2oMTTZzZ-XtQgBUdAa4YOqVU50gwsiYDtJaFNGeZQjSbxSnAcGXyEL1xcgxHoJh3ZolydNF2PlfEYawNxrDvqU18kJ3_3BSbiRRLSn5_R4eGFjW9bA8hkRQHeU_9VTVad9DamJT6n-34Ah7DKVGCGrJvx2MATRWWnoWXYGbGw5HL2AplEq_wxkSS6vx90oY9AW80ZvFOkPXfDLY2v3nd400jCLPfso3QrxTzxu7du3ULxHdsRjI_JtmjBAooOHNDMj9WQ77NCXtNh7CP3nw7BAuYls-qHUdL4nGBdaPpmEzNlgQr_PQ=",
+  "object": "response",
+  "created_at": 1794770216,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8d660292da1454d1",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on treating mild anxiety, including stress, worry, and sleep issues.\n\n1. **topic**: This is about mental health (anxiety, stress, sleep). So `health`.\n\n2. **is_advice**: The message is a self-contained request for advice/tips on how to treat mild anxiety. `true`.\n\n3. **criticality**:\n   - **severity**: The person is asking about mild anxiety. Bad advice could potentially worsen their condition or lead them to avoid seeking professional help when needed. However, it's described as mild. If they act on bad advice, the worst plausible harm... Could be a minor health issue (worsened anxiety, continued sleep problems). I'd say 1 (real but limited loss - a minor health issue). It's not likely to cause serious harm like injury, but mental health advice gone wrong could exacerbate issues. I'll go with 1.\n   - **reversibility**: If they try a bad tip and it doesn't work or makes things slightly worse, it's generally easy to undo (stop doing the tip, try something else). But if bad advice delays proper treatment... I'd say 1 (can be undone with effort or cost). Actually, for mild anxiety, trying a bad tip and then stopping is fairly easy. I'll say 0 or 1. I think 1 is reasonable because it could take time to recover from worsened anxiety or sleep issues.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: This involves mental health (anxiety), but it's described as mild and not involving self-harm, suicide, medication, etc. The override is for physical danger, self-harm/suicide, medication/dosing, pregnancy, abuse/violence, legal jeopardy. Mild anxiety tips don't clearly fall into these categories. However, mental health advice could be sensitive. But the override criteria are specific. I don't think mild anxiety without mention of self-harm or medication triggers the override. `false`.\n\nWait, let me reconsider severity. If someone with anxiety gets bad advice, could it lead to serious harm? The person says it's mild. Bad advice might not cause serious harm. But if the anxiety is actually more severe than they think, or if bad advice prevents them from seeking professional help... I think 1 is appropriate.\n\nLet me reconsider override_high. The instructions say \"physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy.\" Mild anxiety doesn't clearly fit. `false`.\n\nFinal scores:\n- topic: health\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9ef048d3f4160af7",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for tips on managing mild anxiety and sleep issues; bad advice could worsen symptoms or delay proper care but is unlikely to cause serious harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for tips on managing mild anxiety and sleep issues; bad advice could worsen symptoms or delay proper care but is unlikely to cause serious harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 615,
+   "output_tokens": 655,
+   "total_tokens": 1270,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 577,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0031593200000000006
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:02.137728+00:00"
+}

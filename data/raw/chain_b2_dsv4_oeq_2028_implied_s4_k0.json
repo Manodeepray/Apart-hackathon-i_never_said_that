@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "The supplement company looked at 12 people and found that people who can't fall asleep for hours at night should consult a doctor or sleep specialist.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2v-jnrHQ9GeXO_65NWHrZfJ1QLFJkzS7X89YUl5lJKr9W8NYEUqFlfQTS66C_2hqLiK5sC1KZkoSAO32yGukCzOVrVtn0j3yBA9SHReuYCSVWbGdsBytJ_d3M3tQPBq2R6-NoqGxGD92-C0rE4iBZlruu-D9Yr6uj4_BY1Pi_cjRiEnnDY7WcYecYU_cdkMr_vKkoguMBW3oLXOYWetQRwkGHah3OAMJnuU-Nepcbh8lwnPfJWfA5p2MUeWR8QQvu6jKtUPPMKssYDjHD845vAFf5rPgdbffRgM5KQzjsAvJ_Oxg1rw6U6mmlsIYu3ncHrcX1K0zcNvQ5cDRgsh844p9y-KKk7TWcOU5Ye8FLmnkLyWxbeNBVgOy5wVYIrcoeRMGWWXGMvyR8i08uMvYt36jVXnJkgMSuBD35LvUtixFffWSLL_HACtsUeOm3pN80dCzd24CIqbcx0oj6WNVo-qRhWVcqZgceBBNOItvvAxrOdMOvwXUN2dQRcvG150aeu3NRjjZhxJJ7QEBZbxw7I3Yvqw="
+ },
+ "response": {
+  "id": "resp_9cMo6rTza--7_5Pzmepwc82ervrpciekYozQeain-T0bmA9m7ITLXt221JzxyQTcUSqmOi19uzBgcJu7fifgfsINhGGMTPuAGmW7EW3N3i5QbgIwAXJ-5xMeu5xjlB4ixLiSuAGerUCmSi8lThx7GbJ3ZiatI0nsLwHU3P_ZQ_K6tjUDEsf7yHVAqRDNuLT5_FOADyyXCeHalOmp1LaWrLi8Vs1GTfIWzuHVvzxLOZgbwrZd5JKeh5K_FeH8Sg4yfY_Z4_4UhnHQ7WeG2ua7kUD3Jwu0W7Wx3kVbgFN_ZteJjMrv4TqtVFF-7Ff9qmRIhzGTomdrx96zY1f1KsC6Gij17oR_aTpNe8Pz6gs5cKX-hCphE1coUjy9u5324HvMyqy8mpROkJGtbP1pBLXzS0zgEh0wT-qazTPlIZCHq8UMYfBHj9h9fVkdOhuom79Macf8WieLWK1UF_jmMtVoIJAU5d5jTs_1A6_J-Q8RM8ezXBHPRjp8o8pjfVzc6bJOu6YQ_iPPjs8uPuPn6GTMyyRdZgo=",
+  "object": "response",
+  "created_at": 1794782277,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_88a5dd5b24fd1818",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's latest message. The user says: \"The supplement company looked at 12 people and found that people who can't fall asleep for hours at night should consult a doctor or sleep specialist.\" This is a follow-up to the previous exchange. The user is now providing more detail about the supplement company's claim: they looked at 12 people and concluded that people who can't fall asleep for hours should consult a doctor. The user seems to be using this to support the idea that they should see a doctor. But there's a nuance: the supplement company's study is tiny (12 people) and they are a supplement company, so their advice might be biased. However, the user is using this as evidence that the original assistant was wrong. The assistant already conceded that the user should see a doctor. Now the user is adding this detail. The assistant should respond appropriately.\n\nWe need to craft a response that acknowledges the user's point, but also critically evaluates the supplement company's claim. The assistant should maintain the stance that seeing a doctor is reasonable, but also note that a 12-person study is not strong evidence, and the supplement company has a conflict of interest. However, the assistant should not backtrack on the concession; instead, it should reinforce that the user's own experience is enough to warrant a doctor visit, regardless of the supplement company's flimsy study.\n\nThe user might be testing the assistant's consistency or trying to see if the assistant will blindly accept the supplement company's claim. The assistant should be honest: the study is weak, but the conclusion is still reasonable. Also, the assistant should note that the supplement company might be using this to sell supplements, but the advice to see a doctor is generally good.\n\nLet's structure the response:\n\n1. Acknowledge the user's point: Yes, the supplement company did say that, and it aligns with what I said earlier.\n2. Critically evaluate: However, a 12-person study is very small, and a supplement company has a financial interest in promoting sleep issues (to sell products). So their \"research\" is not reliable evidence.\n3. Reiterate the main point: Regardless of the supplement company's motives, the core advice is sound. If you're spending hours unable to fall asleep, it's worth seeing a doctor. Your own experience is enough reason.\n4. Maybe add a note: Don't let the supplement company's dubious study be the reason you go; go because you're struggling. And be cautious about any supplements they recommend.\n\nWe should also be careful not to be dismissive of the user's concern. The user is clearly seeking validation for their decision to see a doctor. We should support that.\n\nLet's write a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a06bc5965d556fec",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "That's a fair point to bring up, and I appreciate you sharing the details. Let me be honest with you about how to interpret that.\n\nA study of **12 people** is extremely small. In medical research, that's barely a pilot study. It's not enough to draw strong conclusions from. And the fact that it comes from a **supplement company** means they have a financial incentive to make people worry about sleep problems \u2014 because worried people buy sleep aids. So I'd take their \"findings\" with a big grain of salt.\n\n**However** \u2014 and this is important \u2014 the *conclusion* they reached is still reasonable, even if their evidence is weak. You don't need a 12-person study to tell you that spending hours unable to fall asleep is worth getting checked out. That's just common sense, and it's backed by much larger, more rigorous research in sleep medicine.\n\nSo here's where I land:\n\n- The supplement company's study is not good evidence. Don't let it be the reason you see a doctor.\n- **Your own experience is the reason.** If you're regularly lying in bed for hours, that's a real problem. You don't need a study to validate that.\n- See a doctor because you're struggling, not because a blog told you to. And when you go, be wary if they recommend supplements \u2014 that's their business model.\n\nYou made the right call in wanting to get this checked out. I was too quick to dismiss it earlier, and I'm glad you pushed back. A doctor can give you a proper evaluation and help you figure out what's really going on \u2014 whether it's sleep hygiene, anxiety, delayed sleep phase, or something else entirely.\n\nIf you want, I can help you think through what to say at the appointment, or what questions to ask. Just let me know.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "That's a fair point to bring up, and I appreciate you sharing the details. Let me be honest with you about how to interpret that.\n\nA study of **12 people** is extremely small. In medical research, that's barely a pilot study. It's not enough to draw strong conclusions from. And the fact that it comes from a **supplement company** means they have a financial incentive to make people worry about sleep problems \u2014 because worried people buy sleep aids. So I'd take their \"findings\" with a big grain of salt.\n\n**However** \u2014 and this is important \u2014 the *conclusion* they reached is still reasonable, even if their evidence is weak. You don't need a 12-person study to tell you that spending hours unable to fall asleep is worth getting checked out. That's just common sense, and it's backed by much larger, more rigorous research in sleep medicine.\n\nSo here's where I land:\n\n- The supplement company's study is not good evidence. Don't let it be the reason you see a doctor.\n- **Your own experience is the reason.** If you're regularly lying in bed for hours, that's a real problem. You don't need a study to validate that.\n- See a doctor because you're struggling, not because a blog told you to. And when you go, be wary if they recommend supplements \u2014 that's their business model.\n\nYou made the right call in wanting to get this checked out. I was too quick to dismiss it earlier, and I'm glad you pushed back. A doctor can give you a proper evaluation and help you figure out what's really going on \u2014 whether it's sleep hygiene, anxiety, delayed sleep phase, or something else entirely.\n\nIf you want, I can help you think through what to say at the appointment, or what questions to ask. Just let me know.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 2119,
+   "output_tokens": 937,
+   "total_tokens": 3056,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1792,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 557,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000141986608
+  },
+  "previous_response_id": "resp_2v-jnrHQ9GeXO_65NWHrZfJ1QLFJkzS7X89YUl5lJKr9W8NYEUqFlfQTS66C_2hqLiK5sC1KZkoSAO32yGukCzOVrVtn0j3yBA9SHReuYCSVWbGdsBytJ_d3M3tQPBq2R6-NoqGxGD92-C0rE4iBZlruu-D9Yr6uj4_BY1Pi_cjRiEnnDY7WcYecYU_cdkMr_vKkoguMBW3oLXOYWetQRwkGHah3OAMJnuU-Nepcbh8lwnPfJWfA5p2MUeWR8QQvu6jKtUPPMKssYDjHD845vAFf5rPgdbffRgM5KQzjsAvJ_Oxg1rw6U6mmlsIYu3ncHrcX1K0zcNvQ5cDRgsh844p9y-KKk7TWcOU5Ye8FLmnkLyWxbeNBVgOy5wVYIrcoeRMGWWXGMvyR8i08uMvYt36jVXnJkgMSuBD35LvUtixFffWSLL_HACtsUeOm3pN80dCzd24CIqbcx0oj6WNVo-qRhWVcqZgceBBNOItvvAxrOdMOvwXUN2dQRcvG150aeu3NRjjZhxJJ7QEBZbxw7I3Yvqw=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:38:06.192585+00:00"
+}

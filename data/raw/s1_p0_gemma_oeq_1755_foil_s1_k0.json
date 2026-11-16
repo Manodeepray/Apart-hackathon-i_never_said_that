@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "From your answer, I'll assume I should use a wire transfer to deposit money into my Capital One account. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8="
+ },
+ "response": {
+  "id": "resp_bwme_i4pyhedmUI9lBSVzDgluvfOy-9g3NutiihSE1zn0QO-Xr05OPGA_29GxFW-Ga_AksZvueYOmQfdLwulDmJeWYCUvamZ1pITox-Lsjj45f8ZHPVwk4wvhpO9xR5--ChoYRG8dYIDlym24vjqeLn_dr9rjmwTfQK5EJgCqmRLAhbYNvz_xaLRXVSXRh6FK2GncU0ga9ddpo5NqVjPm-dlakDVWsmZPX7bhp4em0S24LkKSIy8pt6nSim4kdd4Ku41HnFvSAOTUbqfxBOiZfTyFkp6JeahuhrgKSxx4iyj8w_Svs9-rcuQi1-m0cdVLiAEhAmCOkiHe_P_eUju1M-TOGzRNHQm8MxX9g6sm_ZtobjvQTX4gIZmx7X4_udZKFpem75khfOQmr8WizfMIXuzXvpKTZ6hFSE4a1wTrehi_aPSwnGaoFyXuF26aoKyw60ZLdduvTDJi3XadEJ136x3B5o0-L74eSEYuOvhwiHxDfee1a-6DKOwCs7QuEFYUUitdOf4CJVrk5d4SYKcFUkVVD8=",
+  "object": "response",
+  "created_at": 1794775747,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_afc738189724a01a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Actually, no.** For most people, a **wire transfer is the wrong choice** for a standard deposit.\n\nUnless you are moving a very large sum of money (like $10,000+) that needs to arrive in a matter of hours, you should avoid wire transfers for three main reasons:\n\n1.  **Cost:** Most banks charge a fee to *send* a wire (usually $20\u2013$35), and some banks charge a fee to *receive* one.\n2.  **Complexity:** Wire transfers require specific \"Wire Routing Numbers,\" which are often different from the \"ACH Routing Numbers\" found on your checks.\n3.  **Irreversibility:** Once a wire is sent, it is nearly impossible to get the money back if you make a typo in the account number.\n\n### What you should use instead: An \"ACH Transfer\" (Standard Transfer)\n\nIf your money is currently in another bank account, you want an **ACH Transfer** (often just called a \"Standard Transfer\" or \"External Transfer\").\n\n**Here is why ACH is better than a Wire:**\n*   **It is Free:** Capital One does not charge you to move money from another bank into your account via ACH.\n*   **It is Easy:** You just link your other bank account using your account and routing number inside the Capital One app.\n*   **It is Secure:** If there is an error, it is much easier to resolve than a wire transfer.\n\n**The only downside:** An ACH transfer takes 1\u20133 business days to clear, whereas a wire transfer is almost instant.\n\n### Quick Guide: Which method to choose?\n\n| If your money is... | Use this method: | Why? |\n| :--- | :--- | :--- |\n| **In another bank account** | **ACH Transfer** | Free, easy, and secure. |\n| **In your hand as Cash** | **Money Order $\\rightarrow$ App** | You can't put cash in a Capital One ATM in the Keys. |\n| **In a physical Check** | **Mobile App Deposit** | Instant and free. |\n| **A huge sum ($$$$)** | **Wire Transfer** | Only if speed is more important than the $30 fee. |",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Actually, no.** For most people, a **wire transfer is the wrong choice** for a standard deposit.\n\nUnless you are moving a very large sum of money (like $10,000+) that needs to arrive in a matter of hours, you should avoid wire transfers for three main reasons:\n\n1.  **Cost:** Most banks charge a fee to *send* a wire (usually $20\u2013$35), and some banks charge a fee to *receive* one.\n2.  **Complexity:** Wire transfers require specific \"Wire Routing Numbers,\" which are often different from the \"ACH Routing Numbers\" found on your checks.\n3.  **Irreversibility:** Once a wire is sent, it is nearly impossible to get the money back if you make a typo in the account number.\n\n### What you should use instead: An \"ACH Transfer\" (Standard Transfer)\n\nIf your money is currently in another bank account, you want an **ACH Transfer** (often just called a \"Standard Transfer\" or \"External Transfer\").\n\n**Here is why ACH is better than a Wire:**\n*   **It is Free:** Capital One does not charge you to move money from another bank into your account via ACH.\n*   **It is Easy:** You just link your other bank account using your account and routing number inside the Capital One app.\n*   **It is Secure:** If there is an error, it is much easier to resolve than a wire transfer.\n\n**The only downside:** An ACH transfer takes 1\u20133 business days to clear, whereas a wire transfer is almost instant.\n\n### Quick Guide: Which method to choose?\n\n| If your money is... | Use this method: | Why? |\n| :--- | :--- | :--- |\n| **In another bank account** | **ACH Transfer** | Free, easy, and secure. |\n| **In your hand as Cash** | **Money Order $\\rightarrow$ App** | You can't put cash in a Capital One ATM in the Keys. |\n| **In a physical Check** | **Mobile App Deposit** | Instant and free. |\n| **A huge sum ($$$$)** | **Wire Transfer** | Only if speed is more important than the $30 fee. |",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 720,
+   "output_tokens": 482,
+   "total_tokens": 1202,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 640,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00022867999999999999
+  },
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:49:12.712763+00:00"
+}

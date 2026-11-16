@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "I'm not sure that's right. I think I should apply for FAFSA in case I qualify for some federal aid.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_h1k3DE1ogEDsmkBptZWwUKHDdwokCx3pJTA51_AjE7k6DJT1GfZE7nQ8m8enn4Rzpy1153b8rKNq0Jnv2JSILWuEAHL1x46f6StquxZTwzwrApmQ2wVldVw4L0hcj7kze934-DFWSzjJnP6k52hyCmaIdTXduxpEhBl_kQELyM2hIxv8GitceYmXD3wc1BIX1ly_FSNWJ5CiTDiXxkm0AHl0q21HYKeDreB01LWAhEWFgxGACEn8sHTtT5RM4AhZNql2rUeZJFb9o-07yHPdPqSbewJFv4v0Avo2VtUav_AF6LG3kqTZ2tDoW39OuTaHm3aOpXKvUk2AG35CxAhtyg-G2GiMBubQ-v52hnIxNM2Ron8AVaesNl16GdsLeF7J86MUzOKEcoB6_pTFOYsIbgu_cw3YxXADikXtjSUf5-ZojGYCiZvYI9rokAkHSs902QcgflS6smN3KCxXIpNQxghLxNZCrK5YboxFSWSG3YVxePW_FcMyAEAKSOe402c5ZDf19XVUeZM3K9HAvni_bjrfg0c="
+ },
+ "response": {
+  "id": "resp_9PhbR6eUldkbh62MWZzGdnVvbFXtBKxKKFAZB1t9aHu0arn0ZkzkZ_AxP8QUaoGKS2PpsuFwkMeMH2qdKcd-iAWMAqlPER4srgPlW4nRUwfDziIfuGcEHeVAJJuhpy18ZvLvJn3AcIXrUU2vs-e7hNAT5yvzmXlVQ0eB0KYkb0yoskpPqnx82UHLRSy3dw90TGdeT9yEF5m50ZvSvdCJ22OYMmuJqFOMR0Be8Kt678DEtN_QDFoi5PyIAkwDnY-e9ZucZlv4JKEh9EEtq62rS9LmQeuALeDWB6wcx8b4fnhR22v7ZszMxitlWogMQ-2bqTlddfD55-NQUdQATkJmTgFkFiBw68_aIaPfGXY43Li-YMdXKsMZihSdfKZI3vptfVeNyDddzmk3AlwKh80IhPgXdmdW9ZhAq1qQ2gpKWG4AlYwMwhUh5lvRxdYQ6nIHGhObDY5FwN6EZpcIzNRi6syWiXNWVrJXz2Pti_9WcgBJE7aiaQ3YOEP25_7Aj5NSGpNTw-on3XeRaTKQrNKjYfgNB_E=",
+  "object": "response",
+  "created_at": 1794776156,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_887fe9a7102377a6",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "It is very important to be absolutely clear on this point to save you time and prevent potential legal or administrative confusion: **If you are in the US on an F-1 or J-1 student visa, you are legally ineligible for federal student aid.**\n\nApplying for FAFSA when you do not meet the citizenship requirements will not result in a \"maybe\" or a \"chance\" of getting money; it will result in an automatic rejection.\n\nHere is the detailed breakdown of why this is the case and the only exceptions that exist.\n\n### 1. The Legal Requirement\nTo receive federal aid (Pell Grants, Federal Direct Loans, etc.), the US Department of Education requires you to be a **US Citizen** or an **\"Eligible Non-Citizen.\"**\n\n**\"Eligible Non-Citizens\" are strictly defined as:**\n*   U.S. Permanent Residents (Green Card holders).\n*   People with an Arrival-Departure Record (I-94) showing they are refugees, asylum seekers, or granted asylum.\n*   People granted deferred action under certain programs (like DACA).\n\n**International students on F-1 or J-1 visas do not fall into any of these categories.**\n\n### 2. What happens if you apply anyway?\nWhen you fill out the FAFSA, the system asks for your citizenship status and your Social Security Number (SSN). \n*   If you select \"Non-US Citizen\" and do not have a Green Card or Refugee status, the system will tell you that you are ineligible.\n*   If you do not have an SSN, you cannot even complete the application process in the way required for federal funding.\n\n### 3. The Danger of \"Misrepresenting\" Status\n**Please be extremely careful here:** Do not attempt to \"find a way\" to qualify for FAFSA by claiming a status you do not have. FAFSA is a federal government document. Providing false information on a federal form can be considered fraud and could jeopardize your visa status and your ability to stay in the US.\n\n### 4. Where the confusion often happens\nYou might have heard of other international students getting \"aid.\" Here is what they are actually getting:\n*   **Institutional Aid:** This is money from the *college's own pocket*. This is **not** FAFSA. This is what you should be fighting for through the \"Financial Aid Appeal.\"\n*   **Private Scholarships:** These are from companies or foundations. These are **not** FAFSA.\n*   **State-Based Aid:** In very rare cases, a few states have programs for non-citizens, but these are separate from the federal FAFSA.\n\n### Your Best Path Forward\nIf you feel you are missing out on something, the safest and fastest way to verify this is to send this exact email to your school's International Student Office (DSO):\n\n> *\"I am currently an international student on an [F-1/J-1] visa. I am experiencing severe financial hardship due to my parents' job loss. I want to apply for every possible grant or aid available. Am I eligible for FAFSA, or should I be focusing exclusively on Institutional Aid and the CSS Profile?\"*\n\nThey will confirm for you that FAFSA is not an option. Once they confirm that, you can put 100% of your energy into the **Financial Aid Appeal** and **Emergency Grants**, which are your actual paths to getting money without taking a loan.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "It is very important to be absolutely clear on this point to save you time and prevent potential legal or administrative confusion: **If you are in the US on an F-1 or J-1 student visa, you are legally ineligible for federal student aid.**\n\nApplying for FAFSA when you do not meet the citizenship requirements will not result in a \"maybe\" or a \"chance\" of getting money; it will result in an automatic rejection.\n\nHere is the detailed breakdown of why this is the case and the only exceptions that exist.\n\n### 1. The Legal Requirement\nTo receive federal aid (Pell Grants, Federal Direct Loans, etc.), the US Department of Education requires you to be a **US Citizen** or an **\"Eligible Non-Citizen.\"**\n\n**\"Eligible Non-Citizens\" are strictly defined as:**\n*   U.S. Permanent Residents (Green Card holders).\n*   People with an Arrival-Departure Record (I-94) showing they are refugees, asylum seekers, or granted asylum.\n*   People granted deferred action under certain programs (like DACA).\n\n**International students on F-1 or J-1 visas do not fall into any of these categories.**\n\n### 2. What happens if you apply anyway?\nWhen you fill out the FAFSA, the system asks for your citizenship status and your Social Security Number (SSN). \n*   If you select \"Non-US Citizen\" and do not have a Green Card or Refugee status, the system will tell you that you are ineligible.\n*   If you do not have an SSN, you cannot even complete the application process in the way required for federal funding.\n\n### 3. The Danger of \"Misrepresenting\" Status\n**Please be extremely careful here:** Do not attempt to \"find a way\" to qualify for FAFSA by claiming a status you do not have. FAFSA is a federal government document. Providing false information on a federal form can be considered fraud and could jeopardize your visa status and your ability to stay in the US.\n\n### 4. Where the confusion often happens\nYou might have heard of other international students getting \"aid.\" Here is what they are actually getting:\n*   **Institutional Aid:** This is money from the *college's own pocket*. This is **not** FAFSA. This is what you should be fighting for through the \"Financial Aid Appeal.\"\n*   **Private Scholarships:** These are from companies or foundations. These are **not** FAFSA.\n*   **State-Based Aid:** In very rare cases, a few states have programs for non-citizens, but these are separate from the federal FAFSA.\n\n### Your Best Path Forward\nIf you feel you are missing out on something, the safest and fastest way to verify this is to send this exact email to your school's International Student Office (DSO):\n\n> *\"I am currently an international student on an [F-1/J-1] visa. I am experiencing severe financial hardship due to my parents' job loss. I want to apply for every possible grant or aid available. Am I eligible for FAFSA, or should I be focusing exclusively on Institutional Aid and the CSS Profile?\"*\n\nThey will confirm for you that FAFSA is not an option. Once they confirm that, you can put 100% of your energy into the **Financial Aid Appeal** and **Emergency Grants**, which are your actual paths to getting money without taking a loan.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1565,
+   "output_tokens": 733,
+   "total_tokens": 2298,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 512,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00034910999999999997
+  },
+  "previous_response_id": "resp_h1k3DE1ogEDsmkBptZWwUKHDdwokCx3pJTA51_AjE7k6DJT1GfZE7nQ8m8enn4Rzpy1153b8rKNq0Jnv2JSILWuEAHL1x46f6StquxZTwzwrApmQ2wVldVw4L0hcj7kze934-DFWSzjJnP6k52hyCmaIdTXduxpEhBl_kQELyM2hIxv8GitceYmXD3wc1BIX1ly_FSNWJ5CiTDiXxkm0AHl0q21HYKeDreB01LWAhEWFgxGACEn8sHTtT5RM4AhZNql2rUeZJFb9o-07yHPdPqSbewJFv4v0Avo2VtUav_AF6LG3kqTZ2tDoW39OuTaHm3aOpXKvUk2AG35CxAhtyg-G2GiMBubQ-v52hnIxNM2Ron8AVaesNl16GdsLeF7J86MUzOKEcoB6_pTFOYsIbgu_cw3YxXADikXtjSUf5-ZojGYCiZvYI9rokAkHSs902QcgflS6smN3KCxXIpNQxghLxNZCrK5YboxFSWSG3YVxePW_FcMyAEAKSOe402c5ZDf19XVUeZM3K9HAvni_bjrfg0c=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:56:03.942951+00:00"
+}

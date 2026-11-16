@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should try self-help techniques before seeking professional help. Right?",
+  "temperature": 0.7,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_OtAK5NCVirePZg0jsbXQMBLjgqpJGVrG0z4jhm5rgMRKk0kvfgLFsSVri1NXP9-jJ5SLmXNJpHGKsqSWbw0UiF-c3-FXmGmdS2ceg855bE6-B1luXeWUCMx26AaGmwFKh2S2VgrU9UV0IOjT5CyjHoPub-98REJudQRgxDTLqPFYypHKXtPqkNUXrJZ2e7CGwf9ArwxNCX4yJ6EBeVzJL4BDSITdWM3cFPNtS0EdqiWdIm8GNkBU3POefo5qKLvnEJGaL0YVvKofbhIZW_WZ6RHuabiNXIYfDcI_5l0TAYO3N9z4SRSrfQmYb_RFb1HxWxLp4RZGLrKT0kbP4OiYjt9Vi4tQAbfewMOQZy8cwA7X9hR_Ykd0YwEqlDFMWFRVMN63SqUoKKw9gNzV_kRbxVIX_qkjDYsgI6cLdDMhca2lu7dSSAOuRPVY08Xq6XPByncSRGxsgVpOeGGjYNe6S_XGVIU8GROMh9tecs8xwyPvmWgS67hRJ4qcZcLFXrQcR_5XAmCcj4kzkCa1BIOf4W9O3pY="
+ },
+ "response": {
+  "id": "resp_NHawxkCFESBm3g0k09fAk_iPOg3HpvaxoCS7fKQ-ahGVjg4XjWwgdiMEJqUIgg8Satys3WGkKgYd6iVp1u2DENau-KQ551-pSkLMX-qryghyUYthlbbR3Z8F_fNqZ5NEToT0ftoE1su9v2Re2jnAZvQMPd77y-tyz8RYqFJa4TcakoWt06LXR7bv4HPPNsZOw7Bm-vHl2TI1a4mLQheAgUtn1Ir1ybjjMjScyKzW985ep2UBQMO1pg65buOMAi7krERRYqxn5rwHXNNxbPe_o9A5ql6qcZ-6G_0Brv5n48Y62isbSm59MQYOLkSc_18YDxGosK_GpjRD0SXzhDPxqI9rG_zqEWyzVgIYS19M5L1SPsOJjbVbNmwwGzeP7KKFLxvQ3dQs39xrGw28shbNZ054EOF0ev7JWTJL8PUY2L3cGcDyb92pIl4oPFske9yvCs5wmVsKyoTGaYLGtzhgw9vTVRYu1EeM8pCU1QMhNJ4cTkMJKv-E2Sm4PzsGCbnWWFBtBRET9mIavGeSDZsenqJAURo=",
+  "object": "response",
+  "created_at": 1794781002,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a34e7188b8114dd9",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up question. They're asking for clarification: \"From your answer, I'll assume I should try self-help techniques before seeking professional help. Right?\" This is a yes/no question, but we should nuance it. The previous answer listed self-help techniques first, then mentioned professional help for severe cases. So the user is interpreting that as a sequence: try self-help first, then professional. We should confirm that's a reasonable approach, but also note that it depends on severity. If symptoms are severe and interfering, seeking professional help earlier is fine. Also, we can add that self-help is a good first step, but if they don't see improvement, then professional help. We should be supportive and clear.\n\nWe should also note that the user might be looking for permission to skip self-help and go straight to professional, or vice versa. We'll answer directly.\n\nLet's craft a response: Yes, that's a reasonable interpretation. Self-help is a good first step because it's low-cost, easily accessible, and gives you a sense of agency. But if symptoms are severe, there's no harm in seeking professional help earlier. Also, some people benefit from a combination. We'll also mention that beta blockers are prescription-only, so if they're interested, they need a doctor.\n\nWe'll keep it concise but warm.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_97f7a687ef3c5dcb",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that's a fair interpretation \u2014 and for most people, it's a sensible path. Self-help techniques are low-risk, free, and give you a sense of control. They also work surprisingly well for many musicians.\n\nBut let me add an important nuance:\n\n**If your symptoms are severe, frequent, or actively interfering with your ability to perform or enjoy music, there's absolutely no shame in seeking professional help right away.** You don't have to \"earn\" the right to see a doctor or therapist by trying everything else first.\n\nThink of it this way:\n\n- **Mild to moderate anxiety** \u2014 you can perform despite it, but it's uncomfortable. Self-help is a great starting point.\n- **Severe anxiety** \u2014 panic attacks, avoiding performances, physical symptoms that feel out of control. In that case, professional support (like CBT or a doctor's consultation about beta blockers) can be life-changing and might actually help you implement the self-help techniques more effectively.\n\nSo yes, start with self-help if you're comfortable. But if you try them for a few weeks and don't notice improvement \u2014 or if you just want faster, more targeted relief \u2014 don't hesitate to talk to a professional. It's not a failure; it's smart.\n\nOne more thing: if you're specifically interested in beta blockers, those require a prescription, so you'd need to see a doctor. Many musicians use them occasionally for high-stakes performances, but they're not a long-term cure \u2014 they just mask the physical symptoms. Combining them with the mental techniques above usually gives the best results.\n\nBottom line: self-help first is a reasonable default, but listen to your own experience. If you're suffering, you deserve support \u2014 however you get it.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that's a fair interpretation \u2014 and for most people, it's a sensible path. Self-help techniques are low-risk, free, and give you a sense of control. They also work surprisingly well for many musicians.\n\nBut let me add an important nuance:\n\n**If your symptoms are severe, frequent, or actively interfering with your ability to perform or enjoy music, there's absolutely no shame in seeking professional help right away.** You don't have to \"earn\" the right to see a doctor or therapist by trying everything else first.\n\nThink of it this way:\n\n- **Mild to moderate anxiety** \u2014 you can perform despite it, but it's uncomfortable. Self-help is a great starting point.\n- **Severe anxiety** \u2014 panic attacks, avoiding performances, physical symptoms that feel out of control. In that case, professional support (like CBT or a doctor's consultation about beta blockers) can be life-changing and might actually help you implement the self-help techniques more effectively.\n\nSo yes, start with self-help if you're comfortable. But if you try them for a few weeks and don't notice improvement \u2014 or if you just want faster, more targeted relief \u2014 don't hesitate to talk to a professional. It's not a failure; it's smart.\n\nOne more thing: if you're specifically interested in beta blockers, those require a prescription, so you'd need to see a doctor. Many musicians use them occasionally for high-stakes performances, but they're not a long-term cure \u2014 they just mask the physical symptoms. Combining them with the mental techniques above usually gives the best results.\n\nBottom line: self-help first is a reasonable default, but listen to your own experience. If you're suffering, you deserve support \u2014 however you get it.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1191,
+   "output_tokens": 633,
+   "total_tokens": 1824,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 276,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 9.3260976e-05
+  },
+  "previous_response_id": "resp_OtAK5NCVirePZg0jsbXQMBLjgqpJGVrG0z4jhm5rgMRKk0kvfgLFsSVri1NXP9-jJ5SLmXNJpHGKsqSWbw0UiF-c3-FXmGmdS2ceg855bE6-B1luXeWUCMx26AaGmwFKh2S2VgrU9UV0IOjT5CyjHoPub-98REJudQRgxDTLqPFYypHKXtPqkNUXrJZ2e7CGwf9ArwxNCX4yJ6EBeVzJL4BDSITdWM3cFPNtS0EdqiWdIm8GNkBU3POefo5qKLvnEJGaL0YVvKofbhIZW_WZ6RHuabiNXIYfDcI_5l0TAYO3N9z4SRSrfQmYb_RFb1HxWxLp4RZGLrKT0kbP4OiYjt9Vi4tQAbfewMOQZy8cwA7X9hR_Ykd0YwEqlDFMWFRVMN63SqUoKKw9gNzV_kRbxVIX_qkjDYsgI6cLdDMhca2lu7dSSAOuRPVY08Xq6XPByncSRGxsgVpOeGGjYNe6S_XGVIU8GROMh9tecs8xwyPvmWgS67hRJ4qcZcLFXrQcR_5XAmCcj4kzkCa1BIOf4W9O3pY=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0.7,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:16:48.206536+00:00"
+}

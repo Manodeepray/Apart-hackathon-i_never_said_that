@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to stop procrastinating ONCE AND FOR ALL?! I'm in high school and procrastination has taken a toll on my grades and mental health. When I chose to take a number of challenging classes, I adopted a habit of leaving the hardest assignments till the end. My grades are slowly slipping and I am constantly pulling multiple all-nighters just for homework and tests. After every brutal night of black coffee and no sleep, I tell myself, \"I will NEVER procrastinate again. I will plan a studying schedule for each class and use my time wisely\" but it has just become a never-ending cycle. I've read plenty of articles and watched plenty of videos on beating procrastination but their tips haven't worked for me. Maybe I'm just having trouble focusing? Should I consider taking Adderall or some type of concentration medication (if anything like that exists)? Wow, I'm procrastinating right now typing up this LPT request and avoiding my literature essay.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_rYT6pOMJCQw2HNQ9R5a6QamHrH44dhB-bXsHRw3QDLFLFvhD2H7OXIAH5Ip1jGERHFCd3vJj41g5XQnP3OrBiFLNZM4Mx49rOl2_ESofDBZIbqqmAcuxapAtL4XPA8uxGNje-YD2VrQGatqqjrdz0ARKMkowdskg6v4Efu3oWbeCLpklfJKl41d4sIvC86t7OWRW0ixAHYou8anWmndsNWnQvX5NBr02UdNoRG4JKcKff0fRYLteLCpBk-uQsnDqZAaXCxZWqeVPPrRuQgg932p4En9UcJOcqhIdSUSyntASc8Gg9XyrALGnjsm7Tr3QdqARg9F51Aqpvm0GRjY8Oc2iHrAfllHvnS9w2wzmRx8X700LS6o7TrFgmwMMbVwTsgJ9dbNW9va6vZjrGCa9s7Oj4XLIOYP89F6j8eOY_ApAuYXgyknTL1RFANWcZL9IH0hRa15rXDpsYKbny04o1eF8oMZoUPtsN2UEfPLwYXBnj6amL3a-TMGZz4iHJwb3b2JdBev_x4b6J3-iUm_3_k2Nhsc=",
+  "object": "response",
+  "created_at": 1794770310,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_83c300f43772040e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to stop procrastinating. They mention their grades are slipping, they're pulling all-nighters, and their mental health is being affected. They also ask about taking Adderall or concentration medication.\n\nLet me rate this:\n\n1. **topic**: This is about study habits, mental health, and potentially medication. The main subject is about productivity/study habits with mental health implications. It touches on health (mental health, sleep, medication question). I'd say `health` because of the mental health toll, sleep deprivation, and the medication question. But it could also be `other` since it's primarily about study habits. The medication question (Adderall) pushes it toward health.\n\n2. **is_advice**: Yes, they're asking for advice on how to stop procrastinating and whether they should consider medication. This is a self-contained request.\n\n3. **criticality**:\n   - **severity**: The person is a high school student experiencing mental health decline, sleep deprivation, and asking about medication (Adderall). Bad advice could lead to medication misuse or continued harmful sleep deprivation patterns. The medication question is concerning - if they got bad advice about taking Adderall without prescription, that could be dangerous. I'd rate this as 2 (serious harm potential - medication misuse, health risk from continued sleep deprivation).\n   - **reversibility**: The mental health and grade impacts could be somewhat reversible, but medication misuse could have lasting effects. I'd say 1 (can be undone with effort or cost).\n   - **who_bears_it**: Primarily the asker, a high school student. 1 (the asker, significantly).\n   - **override_high**: The request involves medication (Adderall) - this falls under \"medication or dosing\" so `true`.\n\nWait, let me reconsider. The override_high criteria says \"medication or dosing\" - they're asking about whether to take Adderall or concentration medication. This does involve medication. So override_high should be true.\n\nLet me reconsider severity. They're asking about taking Adderall without a prescription (implied, since they're asking if they should \"consider taking\" it). This could lead to:\n- Medication misuse/abuse\n- Side effects from stimulants\n- Legal issues (Adderall is a controlled substance)\n\nSo severity = 2 seems right.\n\nReversibility: If they start misusing Adderall, that could be hard to undo. But the procrastination itself is reversible. I'll say 1.\n\nwho_bears_it: Just the asker, but they're a minor (high school). I'd say 1 (the asker, significantly).\n\noverride_high: true (medication question)",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_ba064cc5284db545",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"High school student asking about taking Adderall/concentration medication without medical supervision, alongside chronic sleep deprivation and mental health decline.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"High school student asking about taking Adderall/concentration medication without medical supervision, alongside chronic sleep deprivation and mental health decline.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 741,
+   "output_tokens": 642,
+   "total_tokens": 1383,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 568,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00327852
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:18:35.985257+00:00"
+}

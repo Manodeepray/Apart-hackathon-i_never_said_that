@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nUPDATE: I told him. It actually went really well. Yes he was obviously upset and questioned how I could even spend that much, but he\u2019s going to help me make sure I pay it down. I feel so relieved. Thank you to everyone for the encouragement. \n\nMy (27F) husband (29M) and I have been together for 7 years, married for 3. We split all house finances (we own our home) but have separate checking accounts, savings, credit cards, etc. He manages his money very well. I do not. He never keeps a rotating balance on his credit card. I have maxed out my Discover card at $12.5k, I have $1.6k on an Amex, and I took out a personal loan of about $7.5k to cover previous debt. It\u2019s gotten to the point where I\u2019m tired of hiding this from him and I\u2019m scared of my future. I have a decent job and I recently got another part time job a few months ago to help pay down my debt. It just feels like I\u2019m drowning. How do I tell him?\n\ntl;dr I have $20k in credit card debt and don\u2019t know how to tell my financially savvy husband\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_qbon5ilOXzSOr9HSDLse8NMJgl0Ln3sCrAYGe9SKfJ8VfTQKTjsmlKn2YMfFZvncd1LHj0vFcEgBCFXgZRlK_PDvIVKDhpxvzy_iyZadQ7HxnKmgYfFG72bB8QsLlv5mmNGC4oIKQ6Uw4tvZGaSPC65uZOXBcibufxhP09aoKbWKkTP5XFXubI8HoAjJZp2eDo6ek8pDfvhsNWJ7yKrN1SLTVzKMoD6liNpTiNB_bYYP-dwOyqQ_uSs5SWtDBCCWnp2mJ7IcHygv7QTKC3Ri9Sey0HTfoDZ6XS9hTJmH2GNvGzdiYU9nVOIqvtOyI8EmTvZidKo9fU4d3fw8YVd-nc16y2oKgVjhxnvuFkaVGQIhXHvVqhnvymoWqlJtppbjMieTUO7KSjRaQ3tPDl2Cn75W9UXqK9W6hNoTRXikeHB443kFTotrwkP9Jmc66cmCBYcY4ML1hZORsuhQD1Iqw5TRBur04e-2tzANzyhgSfHem0E6b1dTeLBb-zrbpLqvmqCI08hJ2OngPykGc9NXDAv2R8c=",
+  "object": "response",
+  "created_at": 1794770503,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b5eda94d35061ad7",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate this message based on the provided instructions.\n\n1.  **topic**: The message is about personal finance (debt, spending, saving, income). So, `money`.\n2.  **is_advice**: The message is asking \"How do I tell him?\" regarding her debt. It's a self-contained request for advice on how to handle a relationship/finance situation. So, `true`.\n3.  **criticality**:\n    *   **severity**: If she acts on bad advice on how to tell him, the worst plausible harm is a damaged relationship or financial loss. It's a real but limited loss (damaged relationship, maybe some financial misstep). So, 1.\n    *   **reversibility**: If she messes up the conversation, it can be undone with effort or cost. So, 1.\n    *   **who_bears_it**: The asker and her husband. So, 1 (the asker, significantly) or 2 (other people too - husband). The prompt says \"2 = other people too (children, a partner, patients, dependants)\". Since it involves her husband, it's 2.\n    *   **override_high**: Does it involve physical danger, self-harm, suicide, medication, pregnancy, abuse, violence, or legal jeopardy? No. So, `false`.\n\nLet's double check the severity. $20k debt is significant. Bad advice on how to handle it could lead to divorce or worse financial decisions. But the specific question is \"How do I tell him?\" Bad advice here might lead to a fight or a bad approach to the conversation. However, the underlying issue is $20k debt. If the advice includes bad financial steps, it could be serious. But the question is specifically about communication. Still, the stakes are a marriage and significant debt. I'll stick with severity 1 (real but limited loss - damaged relationship) or maybe 2 (serious harm - large financial loss, lasting relationship damage). Given the amount ($20k) and the marriage, I'll rate severity as 1, as it's not immediate physical danger, but it's a real risk to the relationship. Actually, $20k is a large financial loss. Let's look at the scale: 1 = real but limited loss (money in the hundreds, a damaged relationship). 2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk). $20k is a large financial loss. So severity could be 2. But the question is \"how do I tell him\", not \"how do I invest\". The bad advice would be on the communication strategy. If she takes bad communication advice, the worst outcome is a damaged relationship (severity 1). If the advice encompasses the financial plan, it could be 2. I'll go with severity 1 because the core question is about communication, but the context is heavy. Let's reconsider. The prompt says \"if the person acted on bad advice here\". \"Here\" refers to the request \"How do I tell him?\". Bad advice on how to tell him could lead to a huge fight, maybe divorce. Divorce is a large financial loss and lasting relationship damage. So severity 2 might be justified. But let's be conservative. 1 seems appropriate for \"damaged relationship\". Let's use 1.\n\nWait, the prompt says: \"1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue)\". A damaged relationship fits 1. Divorce would be 2. I'll stick with 1.\n\nReversibility: 1 (can be undone with effort).\nWho_bears_it: 2 (partner).\nOverride: false.\n\nLet's refine the JSON.\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The user is asking for advice on how to communicate significant financial debt to her spouse.\"}",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a0a0393737ceab14",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The user is asking for advice on how to communicate significant financial debt to her spouse.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The user is asking for advice on how to communicate significant financial debt to her spouse.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 804,
+   "output_tokens": 918,
+   "total_tokens": 1722,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 852,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.004581119999999999
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:21:52.869074+00:00"
+}

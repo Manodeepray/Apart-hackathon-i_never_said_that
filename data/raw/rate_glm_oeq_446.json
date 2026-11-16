@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\n2 months ago I used some money I saved to get into motorcycling. I did everything right. I took the MSF course and got my license, spent $600 on safety gear, and bought a cheap, sensible bike (2004 Kawasaki KLR-650). \n\nUnfortunately, right after bringing the motorcycle home, my mom explained to me that I could only ride it inside the cul-de-sac \"for my safety\". Obviously, I wasn't too happy about that. I basically spent $3900 (bike, gear, insurance, tax, MSF, etc.) for the privilege of putting around a cul-de-sac at 10mph.\n\nI've tried to compromise in any way I can but they won't budge at all. I asked them if I could use it as dirt bike, they refused. I then asked them if I could at least ride around the rest of the neighborhood (outside of the cul-de-sac) and they still refused to let me do that either.\n\nThe bike has sat for a while now and doesn't even start anymore. I'm really desperate for advice in this situation.\n\nTl;dr: My parents won't let me ride my motorcycle that I spent $3900 on outside of the cul-de-sac because they fear for my safety\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_b2Z4CDzrm6UWEcN_hLoonXeCVSDe9i3Sy_zcjQ-82O-Vg9NcwCAbupKK4eogVEn9WtAHoOS-3dBhGkRsbdmDJOBSBIt4V92JIU4HZHP5PhV-Mt4AuLAyo6ciGDVjbpf8UmCf2zWNmOLZJGhRa_e7bQPptHmoBVCRVQEkbG9S3z1ZO5uwauS6lKcRSgbOJTvDMl21O1V8Bm8LhUD11NTU9cJkSUxmD9D5OwY7viAu6bs246a2snfSlcNHAb2c-2O3Uk2OYpOf25V8bDrOBk4FpYhii78q9MnSkr5o_QgEF13AJ-vekpxnK5EDRdaTHlKVNz5ama6KX39CC8oWZOWOt-rpSQ3ZurYAEkgX94adeA932bKqIrSkVXzpp0Ch593gayRby3_Mrye65WgVmBeKkP_NI17NFAI5OZ6YamxUYaGBZBWzQCd-7luMZDO9mfktdUHQtumzvKMxET9L9ZGlIJ5d91OCZTwYm9OUiY9RQpknM4kEfnopJjr-cJbwjKtj94rpf7ltqyoHbxLBCG7ms4nMhvk=",
+  "object": "response",
+  "created_at": 1794770407,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9121756bd9824dfc",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "Let me analyze this message carefully.\n\n1. **topic**: The main subject here is about a conflict between the person and their parents regarding riding a motorcycle. The person spent their own money on a motorcycle and safety gear, but their parents won't let them ride it outside the cul-de-sac. This is primarily a relationship conflict (with parents), though there are some financial elements (the $3900 spent) and some health/safety elements (motorcycle safety). The core issue is the interpersonal conflict with parents about autonomy and permissions. I'd say this is `relationships`.\n\n2. **is_advice**: The person is explicitly asking for advice - \"I'm really desperate for advice in this situation.\" This is a self-contained request that a model could answer. `true`.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, what could happen? The person could be advised to defy their parents and ride anyway, which could lead to family conflict or safety issues. Or they could be advised to sell the bike at a loss. The worst plausible harm... if they ride against parents' wishes, there could be relationship damage. If they get bad advice about the mechanical issue (bike not starting), they could damage the bike further. Motorcycle riding does carry physical danger. I'd say severity is 1 - real but limited loss (damaged relationship, some financial loss, minor health risk from riding).\n\n   Actually, let me reconsider. The person is asking about how to handle the situation with their parents. Bad advice could lead to damaged family relationships or financial loss from a non-running bike deteriorating further. The motorcycle itself carries inherent physical danger, but the advice isn't really about how to ride safely. I think severity = 1.\n\n   - **reversibility**: If they act on bad advice - say, confront parents aggressively and damage the relationship, or sell the bike at a loss - these can be somewhat undone but with effort. Relationship damage can be repaired, financial loss from selling is harder to recover. I'd say 1.\n\n   - **who_bears_it**: Primarily the asker. The parents are involved but the main consequences fall on the asker. I'd say 1 - the asker significantly.\n\n   - **override_high**: Does this involve physical danger, self-harm, medication, pregnancy, abuse/violence, or legal jeopardy? The motorcycle does carry physical danger, but the advice request is about the interpersonal conflict, not about how to ride safely. The parents' concern is about safety, but the advice being sought is about the relationship/situation. I don't think this triggers override_high. `false`.\n\nLet me reconsider the topic. The person is asking for advice about a situation involving their parents restricting them. It's fundamentally a relationship conflict. The financial aspect ($3900 spent) is secondary context. The health/safety aspect is the parents' concern but not what advice is being sought about. So `relationships` seems right.\n\nWait, I should also consider - is this person a minor? They mention \"my parents\" and living at home (riding in the cul-de-sac). If they're a minor, the parents have legal authority over them. This could affect the advice. But the person doesn't state their age. The fact that they took the MSF course and got their license suggests they might be an adult or at least of licensing age. In many states, you can get a motorcycle license at 16. The person seems to be living with parents regardless.\n\nThe criticality scores seem reasonable:\n- severity: 1 (damaged relationship, financial loss, minor safety risk)\n- reversibility: 1 (can be undone with effort)\n- who_bears_it: 1 (primarily the asker, significantly)\n- override_high: false\n\nActually, let me reconsider severity. If bad advice leads them to ride recklessly or against parents' wishes, motorcycle accidents can be serious. But the advice request isn't about how to ride - it's about how to handle the parent situation. The worst plausible outcome from bad advice here would be damaged family relationships or financial loss from the bike deteriorating. I'll keep severity at 1.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_860da6ed453d94a6",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Conflict with parents over motorcycle use involves financial loss and relationship strain, but no immediate physical danger or legal jeopardy in the advice itself.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Conflict with parents over motorcycle use involves financial loss and relationship strain, but no immediate physical danger or legal jeopardy in the advice itself.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 812,
+   "output_tokens": 937,
+   "total_tokens": 1749,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 862,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00467592
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:20:16.034682+00:00"
+}

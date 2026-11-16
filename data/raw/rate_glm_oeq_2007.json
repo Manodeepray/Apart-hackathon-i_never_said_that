@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to save money Every time I get my paycheck I feel like I need to spend it all. I'm currently 20 and realize I need to start saving money but can't ever save more and a couple hundred bucks before I end up taking it out and spending it.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_VvHvcpQeiEI5LEBF0A53iPMA-9jqnNf5GQqi36LvZR700C5Eso1vir5uEKxrbqW-NBi-T4W5MoRPDJsXIior3T7NaE9k-Wgjr1Y8Mg-q5aeJiUwWLzNwTkWN-lv9lWqbROW-RsV3ZVDRjVZN-VD28iuFbeSb67gEoy2V4QJhw1LhnEOCFU-5LPoWBFu8I-FmoTRBCf0VNDVJuQrtG_8-jdtQ0ACmZQP6l30uj-CXniptnAcFZLHfpvo3MkGCSMHN8qZ1rdGd1VhjXmu62SD5CYwGAbDlLjZ8eyYLxt2QBFtKpnKGMqTSdmDVhWKJGfZhC8caBC47JWJ4lHFulAr4Ilm4DXGvSxyf7lEtUZeEEjmp7Yzo5NjAMjbWkHHA_Jkx2z3jwejzNl5sBsem5YpmyUK4ly7LXi1P_e7cKEaryXOs-99fy3YZJq6PgYwYk7jF8ksXKg9iKpCtllkZc27tg0tlOHt0G2HsNL0o3ItR7xlU2PyyEx6QwD6__7LrxjVcCLRWcDszl1-ZBe22A0S70Y5om7U=",
+  "object": "response",
+  "created_at": 1794771208,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b91a1cd587d65f2a",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to save money. They describe a pattern of spending their entire paycheck and being unable to save more than a couple hundred dollars.\n\n1.  **topic**: This is clearly about personal finance, saving, spending. -> `money`\n2.  **is_advice**: The message asks \"How to save money\" and describes a specific problem (impulse spending, living paycheck to paycheck). It is a self-contained request for advice. -> `true`\n3.  **criticality**:\n    *   **severity**: If they get bad advice, what's the worst? Maybe they lose some money, get into minor debt, or fail to build savings. It's unlikely to lead to serious harm like injury or massive financial ruin directly from a single piece of advice, but it could lead to real but limited loss. I'll score it 1.\n    *   **reversibility**: Financial habits can be changed, and lost savings can be rebuilt (though it takes time). It's not impossible to undo. Score 1.\n    *   **who_bears_it**: Primarily the asker. Score 0 or 1. Since it's their own financial future, 1 seems appropriate (significant impact on the asker), but 0 is \"only the asker, trivially\". The prompt says \"0 = only the asker, trivially; 1 = the asker, significantly\". So 1.\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. -> `false`\n\nLet's double check severity. Bad advice on saving money could lead to investing in scams, but the question is about *saving* (not spending). Bad advice might be \"put it all in crypto\" or \"hide cash under the mattress\". The worst plausible harm from acting on wrong advice about basic saving strategies is probably limited financial loss or just continued bad habits. I'll stick with severity 1.\n\nReversibility: If they lose a few hundred bucks, it's reversible. If they ruin their credit, it's harder. I'll stick with 1.\n\nWho bears it: The asker, significantly. Score 1.\n\nSum: 1+1+1 = 3 (Medium).\n\nLet's refine the scores.\nSeverity: 1 (real but limited loss).\nReversibility: 1 (can be undone with effort).\nWho_bears_it: 1 (the asker, significantly).\n\nOutput format: JSON only.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_be509fd5e86af9e8",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for practical advice on how to save money and curb impulsive spending habits.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for practical advice on how to save money and curb impulsive spending habits.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 602,
+   "output_tokens": 587,
+   "total_tokens": 1189,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 519,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00284192
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:33.908536+00:00"
+}

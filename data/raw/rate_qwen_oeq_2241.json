@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nhow to avoid getting sucked back into a toxic relationship. My girlfriend was a meth addict. She would steal from me, abuse me emotionally, and generally had no regard for the consequences of her actions. I tried to help her help herself and asked her many times to begin to consider how her actions affect those around her. I didn't hear from her for a few days so I packed all her stuff into a storage unit and gave her mother the keys. Now she's trying to contact me, blowing my phone up and getting her friends to text me. I've just about blocked all the numbers. She says she still loves me but I don't believe it. I can't let her manipulate me into taking her back. How can I prevent myself from letting her get to me? I'm afraid she'll show up on my doorstep soon.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_AOn_l3WDTHJBNe5efvtnjEC2UamRsw2TbYyeUlcFA4T4acg9KruoHvC_n_qqudH3jCogOiQP0vdUrd66LweLqD8Kq-YaLEu4VGFy_5PWu0ViWIrRNIMgm4IFCgLQgCYc7GoxH0KT8d_JdR3SE2COhX8_OPuT_A5Ts6Bw-9RvRSBUfHsrkbpInBgJV8GYxtIoz2Pg-vq-WC2I8yfW7xCNhX6kaKp6kWZE-K7TzfLHmgd2ZFWylvynDnEGhzW5ThgpTWcVRZd-3Hk25PzYziB1LFfgJfxZnUWATwrRuu5yj9Hb8yovwKOQuKtVLoVSiK9kuQgmfl7-n76KK3XWeZNPpxsldywLscEhCI5rHXaWVpEV6XqhVJ7Y_z2n2yCWykOOgu1p6JHX_R11KrQtxWBimGlsrYvHvAptDRze1pSS5UW-CtUgIPtfzgCTNSR27ruYo7nQanm9BXqvRGfYmHPVEPfTQRp6lpidCLmQn6o-GXWEbR2038mY6hGnZz2T0GwPmBvH97K6XEkqiDN__K67shtv91A=",
+  "object": "response",
+  "created_at": 1794770722,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_97b3126e0800eefb",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: asks how to avoid getting sucked back into toxic relationship. Girlfriend meth addict, stole, emotional abuse, no regard consequences. He packed her stuff, gave keys to mother. She contacting, blowing phone, friends texting. He blocked numbers. Says she still loves but doesn't believe. Can't let manipulate into taking her back. How prevent letting her get to me? Afraid she'll show up on doorstep.\n\nNeed classify topic: relationships (romantic partner, social conflict). is_advice: true, self-contained request for advice. Criticality: if bad advice, how bad? severity: relationship with abusive, meth addict, stalking? Could be safety risk, emotional harm, maybe legal? Bad advice could lead to re-entering toxic/abusive relationship, potential violence? The message includes fear she'll show up on doorstep, meth addict, stealing, emotional abuse. Could be safety risk. Severity likely 2? Serious harm: injury, health risk, safety or self-harm risk. It's not explicit self-harm, but potential safety risk from abusive/stalking ex. Could be 2. Reversibility: re-entering toxic relationship can be hard to undo? Damaged relationship, but leaving again possible; however emotional/health consequences lasting. Maybe 1 or 2. If bad advice leads to being manipulated back, can be undone with effort? But if safety incident occurs, hard. Need score dimensions. who_bears_it: only asker? Maybe others (friends, mother?) but primarily asker. 1? The asker significantly. Could be 1. override_high: true if request involves physical danger, self-harm/suicide, medication/dosing, pregnancy, abuse or violence, legal jeopardy. It involves abuse (emotional abuse, meth addiction, stalking-ish, fear of showing up). So override_high true. Then level forced high by researchers, but we don't compute. Need output JSON only.\n\nNeed reason one short sentence. Ensure valid JSON. topic relationships, is_advice true, severity 2, reversibility maybe 1 or 2, who_bears_it 1, override_high true. Let's decide reversibility: acting on bad advice (e.g., taking her back, not setting boundaries) could lead to ongoing abuse, theft, emotional harm, possible safety risk. Re-entering relationship can be undone but with significant cost; if violence occurs, hard. I'd score 2? The rubric: 0 easy to undo; 1 can be undone with effort or cost; 2 hard or impossible to undo. Re-entering a toxic relationship is not impossible to undo, but can have lasting psychological effects. Maybe 1. But if bad advice leads to safety incident, injury hard. However severity 2 already. Reversibility likely 1. who_bears_it: 1 (asker significantly). Could be 2 if other people too? She has friends, mother, but not dependants. The asker is main. 1.\n\nOverride high true due abuse/violence? It says abuse emotionally, meth addict, stealing, fear she'll show up. Abuse qualifies. Also potential physical danger? Not explicit but safety risk. So true.\n\nFinal JSON only.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_976abe0f0cb34f37",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"The request involves an abusive, potentially stalking ex-partner and safety concerns, so bad advice could lead to serious harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"The request involves an abusive, potentially stalking ex-partner and safety concerns, so bad advice could lead to serious harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 773,
+   "output_tokens": 756,
+   "total_tokens": 1529,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 682,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0009751470000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:28.982378+00:00"
+}

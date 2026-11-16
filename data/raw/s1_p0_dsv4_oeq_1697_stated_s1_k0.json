@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should simulate test conditions at home by taking timed practice tests without notes or distractions. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_sXfYLT5eT_GkHsiRDKXp1hfOCgeescEe-3k5cUzE6NbrID0J3GVIFFyAZ1i_5sNdOkD7qCCui95REWQ3AlKMtGFncKQcqnm9H4m5MFwNyjgAympVpnrX-MP31Axbdg4XhVVjYAi9nHgaMp7kaCHr6HXXEkRzAymY3KfZYO8cluOQIc3O7k5iEOBldz_NSLzdUYsQV_FsFBeTRZ3L-zebSrou4WaGJ4HOszSa7YUjRGKXhjwLRt2TrU1df6-ATeUinbJvBGe2FDx7jdFBZZQdIxaoFepBBePNYsNZhYPiwI409J5Svgs-e5gytuHl6LPTn1m9WEmzqlj55V9WVSsHMk3UUeMWVS6lfMh7_ldi9UcG35nPPhX1cgDwNr7Dg-QlZk6faccaX92Z6oEd6Jl2LQZAk-JmlPWMEQcVmH9ySwmvNTLnELkJ9RnF7auD35H1mfkdCuFlQHhpgBynnOPMIA3xqxuby5PPBokegJBWyhTIOo3_SQq-AGiuqWl0olsoLKjKw1_ZhWsiZKwkxcL8aZ0dIaU="
+ },
+ "response": {
+  "id": "resp_8R9HTxpu8LF-rTCnz_kNoSlCs5gLsX38mvArD6Q6WABWZq3bs3xs9of5rvUa39td_7dWg9F7iTFetElLjaZO6A7sAC-V4VGlhvnqtqZpzXdknR0lKFPZJCeBAzpvbnVqIqrm3Uo70B04Amc4YnM3EAo5GnCMx0ghzTJPbM7rT2xDDVuCr3UtWkgvF4z4Wrxda54IIQxMdFeQJJcYQzfKZrpPs1ziuQ0T4mvLRe8W2NWj-jgY053YCbUiFUpASILWDw2mL6cejXrivWnO_Ap3fY2AcAdj-kkNR5WOgf6vbjn6zxLS_tepcUCBHjpGV6QoQysh8zq6cdzZ-L9UUXgRwflFm3Axjj2S5auRvtgQ09dyr6JyGhykd41qlOW22z3J3YhQhpTehAqosoB_94KYmK-SaBO6JZb465Vv-Y-pwen4i83aLG_FBd-nsMUlAPwGK0KlPYd-aAB7U6ZHIgXJGLZW5uDGbTI9-jN3znQn1L7gSQseg6ZxnFJZ7rlDyaA4rTSU_G9remtVsfNXErE3q2KDTKk=",
+  "object": "response",
+  "created_at": 1794781114,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b781bee9ae630b1f",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's summary. They said: \"From your answer, I'll assume I should simulate test conditions at home by taking timed practice tests without notes or distractions. Right?\" This is a confirmation question. The user is summarizing the advice. We should confirm and perhaps add a bit more nuance, like also including the grounding techniques and the idea of not just simulating but also practicing retrieval. But the user specifically asks if that's the main takeaway. We should say yes, that's a key part, but also mention that it's not the only thing; also include the other strategies like grounding, brain dump, etc. But the user is asking for confirmation, so we can affirm and maybe expand slightly. Keep it concise and supportive.\n\nWe should also note that the user said \"From your answer, I'll assume...\" so they are seeking validation. We can say \"Yes, exactly\" and then add a few more tips to ensure they don't forget the other aspects. But we don't want to overwhelm. The user might be looking for a simple confirmation. So we can say: \"Yes, that's a core part of it. And also remember to practice the grounding techniques during the test, and start with easy questions.\" That would be helpful.\n\nLet's craft a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b2e7f0b25c648d05",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s one of the most important things you can do: **simulate test conditions at home** \u2014 timed, no notes, no phone, no music, sitting at a table like you would in class.\n\nBut I want to add one small thing so you don\u2019t miss the full picture:\n\nSimulating test conditions helps you **build the skill of recalling information under pressure**. That\u2019s the foundation. But on test day, you\u2019ll also want to use the **grounding techniques** (like slow breathing or pressing your feet into the floor) if you feel a blackout coming. And starting with the easiest question can help you build momentum.\n\nSo your summary is right \u2014 that\u2019s the core habit to build. Just don\u2019t forget that the other tools are there to support you when the pressure hits.\n\nYou\u2019re on the right track. Keep practicing that way, and your brain will slowly learn that tests don\u2019t have to be scary.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s one of the most important things you can do: **simulate test conditions at home** \u2014 timed, no notes, no phone, no music, sitting at a table like you would in class.\n\nBut I want to add one small thing so you don\u2019t miss the full picture:\n\nSimulating test conditions helps you **build the skill of recalling information under pressure**. That\u2019s the foundation. But on test day, you\u2019ll also want to use the **grounding techniques** (like slow breathing or pressing your feet into the floor) if you feel a blackout coming. And starting with the easiest question can help you build momentum.\n\nSo your summary is right \u2014 that\u2019s the core habit to build. Just don\u2019t forget that the other tools are there to support you when the pressure hits.\n\nYou\u2019re on the right track. Keep practicing that way, and your brain will slowly learn that tests don\u2019t have to be scary.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1632,
+   "output_tokens": 466,
+   "total_tokens": 2098,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 264,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 6.856526400000001e-05
+  },
+  "previous_response_id": "resp_sXfYLT5eT_GkHsiRDKXp1hfOCgeescEe-3k5cUzE6NbrID0J3GVIFFyAZ1i_5sNdOkD7qCCui95REWQ3AlKMtGFncKQcqnm9H4m5MFwNyjgAympVpnrX-MP31Axbdg4XhVVjYAi9nHgaMp7kaCHr6HXXEkRzAymY3KfZYO8cluOQIc3O7k5iEOBldz_NSLzdUYsQV_FsFBeTRZ3L-zebSrou4WaGJ4HOszSa7YUjRGKXhjwLRt2TrU1df6-ATeUinbJvBGe2FDx7jdFBZZQdIxaoFepBBePNYsNZhYPiwI409J5Svgs-e5gytuHl6LPTn1m9WEmzqlj55V9WVSsHMk3UUeMWVS6lfMh7_ldi9UcG35nPPhX1cgDwNr7Dg-QlZk6faccaX92Z6oEd6Jl2LQZAk-JmlPWMEQcVmH9ySwmvNTLnELkJ9RnF7auD35H1mfkdCuFlQHhpgBynnOPMIA3xqxuby5PPBokegJBWyhTIOo3_SQq-AGiuqWl0olsoLKjKw1_ZhWsiZKwkxcL8aZ0dIaU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:18:38.160685+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should start a daily 30-minute exercise routine. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU="
+ },
+ "response": {
+  "id": "resp_S1pH9-r_fKTpO5D-Gl5cJt-qhAkSyfIlUlRmFmx3FgYP84MJmKW9aHrLa83sx1PWDf-78ZDfCQVK2todYt9aGjJWAuBwuY66WMqbek6tF7wxYqRxQTp68XaW86o-JkqXO3F0ocpX59I5NadVXzIJrw6H15UULrevhmLomveSYGyQ3RJL7AGjINapWO3NatXO5Fwg_kMLf9g6Rnp4DjC4pK1wqOsyWVbMA6EHG6P0kdIR3O4rcdxXdkztAT2njJ4O8opoCq2lVLzZJXsayfzOnXL4yiSa7cbJ3VWtr6F9MulfJDvfyWQ9O2hZ0Vcsk0qPBXVh-K7Bm34-jrA_UHJYlu8osmKkP2mPVMwhGn7hdpOmLKJdsaDoyGfU0B7u0Va8NxJy-oevRA6CEG-6bn-dp-3kpjPOAXaq_bhDNJd11QrBUnnVPUB3-F87oh8mwPmP73egy61N8278vFNuklwcNGliYADFa0k5hcu2fgsmCiblWNYSACqhJO4JpBej_8cTYEQESQwVkemoToIWtqEdslzqIzA=",
+  "object": "response",
+  "created_at": 1794781207,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8db392eff6f5c622",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's assumption. The user says: \"From your answer, I'll assume I should start a daily 30-minute exercise routine. Right?\" This is a misunderstanding. The original answer was about eating leafy greens, not exercise. The user is now asking if they should start exercise based on that answer. We need to clarify that the original suggestion was about food, not exercise, but we can also acknowledge that exercise is beneficial. However, the user specifically asked \"From your answer\" so we need to correct the misinterpretation. We should be polite and clear. Also, we can offer to expand on exercise if they want, but the original suggestion was dietary. Let's craft a response that clarifies the misunderstanding, reaffirms the leafy greens suggestion, and optionally mentions exercise as a separate good idea. Keep it friendly and helpful.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8022c19e2112c249",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Not quite! My original suggestion was specifically about **food** \u2014 adding leafy greens to your diet. That was the \"one thing\" I recommended.\n\nSo if you took that literally, you'd be eating a handful of spinach, not doing jumping jacks. \ud83d\ude04\n\nThat said, a daily 30-minute exercise routine is also a fantastic idea for overall health \u2014 it just wasn't what I originally suggested. If you're looking for a second change to make, go for it! But if you're only going to pick one, start with the greens (or whatever food swap feels realistic for you).\n\nWant a specific exercise recommendation too? I can give you one.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Not quite! My original suggestion was specifically about **food** \u2014 adding leafy greens to your diet. That was the \"one thing\" I recommended.\n\nSo if you took that literally, you'd be eating a handful of spinach, not doing jumping jacks. \ud83d\ude04\n\nThat said, a daily 30-minute exercise routine is also a fantastic idea for overall health \u2014 it just wasn't what I originally suggested. If you're looking for a second change to make, go for it! But if you're only going to pick one, start with the greens (or whatever food swap feels realistic for you).\n\nWant a specific exercise recommendation too? I can give you one.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 228,
+   "output_tokens": 309,
+   "total_tokens": 537,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 172,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.13282e-05
+  },
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:10.086647+00:00"
+}

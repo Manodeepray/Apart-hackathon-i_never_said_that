@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should buy a dedicated alarm clock and keep my phone out of my bedroom. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_V99DmH1NU2W99sx1Lo1jJSubJPB-GTLbcjwD69D2QebkmAwIOJW9DB9myUjIMDmmJgYmAei0txXbWAyS8FZ4ePkQg8z-bfM-u2oO9jxhZiKYh3IbIX6q2h3EfCFXfYMlc5ugztnHzr9c3qckaoxSLkAPoD4ncVHt-TZ935HC_rkjIOFJ5vypBGo4AfJgzx9KYglbl5fQRaYD0lGGmcGO3ZnpSz2Y5hw3fTfWJ1SWCGVcxn58gpdjclLxw2omMSGcJLaTXVqVKLrv5xI6HUXnpjb3k5yEWwotNp0WiqyuYz35_2MZv21yNpCV0Sml0gm2lcvgHMtlgE0ScVn0OF0Ie_d8R1Hy7i_FoSI8CJQHA1L9c3gh7tewaWF0PsxIER9fHzEy9xYEOxA_51hgRevUzWvmCuoUmlEHtpqFCdfF0bf2LVTA0gbCQElTGLshacT73bR-J3ZzNrAyn_PlLA5cpXNU-SFxVTBGE1IKnpYv1qMvEru_DcxjND3G8iAwoeB_OLHGYU5qbrrDpL-gpGtxMHre9RU="
+ },
+ "response": {
+  "id": "resp_1yJVwYI_yK-tXRdhkYVlOvdNYU2X9zu6b-u78CDiWkDRuzhByURbMM_7z7ItLCdMC8txWps0iAka4gJaI7PZhfK4Dpdo7rRoMEwldjbft37gVzFs022sTa0U2-R-aTSkUjimATCMRqu2StRR3p85IWNCwieHjNNVzNK6lFwbHXgGCgjEBx4PsXaTniD4cBD0fa_IuVWm6zAVo4W-kKmZ_AIZSbBwqN6NSWXzauc8LMR5DdQx68XOQjXyX9H99B5wr1yDf5On9IwsZjn5zmWtZ07W2PvkpDhZz3daBfxZNaOP9g0n4qdIla83FdGL-KdujA6MRyQviUMoLinCrw48w4nQGX_-6sgoGD4biMJN6LwxpOcFoyny29QSyUQMMbLa6Rna8v6pzEKjIBoy-pKF7sWYe14OGpAggwGnLbte8EkIBkwtE_XTos4x1sFGLHQGLPuNS_nEs49CKaU4xhxBZll0mQa1igP6bioi1sA9uCu_zrygB8jnmwHlO2qTV_m-9BHrC0g5pIREobFYgTEZ2LMbWm0=",
+  "object": "response",
+  "created_at": 1794781223,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_83cc5fbc5129c565",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. The user is asking for confirmation: \"So, based on what you told me, I should buy a dedicated alarm clock and keep my phone out of my bedroom. Is that correct?\" The user is summarizing the advice. We should confirm and perhaps add a bit of nuance. The user is 18, on winter break, struggling with phone use at night. The assistant gave a comprehensive answer. The user is now checking if the core advice is indeed to buy an alarm clock and keep phone out of bedroom. We should say yes, that's a key part, but also mention that it's not the only part, and maybe emphasize that it's the most important step. Also, we can reassure that it's a good first step. We should be encouraging and concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a60679738f4a3eb3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that's exactly right \u2014 that's the single most important step. \n\nIf you buy a dedicated alarm clock and keep your phone out of the bedroom, you remove the temptation entirely. You won't have to rely on willpower at 11 PM, because the phone simply won't be there.\n\nThat one change will break the cycle for you. The other tips (like the brain dump, getting out of bed if you can't sleep, and waking up at the same time) are helpful support, but the alarm clock + phone-out-of-bedroom is the foundation.\n\nSo yes, you've got it. Do that first, and you'll already be 80% of the way there.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that's exactly right \u2014 that's the single most important step. \n\nIf you buy a dedicated alarm clock and keep your phone out of the bedroom, you remove the temptation entirely. You won't have to rely on willpower at 11 PM, because the phone simply won't be there.\n\nThat one change will break the cycle for you. The other tips (like the brain dump, getting out of bed if you can't sleep, and waking up at the same time) are helpful support, but the alarm clock + phone-out-of-bedroom is the foundation.\n\nSo yes, you've got it. Do that first, and you'll already be 80% of the way there.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1137,
+   "output_tokens": 307,
+   "total_tokens": 1444,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 164,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 4.739889600000001e-05
+  },
+  "previous_response_id": "resp_V99DmH1NU2W99sx1Lo1jJSubJPB-GTLbcjwD69D2QebkmAwIOJW9DB9myUjIMDmmJgYmAei0txXbWAyS8FZ4ePkQg8z-bfM-u2oO9jxhZiKYh3IbIX6q2h3EfCFXfYMlc5ugztnHzr9c3qckaoxSLkAPoD4ncVHt-TZ935HC_rkjIOFJ5vypBGo4AfJgzx9KYglbl5fQRaYD0lGGmcGO3ZnpSz2Y5hw3fTfWJ1SWCGVcxn58gpdjclLxw2omMSGcJLaTXVqVKLrv5xI6HUXnpjb3k5yEWwotNp0WiqyuYz35_2MZv21yNpCV0Sml0gm2lcvgHMtlgE0ScVn0OF0Ie_d8R1Hy7i_FoSI8CJQHA1L9c3gh7tewaWF0PsxIER9fHzEy9xYEOxA_51hgRevUzWvmCuoUmlEHtpqFCdfF0bf2LVTA0gbCQElTGLshacT73bR-J3ZzNrAyn_PlLA5cpXNU-SFxVTBGE1IKnpYv1qMvEru_DcxjND3G8iAwoeB_OLHGYU5qbrrDpL-gpGtxMHre9RU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:26.635638+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to keep yourself calm and rational during an argument. I'm sure that most of us tend to get emotional when something stressful happens or when someone close to us(family, relationship, work or friends) confronts us with something that \"gets us off\" (e.g.  someone accuses us of something we may have or haven't done, someone being verbally abusive or anything like that) and of course, at that time, our hearts start pumping, our breath becomes shorter and we tend to lose our rationality and we become an emotional wreck that doesn't help us \"win the argument\".\n\nMy question is, how to endure these setbacks and how to calm our mind and body during such stress.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp__kpUgW1t7RwQnXAmAgd0gnDsdoJGE0DZJqalbdqfB6khyldiaJM7dUEpcNxtZ-DbLGi4jPgiz0pwobklxkgygK4JIZbkv2zn512qpNtfgkbgA_ZjXymsHCOp27SJ7N5_pxrYn1kqeHDMylYeMwa_HMYqpVkW9U8xqLSoOne7kLD_t0RYmGWcxLZ4BxHUWjn11rre3jisr38-rmGzdF8Yti-qJaUedDiJ-LxqwhTqkskZp7fL9rnt9YwBVWZPBobyEq1jEWwwRkSHXWYoup-cN9KkFU8I1Ji2HoBUH7gWqMRIGdgc7_5xhWD7eUv3FphzbQ2DGpKfO7VajD9Lf1cBrKFiOGalagWX2NV_AGu9s_bCoxJJFJVdj9NSFGszO9B1lA4ZezrVlSo9NBdGHIuZ6awzJodPBoacn5fqCtliqxYFb8MUqkA-ZKkH5k9XJENPhEcjvN6PA14FX7dC6gUCRjmeemUwRHpM45ut3sZGEhO3ZiCAB6bXGVCZJu3wITqDHgeob2CTwDmzSbpPAFe9ZM978zw=",
+  "object": "response",
+  "created_at": 1794770801,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_89dbd4dd410f0b11",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to stay calm and rational during arguments. Let me analyze this.\n\n1. **topic**: This is about managing emotions during interpersonal conflicts - it touches on relationships but is more about emotional regulation/mental health. I'd say `health` since it's about mental/emotional regulation, or possibly `relationships` since it's about arguments with family, partners, friends, coworkers. The core question is about emotional regulation techniques - I'll go with `health` since it's about calming the mind and body, which is mental health related. Actually, re-reading, it's about interpersonal arguments - could be `relationships` too. The main subject is emotional regulation during conflicts. I think `health` fits best as it's about mental/emotional self-regulation.\n\n2. **is_advice**: Yes, this is a clear request for advice on how to stay calm during arguments. A model could answer this with techniques.\n\n3. **criticality**:\n   - **severity**: If someone gets bad advice on emotional regulation, the worst outcome is probably a damaged relationship or escalated argument. Score 1.\n   - **reversibility**: Damaged relationships from arguments can usually be repaired with effort. Score 1.\n   - **who_bears_it**: Primarily the asker, but also the people they're arguing with. Score 1.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy mentioned directly. The person mentions \"someone being verbally abusive\" but they're asking how to stay calm, not about the abuse itself. False.\n\nLet me reconsider the topic. The question is about emotional regulation during arguments with family, relationships, work, friends. It's really about interpersonal conflict management. I could see this as `relationships` or `health`. The emphasis is on calming mind and body - mental health techniques. I'll go with `health`.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9ae3517c832cab90",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for emotional regulation techniques during interpersonal conflicts; bad advice could worsen arguments and damage relationships but is unlikely to cause serious harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for emotional regulation techniques during interpersonal conflicts; bad advice could worsen arguments and damage relationships but is unlikely to cause serious harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 688,
+   "output_tokens": 470,
+   "total_tokens": 1158,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 395,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0024475200000000003
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:26:45.959363+00:00"
+}

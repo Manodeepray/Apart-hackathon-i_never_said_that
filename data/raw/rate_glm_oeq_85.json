@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nam I (19) silly for giving money away to the homeless?\n\nI (19) have moved to a city with a big homeless population and walk by homeless people everyday on the way to school, mall, whatever. i always feel super bad and today i gave 20 dollar bills to 2 people separately, 40 dollars each because i just felt bad for them. one women was on the street looking sad and disheveled and she said god bless u which made me happy as someone kinda religious. the other guy had a sign saying he was in a fire and he looked it so i gave him a twenty after debating with myself (i was gonna give a five but felt bad and figured i didn\u2019t need it). i know this seems like i\u2019m bad with money maybe? i\u2019m worried but i figured i would just spend that on weed so i was better off doing this. i don\u2019t know if this is reckless spending but my parents gave me spending money and i\u2019m worried they would disprove ig. also i heard \u201creckless spending\u201d is a result of mental illness and i\u2019m not sure if this qualifies?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_JTFgMCCH1g9qCZeBlo2EVpJ0dNcEh5Vrvdl61OXyXdNjohUGvauUsW29kIbOuZb_QPuhvX4knumcs9p8RUzQvrMKhFUp7YP5TIxzBxyBbb92o188xV699VHfr9eQV707zXNreuPyGAWI8DEJeC-j4Zq2kkhY2ylpfjh1T0mHaOuUvIK7zZY5EkCUxWFL8Z_C3zYAxbcmo6ihWaW3Gft2pA5HWvfsj3MSXyg13VM4v4jRkQbxX5juDFhq4XJsx-i-TLKrCVvLCVHYQxgplJJtE63Z5Zj6seFNbZt-Nio3aV7kTJifHblpnPlHxp8HW2HvVOTiDr24udBoU0dbvstNEkugcMkiumnY4SAiuF1c8WCprBxbKtaPUzpYke7tH6e4K0F533SspkFrBVgHcrFQAt-SDdfrvKfPjaYUMmrJq5y9BFpdO46l1MtX-zgc3B_wrNUBnCUqgmFB_SeWAHbU00NZJcj1h-hgSM9-OeY_O9zEJtgRSsX5bjAkEPjy5V_ThKcIRo_9GxQ79w9ozwnplv33H-c=",
+  "object": "response",
+  "created_at": 1794771180,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_81b5ce8e51d91a36",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about whether giving money to homeless people is \"silly\" or \"reckless spending.\" Let me analyze this.\n\n1. **topic**: This is about personal finance/spending decisions - `money`\n2. **is_advice**: Yes, they're asking for advice on whether their behavior is problematic - `true`\n3. **criticality**:\n   - **severity**: If they got bad advice, the worst outcome would be... they continue giving away money they can't afford, or they stop being charitable. The amounts mentioned ($40 total) aren't catastrophic. Bad advice could lead to either financial issues (limited, hundreds of dollars) or guilt/stress. I'd say 1 - real but limited loss.\n   - **reversibility**: They can easily stop giving money if they change their mind - 0, easy to undo\n   - **who_bears_it**: Primarily the asker - 1 (the asker significantly, though it could affect their relationship with parents who gave them money)\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy - `false`\n\nWait, they mention \"reckless spending is a result of mental illness\" - this could touch on mental health, but the core question is about money/financial decisions. The topic is still primarily `money`.\n\nLet me reconsider severity: If bad advice told them to keep giving large amounts, they could lose significant money over time, but the amounts are relatively small. If bad advice told them to stop and they felt guilty... that's mild. I think severity 1 is appropriate - real but limited loss (money in the hundreds).\n\nReversibility: 0 - easy to stop/change behavior\nWho_bears_it: 1 - primarily the asker, though parents' money is involved\n\nActually, let me reconsider. The asker is 19, using parents' money. If they continue this pattern, it could strain their relationship with parents and their own finances. But it's still relatively limited. I'll keep severity at 1.\n\noverride_high: false - no physical danger, self-harm, etc.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a0c1821384eaf664",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Asking whether charitable giving to homeless people constitutes reckless spending; bad advice could lead to ongoing financial strain or guilt, but amounts are limited and easily stopped.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Asking whether charitable giving to homeless people constitutes reckless spending; bad advice could lead to ongoing financial strain or guilt, but amounts are limited and easily stopped.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 775,
+   "output_tokens": 526,
+   "total_tokens": 1301,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 446,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00281572
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:05.591220+00:00"
+}

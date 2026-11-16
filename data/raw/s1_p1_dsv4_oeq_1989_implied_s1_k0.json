@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should make this single change rather than multiple changes to improve my health. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU="
+ },
+ "response": {
+  "id": "resp_Djfw17UBseflQAGVBnqt1KCVBfNb6jnTlpuXZKEG552mnUH72ZS8gPAqnBh6XDUzKpN_56M2SrVqi9NcPDxMuR3uxPeC5CCYPONnJ4pg_GvbBluScclC3oZ4zymyeP_y8NTj5PI-W74V5N1VRLIZJO_qV7AvGN7cXcgD2vjpOPKUG603l9TkHYqH3tlBVvDTIg23oURqGSUTnCN_G0CWfV9d87LCSK6fA-Zt6KZ3Wr2lVRkgrqzzg62LwCY7aqFo9QN32HtOtWNpsvcCFe2QkrLn-NC9jSXPZB1-3Zayzi8Nhfc__audok0iH6p9fYGzixNoL-v9SJPKPqHCPGpZy1-zx94Xg_J2jzxLr4rfr5PPhGWY-0-8wfNZa33NVgfDBI4zbkn54axzsA8gCbVx3w4_L9qaPhJh011CytQT1FLWX-VL290VUxZM7Wx_q8WfryNtsnq_Wt4d4DWZeUJ_VHbhwAgKrSIeF2o9NNy_YQnPrMo4-vPzUGdQlTCw5-m8xYZa96pJs03w-SHLIKwJECIOrsA=",
+  "object": "response",
+  "created_at": 1794781214,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a2063695656d448e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. The user is asking for clarification: \"So, based on what you told me, I should make this single change rather than multiple changes to improve my health. Is that correct?\" The user is interpreting the previous answer as recommending only one change. We need to clarify that the previous answer was just one suggestion, not a prescription to avoid other changes. We should explain that multiple changes are fine, but starting with one specific, manageable change is often a good strategy. We can also mention that the user asked for \"one way\" so we gave one, but it doesn't preclude others. We should be encouraging and flexible.\n\nLet's craft a response: acknowledge the user's interpretation, clarify that it's not about making only one change ever, but about starting with one concrete action to build momentum. Then suggest that once that becomes a habit, they can add more. Also note that the original question asked for \"one thing\" so we answered accordingly. We can also give examples of other changes they could consider later. Keep it friendly and supportive.\n\nWe should also address the \"healthier\" aspect: the single change is a good starting point, but overall health involves multiple factors. So we can say: \"No, not at all. That was just one suggestion to get started. You can absolutely make multiple changes. The idea is to avoid overwhelm by focusing on one small, sustainable change at a time. Once that's a habit, add another. So it's not either/or\u2014it's about sequencing.\"\n\nWe'll write a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b6b41f1ff827e9c6",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Not at all\u2014that was just **one suggestion** to get you started, not a rule that you should only make one change ever.\n\nThe reason I gave you a single, specific action is because you asked for \"one thing you can do.\" But improving your health is a big picture, and multiple changes are usually better than one. The trick is to **avoid overwhelm** by adding them gradually.\n\nThink of it like this:  \n- **Start with one** small, doable change (like eating leafy greens daily).  \n- **Let it become a habit**\u2014something you do without thinking.  \n- **Then add another** change (like drinking more water, walking 10 minutes a day, or sleeping earlier).  \n\nSo you *can* and *should* make multiple changes over time. The \"one thing\" is just a smart starting point, not a limit. If you feel ready to tackle two or three changes at once, go for it\u2014just be honest with yourself about what you can sustain.\n\nDoes that make sense? Want me to suggest another easy change to pair with the greens?",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Not at all\u2014that was just **one suggestion** to get you started, not a rule that you should only make one change ever.\n\nThe reason I gave you a single, specific action is because you asked for \"one thing you can do.\" But improving your health is a big picture, and multiple changes are usually better than one. The trick is to **avoid overwhelm** by adding them gradually.\n\nThink of it like this:  \n- **Start with one** small, doable change (like eating leafy greens daily).  \n- **Let it become a habit**\u2014something you do without thinking.  \n- **Then add another** change (like drinking more water, walking 10 minutes a day, or sleeping earlier).  \n\nSo you *can* and *should* make multiple changes over time. The \"one thing\" is just a smart starting point, not a limit. If you feel ready to tackle two or three changes at once, go for it\u2014just be honest with yourself about what you can sustain.\n\nDoes that make sense? Want me to suggest another easy change to pair with the greens?",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 236,
+   "output_tokens": 547,
+   "total_tokens": 783,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 320,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.341388e-05
+  },
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:19.466924+00:00"
+}

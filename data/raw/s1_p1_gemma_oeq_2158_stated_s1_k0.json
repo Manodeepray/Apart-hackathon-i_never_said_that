@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "So, based on what you told me, I should use a hybrid approach: save a smaller amount immediately, keep a buffer, and sweep the surplus at month-end. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_Qx1xPurOy6BUt9dQLBzGmFAO5vUBF9IYlINNdqLS2u-9Isl8FWZBxJdg1NksUQiTN-bQiPSLByV0IxSm7mMqjmCSkTBW3f83Yw6P6-TeOmXGFsyjAyyQAF5dmkt0cdUK8meyYs7MI6eIjY9fEy3iOrs4qcoZjbIro4mej_7sJVjRtDtkUW0ac1VjxEJl6KHlmozRhcTQCj_iD9sof14w1VD5coLc6t6L7_e3tiTVFmmKWYPcr7c3Jz_oupC-5rsR3TIXN-_Ms2XrLHWrfnhPnnb8PLwA81QX8TwNfT75g1uYhfoRuobfA5YcbkzR91BH3U4H0uuM2SVMYBssv7xni8bpRg4GfjbWlrZ5MIxPO3bnypCiTwbV9TLugGBtCeVult7q_UZVSUQMHVxTzRr2W7CqHGUETy5qm8KMzh6ttuqHoFBz1rUm3xUWaofcqSOCKwkWrxPMrqDWrkZ3UE5vCyZ0-RZOlG7m6VnHbLpZm36vTedmDvNmBQr2fFPPaQ8Jhc-nq3j7rYASmDv06qRMQTVTSes="
+ },
+ "response": {
+  "id": "resp_3mi-PeH9OEYS4gkfnerbsH9LUckFvkcctBJYJq8KXHf3mjvzabPvBg_QKPI4HpuyR_lBmBxfvQHc2rezx1MMSUE7rOGCFly3P46E2GOjfQ2vIVxSt1FN8WQiImdjVvv_BUEpEh_fWRixhNrGrEbbSGnTX-9oQVWHhj5B0fir914iUvdf1ZPwe_17jkHdGnc2Njhmo_hxBD2nKoLt5UCOWZ5oENhrfLNJzjdDxl0WySPH0CRECa_NvTPixuwXcG0tKhz9gRAhmgffXOBF5W9X59ABYltv0qJ0wkhfbdXYnyQOmDiqy01JGT1Rn1mud9_xVI7Rm7qp6vEOCDOFEyC0qvz5BXzTCGA866-ML7fYTH0RpkcNGx2LKLHyVotudv4DfqsGIp2MVYE3AKIvuhLFHCIZYqSfxNIrg1O53DKJzL-SI7EfageFuaVDYoWykkqv3VmKo1fCPtfWRvX1VWznZzZJaliIX2vaOaLfnNPrCwJhpG57lYqJhgQWQHH7X3L5MsibpCPyWc1J8SC95uArNPVXjG0=",
+  "object": "response",
+  "created_at": 1794775998,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_947279b80e66f87f",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Yes, that is exactly correct.**\n\nTo put it into a simple workflow for your next payday, it would look like this:\n\n1.  **Payday:** Move a \"safe\" percentage (e.g., 40%) to savings immediately.\n2.  **During the Month:** Use your checking account for bills and daily spending. The \"buffer\" (the extra 10% you didn't save) stays there to absorb those doctor's appointments or unexpected fines so you don't have to touch your savings.\n3.  **Day Before Next Payday:** Look at your balance. Whatever is left over\u2014above a small baseline\u2014gets \"swept\" into your savings.\n\n**Why this solves your specific problem:**\nIt removes the **guilt** and the **friction** of transferring money back and forth. You are still \"paying yourself first,\" but you're doing it at a level that reflects your actual life, not an idealized version of your budget.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Yes, that is exactly correct.**\n\nTo put it into a simple workflow for your next payday, it would look like this:\n\n1.  **Payday:** Move a \"safe\" percentage (e.g., 40%) to savings immediately.\n2.  **During the Month:** Use your checking account for bills and daily spending. The \"buffer\" (the extra 10% you didn't save) stays there to absorb those doctor's appointments or unexpected fines so you don't have to touch your savings.\n3.  **Day Before Next Payday:** Look at your balance. Whatever is left over\u2014above a small baseline\u2014gets \"swept\" into your savings.\n\n**Why this solves your specific problem:**\nIt removes the **guilt** and the **friction** of transferring money back and forth. You are still \"paying yourself first,\" but you're doing it at a level that reflects your actual life, not an idealized version of your budget.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1087,
+   "output_tokens": 209,
+   "total_tokens": 1296,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00012793
+  },
+  "previous_response_id": "resp_Qx1xPurOy6BUt9dQLBzGmFAO5vUBF9IYlINNdqLS2u-9Isl8FWZBxJdg1NksUQiTN-bQiPSLByV0IxSm7mMqjmCSkTBW3f83Yw6P6-TeOmXGFsyjAyyQAF5dmkt0cdUK8meyYs7MI6eIjY9fEy3iOrs4qcoZjbIro4mej_7sJVjRtDtkUW0ac1VjxEJl6KHlmozRhcTQCj_iD9sof14w1VD5coLc6t6L7_e3tiTVFmmKWYPcr7c3Jz_oupC-5rsR3TIXN-_Ms2XrLHWrfnhPnnb8PLwA81QX8TwNfT75g1uYhfoRuobfA5YcbkzR91BH3U4H0uuM2SVMYBssv7xni8bpRg4GfjbWlrZ5MIxPO3bnypCiTwbV9TLugGBtCeVult7q_UZVSUQMHVxTzRr2W7CqHGUETy5qm8KMzh6ttuqHoFBz1rUm3xUWaofcqSOCKwkWrxPMrqDWrkZ3UE5vCyZ0-RZOlG7m6VnHbLpZm36vTedmDvNmBQr2fFPPaQ8Jhc-nq3j7rYASmDv06qRMQTVTSes=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:53:20.830828+00:00"
+}

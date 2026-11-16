@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to respond back without being rude when someone asks you personal finance questions like for how much you purchased your residence or your salary increment and you dont feel enough trust on them to reveal such info? Consider the following situations as examples. There could be lots of other situatios too:\n\n* Let's say I'm with an office colleague and one of them casually asks me my salary. \n\n* Or suppose I'm in a group of friends and one of them heard that our team got a good salary increment or a bonus. And this guy is now relentlessly asking me details about my increment /bonus.\n\n* Or suppose I'm hanging out with my people who live in the same apartment building. And one of them is asking me for details about how much I purchased my flat.\n\nThere could be lots of scenarios. But in all these scenarios lets say that you don't trust the other person enough. So how do you not reveal these details but at the same time you want to come across as rude.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_My1r-agWWjlRhIyi7afGy52FBxadC51GSqc1ZgA5MqRg_Kg6EnbYeR8E7MyNi2q1CwMPcaKCX1yDyU2MDH90wJ0Mx47XSuo3niCCeQhuuI38HOi7BaHpCoYwc6HS3qO9NpGS5akxXzUEv_czaueSdCtQty_mcP9mCCqeiQ2rrxJsufTqeKDsn3Q5qFUwtMBcIVZi0zZxiyUnTiNNsK01T28aNmmsO7rn0EDXwGSYu1ZhAb2PU12mNeWycum9mbCsQPJm1sWDrxkmBRVztjMY4rKgGnJaTAziQmdcThCGnmkJmnl46RFagnfsUfkBSwlZU-AcWu5kUuQSvzdE7ZhFPxVSi7MkJ3f9KYNfwHkrbN9lBkZw9szO2pMMkE_-3wxAWVaRVkFe-Q8ou0TxiihmUadwRscWkNIJ8yJdZQ2dgs0uLsSSnvad0-6zZX543Uxa-5TIPuW4mBLAD6BipqClw8E5_8XoxKByieYhr8h6qiWHiVZabYhpb6qNKobv9VMdzzvNa2z_j71Xw3t_5-qvuLV_Dow=",
+  "object": "response",
+  "created_at": 1794771287,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_beda351f44b9ec6d",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to politely decline answering personal finance questions in various social situations. Let me rate this.\n\n1. **topic**: This is about interpersonal communication/social skills, but the core subject is about personal finance information. The advice is about social interactions though. It's about relationships/social dynamics. Actually, it's about handling social situations - this falls under \"other\" or \"relationships\". The main subject is social interaction/communication, not really about money itself. I'd say \"other\" since it's about communication skills, or \"relationships\" since it's about social interactions. Let me think... the examples are about colleagues, friends, neighbors - social relationships. I'll go with \"relationships\".\n\n2. **is_advice**: Yes, this is a clear request for advice on how to handle social situations.\n\n3. **criticality**: \n   - severity: If someone acts on bad advice, the worst outcome is probably mild social awkwardness or damaged relationships. 0-1. I'd say 0 (embarrassment or mild annoyance).\n   - reversibility: Easy to undo - you can always clarify or apologize. 0.\n   - who_bears_it: Only the asker. 0.\n   - override_high: false. No physical danger, self-harm, etc.\n\nLet me reconsider the topic. The question is about how to respond in social situations - it's about communication and social skills. The financial aspect is the content of what's being asked, but the advice sought is about social interaction. I think \"relationships\" fits best since it's about navigating social interactions with colleagues, friends, and neighbors.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_95ec98199c37dda3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting polite ways to deflect personal finance questions in social settings; worst outcome is mild social awkwardness.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting polite ways to deflect personal finance questions in social settings; worst outcome is mild social awkwardness.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 747,
+   "output_tokens": 406,
+   "total_tokens": 1153,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 336,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00224852
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:34:51.079506+00:00"
+}

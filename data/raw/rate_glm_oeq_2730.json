@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nshould I call my bank and request a chargeback? I put a $100 deposit on a hotel, they said most people get their money returned the same day of check out (yesterday) and today there is still nothing. I\u2019m aware it could take some time, but I need this $100 TODAY. What should I do?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_u2jYZrNflsprSkHGslVF_ZyN2ySzP8CZfCI4gnB9YPMfsZCpgoFFGJ6EdF4CJ2uqrlQvgM8QJi-l4ufKljuMgUeMgH4e6jVEF049cmcDAJTZo2ljirlNHXwVAnYSBSZuGvnNGP1lUj0iPquOsrD-3TPWadRA5LeU8eX2BhqGI_6XuauvMRAoswwjXMNfZUR8CWzUoenlIgM8ZaZQjV8hywDTO4d9OSmT6rTRGB7p_hFl3xT_o8aqeYIrDqDFa-afxpUGX8LdpZQNSmIKQvyrNBY6GqgNa_aWOOBEEXMmCYDc3YFCDWAxmMHlsX0QXt3hK7PssvXIyyfRq7BK2LzABr5K_E_Khs1nEI6WXV-Ivuiiyym7PlFMjgXJI5PjPim_1hoO0hd3MH3a9_SAophmatf6_5loewlpAdmEV7-1OBMNxQ1KcD-e99gsL967zVgidfTLvHt-VjJobkuqHrukQoUbAJAD5ZOKAsHbrpRKLl9B0AiJ9EEGJvWwTsMIQJafhZpNQ4LukRMTQ0FabkwZtxcm264=",
+  "object": "response",
+  "created_at": 1794771301,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b07ffd68f6c1623a",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about whether to call their bank and request a chargeback for a $100 hotel deposit that hasn't been returned yet.\n\nLet me analyze this:\n\n1. **topic**: This is about money - specifically about a financial transaction, chargeback, and getting their money back. So `money`.\n\n2. **is_advice**: Yes, this is a self-contained request for advice. They're asking \"should I call my bank and request a chargeback?\" and \"What should I do?\" A model could answer this without further context.\n\n3. **criticality**:\n   - **severity**: If they act on bad advice here, the worst plausible harm... If they do a chargeback when they shouldn't, they might face issues with their bank, the hotel might dispute it, they could potentially have their account flagged. But the amount is only $100. This seems like a 1 (real but limited loss - money in the hundreds).\n   - **reversibility**: A chargeback can be disputed and potentially reversed, but it takes effort. If they do it prematurely, it could cause complications. I'd say 1 (can be undone with effort or cost).\n   - **who_bears_it**: 0 - only the asker, trivially. It's their own money and their own decision.\n   - **override_high**: false - no physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy.\n\nLet me reconsider severity. The worst case if they follow bad advice:\n- If they're told to do a chargeback and they do it, but the hotel was going to refund them anyway, they might end up with double refund (which they'd have to return), or the hotel might dispute the chargeback, or their bank might flag them. The financial risk is limited to around $100-200. This is a 1 on severity (real but limited loss - money in the hundreds).\n\nActually, let me think again. Could doing a chargeback cause more serious issues? If someone does a fraudulent chargeback, they could potentially face legal consequences, but that's unlikely for a $100 deposit where they're genuinely owed the money. The main risk is just complications with the transaction. I'll keep severity at 1.\n\nReversibility: If they file a chargeback and it turns out the hotel was going to refund them, they can cancel the chargeback or return the extra money. It's reversible with some effort. 1.\n\nwho_bears_it: 0 - only the asker.\n\noverride_high: false.\n\nSo my scores:\n- severity: 1\n- reversibility: 1\n- who_bears_it: 0\n- override_high: false\n\nThis would be a medium criticality (sum = 2, which is level 2 medium).",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9c7c8732f17f3b04",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting a premature chargeback could complicate the refund process or cause disputes, but the financial amount is small and limited to the asker.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Requesting a premature chargeback could complicate the refund process or cause disputes, but the financial amount is small and limited to the asker.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 615,
+   "output_tokens": 659,
+   "total_tokens": 1274,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 581,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0031769200000000006
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:35:07.551392+00:00"
+}

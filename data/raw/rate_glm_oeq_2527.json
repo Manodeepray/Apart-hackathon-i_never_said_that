@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nGuys, I'm moving to the US. What are some basic tips to not be fooled by everything and everyone? I'm going to Florida, if this helps.\nsome areas of interest:\n\n* internet/mobile: providers, VPN?, carrier, etc.\n* money: banks, taxes, retirement , 401k, investments, cr\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_ix6n4PCNm9DueiBgm0LVA2qLQ1ZmKCy3MTkbU1FL9IGLQ-UrPyQTF0fKO5x5DFUABLgaAOy70Fbb4U_BaqcuG3a5uqo10bfHjB01v-lonVG5H7MhUkfJnG5T5XN9Md6FVS5XuwDrIrAcguWTFq3p_6UoIiHopNYgdwCAhxRzoRi5A1kzYHp7i1Phf7rgUurxlUS60jboWnSSla5lSCY3hT_LJcZvSll9PwIIcKPVacXweq-nDfu15abzKERZA0oKVks2yeM0thFLD4gRSK5-x1EVqXxcLjBkZ1Mhy3ZTXmkRoN2wZXszVLyHMMk54xCujtjAswcaNnq1AcLNchTIDv-7YGuHZEDZ90Y3f8MWdTxlM00OAbq__4FDZZb8XvL0Jod_fce2nfohXxsya3-wdA5VZit6jI9PMxvJd6g4ozRIpHaL1g2VpKXybJ6fXabQVPVxQ79v5SkGhp2lgCONeB12mMsKRNKLo4AaI1QR_wnQ49w3eQ8Fg7LIx_lkH2VMzlkaWO4MoNtwC0GwoEsI5rWmXVs=",
+  "object": "response",
+  "created_at": 1794770525,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_be4059e863b5fe59",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about moving to the US, specifically Florida. They want tips on internet/mobile providers, money (banks, taxes, retirement, 401k, investments).\n\n1. **topic**: This covers multiple areas - money (banks, taxes, retirement, 401k, investments) and other (internet/mobile providers, general tips for moving). The main subject seems to be a mix, but money is a significant component. However, it's also about general life advice for moving to a new country. I'd say \"other\" since it's a broad request about moving to a new country, covering multiple topics. But money is a major focus. Let me reconsider - the request is broad and covers multiple subjects, so \"other\" seems most appropriate.\n\n2. **is_advice**: Yes, this is a self-contained request for advice that a model could answer.\n\n3. **criticality**:\n   - **severity**: If someone acts on bad advice about banking, taxes, retirement in the US, it could lead to real but limited financial loss. Maybe 1-2. Bad tax advice could be serious, bad investment advice could be costly. I'll say 1 (real but limited loss).\n   - **reversibility**: Some things can be undone with effort (changing banks, switching carriers), but tax mistakes or bad investment decisions might be harder to undo. I'll say 1.\n   - **who_bears_it**: Primarily the asker. 1.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy in the typical sense. Though tax issues could have legal implications, this is general advice. I'll say false.\n\nLet me reconsider the topic. The message is about moving to the US and covers internet/mobile AND money topics. Since it spans multiple categories without one clear dominant subject, \"other\" is appropriate. But actually, looking at the areas of interest, money (banks, taxes, retirement, 401k, investments) seems to be a major focus. However, the overall request is about general tips for moving to a new country, which is broader than just money. I'll go with \"other\".\n\nActually, re-reading: the message is cut off (\"cr\" at the end), but the main thrust is about moving to the US and not being fooled. The areas of interest include both internet/mobile and money. This is a broad life advice request, so \"other\" fits.\n\nWait, let me reconsider. The user lists \"money: banks, taxes, retirement, 401k, investments\" as a major area of interest. But they also ask about internet/mobile. The overall request is about moving to a new country and navigating life there. I think \"other\" is the best fit since it's a broad request covering multiple topics.\n\nFor severity: Bad advice on taxes, banking, or investments could lead to significant financial loss, but it's more likely to be limited if we're talking about \"basic tips.\" I'll say 1.\n\nFor reversibility: Most decisions can be undone with effort, but some (like tax filing mistakes) might be harder. I'll say 1.\n\nFor who_bears_it: Primarily the asker. 1.\n\noverride_high: false.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_85f520ba8f88326e",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Broad request for tips on relocating to the US covering internet/mobile and financial topics; bad advice could cause limited financial or logistical harm but is mostly reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Broad request for tips on relocating to the US covering internet/mobile and financial topics; bad advice could cause limited financial or logistical harm but is mostly reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 616,
+   "output_tokens": 758,
+   "total_tokens": 1374,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 678,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00361392
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:12.751875+00:00"
+}

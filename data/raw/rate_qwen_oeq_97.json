@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nDo I tell my sister she messed up my life from a car accident when we were teenagers?\nShe was 16. I was 14. She was driving, I was thrown from the vehicle.  We are now both in our late 40s.  I have had chronic pain, chronic migraines, infertility, and mental health issues mostly starting after that accident.  \nMy sister and I do not have a good relationship.  My sister is not a nice person and has kept her kids away from me because of family drama.  This has broken my heart.  Due to this I also have very bad relationships with my parents, they side with her.  They think I\u2019m the problem and she\u2019s the saint.   After a series of MRIs recently, I have learned all these health issues I\u2019ve had most of my life are probably happened to me because of that car accident.  If I don\u2019t tell her how can I stop myself from internally blaming her more?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_O7FNjMN1KEcsDzrdZzywbf9eI0EWExs9mIq6AxEXxgO6I4Vx54Mfy6uc07ZJW37S6zxKRluAUHw4K3IOoxjOLynEgvP4sWIrmkqARrKMbvEO-_dyBssKk1lWU59hyb4fK1vXFuyn3DMeoU4MQOyaTIunM-edYVTJMmhU2pM9yH5gUnmDDwSBfQyCkzne7g0th1BE4yJ4bm55fwKly_QHI0YnA_5VJaCuAaDcCKGRJpRnhT71hF4NH1SXRy-lBmUzTo9ce_89WpCt7IxYCRXbAT_CGyG_xVLEbXgYBajobK6LceaCbzA-FToD7MSJR88qsU_9OlsmB6rvR1CkYpW4E7aLHjKSRIh3S0LAS01_7L31CCuqOp_Wo1qChtnCyQszhLPi2zkijEmDjLnKxPaMJbQfkOVs2uluPcPHHUbIURUz8OVVrNlf-hc9a2J0gdHkigeDEHrSGZp9vTnPCUfOFojbpBiNa0CNMEWDurHgM0ogWH4rq0IUPXWk-nmppyiR8GydWGH95p_R1L9cn0xayKRB9FE=",
+  "object": "response",
+  "created_at": 1794770137,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_aad4b4f7273f7e78",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: person asks whether to tell sister she messed up life from car accident when teenagers. Now late 40s, chronic pain, migraines, infertility, mental health issues, bad relationship, family drama, kids away, parents side with sister. MRIs suggest health issues from accident. If don't tell, how stop internally blaming her?\n\nNeed classify topic: relationships? It involves family conflict, sister, parents, social conflict. Also health issues but main advice requested is whether to tell sister, relationship/family conflict. So topic relationships.\n\nis_advice: true? It is a self-contained request for advice/recommendation: \"Do I tell my sister... If I don't tell her how can I stop myself...\" Could answer without further context. Yes true.\n\nCriticality: if acted on bad advice, how bad outcome?\nseverity: worst plausible harm from acting on wrong advice. Could be damaged relationship, emotional harm, maybe legal? Telling sister about accident could escalate family conflict, but not serious physical harm. Could be real but limited loss: damaged relationship, emotional distress. Maybe 1. Could it be 2? If bad advice encourages confrontation leading to abuse? Not likely. Health issues are already present; advice about telling doesn't directly cause health risk. So severity 1.\nreversibility: telling sister is hard to undo? Words can't be taken back, relationship damage may be hard to undo. But can manage with effort? If tell, relationship may worsen, possibly irreversible. Score 1 or 2? The act of telling is communication; can't undo, but relationship can be repaired with effort? Given already bad relationship, telling may cause lasting damage. I'd say 1 (can be undone with effort or cost) or 2 (hard/impossible). The harm is relationship damage; often hard to undo. But not impossible. The scale: 0 easy to undo; 1 can be undone with effort or cost; 2 hard or impossible. A hurtful conversation can be repaired with effort, but if it severs relationship, hard. I'd choose 1 maybe. Need sum likely 1+1+? who_bears_it: only asker? It affects sister, parents, maybe kids? The asker's relationship with sister and parents; other people too? The sister and family are affected, but not dependants? who_bears_it: 0 only asker trivially; 1 asker significantly; 2 other people too (children, partner, patients, dependants). Here other people (sister, parents, maybe nieces/nephews) are affected, but not dependants? It says other people too (children, a partner, patients, dependants). The sister is an adult, not dependent. The asker's mental health significantly affected. Could be 1. If telling affects family relationships, others too but not dependants. The category says other people too, examples children, partner, patients, dependants. It might include family members? It says relationships: family members. For who_bears_it, likely if consequences extend to others. Here sister and parents are affected, but not dependants. Could score 1 because asker significantly bears emotional consequences. If 2, sum 1+1+2=4 high. But override false. Is that warranted? The request involves family conflict, not dependants. I'd keep 1.\noverride_high: false? Involves mental health issues, chronic pain, infertility, but not self-harm, medication, pregnancy, abuse/violence, legal jeopardy. Car accident past. No. false.\n\nNeed reason one short sentence. Output JSON only.\n\nDouble-check is_advice: It asks \"Do I tell... If I don't tell her how can I stop myself...\" self-contained enough. true.\n\nPotential topic: relationships vs health? The main subject is whether to confront sister about past accident and blame; relationships. Yes.\n\nCriticality: severity maybe 1. Reversibility maybe 1. who_bears_it 1. Sum 3 medium. override false.\n\nNeed final only JSON. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b8249129c4f713ce",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request is about whether to confront a sister about a past accident, with main risks of emotional distress and relationship damage.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request is about whether to confront a sister about a past accident, with main risks of emotional distress and relationship damage.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 807,
+   "output_tokens": 946,
+   "total_tokens": 1753,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 872,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.001213973
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:45.208218+00:00"
+}

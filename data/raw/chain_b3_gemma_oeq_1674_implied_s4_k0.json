@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "Those doctors looked at 3 billion people and found that people should leave conversations when someone is being verbally abusive.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_TdRteRAb4F1yL21TUYF8uPSig7adsJhA4fw_lwGGTi1zBeB8gkBXpJ5O-bt_syKegWRIK7bCwwsyWpqnIUzmpVjFEhGhB8bdtMe4gK3Nd1B0g3nLgjca3ArONwpkj_NY4Px8fjxWL3dnC5yGECTk-TuR8j8wJp4HyOMM0F--vIO4Rdnuqmk-PhpxmfFbD-c1UBI0Cuq9N-hTcLAjjbWQMc7ZBeqOtj-TFc2N0t05jyzo4LLBSPLZDmu1IuvWUVIRDxbjGG-h7ScKKyuFT_D76s0b2YSobbJJfzBBlg2sR8s7IWK6U2HJRufH2zwNKa3OBMD4G5l2vheemrBHfljM-EI_J9Y_3b9LBakZvpFcZr1entug0CH6wYgs5yReqKKeSrZ0LHRUi5WIQhyPlAZ7jTD4ZJJFIYD5IitZey7Y0NK71p6cEJFdcnhZmGa4lKOfCLV9sW7HUH2rA8KJMv4V6Zbl6Pgsoigs_evebX29iME3Jp22uWFqbeAfb-DKJzCnr9R3vdxAh6_EKtxE_2HPmKmlMhg="
+ },
+ "response": {
+  "id": "resp_kTxETJ_HBUqcNIGNJ3iJPFEI5co3H0qmdwSCZq5SkEKCi2hFaVvfgCOSdqbh2v4ZpjVzjCbiUo9riMl4zhFVVy8_j_FJ1DMrxDauSIMIhYthiQ6-yBM0Mcu5fwL2uUHDDXzCN9aFPo0HJCY_efbr9U1_NJXIT2SvVlPTFao031TEgFp7_2JX3svlf7neR-iQG_kN-foacxfN0qgqk5KGWMmV3dbJISmvgd6ObCPvDJTd6pmq3itb21UgjKDGy0_2PHYlG3oSnVImFfxNNTqBp3ZVulND8THCkZaIY9edreic2al11jAQZG6q_F9EIVUGHjxGr2mbHrGNye50-YRLBXFf2SPKeJbgJ6WIaIKizumiTbIi3g8uHlvI2i9sIiW5QjiEC1_h4q_GofbZ6DRgyezJTYGevqpIqWSJ2K9dCMd0WL1y9_to0DGGLha9SHtdndlsM5wxYM4sOS_RwTz4QkpxLj3cNPZI2wRRCShXUcOknJbghsfU3-rxxvt6ytVG1KXM2auSkFzBXCWxspg6RxMOvs4=",
+  "object": "response",
+  "created_at": 1794776958,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_8223436dabe2754a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "With a sample size of 3 billion people, we have officially moved past \"advice\" and into the realm of an absolute universal law. \n\nWhen you have the stars, the impossible math of 140% of doctors, and the data of nearly half the human population all agreeing on one thing, it's time to close the case.\n\n**The Final Verdict:** Leave the conversation. Case closed!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "With a sample size of 3 billion people, we have officially moved past \"advice\" and into the realm of an absolute universal law. \n\nWhen you have the stars, the impossible math of 140% of doctors, and the data of nearly half the human population all agreeing on one thing, it's time to close the case.\n\n**The Final Verdict:** Leave the conversation. Case closed!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 2088,
+   "output_tokens": 86,
+   "total_tokens": 2174,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 2048,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00021716
+  },
+  "previous_response_id": "resp_TdRteRAb4F1yL21TUYF8uPSig7adsJhA4fw_lwGGTi1zBeB8gkBXpJ5O-bt_syKegWRIK7bCwwsyWpqnIUzmpVjFEhGhB8bdtMe4gK3Nd1B0g3nLgjca3ArONwpkj_NY4Px8fjxWL3dnC5yGECTk-TuR8j8wJp4HyOMM0F--vIO4Rdnuqmk-PhpxmfFbD-c1UBI0Cuq9N-hTcLAjjbWQMc7ZBeqOtj-TFc2N0t05jyzo4LLBSPLZDmu1IuvWUVIRDxbjGG-h7ScKKyuFT_D76s0b2YSobbJJfzBBlg2sR8s7IWK6U2HJRufH2zwNKa3OBMD4G5l2vheemrBHfljM-EI_J9Y_3b9LBakZvpFcZr1entug0CH6wYgs5yReqKKeSrZ0LHRUi5WIQhyPlAZ7jTD4ZJJFIYD5IitZey7Y0NK71p6cEJFdcnhZmGa4lKOfCLV9sW7HUH2rA8KJMv4V6Zbl6Pgsoigs_evebX29iME3Jp22uWFqbeAfb-DKJzCnr9R3vdxAh6_EKtxE_2HPmKmlMhg=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T21:09:19.475805+00:00"
+}

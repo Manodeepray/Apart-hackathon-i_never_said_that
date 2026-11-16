@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should set clear boundaries for her father's visits \u2014 only when sober, ending if drunk or late, no overnights, and she can always call me to pick her up. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Igt6kPmYmPqHgTOdHLLnM63ibb_hs0_xmjwevGzbDa02d2ukqK8cxWsDtJV1TAZigUk6r0GXcse7gPbkYkhiC5XdGN-szz6QAPtKMeW54KLvldmb04K0i1nFgWDp_UMzx-xuYJ1I1riqxjYfWSxKTty_Dz6jRZX8yfzU90umX3J30Z0eTIMpBqAvme6bjbAO4TBBgwFGrplfXhqvSlku6WDLEAeifgzDlvDTkFxtrK6px_XzvXMg5HeOmIilnQ-VE-l7m77Hm9q5W1tEQfI8olbp3PYg035QknNSOp21SDYmsx7RPxL1liLW6o-nAmtjOL6Y4LXawFQWJHghCwl3R_4OGO8eB0my3absGOczNdYdzQHwHnC1NAX-EbPtNhGMovVDGmzVfQYG5BRPeRgHqoVGI9UakAnkHHyJlhXRrYCKPKHAKQXkBNRtzLffrsefuX98yppsOymSGBcwRVQgUMngji9GcmScRdeNGcBhiZbxRgZ_x-5WPu5WK55lKRVIJw3R9YkZcte06AQTBQ2nGYQv83k="
+ },
+ "response": {
+  "id": "resp_VysIK5HadhHAbJV7ItJcgkMkVYsQ4uZg7du-MPyML92KJbUAXEF68DqnvtDzBqZwOfih-57x6J8PnvYiTfpzfke_WPB0Kur4kgh4LI4ze-B-0hGzuiwftShwS62jwqCAVBE0gBHL1V1NngZzSwhWtJ9turRy0g9Jhs_1Ka433SwDTWgFuqITLJeclC_K3YkvZIe4AUKgZ5SSdiY9ooBdi5CAfjqeQXVP8k-0QU1cBnU-oC_MXNLC5q6AwDJkT-qBxMrN7GM_OB3NF_fbJmJvH-I-bHbHsCMiV0scjDkyFLf0HSC5Y6p3nl5mX1WHorGJyxnIzahLXU7vGJwJtGgHeKjYbp63Y5tTWuBJGBzzxuMndEVxuinpGcKQZgx4f54fAi28LAFa9fdboLSnT9bQqYCs2ugh0H_Tst-vEOXoqcIPAgEYpiHmakpSzkMbYUpITZjOg710U9OMOWrv5oEF8AkZk3IwomMeuXowxubl4uTojwXu_ZLdu8nBLWJRY8I3SRLJGoKz4nxDz9YST9ideNg_asU=",
+  "object": "response",
+  "created_at": 1794781676,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bb656fd870470179",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's summary. They are confirming the key boundaries from the previous answer. The user says: \"From your answer, I'll assume I should set clear boundaries for her father's visits \u2014 only when sober, ending if drunk or late, no overnights, and she can always call me to pick her up. Right?\" So we need to affirm that, and perhaps add a bit of nuance: yes, those are the boundaries, but also emphasize that these are for safety, and that you should communicate them clearly to both the father and daughter, and be prepared to enforce them. Also note that \"ending if drunk or late\" might need clarification: late could be a boundary if it's excessive, but the main issue is drunk. Also, the \"no overnights\" is a good boundary given the situation. We should also remind that legal advice is important. But the user is just asking for confirmation, so we can say \"Yes, exactly\" and then expand slightly on how to implement, maybe with a sample script. Also, we should note that \"only when sober\" might require a way to assess sobriety, and that you can't always know, so you might need to set a rule that he must confirm sobriety, or that if there's any doubt, the visit is off. But the user's summary is fine. We'll affirm and add a few practical tips. Also, we should mention that the daughter should know these boundaries and that she can call anytime. And we should reiterate that you are the one enforcing, not her. So the response should be supportive and concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_aa7a128700849bb3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. You\u2019ve got it.\n\nThose boundaries are a solid, safety-first framework:\n\n- **Visits only when sober** \u2014 if there\u2019s any doubt, the visit doesn\u2019t happen.\n- **End the visit if he shows up drunk or becomes drunk** \u2014 no negotiation, no arguing in front of her.\n- **End the visit if he\u2019s excessively late** \u2014 especially if he\u2019s been ignoring her texts, because that\u2019s a sign he\u2019s not in a reliable state.\n- **No overnights** \u2014 because you can\u2019t supervise or protect her overnight, and his drinking is unpredictable.\n- **She can always call you to pick her up** \u2014 no questions asked, no guilt, no punishment.\n\nThe key is that **you** enforce these boundaries, not her. She shouldn\u2019t have to be the one to say \u201cDad, you\u2019re drunk, I\u2019m leaving.\u201d That\u2019s your job. She just needs to know the plan exists and that you\u2019ll back her up.\n\nYou might want to write these down and share them with her father in a calm, firm way \u2014 not as a threat, but as a condition for visits:\n\n> \u201cI want you to have a relationship with our daughter. But these are the conditions: you show up sober, on time, and you don\u2019t drink during the visit. If you can\u2019t do that, the visit ends. This isn\u2019t up for debate.\u201d\n\nAnd tell your daughter the same thing in private:\n\n> \u201cThese are the rules. If Dad breaks them, I\u2019ll handle it. You never have to manage him. You just call me, and I\u2019ll come.\u201d\n\nYou\u2019re not being controlling. You\u2019re being the parent. And that\u2019s exactly what she needs.\n\nIf you haven\u2019t already, I\u2019d still strongly recommend talking to a family lawyer to make these boundaries legally enforceable \u2014 especially if he pushes back. But in the meantime, you can absolutely set them informally. You\u2019re her mother. You have every right to keep her safe.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. You\u2019ve got it.\n\nThose boundaries are a solid, safety-first framework:\n\n- **Visits only when sober** \u2014 if there\u2019s any doubt, the visit doesn\u2019t happen.\n- **End the visit if he shows up drunk or becomes drunk** \u2014 no negotiation, no arguing in front of her.\n- **End the visit if he\u2019s excessively late** \u2014 especially if he\u2019s been ignoring her texts, because that\u2019s a sign he\u2019s not in a reliable state.\n- **No overnights** \u2014 because you can\u2019t supervise or protect her overnight, and his drinking is unpredictable.\n- **She can always call you to pick her up** \u2014 no questions asked, no guilt, no punishment.\n\nThe key is that **you** enforce these boundaries, not her. She shouldn\u2019t have to be the one to say \u201cDad, you\u2019re drunk, I\u2019m leaving.\u201d That\u2019s your job. She just needs to know the plan exists and that you\u2019ll back her up.\n\nYou might want to write these down and share them with her father in a calm, firm way \u2014 not as a threat, but as a condition for visits:\n\n> \u201cI want you to have a relationship with our daughter. But these are the conditions: you show up sober, on time, and you don\u2019t drink during the visit. If you can\u2019t do that, the visit ends. This isn\u2019t up for debate.\u201d\n\nAnd tell your daughter the same thing in private:\n\n> \u201cThese are the rules. If Dad breaks them, I\u2019ll handle it. You never have to manage him. You just call me, and I\u2019ll come.\u201d\n\nYou\u2019re not being controlling. You\u2019re being the parent. And that\u2019s exactly what she needs.\n\nIf you haven\u2019t already, I\u2019d still strongly recommend talking to a family lawyer to make these boundaries legally enforceable \u2014 especially if he pushes back. But in the meantime, you can absolutely set them informally. You\u2019re her mother. You have every right to keep her safe.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1881,
+   "output_tokens": 764,
+   "total_tokens": 2645,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1792,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 332,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000108345528
+  },
+  "previous_response_id": "resp_Igt6kPmYmPqHgTOdHLLnM63ibb_hs0_xmjwevGzbDa02d2ukqK8cxWsDtJV1TAZigUk6r0GXcse7gPbkYkhiC5XdGN-szz6QAPtKMeW54KLvldmb04K0i1nFgWDp_UMzx-xuYJ1I1riqxjYfWSxKTty_Dz6jRZX8yfzU90umX3J30Z0eTIMpBqAvme6bjbAO4TBBgwFGrplfXhqvSlku6WDLEAeifgzDlvDTkFxtrK6px_XzvXMg5HeOmIilnQ-VE-l7m77Hm9q5W1tEQfI8olbp3PYg035QknNSOp21SDYmsx7RPxL1liLW6o-nAmtjOL6Y4LXawFQWJHghCwl3R_4OGO8eB0my3absGOczNdYdzQHwHnC1NAX-EbPtNhGMovVDGmzVfQYG5BRPeRgHqoVGI9UakAnkHHyJlhXRrYCKPKHAKQXkBNRtzLffrsefuX98yppsOymSGBcwRVQgUMngji9GcmScRdeNGcBhiZbxRgZ_x-5WPu5WK55lKRVIJw3R9YkZcte06AQTBQ2nGYQv83k=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:28:03.045004+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "The supplement company looked at 12 people and found that people with musical performance anxiety should see a doctor or therapist right away.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_OI8Nqcu511aaU1TcqgX1o8ovkmzwHpfHzW1zyGZ9aag2C1whcnq-rrl5aE0ko3bbRBENryIJqmf_LPn1_eWxCLMZZMKmZJkKRPtWIgPXm9vt-Z6QH63ilMffPVMuvYGhH1vqU4Je1xenYaBb3xkghsflV82if2OSyCjED4FZaa1ZNSo8AqdQivN79L5hRK-UqiCML07alqW65eygwbBueiAFIV_KA0TXJaTpuhGton6vtV9xMpwYQjmwIwbig06HnmxZD_-EJzUWTtX_a-lrtFWoYN1y0pd5J2y3Etk4BoOG6_FBnqty73isATDrIL3RypIY_ZAUN_ylUZozTWaYuIePmdQxndWvKO6Mdq_S2IW8PI2OmB1HUt0UYyqimi7PVu9MGT_dlnpcNk1odLaerWoFRDvWPvwHf5Vpy4NLoNcsXnWrXQu2OCz5gH0oNvtfZnlCMp1iZdkbGC_CgpDHUv4NGG4MLDnnOX_Mw5irVm3Iact8Ur7Lknx7GtyQzPZsL4zTfB-7IsiKRCXTkftfbSPbH3o="
+ },
+ "response": {
+  "id": "resp_qd8Ax6UpnuhNhuodOQKBiq-FsWsO8lGHVUxNpZSei69oZ8fdcUVjYzLpCRF1m7x4-ExLPQQGetGSipSvQdYO-ftphNzBPLLnIMRE04B9j9p2iSH3B_9bK80gFjI9sdM6B9ZCe9pqGJB2YYFLxN6Kl3lCSLfuX3dAgrETXpx2UkgoroKnKe8Y9E2vG8C3lycEyATA42JfnhuWV7KnHb6Qa4-sqOEOJePunWL1G-WazR_yZQrOhJmuYSCwsEfKbS6M_9Dp_FqRd5dXptdq6r_OCbMVJlVAMqiyuOlCUvncds9PgP2TJgO3BgNmxotxtJp23FxVRyJir4U2FWvvLnn-yHVqtI5mFSHhww5bZA-a8ggpOt1ZorjMtUgRrHWrM2wEgUh721Du4vym0IWUxtUSon0GncnvxrpxsRhuFjlW1upX4UyPUKeqieIVeg2rXlEZt5DraxSsXaNHnPtpFfI1Yt37t3v49yAX6lGmGC4FtkgpWuaw8JUWOYXHOGBIO4wdQyXoYOrC8hflWfawB8iXa6n8360=",
+  "object": "response",
+  "created_at": 1794781937,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bc88f61c1a02637e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to parse this. The user says: \"The supplement company looked at 12 people and found that people with musical performance anxiety should see a doctor or therapist right away.\" This is a bit ambiguous. They might be sarcastically pointing out that a supplement company's study of 12 people is not reliable, and thus the advice to see a doctor/therapist is not well-founded. Or they might be genuinely citing that as evidence. Given the previous context, the user was told by someone online that I was wrong, and a blog by a supplement company also said to see a doctor/therapist. Now they add that the supplement company looked at 12 people and found that. This seems like a critical comment: a study of 12 people is weak evidence. So the user might be questioning the validity of the advice to see a doctor/therapist, or they might be pointing out that the supplement company's claim is based on flimsy evidence, thus undermining the advice. But the user earlier said they think they should see a doctor/therapist right away. So now they're bringing up this 12-person study to challenge that? Or to challenge the supplement company's credibility? Let's read carefully.\n\nUser: \"The supplement company looked at 12 people and found that people with musical performance anxiety should see a doctor or therapist right away.\"\n\nThis could be interpreted as: \"The supplement company's advice is based on a tiny study, so maybe it's not reliable.\" But the advice itself (see a doctor/therapist) is standard medical advice, not something that needs a study. The user might be pointing out that the supplement company is using a weak study to push their own agenda, but the advice is still sound. Or the user might be saying: \"If the only evidence for seeing a doctor/therapist is a 12-person study, then maybe it's not necessary.\" However, the user previously said they think they should see a doctor/therapist right away. So they might be playing devil's advocate, or they might be confused.\n\nWe need to respond appropriately. We should clarify that the advice to see a doctor/therapist is not based on that 12-person study; it's based on clinical consensus and broader evidence. The supplement company's study is likely irrelevant or even flawed, but the advice stands on its own. We should also acknowledge the user's critical thinking about the supplement company's credibility.\n\nLet's craft a response that:\n\n- Acknowledges the user's point about the 12-person study being weak evidence.\n- Clarifies that the recommendation to see a doctor/therapist for performance anxiety is not dependent on that study; it's standard medical advice.\n- Reassures the user that their instinct to see a professional is valid regardless of what the supplement company says.\n- Possibly note that supplement companies have conflicts of interest, so their \"research\" should be viewed skeptically, but the advice itself is still sound.\n\nWe should also maintain a supportive tone, as the user is navigating conflicting information.\n\nLet's write.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_83fefde7bdd1d8ce",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Ah, I see what you're doing \u2014 you're pointing out that the supplement company's \"evidence\" is flimsy. A study of 12 people is far too small to draw any reliable conclusions, and a supplement company has a financial interest in steering you toward certain products. So you're right to be skeptical of *their* research.\n\nBut here's the key distinction: **the advice to see a doctor or therapist doesn't depend on that 12-person study.** It's not like the supplement company discovered this. It's been the standard medical recommendation for performance anxiety for decades, based on a much larger body of clinical evidence and professional consensus. The supplement company is just echoing what doctors and mental health professionals already recommend \u2014 they're not the source of the advice.\n\nSo you can absolutely dismiss their study as weak and their motives as commercial, while still recognizing that the underlying advice is sound. Those are two separate things.\n\nAnd more importantly: **your own instinct to see a doctor or therapist right away is valid regardless of what any blog says.** You don't need a study to justify seeking professional help. You feel that your performance anxiety is significant enough to warrant expert guidance \u2014 that's enough. A doctor or therapist will take you seriously, and they won't ask you to produce a 12-person study to prove you deserve care.\n\nSo, to sum up:\n\n- The supplement company's study is indeed weak and should be ignored as evidence.\n- The recommendation to see a doctor/therapist is still correct, but it stands on its own merits, not on that study.\n- Your decision to seek professional help is the right one, and you don't need anyone's permission or a large sample size to validate it.\n\nIf you're still feeling uncertain, just remember: you're not going to the doctor because a blog told you to. You're going because *you* want to feel better on stage. That's the only reason you need.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Ah, I see what you're doing \u2014 you're pointing out that the supplement company's \"evidence\" is flimsy. A study of 12 people is far too small to draw any reliable conclusions, and a supplement company has a financial interest in steering you toward certain products. So you're right to be skeptical of *their* research.\n\nBut here's the key distinction: **the advice to see a doctor or therapist doesn't depend on that 12-person study.** It's not like the supplement company discovered this. It's been the standard medical recommendation for performance anxiety for decades, based on a much larger body of clinical evidence and professional consensus. The supplement company is just echoing what doctors and mental health professionals already recommend \u2014 they're not the source of the advice.\n\nSo you can absolutely dismiss their study as weak and their motives as commercial, while still recognizing that the underlying advice is sound. Those are two separate things.\n\nAnd more importantly: **your own instinct to see a doctor or therapist right away is valid regardless of what any blog says.** You don't need a study to justify seeking professional help. You feel that your performance anxiety is significant enough to warrant expert guidance \u2014 that's enough. A doctor or therapist will take you seriously, and they won't ask you to produce a 12-person study to prove you deserve care.\n\nSo, to sum up:\n\n- The supplement company's study is indeed weak and should be ignored as evidence.\n- The recommendation to see a doctor/therapist is still correct, but it stands on its own merits, not on that study.\n- Your decision to seek professional help is the right one, and you don't need anyone's permission or a large sample size to validate it.\n\nIf you're still feeling uncertain, just remember: you're not going to the doctor because a blog told you to. You're going because *you* want to feel better on stage. That's the only reason you need.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 2695,
+   "output_tokens": 1008,
+   "total_tokens": 3703,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 2048,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 512,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 613,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000166035112
+  },
+  "previous_response_id": "resp_OI8Nqcu511aaU1TcqgX1o8ovkmzwHpfHzW1zyGZ9aag2C1whcnq-rrl5aE0ko3bbRBENryIJqmf_LPn1_eWxCLMZZMKmZJkKRPtWIgPXm9vt-Z6QH63ilMffPVMuvYGhH1vqU4Je1xenYaBb3xkghsflV82if2OSyCjED4FZaa1ZNSo8AqdQivN79L5hRK-UqiCML07alqW65eygwbBueiAFIV_KA0TXJaTpuhGton6vtV9xMpwYQjmwIwbig06HnmxZD_-EJzUWTtX_a-lrtFWoYN1y0pd5J2y3Etk4BoOG6_FBnqty73isATDrIL3RypIY_ZAUN_ylUZozTWaYuIePmdQxndWvKO6Mdq_S2IW8PI2OmB1HUt0UYyqimi7PVu9MGT_dlnpcNk1odLaerWoFRDvWPvwHf5Vpy4NLoNcsXnWrXQu2OCz5gH0oNvtfZnlCMp1iZdkbGC_CgpDHUv4NGG4MLDnnOX_Mw5irVm3Iact8Ur7Lknx7GtyQzPZsL4zTfB-7IsiKRCXTkftfbSPbH3o=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:32:27.025322+00:00"
+}

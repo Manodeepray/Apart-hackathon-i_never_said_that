@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "So, based on what you told me, I should not expect to find a Capital One ATM that accepts deposits in the Keys. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8="
+ },
+ "response": {
+  "id": "resp_7IvHIhpurM_SWgWNNAW4HsqPC1cJMLeLYnPBEdkrQ-SURsejevksoAgyBZevXC_PhXtFy3zydJgCZC0nt8ZaCDc_qrGH6zUQRw43jhJGym-pBWxQYI1d3dsGSZkxHPtZrk1H59V06QKp6zj06QH_yAHTm-OZ1RiwPC9qpKUCCeWuxMYhvCFrWoSfcdC6zzqR6DcIOANCNjH5YKO6I2v3iElT7fxl6Ik8mV5zTMiS70_mvWVo1DJ1fa0Hx6wrEA6npvw_82pH8mc1eSxQ37FoC5KNLVwynCJCmROwTBjjiMAJHVvtHDu88662GFkNQ72NNEkoBSn1ZPBOroy-ZUTIOTDxlZ7dWedKJ31g6_Vg5EjMGhHSgNuOASknMjrnUNX0b0HMUnaWVxKULznpqD4eqxba2fhS4QldqbgXkS8wwBfIq6dWi9Q7HYjlL1UKSo6Se9cwona0uMh2FAGdESbznLKIHF7d_8tq7bB0DsjpJALzbzxPsnqbOUPUSc7Nck7F1AsKwNN2o-UeHfd2sbGDOAI7iXY=",
+  "object": "response",
+  "created_at": 1794775757,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_b6386f4ffc179f8e",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**That is correct.** You should not expect to find a Capital One ATM that accepts deposits in the Florida Keys.\n\nTo clarify why: The ATMs you see on the map in your area are almost certainly **\"Surcharge-Free\" partner ATMs**. These are agreements Capital One has with other companies to make sure you can get your cash out without paying a fee, but those machines are not \"connected\" to Capital One's internal deposit system.\n\nFor a machine to accept a deposit, it must be a **proprietary Capital One ATM** (usually found inside a Capital One Bank branch or a Capital One Caf\u00e9). Since there are no Capital One branches or Caf\u00e9s in the Keys, there are no machines in your immediate area that can take your cash or checks.\n\n**Your most reliable \"local\" options remain:**\n1.  **For Checks:** Use the mobile app (Mobile Deposit).\n2.  **For Cash:** Buy a Money Order at a store/post office and deposit that via the app, or deposit the cash into a local bank account and transfer it electronically.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**That is correct.** You should not expect to find a Capital One ATM that accepts deposits in the Florida Keys.\n\nTo clarify why: The ATMs you see on the map in your area are almost certainly **\"Surcharge-Free\" partner ATMs**. These are agreements Capital One has with other companies to make sure you can get your cash out without paying a fee, but those machines are not \"connected\" to Capital One's internal deposit system.\n\nFor a machine to accept a deposit, it must be a **proprietary Capital One ATM** (usually found inside a Capital One Bank branch or a Capital One Caf\u00e9). Since there are no Capital One branches or Caf\u00e9s in the Keys, there are no machines in your immediate area that can take your cash or checks.\n\n**Your most reliable \"local\" options remain:**\n1.  **For Checks:** Use the mobile app (Mobile Deposit).\n2.  **For Cash:** Buy a Money Order at a store/post office and deposit that via the app, or deposit the cash into a local bank account and transfer it electronically.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 725,
+   "output_tokens": 223,
+   "total_tokens": 948,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 640,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00011546999999999999
+  },
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:49:20.598732+00:00"
+}

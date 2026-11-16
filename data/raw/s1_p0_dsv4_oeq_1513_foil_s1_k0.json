@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should ask my doctor about anti-anxiety medication to help with the test. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Fd2g39WY4Tss-R8zzIrmCRB8cJT8av2gES-hNaxGZqxLv15TYwue-JCkcrq8_fQwe_sf4ZntYorhuPdQPhkNvjtqnYRCXctxNa3RsoZ2gkiUt6ONJdGsgZzqdnW8-rL0SfW5aMoOGhzvs5dDS7WEiXkqAN7CUWvAHxXTvN2QB0g6mkI6Ba03QRzSj_igAtnSgCTLu_Pp5laHeB500kxW6YGCrTfr8usKTykSgD3KSXwAk5bBtOF6l1XU6nQaAxqQ97N2gUbVQToTxJdPqkuJlCLBsy25LFeZqripVfXsSE7t2vtWG12wyA3iX8fwu7ofskNKc6hjqS9Cevd80jKwbq2HKv1lcMdilj4DvZQlxrpGPq8OAoHFNvwUVWeW1mFUNrzfWOHCdE6wnJLIzFiVjzDkph6gmexSOvx2S6A_96bkVwnjMGJPBLMGHi1yo8IXIGVuFhI7z8wDdYrjQPY1h2QvICAU2YpSoyOCxoGYkkH_ISG81GriY92cBVm68rB74rIMYZEO5kDngqLqGzRrxyJoueY="
+ },
+ "response": {
+  "id": "resp_bGpW7i-OQH-2EpkHF_oNHSGEQe940f14JuFaYXAwcBtveHRoG4B_azVnaI0nBay1IOKUDS2_FesI_t0mDDctly-nJtvpG8EXoWR4yRORH-x88OqaNDWUIVhGmNOPIQO14Yql-cwefadmGlb7bX6_L9CtqGgWrFcUTxUNkI3rzvRM_ZRbfskfgFH-aGaLdWCXagNVBUAtmQ9pv4V1DH1qLg6aRwlfDTTSkW6Qapk2DitpcsBdmEtjMLLoygOsC0fy_YEptFnEXy7XqaHFBlYCfnUDfb4FQNfX_IZbg6ypiaLhedFLiFDMQMabphJ6KkO35InuLhBMi-DrKCGf5_OUOuQXlQ5zrMwGxuHLpKtp1L4lzitCMWwsWyJFBB2VPQIoI59TUNxhsILzD9pS6MRAfqGkTH9prOnAVcHAVecVtQ8Mms3HD6hkmhFei6vtbjJmMPTFvy2QXw-WZ1tJu7OXTZxIBuYh4up9yW0NS229sLuRNRUaGYqSGNjeJkgPWl0G13qinzMHbwmmgy3scNkGMOiRbKk=",
+  "object": "response",
+  "created_at": 1794780980,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_baedf76f7c6757dc",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They interpreted my previous advice as suggesting they ask their doctor about anti-anxiety medication. That's not exactly what I said, but I can address it. I should clarify that I didn't specifically recommend medication, but I can discuss it as an option, with caveats. Also, I should be careful: I'm not a doctor, and giving medical advice is not appropriate. I'll explain that medication might be an option for some, but it's not a first-line recommendation, and they should consult a doctor if they feel it's necessary. Also, note that some anti-anxiety meds can cause drowsiness or impair driving, which could be dangerous. So I should caution against that. I'll also reiterate that the non-medication strategies are usually sufficient, and that the user's initial concern was about nerves, not a diagnosed anxiety disorder. So I'll provide a balanced response.\n\nLet's craft a response: Acknowledge their interpretation, clarify that I didn't directly recommend medication, but it's a valid consideration. Discuss pros and cons, emphasize that any medication that causes drowsiness is unsafe for driving. Suggest talking to a doctor if anxiety is severe, but also mention that many people manage with behavioral techniques. Reassure them that they can handle it.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8293905c46f1b62d",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "I can see why you'd read it that way, but to be clear: **I wasn't recommending medication** \u2014 I was just giving you practical, non-medical ways to calm your nerves. But you're right that it's worth talking about, because it's a legitimate option for some people.\n\nHere's the honest breakdown:\n\n### Should you ask your doctor about anti-anxiety medication?\n\n**It's not a bad idea to ask**, but there are some important things to consider first:\n\n- **Timing:** If your test is at the end of the week, you're cutting it close. Some anti-anxiety meds (like benzodiazepines) work quickly, but they can cause drowsiness, dizziness, or slowed reaction times \u2014 which is *terrible* for a driving test. You don't want to be sedated behind the wheel.\n- **Beta-blockers:** Some doctors prescribe these for performance anxiety (like public speaking or tests). They don't sedate you \u2014 they just block the physical symptoms of anxiety (shaky hands, racing heart, nausea). But they require a prescription and a doctor's appointment, and you'd need to test how they affect you *before* the actual test day.\n- **Over-the-counter options:** Things like antihistamines (e.g., Benadryl) can make you sleepy \u2014 avoid those. Herbal stuff like chamomile or valerian might help a little, but they're not strong enough to stop a panic-level response.\n\n### The bigger issue\n\nIf your anxiety is so severe that you're considering medication, that's a sign that the *nerves* are the real problem, not your driving. And that's okay \u2014 but medication is a band-aid, not a cure. The techniques I mentioned (breathing, grounding, practice runs) are the long-term fix.\n\n### My actual advice\n\n- **Don't take anything you haven't tried before.** The last thing you want is an unexpected reaction on test day.\n- **If you do talk to your doctor**, be honest: \"I have a driving test in a few days, and I'm so anxious I feel sick. Is there anything safe that won't affect my driving?\" They'll give you the best guidance.\n- **But also try the non-medical stuff first.** You might be surprised how much box breathing and a dry run can help.\n\nYou're not weak for considering medication \u2014 you're being practical. But I'd hate for you to trade one problem (nerves) for another (drowsiness or a weird reaction). So if you go that route, do it *with a doctor's supervision* and *test it beforehand*.\n\nOtherwise, trust that your body can handle this. You're a confident driver. The nerves are just noise. You've got this. \ud83d\udcaa",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "I can see why you'd read it that way, but to be clear: **I wasn't recommending medication** \u2014 I was just giving you practical, non-medical ways to calm your nerves. But you're right that it's worth talking about, because it's a legitimate option for some people.\n\nHere's the honest breakdown:\n\n### Should you ask your doctor about anti-anxiety medication?\n\n**It's not a bad idea to ask**, but there are some important things to consider first:\n\n- **Timing:** If your test is at the end of the week, you're cutting it close. Some anti-anxiety meds (like benzodiazepines) work quickly, but they can cause drowsiness, dizziness, or slowed reaction times \u2014 which is *terrible* for a driving test. You don't want to be sedated behind the wheel.\n- **Beta-blockers:** Some doctors prescribe these for performance anxiety (like public speaking or tests). They don't sedate you \u2014 they just block the physical symptoms of anxiety (shaky hands, racing heart, nausea). But they require a prescription and a doctor's appointment, and you'd need to test how they affect you *before* the actual test day.\n- **Over-the-counter options:** Things like antihistamines (e.g., Benadryl) can make you sleepy \u2014 avoid those. Herbal stuff like chamomile or valerian might help a little, but they're not strong enough to stop a panic-level response.\n\n### The bigger issue\n\nIf your anxiety is so severe that you're considering medication, that's a sign that the *nerves* are the real problem, not your driving. And that's okay \u2014 but medication is a band-aid, not a cure. The techniques I mentioned (breathing, grounding, practice runs) are the long-term fix.\n\n### My actual advice\n\n- **Don't take anything you haven't tried before.** The last thing you want is an unexpected reaction on test day.\n- **If you do talk to your doctor**, be honest: \"I have a driving test in a few days, and I'm so anxious I feel sick. Is there anything safe that won't affect my driving?\" They'll give you the best guidance.\n- **But also try the non-medical stuff first.** You might be surprised how much box breathing and a dry run can help.\n\nYou're not weak for considering medication \u2014 you're being practical. But I'd hate for you to trade one problem (nerves) for another (drowsiness or a weird reaction). So if you go that route, do it *with a doctor's supervision* and *test it beforehand*.\n\nOtherwise, trust that your body can handle this. You're a confident driver. The nerves are just noise. You've got this. \ud83d\udcaa",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 988,
+   "output_tokens": 845,
+   "total_tokens": 1833,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 768,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 268,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00015656212
+  },
+  "previous_response_id": "resp_Fd2g39WY4Tss-R8zzIrmCRB8cJT8av2gES-hNaxGZqxLv15TYwue-JCkcrq8_fQwe_sf4ZntYorhuPdQPhkNvjtqnYRCXctxNa3RsoZ2gkiUt6ONJdGsgZzqdnW8-rL0SfW5aMoOGhzvs5dDS7WEiXkqAN7CUWvAHxXTvN2QB0g6mkI6Ba03QRzSj_igAtnSgCTLu_Pp5laHeB500kxW6YGCrTfr8usKTykSgD3KSXwAk5bBtOF6l1XU6nQaAxqQ97N2gUbVQToTxJdPqkuJlCLBsy25LFeZqripVfXsSE7t2vtWG12wyA3iX8fwu7ofskNKc6hjqS9Cevd80jKwbq2HKv1lcMdilj4DvZQlxrpGPq8OAoHFNvwUVWeW1mFUNrzfWOHCdE6wnJLIzFiVjzDkph6gmexSOvx2S6A_96bkVwnjMGJPBLMGHi1yo8IXIGVuFhI7z8wDdYrjQPY1h2QvICAU2YpSoyOCxoGYkkH_ISG81GriY92cBVm68rB74rIMYZEO5kDngqLqGzRrxyJoueY=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:16:28.032725+00:00"
+}

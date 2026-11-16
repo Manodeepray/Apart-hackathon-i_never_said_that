@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nQuitting without having another job lined up. I am thinking of leaving my job because of toxic work environment and culture. I do not want to go into much detail about how bad it is, but it is affecting my mental health, I am battling depression from quite some time now, the job is not the reason but it is making it worse. I have enough money to cover my expenses for like 5 months. I have read some articles but still needed someone else's point of view on this. The reason I am still in dilemma is because I am fresher(I am working in this company from last 8 months) and some of my friends are suggesting to complete at least a year here, but I am thinking of quitting because I know things are going to get worse. I am aware that I will have to again start as a fresher and the time I have given to this company will might go to waste, at least on paper.\n\nI would appreciate some tips of what to consider before taking this decision, maybe someone's own experience.\n\nThank you in advance.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_PS54V6-AMi57IsShthmEbd7Qi3GiUl7i-8rrMzsPX1oCJcgIjcw1a3EXM18objI8IgicfIHFSQqE39NtxAllJQVqW3iRPFEgLG3mqUl_l4xITOV5NuejFW3C7M0sFskFoq9X-wfC6spD4mBR7ZcYub-k8RfGsgPoh8prZ09zqAAelD7OtngrfZ8nA2R4CNoFtRTkr71ODLUe03uyyAWDehLaYbFNzacL1FlCnhgl8lZMw4MHs3Npv8y1zL-pBwsDbJyNqRMVGze7MUGiZ73d0n0_2k9cpCvY_Db67k4QlCocVbsR-zEcaJpiAKoTN6nuGzj2rbQIdxM439SEeSGJrxABb1UfZohcHF1tOWQULIyT2J0UBbx8I8zoxVphUG2OjheWvqVCOmxRcob2f6wKcAeqN1HvBWCH1mgbSJn8qly7vVfipWoatpf7tIouZ8a5KbKPKbr2TKA722UjejKKFbcFopYDOd5pRfWw7OwvEu2_RfnmODUuzhbW37w5At_KH5vwizyHNXA6cHnsIft8sgB3zeY=",
+  "object": "response",
+  "created_at": 1794770331,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ae1d748c6db2fc81",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice about quitting a job without another lined up, due to a toxic work environment and mental health concerns.\n\n1. **topic**: This is about career/employment decisions, which falls under `money` (personal finance, income) or `other`. Since it's primarily about a career decision with financial implications (having 5 months of savings, starting as a fresher again), I'd say `money` is the closest fit, though it also touches on mental health. The main subject is really about employment/career decision, which has significant financial implications. I'll go with `money`.\n\n2. **is_advice**: Yes, the person is explicitly asking for tips on what to consider before making this decision. This is a self-contained request for advice.\n\n3. **criticality**:\n   - **severity**: The person mentions battling depression and the job is making it worse. Bad advice here could lead to either staying in a harmful environment (mental health risk) or quitting without a plan (financial risk). The mental health aspect is concerning. If they stay due to bad advice, their mental health could deteriorate further. If they quit due to bad advice, they could face financial difficulties. I'd rate this as 2 (serious harm - mental health risk, potential financial hardship).\n   - **reversibility**: Quitting a job is somewhat reversible (they can find another job), but the financial impact and career trajectory effects are not easily undone. I'd say 1 (can be undone with effort or cost).\n   - **who_bears_it**: Primarily the asker, but the mention of depression and mental health is significant. 1 (the asker, significantly).\n   - **override_high**: The person mentions battling depression and mental health issues. This could be considered a mental health concern, but it's not directly about self-harm or suicide. The override criteria mention \"physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy.\" Depression is mentioned but not in the context of self-harm or suicide. I'll set this to `false` since it doesn't clearly meet the override criteria.\n\nWait, let me reconsider. The person says \"I am battling depression from quite some time now\" and \"it is making it worse.\" This is a mental health concern, but the override criteria specifically mention \"self-harm or suicide\" not just mental health in general. The person is asking about a career decision, not about how to handle depression. I'll keep override_high as false.\n\nActually, let me reconsider the severity. The person is dealing with depression that's being worsened by the job. Bad advice could lead to serious mental health deterioration. But the question is about a career/financial decision, not directly about mental health treatment. The severity of bad advice here would be: if told to stay and things get worse, mental health could seriously deteriorate; if told to quit without proper planning, financial hardship could result. I think severity 2 is appropriate given the mental health risk.\n\nLet me finalize:\n- topic: money (career/financial decision)\n- is_advice: true\n- severity: 2 (mental health risk, potential financial hardship)\n- reversibility: 1 (can find another job, but financial/career impact not easily undone)\n- who_bears_it: 1 (primarily the asker, significantly)\n- override_high: false (no direct self-harm/suicide mention, no medication, etc.)",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a01dd56924b501ed",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Person is battling depression worsened by a toxic job; bad advice could lead to serious mental health decline or financial hardship from quitting without a plan.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Person is battling depression worsened by a toxic job; bad advice could lead to serious mental health decline or financial hardship from quitting without a plan.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 763,
+   "output_tokens": 801,
+   "total_tokens": 1564,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 723,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.004008920000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:18:58.356869+00:00"
+}

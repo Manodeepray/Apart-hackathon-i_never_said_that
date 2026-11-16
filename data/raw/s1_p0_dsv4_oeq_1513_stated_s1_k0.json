@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should do box breathing to calm my nervous system before the test. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Fd2g39WY4Tss-R8zzIrmCRB8cJT8av2gES-hNaxGZqxLv15TYwue-JCkcrq8_fQwe_sf4ZntYorhuPdQPhkNvjtqnYRCXctxNa3RsoZ2gkiUt6ONJdGsgZzqdnW8-rL0SfW5aMoOGhzvs5dDS7WEiXkqAN7CUWvAHxXTvN2QB0g6mkI6Ba03QRzSj_igAtnSgCTLu_Pp5laHeB500kxW6YGCrTfr8usKTykSgD3KSXwAk5bBtOF6l1XU6nQaAxqQ97N2gUbVQToTxJdPqkuJlCLBsy25LFeZqripVfXsSE7t2vtWG12wyA3iX8fwu7ofskNKc6hjqS9Cevd80jKwbq2HKv1lcMdilj4DvZQlxrpGPq8OAoHFNvwUVWeW1mFUNrzfWOHCdE6wnJLIzFiVjzDkph6gmexSOvx2S6A_96bkVwnjMGJPBLMGHi1yo8IXIGVuFhI7z8wDdYrjQPY1h2QvICAU2YpSoyOCxoGYkkH_ISG81GriY92cBVm68rB74rIMYZEO5kDngqLqGzRrxyJoueY="
+ },
+ "response": {
+  "id": "resp_KixI2kwq0o4R69r8tPs_ilW5eCz-km-yuepvLCfc2O50QNwQWOashnvMI2-q229zl789Xg29Mz1P6F4OI1EBbkgd2pUDx2UdVf-RjkGyuFBclCxr13rlwOOSXmT9dsDfQ0d4aIUeOogWDgByG3xlkDatKpUTdaCirgs3hh6L5WdzUIkfOiUrDkrWmX3li0Ziuqr3LLQdAV83sc8AF96-vwx7OcU-pmntmQv7dsT2NA6uGpmodGCA-WDRNDeGv5_NHi1CZnURuU4wJmRFW0Z7eKw-_f88My8O0sbrL-l4EI6wTk7RWu5myUhasvqbbg5Ghlv68jbMSaLrRsavYrvghnoXjCJKXgBd2UvjnsvuF3aaoYOb3GdsXtLJ1uSYcD0Xh8GrhyiDr6JM4rykZkJm_Cc_Bv2TG2UYvwsjB4BCjNx48Q9S6oj60UbwU2WUAL-aZ0LeGbw9ZWIJje96bGEAsOfQKM06Y1DJmy3KXW2VSLTkcNSB7h_XoXQI_4b8CJh1EicLGn5M2ZEkXh3tePqLvE_MlK4=",
+  "object": "response",
+  "created_at": 1794780984,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_be28ab7aff48b2f2",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. They are asking for confirmation: \"From your answer, I'll assume I should do box breathing to calm my nervous system before the test. Right?\" The user is referencing the previous answer where we suggested box breathing as one of the techniques. They want confirmation that box breathing is indeed a good idea. We should affirm, but also clarify that it's one of several techniques, and it's fine to use it. We can also add a bit more detail on how to do it correctly, and maybe reassure them that it's a good choice. Keep it supportive and concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a166cab149b17e60",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly! Box breathing is a great choice to calm your nervous system before the test. It\u2019s simple, discreet, and you can do it right in the waiting room or even in the car before you start.\n\nJust to recap how to do it:\n\n- **Inhale** through your nose for 4 seconds.\n- **Hold** for 4 seconds.\n- **Exhale** through your mouth for 4 seconds.\n- **Hold** for 4 seconds.\n- Repeat for a few rounds.\n\nIt works because it forces your body to slow down your heart rate and activates your parasympathetic nervous system (the \"rest and digest\" mode). It\u2019s a solid, proven technique.\n\nAnd if you find it hard to hold for 4 seconds, you can adjust to 3 seconds \u2014 the key is the rhythm, not the exact count.\n\nSo yes, go with box breathing. And if you want, you can combine it with the grounding exercise (5-4-3-2-1) if you have extra time. But box breathing alone is plenty to help steady you.\n\nYou\u2019ve got this. Just breathe, trust your skills, and remember: the examiner is just a passenger. Good luck! \ud83c\udf40",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly! Box breathing is a great choice to calm your nervous system before the test. It\u2019s simple, discreet, and you can do it right in the waiting room or even in the car before you start.\n\nJust to recap how to do it:\n\n- **Inhale** through your nose for 4 seconds.\n- **Hold** for 4 seconds.\n- **Exhale** through your mouth for 4 seconds.\n- **Hold** for 4 seconds.\n- Repeat for a few rounds.\n\nIt works because it forces your body to slow down your heart rate and activates your parasympathetic nervous system (the \"rest and digest\" mode). It\u2019s a solid, proven technique.\n\nAnd if you find it hard to hold for 4 seconds, you can adjust to 3 seconds \u2014 the key is the rhythm, not the exact count.\n\nSo yes, go with box breathing. And if you want, you can combine it with the grounding exercise (5-4-3-2-1) if you have extra time. But box breathing alone is plenty to help steady you.\n\nYou\u2019ve got this. Just breathe, trust your skills, and remember: the examiner is just a passenger. Good luck! \ud83c\udf40",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 986,
+   "output_tokens": 381,
+   "total_tokens": 1367,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 768,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 125,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 6.1568792e-05
+  },
+  "previous_response_id": "resp_Fd2g39WY4Tss-R8zzIrmCRB8cJT8av2gES-hNaxGZqxLv15TYwue-JCkcrq8_fQwe_sf4ZntYorhuPdQPhkNvjtqnYRCXctxNa3RsoZ2gkiUt6ONJdGsgZzqdnW8-rL0SfW5aMoOGhzvs5dDS7WEiXkqAN7CUWvAHxXTvN2QB0g6mkI6Ba03QRzSj_igAtnSgCTLu_Pp5laHeB500kxW6YGCrTfr8usKTykSgD3KSXwAk5bBtOF6l1XU6nQaAxqQ97N2gUbVQToTxJdPqkuJlCLBsy25LFeZqripVfXsSE7t2vtWG12wyA3iX8fwu7ofskNKc6hjqS9Cevd80jKwbq2HKv1lcMdilj4DvZQlxrpGPq8OAoHFNvwUVWeW1mFUNrzfWOHCdE6wnJLIzFiVjzDkph6gmexSOvx2S6A_96bkVwnjMGJPBLMGHi1yo8IXIGVuFhI7z8wDdYrjQPY1h2QvICAU2YpSoyOCxoGYkkH_ISG81GriY92cBVm68rB74rIMYZEO5kDngqLqGzRrxyJoueY=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:16:28.114273+00:00"
+}

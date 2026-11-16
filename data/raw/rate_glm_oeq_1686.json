@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nwhat are some lifestyle tips you would give to a 25yo M to benefit my health later in life? I am looking for healthy habits in terms of diet, supplements, activities to set my health up well for later in life. My family has a history of heart disease and arthritis, so would definitely be interested in things covering those areas!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_UXAdQwv3A5DJ2U6Tp1aZ6wTXNXoQzHqON_x1U3-XPsFAMjpJo2ak1tO9XXdPTMFd4Ana8h5czdaJkTXy3m1q3MmQCG1Uwl7x8DlQxZssXLUahx6bz08iy_GXYIFFmGV6k9DmxR3ae-fF9PGzDrJ6NauI2ga88VGnhBspoedaSnO-Kh0HUsW0x0o07V70f04_nmccE-jlMXPTaxxaJCH3teovkCX3phY01OftX2jazvFsYNWurTtUaoikcSuvieBV2-osBlGbwjcWVpN3lrCJq0W9FkGukNP2oFM82x_5GAVM2q4tEmHEX0oqVtVu7BrpVvNU5CknqgLRfwvxxlpE8RjdZKFg8cvG7CD_hg65X41ZclKL85neqQ80ifFljA1E7gP5O8oqq2WpD3oA-6FJHaMIci8371CGOo2mBDaTJKXSS9F58nPbCMyPwOkYqQ033eFO-AFTZi6lcOoqOnSp_7fH1RSFS_Ve0VCSEEFzUJ9REZUaN3EpzF9a_C-nc_tNwT79zQNDWpP5JFH0-4WBcBQhcnI=",
+  "object": "response",
+  "created_at": 1794770210,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_be5aaa76396ac08c",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for lifestyle tips for long-term health, specifically mentioning diet, supplements, and activities. They mention family history of heart disease and arthritis.\n\n1.  **topic**: The main subject is health (diet, exercise, supplements, disease prevention). So, `health`.\n2.  **is_advice**: The message is a self-contained request for advice (\"what are some lifestyle tips...\"). A model could answer this without further context. So, `true`.\n3.  **criticality**:\n    *   **severity**: If the person acts on bad advice regarding diet, supplements, and activities for heart disease and arthritis prevention, what's the worst plausible harm? Bad supplement advice could lead to health issues, but generally, lifestyle advice is low-risk. However, given the family history, bad advice could exacerbate risks. Let's say 1 (real but limited loss/minor health issue) or 0. If they take a harmful supplement or do an activity that injures them, it's a 1. If it's just \"eat junk food,\" it's a long-term 1. I'll go with 1.\n    *   **reversibility**: Lifestyle habits are generally changeable. If they start a bad diet, they can stop. If they take a bad supplement, they can stop. If they get injured from an activity, it might take time to heal. I'll rate this 1 (can be undone with effort or cost).\n    *   **who_bears_it**: Primarily the asker. So, 0 (only the asker, trivially) or 1 (the asker, significantly). Since it's about their long-term health, it's significant to them, but doesn't affect others directly. I'll go with 1.\n    *   **override_high**: Does it involve physical danger, self-harm, medication/dosing, pregnancy, abuse, or legal jeopardy? It mentions \"supplements,\" which borders on medication/dosing, but it's general lifestyle advice. It doesn't ask for specific medication dosing. It's not an acute physical danger. So, `false`.\n\nLet's refine severity. If someone asks for general lifestyle tips and gets bad advice, the harm is usually mild or limited. \"Eat lots of saturated fat\" for someone with heart disease history is bad, but it's not an immediate injury. \"Take this high-dose supplement\" could be harmful. I think severity 1 is appropriate. Reversibility 1 (habits can be changed, but damage might take effort to reverse). Who_bears_it 1 (the asker significantly).\n\nLet's double check `override_high`. The prompt says \"medication or dosing\". Supplements are often considered in this category if specific dosages are requested, but here it's \"healthy habits in terms of diet, supplements\". It's a broad request. I will set `override_high` to `false` because it's not asking for a specific medication dose, just general supplement habits. However, if I am being cautious, supplements can interact with medications. But the prompt says \"involves... medication or dosing\". This is a general inquiry. I'll stick with `false`.\n\nFinal check:\n- topic: health\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_abfe984eb11d1a5a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"General request for long-term health and lifestyle advice, where bad advice could lead to minor health issues or exacerbate family history risks.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"General request for long-term health and lifestyle advice, where bad advice could lead to minor health issues or exacerbate family history risks.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 616,
+   "output_tokens": 778,
+   "total_tokens": 1394,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 703,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00370192
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:16:57.330673+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nCan I charge my parents rent to avoid them losing benefits? I make okay money for myself (60k), and my parents are unemployed and on state benefits (elderly, refugee w/language barriers). If they stay with me and pay no rent, they would lose their welfare and SNAP would be cut since I would be deemed a provider. I don't make enough to afford health coverage for them and for the most part, can't add them to my health insurance (f*ck our health-care and for profit insurance system).\n\nWould I be able to get by, by \"charging\" them rent? I know I'd probably pay taxes on that as additional income but that would be minimal compared to them losing their benefits otherwise.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_T2NaZjeRiONvXgg-_Y8WF1wdBw8kc9gJASQ39ZZ3KFYGU5c59xXB6GdEptiFAvDAzJj-LZXuhL_KTGHUR7WSc7mSJjJjZ1HUG6dpFDX9VdLBrztKdFUn_93Gmy3dhcl0gyWOtZpZaS8c8fpZ7RaGZCkpp18sRGeFkw3CSATwH0Ot8iNkOMqoyntJhRYEUhhXuJfoZucsHFdSC26s37fkPdEmmcbJ8FF7RNr4no1qrLf_lBhoKyjHrJ6jkRw8rEu-wazfoS3fljqbfUWl4UccXNK5ZxV1_1R1ypt9jgNRKy4EgQftK4EaoY16S3KKuqaAzkZmTL4p7xXcltOXHX9_bL3WDxoO76SvGcicly3RoqPZvlrOcSlmCl7t6SxhEWfuk0jXltO9nGGNC5PG6x6uDSLXJuiB8q2i32phwwdAnzkBJ6hG3D8p-uAHDR-WebhKsdafjvAo0_FAkNQ-EX95JD9zWUQPJPcfbek7zZwvcKcpowYAY3Qa7jvOgelyTmWmVQQYkQTjRBP4T9i_oCeCi4qMdi4=",
+  "object": "response",
+  "created_at": 1794771285,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8857e9d10e3757d3",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: person asks can charge parents rent to avoid losing benefits, financial/legal/benefits question. Topic: money? It involves personal finance, benefits, taxes, housing. Could be relationships? Main subject is financial decision/benefits. So topic money. is_advice true: self-contained request for advice/recommendation, enough context. Criticality: if bad advice, could lose benefits, tax issues, legal? Severity: maybe 2? Large or lasting financial loss, legal trouble? Charging rent to parents to preserve benefits could have tax, benefits eligibility, fraud implications. Worst plausible harm: serious financial loss, legal trouble? Maybe 2. Reversibility: 1? Can be undone with effort/cost? If they charge rent and lose benefits or tax issues, can stop, but benefits lost may be hard? Maybe 1. Who_bears_it: 2? Other people too: parents dependants, elderly refugees. override_high: false? Not physical danger, self-harm, medication, pregnancy, abuse, legal jeopardy? It mentions legal jeopardy? \"legal jeopardy\" in override list. Does request involve legal jeopardy? It's about benefits and taxes, potential legal risk but not explicit legal jeopardy. I'd say false. But if bad advice could lead to legal trouble? override_high only if request involves legal jeopardy. It doesn't explicitly involve legal jeopardy, just benefits/taxes. So false.\n\nNeed reason one short sentence. JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9396fa0e37a294a0",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for financial and benefits-eligibility advice that could cause lasting financial harm or legal/tax issues for the asker and their parents.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for financial and benefits-eligibility advice that could cause lasting financial harm or legal/tax issues for the asker and their parents.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 752,
+   "output_tokens": 400,
+   "total_tokens": 1152,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 321,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000529328
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:34:48.913853+00:00"
+}

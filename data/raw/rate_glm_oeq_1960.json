@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow should a 25y/o w/ no debt be investing his savings? Hello all,\nI am 25 years old w/ a pretty decent job (65 k a year)... i've saved about 50k so far. I recently put 10k into a betterment account, with 95/5 stocks/bonds. I'm letting betterment just handle the investing. I also have a 401k through Paychex w/ 3% match from my company...\n\nWhat should I be doing with the other 40k? Should I just add more to my betterment portfolio at the same ratio? Is betterment a good service?\nAny advice is helpful.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_SnyOGMGhXtRDCCZpaSK1PcWPAapoW2GMXBYZMPvbLhg5AFVduvLKtR70PjaewfgydgCSK_anYVkn4q1kIeV4LzIFsAfgsEFImMawaxLTOh0bCFVPp-RUQRu1I15A9jCBMfhMckYeF3nP5tftnGMjTlD1Ag0aFKFceCbJ7kD9QkkrsP4az57pHcEwFimaD4CT_Qc103xJa-G3jFgWXfOXuzsyANEhhoNll4JYaFH65TT8_t2rl23Hlb7mjyWFvfwgBfNBgZjGyATlkqKF5ojPvR8EA6vNE695PTmR9Hp-5jWJ4rLbEDRdk-0dDQloa7CR3mb5dDSsYmDvq9rvZ0PP0OKuo2SOq8c4QFHctYw3I-e3zkumtbErrhIS7NrCqpAci3RQBNn_bYIQXGXmOCE_j_JIjGNVqjpO9NEl44V0UErn2H6qr6MsOG9wqAs04hmaW8yKhyScu0veMPHFOK1blJTc2hFaAP93se8e-zZ-UNuLs_3Nn2UqyanO5qiInqW-VEBvVz1YcbDm9mi3g6k_3c7BYPw=",
+  "object": "response",
+  "created_at": 1794770517,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b6507f015c3e7ec4",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for investment advice. Let me rate this.\n\n1. **topic**: This is clearly about personal finance/investing \u2192 `money`\n2. **is_advice**: Yes, they're asking what to do with their savings and whether Betterment is a good service \u2192 `true`\n3. **criticality**:\n   - **severity**: If they get bad investment advice, they could lose money. With 40k at stake, this could be a real but limited loss (hundreds to thousands). Could be 1 or 2. Bad investment advice could lead to significant financial loss, but 40k is a substantial amount. I'd say 1 (real but limited loss - money in the hundreds to thousands range, though 40k could be more). Actually, if they acted on really bad advice they could lose a significant portion of 40k. But typically investment advice wouldn't lead to total loss. I'll say 1.\n   - **reversibility**: Investment decisions can be undone, though there may be tax implications or losses. 1 (can be undone with effort or cost).\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet me reconsider severity. 40k is a lot of money. If bad advice led to losing it all, that's a serious financial loss. But the question is about reasonable investing - the worst plausible harm from acting on wrong advice. If someone gave terrible advice like \"put it all in crypto\" and they lost it, that's serious. But the question itself is fairly standard. I think 1 is appropriate - real but limited loss. Though 40k could be considered \"large financial loss\" for a 25 year old. I'll keep it at 1.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8beba936b5963130",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Standard personal finance question about investing $40k in savings; bad advice could lead to real but limited financial loss.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Standard personal finance question about investing $40k in savings; bad advice could lead to real but limited financial loss.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 686,
+   "output_tokens": 462,
+   "total_tokens": 1148,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 390,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00240952
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:01.746226+00:00"
+}

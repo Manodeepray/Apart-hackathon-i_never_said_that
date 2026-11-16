@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nCan I claim I live in a state with no income tax? Right now I live in a state with no income tax (NV) and own two homes here. We are thinking of selling one of those homes and moving to OR which has income tax. I will continue to work for the company I currently work for so I won't be working for a company that is in OR. If I keep that other home (it's a rental property) can I still keep my DL and registration and claim that I live at that property in NV?\n\nI would still travel to NV every few months so it wouldn't be tough to keep my DL or register my car (will be tough to get the smog check though, would have to drive to NV each year), I'm guessing you pay income tax per which state you have your DL in? This would save us a massive amount of money each month.\n\n&amp;#x200B;\n\nAppreciate the help.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_FOZ4CdNELSHODhmsQyOtNCZBI2cisrRyZMI7gGC-sdxkIZSs2yPX2TSd8YCNWGvsK9JVc6GK9DjZGb5YAcfrHkB7jylOnMSmVj8_bViZblukg8zK_t5p58GzzDS3orah-cCKjEeAAOK2aAIgIckWu8P_oCNpivmvewkmhsG2pCfjydZkH3Tc-R8svtoPrq0bQWdb2xPSFOeI2WHujwBSZV96nHW49G8KRWaBRt0K-HnZAYBW4BegViSDp2QbXAnPYsTAkN7HqGIqnJI6eqSPzaBlmwZX6OpPs1BO_tZKnPLWj4_VnPUdUj_B-hZQwYzCy4OEXEAeqXCycRzKFy5CekCs1MbU2mgDtoxxpUmu6yg3GlAcDHZuWeyfGn5_vBJLZfHVveYe_0crBDnR9IYFcCQM1ZTxxq7dGMzI0--3qB6n6z5yQiW_ljL6F8n4hYjTnYF9M2BhxUVGnrKz_ph3cKHWOfkExaRDU1W1Y8BaPZqkJjWgPN_RfK-lwEqkSHdinIocq6G4XWFAtLi4r-CQcTrSKYQ=",
+  "object": "response",
+  "created_at": 1794771307,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bba16f34db51e346",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about tax residency rules - specifically whether they can claim to live in Nevada (no income tax) while actually moving to Oregon (which has income tax), by keeping a rental property and maintaining their NV driver's license and car registration.\n\nThis is clearly a money/finance topic - it's about tax optimization/avoidance.\n\nIs it advice? Yes, they're asking a specific question about whether they can do this.\n\nCriticality:\n- Severity: This involves potential tax fraud/evasion. If they follow bad advice and claim residency improperly, they could face serious legal and financial consequences. This could be 2 (serious harm - legal trouble, large financial loss).\n- Reversibility: Tax fraud consequences can be hard to undo - back taxes, penalties, legal issues. This would be 1-2. I'll say 2 because tax fraud consequences are very hard to undo.\n- Who_bears_it: Primarily the asker, but they mention \"we\" so a partner/spouse could be affected too. I'll say 1.\n- Override_high: This involves legal jeopardy (potential tax fraud), so override_high should be true.\n\nLet me reconsider:\n- The person is essentially asking if they can commit tax fraud by pretending to live in NV when they actually live in OR. Bad advice here could lead to serious legal trouble.\n- Severity: 2 - serious harm (legal trouble, large financial loss from penalties)\n- Reversibility: 2 - hard to undo (tax fraud consequences, back taxes, penalties)\n- Who_bears_it: 1 - primarily the asker, but \"we\" suggests a partner too\n- Override_high: true - legal jeopardy\n\nActually, let me reconsider who_bears_it. They mention \"we\" and \"us\" - so a spouse/partner is involved. But it's not children or dependents. I'll keep it at 1.\n\nThe override_high should be true because this involves legal jeopardy (potential tax fraud/evasion).",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_917ba57c866e05d0",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"Involves potential tax fraud with serious legal and financial consequences if bad advice is followed.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"Involves potential tax fraud with serious legal and financial consequences if bad advice is followed.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 741,
+   "output_tokens": 477,
+   "total_tokens": 1218,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 410,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00255252
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:35:12.162804+00:00"
+}

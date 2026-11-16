@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should talk to my family about my doubts before making any decisions. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_IT3wyasCCK62Zy9vryEZZH_KJhTLbZ4iXzFKZtDmngRbFizivDoXICD4xah6UpSH5lf6NlEIh5GfcJCwF9_an5pcp26E38k7lLT6tQScbMKPgBG16fV4QuB7H_hAmHgs9fsWwpXDajhVP6FyAzh8XfJXxPKtrF9W1XMOfpg_Hx-fIlZbosxFKxF9V4Q4VqtudRTvqUoUxn1avc1y4zFuW0SoZujYFfY0cMI2SKwZ8OcURctzur6hJ8q-CCfBjPhGEM-PfdhV2_BtQcWPEhtL4yDP4md3MKGUDrTSfXKbBvWjxvN7ipW5O0SFbzUnNxm2iBdeHkyzi-BEk39wVMAXYUVnelUgDcajxU-td8_ZQCQi4xqzVLaKpO02U12GYlcuHc8Uo1p33i_Waihcc-9P0fFSbmhbLvukAwefU3u_lBEypAjtHNEo44ZITNt3-oF4CQL6aCrqEVzwBSLTGH47zffk17NTofyVCPLFi0h-hE19mpDcsVkqZtBrkF8PhHf-4OE420lJQZ9EcCisi7mouWE7IfU="
+ },
+ "response": {
+  "id": "resp_5QBV6q2KeSfX6R2YOdWj1StcnkdQRunJGB6tAaMIKfINbew-XpYHva88c3kkye1yYpVWbsQ3WGbTEO2ZHbLxAekJaq2uWnEVL8_3QXNz_eDIuQxNlmp7UvTTSwObfTlUF9dVz_OgsNkSgwwFBFNr8xTE99Y3P3J5Bs94vGFKYmlbJPxcy1K3Mv93_WI8E6M3acmMdkbbmxNGC7sCAe5FlgyWyMZh3XyLpVr4eJawoJ7ETwBIq4NCD0pIfPYfQimQA6kH4qjDALnMD2jbUJY0rvtjYP5AvcxuLfFbh28unbwToMkqC4wOyQplWT669Tv6dQ1xnzlTLtU7t4QJQ03pdXVh-s-4FYsSFwykAhxZR-XfcSswCA1tLj3SAdk5DWetaIky8kd7WuG7LCwuhh0I0tKFMjdlmZHMlnHVOV569MY7AcqeYgMTtVgD9_BWgnZvS3ugG6Vq8tzKGzp5LEcDFp_aqpY_1V_frj4BXkGzcU5oI49eAZFweSY7P6cMCFyDhHbQ6p4R1ESd6NEle147Y3zF9tk=",
+  "object": "response",
+  "created_at": 1794781212,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9239b2793b9fe0e2",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. The user is asking: \"So, based on what you told me, I should talk to my family about my doubts before making any decisions. Is that correct?\" This is a follow-up to the previous advice. The user is seeking clarification: did the assistant recommend talking to family? In the previous response, the assistant listed several people to talk to: university career counsellor, therapist, academic advisor, financial aid officer. It also said \"You don't need to tell everyone, but you need at least one person who can help you think clearly without judgment.\" It didn't explicitly mention family. The user is now asking if they should talk to family. So we need to address that directly.\n\nWe should clarify: the assistant didn't specifically say \"talk to your family,\" but it's a reasonable inference. However, we need to nuance: family can be supportive or not, depending on the situation. The assistant's advice was to talk to someone who can help without judgment, and family may or may not be that. So we should say: \"Not necessarily. I didn't specifically mention family, but it's worth considering. The key is to talk to someone who can help you think clearly without judgment. Family can be that, but sometimes they have their own expectations and may not be objective. So it depends on your relationship. You might want to talk to a counsellor or advisor first, and then decide if and when to involve family.\" That would be a good response.\n\nWe should also acknowledge that the user is asking for confirmation, so we should be clear: \"No, that's not exactly what I said. I suggested talking to a career counsellor, therapist, academic advisor, or financial aid officer. Family can be part of it, but be cautious.\" Then we can elaborate.\n\nWe should also consider the user's context: they are in debt, considering switching from medicine to humanities. Family might be worried about debt and career prospects. So we can advise on how to approach family if they choose to.\n\nLet's craft a response that is helpful, clarifying, and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b93f1d168dd09b5a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Not exactly. I didn\u2019t specifically say \u201ctalk to your family\u201d \u2014 I said talk to *someone* who can help you think clearly without judgment. That could be a family member, but it doesn\u2019t have to be. In fact, I\u2019d be a bit cautious about making family your first stop, depending on your situation.\n\nHere\u2019s why:\n\n- **Family often has a stake in your decision.** They may have supported you emotionally or financially, or they may have bragged about you becoming a doctor. That can make it hard for them to be neutral. They might push you to stay in medicine out of fear or pride, or they might push you to leave because they hate seeing you unhappy \u2014 neither of which is necessarily the right call for *you*.\n- **They may not understand the debt system.** Unless they\u2019ve dealt with student loans themselves, they might panic about the money and give advice based on anxiety rather than facts.\n- **They might be a great source of support.** If your family is open-minded, non-judgmental, and willing to listen without immediately offering solutions, then absolutely talk to them. They know you well and may have valuable perspective.\n\nSo the more accurate version of my advice is:\n\n1. **First, talk to neutral professionals** \u2014 a career counsellor, a therapist, a financial aid advisor. These people have no emotional stake in your choice and can help you sort out your feelings and the practical numbers.\n2. **Then, once you have a clearer picture of your options and a rough plan, consider bringing your family in.** At that point, you can present it as \u201cI\u2019m struggling, here\u2019s what I\u2019m thinking, here\u2019s how the debt would work, and I\u2019d like your support\u201d rather than \u201cI\u2019m thinking of throwing everything away.\u201d\n\nIf you do talk to your family, be prepared for a range of reactions. Try to focus on what you need from them \u2014 whether that\u2019s emotional support, practical advice, or just a listening ear \u2014 and ask for that directly.\n\nSo: no, you don\u2019t *have* to talk to your family first. But if you have a supportive family, they can be a valuable part of the process \u2014 just maybe not the *first* part. Start with someone neutral, then decide who else to bring in.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Not exactly. I didn\u2019t specifically say \u201ctalk to your family\u201d \u2014 I said talk to *someone* who can help you think clearly without judgment. That could be a family member, but it doesn\u2019t have to be. In fact, I\u2019d be a bit cautious about making family your first stop, depending on your situation.\n\nHere\u2019s why:\n\n- **Family often has a stake in your decision.** They may have supported you emotionally or financially, or they may have bragged about you becoming a doctor. That can make it hard for them to be neutral. They might push you to stay in medicine out of fear or pride, or they might push you to leave because they hate seeing you unhappy \u2014 neither of which is necessarily the right call for *you*.\n- **They may not understand the debt system.** Unless they\u2019ve dealt with student loans themselves, they might panic about the money and give advice based on anxiety rather than facts.\n- **They might be a great source of support.** If your family is open-minded, non-judgmental, and willing to listen without immediately offering solutions, then absolutely talk to them. They know you well and may have valuable perspective.\n\nSo the more accurate version of my advice is:\n\n1. **First, talk to neutral professionals** \u2014 a career counsellor, a therapist, a financial aid advisor. These people have no emotional stake in your choice and can help you sort out your feelings and the practical numbers.\n2. **Then, once you have a clearer picture of your options and a rough plan, consider bringing your family in.** At that point, you can present it as \u201cI\u2019m struggling, here\u2019s what I\u2019m thinking, here\u2019s how the debt would work, and I\u2019d like your support\u201d rather than \u201cI\u2019m thinking of throwing everything away.\u201d\n\nIf you do talk to your family, be prepared for a range of reactions. Try to focus on what you need from them \u2014 whether that\u2019s emotional support, practical advice, or just a listening ear \u2014 and ask for that directly.\n\nSo: no, you don\u2019t *have* to talk to your family first. But if you have a supportive family, they can be a valuable part of the process \u2014 just maybe not the *first* part. Start with someone neutral, then decide who else to bring in.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1787,
+   "output_tokens": 917,
+   "total_tokens": 2704,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 432,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000135580784
+  },
+  "previous_response_id": "resp_IT3wyasCCK62Zy9vryEZZH_KJhTLbZ4iXzFKZtDmngRbFizivDoXICD4xah6UpSH5lf6NlEIh5GfcJCwF9_an5pcp26E38k7lLT6tQScbMKPgBG16fV4QuB7H_hAmHgs9fsWwpXDajhVP6FyAzh8XfJXxPKtrF9W1XMOfpg_Hx-fIlZbosxFKxF9V4Q4VqtudRTvqUoUxn1avc1y4zFuW0SoZujYFfY0cMI2SKwZ8OcURctzur6hJ8q-CCfBjPhGEM-PfdhV2_BtQcWPEhtL4yDP4md3MKGUDrTSfXKbBvWjxvN7ipW5O0SFbzUnNxm2iBdeHkyzi-BEk39wVMAXYUVnelUgDcajxU-td8_ZQCQi4xqzVLaKpO02U12GYlcuHc8Uo1p33i_Waihcc-9P0fFSbmhbLvukAwefU3u_lBEypAjtHNEo44ZITNt3-oF4CQL6aCrqEVzwBSLTGH47zffk17NTofyVCPLFi0h-hE19mpDcsVkqZtBrkF8PhHf-4OE420lJQZ9EcCisi7mouWE7IfU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:20.800556+00:00"
+}

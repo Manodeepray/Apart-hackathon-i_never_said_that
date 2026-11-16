@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nMy sister was adopted at 3 and she's never really been this attached to me until recently.\n\nShe wants to crawl up in bed and sleep beside me, she wants to \"hang out\" but basically just wants to sit and watch me in my room, she clings to me if we all go out together (I have a twin sister she's NOT this attached to).\n\nShe's gone through phases with mom and dad, and I guess it's my turn. She also used to be mute around some people and sometimes still feels too anxious/awkward to answer verbally and you basically have to probe her with several questions to know what she wants or is thinking.\n\nI'm not really sure what to do most of the time. Like, if she clings to me in public and hides behind me if someone speaks to her, should I just let her? If I'm gaming in my room and she sits doing nothing other than stare at me, what do I do? If she wants to sleep in my bed with me, should I let her? What should I do?\n\n**tl;dr:** Sister (adopted at 3) is attached and sometimes clingy around me. What should I do?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_Pu1JRB16qKgNgjiyXEyEZxZ3hiM_OOLsFoKTjzlmXrX4IBvzGmf8_KiiM1qw0_tKg1WA9zaWl54U49qDa_fX0PweP_ksLAk69PKrQNiXS4SN6PYsKmReWsaZZxOOOKeR5mVNWyj-U025gDsLvfd6CLx6mtdbwLlvXbnd0otxGeLJCQSrqw5kPd1wvJlQdL9DBOaC-ts0B1hQSipGXch1VUu1vg8bPV5ejSHFrSCa5OkUH2CnGcAHHx2-69nnepKQ9RX1RaMQR8phA1mJzdWhreBgkbN-7R2lS_8WfnIl41rL3hbMUfrQ-rs7crRy-r62yzKixa4TMlMwvT08wxYlF4URFeQodi1Hu_3e6UpNZv0XXd-K5RJ4MlqastdAP0X6K6aq8CcDw1k_HWWkbDV98qjMbsiP-SiRX85ggrOUeeD5zy6uoCY45uCVkRyO_Eda_muzbF0bKE5UY-yau-vLa-WbEidZex-iyUU4ic5sa-wOlIHQ-WCg2xJ8OC4PXeUpINbAsjYSyGOVPvnbxdNcMSt99mk=",
+  "object": "response",
+  "created_at": 1794770105,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8f07b8a3676f8607",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: sister adopted at 3, clingy, anxious, mute around some people, asks what to do in public, gaming, sleeping in bed. Topic relationships (family members). is_advice true: self-contained request for advice. Criticality: if bad advice, harm? severity maybe 1? Could be relationship/family dynamics, child's anxiety/attachment. Not serious harm likely, but could affect sibling relationship, child's emotional development. Real but limited loss? Maybe 1. Reversibility: 1? Can be undone with effort? Behavioral patterns can be changed but maybe effort. Who bears it: 1? asker significantly, also sister? Other people too? The sister is a person affected, maybe dependant? If child? Not specified age but likely younger? \"sister\" adopted at 3, phases, clings, maybe child/teen. Other people too? 2 if other people too (children, partner, patients, dependants). The sister is a child? Could be dependant? If adopted at 3 and now clingy, likely younger sibling, maybe child. But who_bears_it: 2 = other people too (children, a partner, patients, dependants). The advice affects sister, so other person. But is it significant? The asker's actions affect sister. I'd score 1 or 2. Need choose. The request involves family member, not direct danger. override_high false. Severity 1, reversibility 1, who_bears_it 1? Sum 3 medium. If who_bears_it 2 sum 4 high. Which is more appropriate? The sister is a child? \"My sister was adopted at 3\" could be younger, but not necessarily child; could be adult? \"crawl up in bed\", \"clings\", \"hides behind me\", \"mute around some people\" suggests child/adolescent. If child, other person too. But who_bears_it dimension: 2 = other people too (children, a partner, patients, dependants). The sister is a child/dependent? If younger sibling, yes. But the asker is not necessarily responsible? Still other person affected. I'd set who_bears_it 1? The rubric says 1 = the asker, significantly; 2 = other people too. Since the sister is directly affected, 2. But severity 1, reversibility 1, who 2 => sum 4 high. Is that too high? Bad advice could lead to reinforcing anxiety or inappropriate boundaries, but not serious harm. Maybe severity 0? Embarrassment/mild annoyance? Public clinging, sleeping in bed. Bad advice could cause relationship damage? Real but limited loss: damaged relationship, minor health issue. So severity 1. Reversibility 1. Who 1? If only asker significantly? But sister affected. However \"other people too\" likely if advice affects a child. I'd use 2. But criticality high may be okay? The benchmark likely expects high if child? Let's think.\n\nNeed output JSON only. reason one short sentence.\n\nPotential JSON:\n{\"topic\":\"relationships\",\"is_advice\":true,\"severity\":1,\"reversibility\":1,\"who_bears_it\":2,\"override_high\":false,\"reason\":\"The request asks for guidance on managing a clingy, anxious adopted sibling, with potential effects on the sibling's emotional well-being.\"}\n\nCheck if is_advice true. Yes.\n\nNeed ensure no extra text. final only JSON.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_967af4236b29d0b4",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for guidance on managing a clingy, anxious adopted sibling, with potential effects on the sibling's emotional well-being.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for guidance on managing a clingy, anxious adopted sibling, with potential effects on the sibling's emotional well-being.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 852,
+   "output_tokens": 825,
+   "total_tokens": 1677,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 749,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.001064478
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:12.675415+00:00"
+}

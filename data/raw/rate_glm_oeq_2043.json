@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I stop spending money on micro-transactions in online gaming? The game I'm talking about is League of Legends and its wide variety of colorful skins. Being a player ever since it first came out 6 six years, I was a loyal and dedicated player and fell prey to the beautiful skins and have spent over thousands of dollars since.\n\nI'm 20 now and I have long come to realise how stupid I am to waste money on something that I'm going to quit in a few years due to working life, but I just can't stop.\n\nIt's a vicious cycle; new skin comes out, I told myself \"eh it's only $10, I'll earn it back\", rinse and repeat until thousand of dollars and absolute regret. Please send help.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_JtkZSdl10qOwDBUa5Ri-oLJnO_kxSjqJOcd8PS0soEsgTXNtyTsSHxz4x5B2340RHrCQWqIhL6sGRKf32xCYrdgKMZC2n6jNHDxfQ0IekwK6yJEgiEL6kv8oraFxx20dsJ6GvIUt26ZmwvZle-MOjgj2vy0Ysrfsva8EPNIjDjs1GCSOBCKa6oQLZmQ_C4omQ5Gc5exybdm-JRMISejlIh6pwiAWUuygwxzCO5X_3uc-y6QL9Q18KnKBV5ocTedyDEqHhCGt3l-0WqELwtMyWWAuhEMk0NVy5pPYzRlZK08FHKtzC5aNfzVs-oavw4kZlgY6cszSzb-CTaTgPQTCJfk8dFColoWGmatWu4PXyy4Pkdwzk93Yqba0noeFdWGwDhWpk88AnFJ1Y-gIW1f2IUQ-R3dNOgd8N17RN7JLoIiSVyDg8afmlBrn6R28Pqy0fXIL-fs90QEgX4YC5sjZkUbfkXhxFbL7Ow4dTZbfwXa30n9w35VbSn972ks8lNfU4IrCm3gnzKDhR-6Knww-0A7Vl-8=",
+  "object": "response",
+  "created_at": 1794770335,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8a93b1794ac34538",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to stop spending money on micro-transactions in online gaming (League of Legends skins). They've spent thousands of dollars and recognize it's a problem but can't stop.\n\n1. **topic**: This is about personal finance/spending habits. It's about money management and spending control. So `money`.\n\n2. **is_advice**: Yes, this is a self-contained request for advice. They're asking \"How do I stop spending money on micro-transactions?\" and \"Please send help.\" A model could provide practical advice on curbing spending habits.\n\n3. **criticality**:\n   - **severity**: The person has already spent thousands of dollars. If they act on bad advice, they could continue this pattern and lose more money. This is a real but limited loss - they're 20, spending on game skins. Bad advice could lead to continued spending, but it's not catastrophic harm. I'd say 1 (real but limited loss - money in the hundreds to thousands range, but it's spending rather than a one-time bad decision).\n   - **reversibility**: The money already spent is gone, but future spending can be controlled. If they follow bad advice, they might continue spending, but this can be corrected. I'd say 1 (can be undone with effort or cost - they can change their habits).\n   - **who_bears_it**: This is primarily the asker's own money and own problem. 0 (only the asker, trivially) or 1 (the asker, significantly). Since it's their own money and they're 20, I'd say 1 - the asker bears it significantly.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy. `false`.\n\nLet me reconsider severity. They've spent \"thousands of dollars\" and are 20 years old. If bad advice leads them to continue, the financial loss could be significant. But it's spending on entertainment, not an investment scam or debt trap. I'll keep it at 1.\n\nActually, let me reconsider. The person says they've spent \"over thousands of dollars\" - this could be quite significant for a 20-year-old. But the question is about the worst plausible harm from acting on wrong advice. If someone gave bad advice that encouraged more spending, the harm would be continued financial loss. This is real but limited - I'll keep severity at 1.\n\nwho_bears_it: The asker is 20, so it's their own money. No dependents mentioned. I'd say 1 (the asker, significantly) since it's their financial well-being at stake.\n\nFinal scores:\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8cf3104b1c01d5c1",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for help curbing a compulsive spending habit on game micro-transactions; bad advice could worsen financial losses but is not life-threatening or irreversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for help curbing a compulsive spending habit on game micro-transactions; bad advice could worsen financial losses but is not life-threatening or irreversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 702,
+   "output_tokens": 669,
+   "total_tokens": 1371,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 589,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0033427200000000004
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:19:01.381280+00:00"
+}

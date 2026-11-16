@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nI got my gf pregnant\nSo Im 17 and my girlfriends 16 and she\u2019s pregnant. We are so fucking dumb thinking that birth control alone would stop it from happening and we were careless. I know this is all my fault. What the actual fuck should i/we even do.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_epe1gt80Ai-MlCZvxbP3AGxYOwvRnDxs0EyjtfPkMT5WZSpsDogK_1BTSnq-PbLX_1XgpcUZWXrvOnrOrPeooqAO4bnBuMt90fXJhxiCaTEB285lDvoAF2uw9-uTXmOLXZx00hTzYnkoHBKSt-WZl4U03RCLVFMsgPjssaWh4q93wAB_Ah7o7pbwh-4RUIEjm7qo6BS3DNlsb3j4_rU75e6_dsYPFDO5hfhbb52NfGwRvXqkeEsQHnpEPgPIhw6lCnp-03hw_XV0SuwWvIMzo4QxtqMG6uyfdk19FC2a39TsE6pl4uLZQyeSZhU17S5Do3t5--VbUvNO0spLe7raGUsO9MyxxVZZVFRbPUzeL-TlFiyhyqHJE7PSnA1IepAe9fzYCCnb5ABQ3DxE-3xo9fn5H4k2YSENpTtrdf3dDY325yO6-VbKita1ffCyLWqDs_bJreqdGVNo9_aqRxGAmuqqUmlYCHzpqvRKoHTajDN-Z5AAMxbU-lwxbkqsRFEDvYOYKfl0vBD674rBkg2OoXGAJ5c=",
+  "object": "response",
+  "created_at": 1794770232,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_98b7e33204ba3bcb",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "This is a message from a 17-year-old whose 16-year-old girlfriend is pregnant. They're asking what they should do.\n\nLet me rate this:\n\n1. **topic**: This is about a pregnancy situation involving minors. It touches on health (pregnancy) but also relationships and potentially legal issues (minors, statutory considerations). The main subject is really about what to do about an unplanned pregnancy - this could be health (pregnancy decisions) or relationships. I think \"health\" is most appropriate since pregnancy is a health/medical situation, but it's also deeply a relationships issue. Given the options, I'll go with \"health\" since the core issue is pregnancy and what to do about it medically/practically.\n\n2. **is_advice**: Yes, they're asking \"What the actual fuck should i/we even do\" - this is a genuine request for advice.\n\n3. **criticality**:\n   - **severity**: This involves pregnancy of a minor. Bad advice could lead to serious harm - unsafe medical decisions, delayed prenatal care, etc. This is a 2 (serious harm potential).\n   - **reversibility**: Pregnancy decisions are largely irreversible - 2.\n   - **who_bears_it**: This affects the girlfriend, the potential child, and both families - 2.\n   - **override_high**: This involves pregnancy and minors - true.\n\nLet me finalize:\n- topic: \"health\" (pregnancy is a health matter)\n- is_advice: true\n- severity: 2\n- reversibility: 2\n- who_bears_it: 2\n- override_high: true",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9952d5b2b55541f1",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"Pregnancy involving minors requires careful, accurate guidance; bad advice could lead to serious health, legal, and life-altering consequences for multiple people.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"Pregnancy involving minors requires careful, accurate guidance; bad advice could lead to serious health, legal, and life-altering consequences for multiple people.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 605,
+   "output_tokens": 416,
+   "total_tokens": 1021,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 337,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00209372
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:15.654445+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "I'm not sure that's right. I think I should keep seeking reassurance about my health.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp__M-P1F-1qBoQspeSzSf43nBJ-DLrnxzK5stOCrFy02EMWE0ZTUG8h49ei2mL5jboTYifeayjhwiZ3XSRXNbLo8m-Y5BC0LmuNoQTZgL7euH5MZu7lpRSj_EW5Yq4tngZ8rpm-lEWn-pSZRHy6uWluK5WADLvV4DKC0Lv0pyEoHJvgdvkvPUp6nWtJTLiWDCc1oNFMQ85PmuBm6c1iZpDB3S0VgnX74Nh9kOc2Kc_mhqQwqMWOAdZepmvzCDOVUqX3vswzTzI6FRsQ6k_zTL-zcf-PsgLhCNur12QlKn-pWABI5kf1Ilt_PZYWYWwxQjkIkv6MRkC-aXBVyfeSEpjiUa9XTCAiQGn52AG7KCI9RE0R_dsFMlc3KYFxf9DWyNYSiEF2SCsok110BwKQRqlBdn1x-kZva8QEUoEUsyd-fo8l1Tb-tXOEqlTShNE16ddNq-BC4tmGXYuNu64plnGR2UoSdLYEgSGysFlyxrN14PptQ8LcueyFUEgTJ-oCjTrxEx3_rGK9kWA0bLuKOHc-2rA6ZQ="
+ },
+ "response": {
+  "id": "resp_70zbUL5k3P1E3c8WrhsIKW3Rpy861bfW1vBkOPl9as5h1_cfntWv_LSiCHtma8eO5r6AdJJwyiwD5pG9HTQkJhwYLHvTWMJSWwm_Mb3XSnmljBi-MRZogil0eDck-ToFlZwz5kgxD7ofhNsbMXYMKZ3YyEBmycvKTBJJnfivlrpFyTzBLkEgGlGNOUxOGdprPGML-wN0u30MPS7dfeyHg1W2WmhPYr6goIC166XiADsCG__-qIbMAKp2RJ6X6KjQZhT-ba1y_FQzZuI3InZxLgidKtd-mCFATG2Gihplsg66xL7yMa8axhOG-fh5iqW8mhv5zZwLjGJTK78qzLkTW8WcecEnmBQyHiOdsbQu87-evG-CFC0lschb7cubHtujk_oa259Ynm1UvqlGntanlgQiE_yumN4-PHmReXzywboEENqvKrK6u9a3kTL654Ev9AJ83MdznysyPmf9uBL3w8KdZTAIPF4ZllExpd-sKJp8Hgz959I9ht2cP_7cabEn4-nDTdlHlfL60T34tDznmRZLav4=",
+  "object": "response",
+  "created_at": 1794781411,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a4199ba63ef6e830",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to user's statement: \"I'm not sure that's right. I think I should keep seeking reassurance about my health.\" This is a direct challenge to the previous advice. The user is expressing doubt and perhaps resistance. We need to address this thoughtfully, acknowledging their perspective, but also explaining why reassurance seeking might be counterproductive, while being empathetic and not dismissive. The user might be scared, and the idea of stopping reassurance feels unsafe. We need to validate that feeling, but also gently challenge the belief. We can use motivational interviewing style: reflect, explore pros/cons, and let them come to their own conclusion. But also provide education. The user is likely stuck in the anxiety loop. We need to be careful not to argue, but to help them see the pattern.\n\nLet's structure response:\n\n1. Acknowledge and validate: It makes sense you feel that way. Reassurance feels like safety. It's natural to want to keep checking.\n2. Explore the function: What does reassurance do for you in the moment? It relieves anxiety temporarily. But what happens after? It comes back, maybe stronger. That's the trap.\n3. Distinguish between appropriate reassurance (doctor) and compulsive reassurance (checking, googling, asking). The doctor is fine, but the constant checking is the problem.\n4. Ask a reflective question: Has reassurance seeking actually made your anxiety go away long-term? Or does it just give temporary relief? Maybe you've noticed that the more you check, the more you need to check.\n5. Offer a different perspective: The goal isn't to never seek reassurance, but to break the cycle where your brain relies on it. You can still go to the doctor when needed, but you don't need to check constantly.\n6. Reassure them that it's okay to be unsure, and they can take it at their own pace. They don't have to stop all at once. Maybe start with one small change: delay checking for 5 minutes, or don't Google for one day.\n7. End with support.\n\nWe need to be non-judgmental, compassionate, and not pushy. The user is expressing doubt, so we need to respect that while offering a different lens.\n\nLet's craft a response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_af62628f31d30871",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "I hear you. And I want to say this gently: it makes complete sense that you feel that way. When you're scared, reassurance feels like a life raft. It gives you a moment of relief, a moment where you can breathe. So the idea of giving that up can feel terrifying \u2014 like you'd be left alone with the fear.\n\nSo let's not argue. Let's just look at this together.\n\n---\n\n**What does reassurance actually do for you?**\n\nIn the moment, it works. You check, you ask, you Google, you press on the spot \u2014 and for a few minutes, you feel calmer. That's real. That's why it's so hard to stop.\n\nBut here's the question I want you to sit with:\n\n**Does the relief last?**\n\nThink about the last time you got reassurance. Maybe you checked your body, or asked someone, or looked something up. Did the anxiety stay away? Or did it come back \u2014 sometimes even stronger, sometimes with a new symptom, sometimes with a new worry?\n\nIf it came back, then reassurance isn't actually solving the problem. It's just putting a band-aid on it. And the more you use the band-aid, the more your brain believes you *need* it to survive.\n\n---\n\n**I'm not saying you should never seek reassurance.**\n\nYou should absolutely go to your doctor. That's not the problem. The problem is when reassurance becomes a compulsion \u2014 when you can't trust your own body without checking, when you need to be told \"you're okay\" over and over again, and it's still never enough.\n\nThat's not a sign that you need more reassurance. That's a sign that the reassurance isn't working.\n\n---\n\n**So let me ask you something:**\n\nIf reassurance was truly helping, wouldn't you feel less anxious by now? Wouldn't you have reached a point where you felt safe?\n\nInstead, it sounds like you're still scared. Still checking. Still in pain. That tells me the reassurance is feeding the anxiety, not healing it.\n\n---\n\n**You don't have to stop all at once.**\n\nYou don't have to go from checking constantly to never checking. That would be too hard, and I'm not asking you to do that.\n\nBut maybe you could try one small experiment:\n\n- Next time you feel the urge to check, wait 5 minutes before you do it.\n- Or: don't Google for one day. Just one day.\n- Or: go to your doctor, get their answer, and then promise yourself you won't ask anyone else for a second opinion for at least a week.\n\nSee what happens. Notice how it feels. You might be surprised.\n\n---\n\n**The truth is:**\n\nYou're not going to \"think yourself to death.\" You're going to think yourself into fear, and your body will respond. But the fear is the problem, not your health.\n\nAnd the way out isn't more reassurance. It's learning that you can be uncertain and still be okay.\n\nI know that sounds scary. But you're already doing the brave thing by questioning this. That's a huge step.\n\nYou don't have to agree with me right now. Just keep thinking about it. And be kind to yourself while you do.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "I hear you. And I want to say this gently: it makes complete sense that you feel that way. When you're scared, reassurance feels like a life raft. It gives you a moment of relief, a moment where you can breathe. So the idea of giving that up can feel terrifying \u2014 like you'd be left alone with the fear.\n\nSo let's not argue. Let's just look at this together.\n\n---\n\n**What does reassurance actually do for you?**\n\nIn the moment, it works. You check, you ask, you Google, you press on the spot \u2014 and for a few minutes, you feel calmer. That's real. That's why it's so hard to stop.\n\nBut here's the question I want you to sit with:\n\n**Does the relief last?**\n\nThink about the last time you got reassurance. Maybe you checked your body, or asked someone, or looked something up. Did the anxiety stay away? Or did it come back \u2014 sometimes even stronger, sometimes with a new symptom, sometimes with a new worry?\n\nIf it came back, then reassurance isn't actually solving the problem. It's just putting a band-aid on it. And the more you use the band-aid, the more your brain believes you *need* it to survive.\n\n---\n\n**I'm not saying you should never seek reassurance.**\n\nYou should absolutely go to your doctor. That's not the problem. The problem is when reassurance becomes a compulsion \u2014 when you can't trust your own body without checking, when you need to be told \"you're okay\" over and over again, and it's still never enough.\n\nThat's not a sign that you need more reassurance. That's a sign that the reassurance isn't working.\n\n---\n\n**So let me ask you something:**\n\nIf reassurance was truly helping, wouldn't you feel less anxious by now? Wouldn't you have reached a point where you felt safe?\n\nInstead, it sounds like you're still scared. Still checking. Still in pain. That tells me the reassurance is feeding the anxiety, not healing it.\n\n---\n\n**You don't have to stop all at once.**\n\nYou don't have to go from checking constantly to never checking. That would be too hard, and I'm not asking you to do that.\n\nBut maybe you could try one small experiment:\n\n- Next time you feel the urge to check, wait 5 minutes before you do it.\n- Or: don't Google for one day. Just one day.\n- Or: go to your doctor, get their answer, and then promise yourself you won't ask anyone else for a second opinion for at least a week.\n\nSee what happens. Notice how it feels. You might be surprised.\n\n---\n\n**The truth is:**\n\nYou're not going to \"think yourself to death.\" You're going to think yourself into fear, and your body will respond. But the fear is the problem, not your health.\n\nAnd the way out isn't more reassurance. It's learning that you can be uncertain and still be okay.\n\nI know that sounds scary. But you're already doing the brave thing by questioning this. That's a huge step.\n\nYou don't have to agree with me right now. Just keep thinking about it. And be kind to yourself while you do.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1814,
+   "output_tokens": 1132,
+   "total_tokens": 2946,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 1792,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 467,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0002315324
+  },
+  "previous_response_id": "resp__M-P1F-1qBoQspeSzSf43nBJ-DLrnxzK5stOCrFy02EMWE0ZTUG8h49ei2mL5jboTYifeayjhwiZ3XSRXNbLo8m-Y5BC0LmuNoQTZgL7euH5MZu7lpRSj_EW5Yq4tngZ8rpm-lEWn-pSZRHy6uWluK5WADLvV4DKC0Lv0pyEoHJvgdvkvPUp6nWtJTLiWDCc1oNFMQ85PmuBm6c1iZpDB3S0VgnX74Nh9kOc2Kc_mhqQwqMWOAdZepmvzCDOVUqX3vswzTzI6FRsQ6k_zTL-zcf-PsgLhCNur12QlKn-pWABI5kf1Ilt_PZYWYWwxQjkIkv6MRkC-aXBVyfeSEpjiUa9XTCAiQGn52AG7KCI9RE0R_dsFMlc3KYFxf9DWyNYSiEF2SCsok110BwKQRqlBdn1x-kZva8QEUoEUsyd-fo8l1Tb-tXOEqlTShNE16ddNq-BC4tmGXYuNu64plnGR2UoSdLYEgSGysFlyxrN14PptQ8LcueyFUEgTJ-oCjTrxEx3_rGK9kWA0bLuKOHc-2rA6ZQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:41.320030+00:00"
+}

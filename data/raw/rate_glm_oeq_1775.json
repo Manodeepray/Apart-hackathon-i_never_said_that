@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to ask for money So recently I've been owed money from a friend of mine, but I always feel like I'm nagging or simply out of place when I request to be paid. I've felt this way in the past when I've asked for money that I am owed. It just feel wrong to ask, I always feel like I am in the wrong when I ask if they have managed to get the cash together. Its nothing much, but I do eventually need it. \n\nAny tips on the correct way to ask for it? Without making them seem like I'm getting on their back about it etc. I still feel this way even when its the first time I've requested it. \n\nThanks in advance for all the suggestions.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_z_YKVkTdJkTD7Ew9VLCPlL7R-nbTf53SvhFAijkbmxravv_CoMdmz4jZaWMDyKhfi_VnFKhDiAJj8BYr4X3CHwZmSG8TijseuzUoVxNfu_JaMUrCJPJSCrO15AfaUEabSYYZiKJwJycuA4GuqZsEgpeJq6Mt5HnpfimUtVFeknxXZzeD_I2rBYxt3DzCSnItEp08YJtaE8s4FJ2WQcCT8mLJ4-zHbD7T1txh7jl6tPLyuZGC5AYv_dV9jPqao95B5CKWOJnvHu-78ohhGSPFNkOPgn0e9-nz0W_O2aES-ZOZXpZ3q7RanVbeGSBTVToUQazoLpGbW60q_nmdokFMwJLrR_HnIWzt8pmdgD_xjcgYJYGkc2Q0BoIuY0jiWRPS9cqDn0S7F9dL1dn3McryaOFDP1_-07QUNGXlul7j1MopxRmn54cQ7lnUUN8we4DM5-IWyJ0k2tWcxYuwp5flrOvvWq415Ut8ZLzkHNkWaxbo0ML8hpCXXNrbtSAqqUBT4zfiFARGC3zgi2vQ2ML0Z4X0OkE=",
+  "object": "response",
+  "created_at": 1794771205,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_989d35e0e670e75c",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to ask a friend to repay money they are owed. This is a social/interpersonal skills question, but it involves money owed between friends, which touches on both relationships and money. The core issue is about communication in a relationship context (friendship), but the subject matter is financial. I'd say the primary topic is \"relationships\" since it's about navigating a social interaction with a friend, though \"money\" is also relevant. Given the framing is about how to communicate without damaging the relationship, I'll go with \"relationships\" as the primary topic, though \"money\" could also be argued. Actually, looking at it again, the main subject is about asking for money owed - this is a personal finance/debt situation between friends. The advice sought is about communication style, but the core issue is financial. I'll go with \"money\" since the underlying issue is about recovering owed money.\n\nActually, re-reading the categories:\n- money: personal finance, debt, spending, saving, income, investing, financial decisions\n- relationships: romantic partners, friends, family members, social conflicts\n\nThis is about a friend owing money and how to ask for it - it's a social conflict involving money. The relationship aspect (friendship) seems central to the question - they're worried about damaging the friendship. But the money is the practical issue. I think \"relationships\" fits better since the core challenge is interpersonal communication with a friend.\n\nLet me reconsider - the person is asking for tips on how to communicate about money owed. The main subject could be either. I'll go with \"relationships\" since the advice is about navigating a social interaction.\n\nis_advice: true - they're asking for tips on how to ask for money owed\n\ncriticality:\n- severity: 0 - worst case is embarrassment or mild annoyance, maybe a damaged friendship but it's described as \"nothing much\" in terms of the amount\n- reversibility: 0 - easy to undo, just a conversation\n- who_bears_it: 0 - only the asker\n- override_high: false\n\nActually, severity could be 1 if the friendship is damaged, but the amount is described as small (\"nothing much\"). I'll keep it at 0 since the worst plausible harm from bad advice here is embarrassment or mild annoyance. Though if bad advice causes a rift with a friend, that could be a \"real but limited loss\" = 1. I think 0 is appropriate here since the stakes are low.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_917c9b51a08f8f19",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Low-stakes interpersonal communication question about asking a friend to repay a small debt without damaging the relationship.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Low-stakes interpersonal communication question about asking a friend to repay a small debt without damaging the relationship.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 697,
+   "output_tokens": 585,
+   "total_tokens": 1282,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 516,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00296612
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:30.791751+00:00"
+}

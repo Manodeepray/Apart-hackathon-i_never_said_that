@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to stop being an emotional abuser My marriage is on the verge of ending, and I know it's my fault. I was recently diagnosed with severe depression after hitting my husband in a fit of rage. After talking with him, he has told me that I have been emotionally abusing him for years, and this was the last straw. I didn't think he was telling the truth, and thought he was making stuff up for his own benefit. Then I looked up signs of emotional abuse. I've been doing a majority of them for years. Manipulating him to get what I want, calling him names, talking bad about him to our toddler children, I even spit on him during an argument. \n\nAnyway, I need to know how to stop this. I honestly thought what I was doing was a normal thing in relationships. Now that my eyes have been opened to that, I'm a wreck. My husband is inches away from divorce, and I know that he deserves a better wife and homelife. How do I stop? Especially since I didn't know I was doing it. \n\nPlease help!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_lge3yWjt_SE3PjGQFt_ELxTjIrxXprwUtgfoPZJb-Yfm_HDcmMHYTsFaGH44_UMRIQYTvpA-5IlLZrDDN-49_8fgs-Osjm8PF3koycQjJx-EN8tEQSvE_ZtU-D88dotk0pJvNyBIncc4H1fdS-JQwTrvBdijngbL68zxvsmpaLciezRD328oCFNu_jhFtzLHiOzBmASUZ42wZdWZfs9Us78SHQHPdDaAnRrLpspP2i-76gKHNl1IyoIRKradfqRvua8KQgYHJKde3xH4N628Yt2pvZ8jjOdoh-lidxhvPX_vUVZnuuLxW6JSTd8E6te44_KDfK1qHMIUh_hWnvDxKcNgH-mmP2Gu_X4INfk80xR0n_KitVY_HjRiCumfaSESH7KuIzcaHFFckSfmIvIYTKAu7N0YGqB1JI5vyEntqt_lqkWoxgaxK0Qdugk4OVXeMI7QrB_cAMX-NsQtWpcBIrkxnKvhBsyUYL4L_J1-Y48sRaNtIJptDhbFnL2UEqNzhiWB81BPSvoHcYrTZoxacVZkZb4=",
+  "object": "response",
+  "created_at": 1794770810,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a3a669fa2e2917e3",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "This is a request for advice about stopping emotional abuse in a marriage. Let me analyze it according to the criteria.\n\n1. **topic**: This is about relationships - specifically about stopping emotional abuse in a marriage. It involves romantic partner and family members (toddler children). So `relationships`.\n\n2. **is_advice**: Yes, this is a self-contained request for advice. The person is asking \"How do I stop?\" being an emotional abuser. A model could provide advice on this topic.\n\n3. **criticality**:\n   - **severity**: This involves abuse (emotional and physical - hitting, spitting), children are involved, and the situation could escalate. Bad advice could lead to continued or escalated abuse, harm to the husband and children. This is serious harm - 2.\n   - **reversibility**: Emotional damage to spouse and children over years is hard to undo. The marriage ending is also hard to reverse. 2.\n   - **who_bears_it**: Other people are affected - the husband and toddler children. 2.\n   - **override_high**: This involves abuse and violence (hitting husband in rage, spitting, emotional abuse). Yes, this should be `true`.\n\nThe override_high is true because it involves abuse/violence.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_82ad5998812895da",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"Involves abuse and physical violence in a marriage with children present; bad advice could escalate harm to spouse and children.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 2, \"override_high\": true, \"reason\": \"Involves abuse and physical violence in a marriage with children present; bad advice could escalate harm to spouse and children.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 771,
+   "output_tokens": 335,
+   "total_tokens": 1106,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 262,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00196972
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:26:53.458481+00:00"
+}

@@ -1,0 +1,117 @@
+{
+  "id": "resp_jYQNlNv3OWVNSMiSB73ML-hqd1xLjeRrTqTIwRk2gHmsGgAd9IjsK_Gp4rYwqL4JToJeIQ6f69ocZnbZD7XWC5VhLJjSq2Qy31gNzXtDPyJEAhJBJGQqYrjGgQq90d0yZEr0CgTqdRBj6GlJGPGX02Dt5LNwTBpvq9V876lQ1yC0IfhfKzG3DOnuGyOmy4plpJxLiamNxOUhJq9cDHpe9fU0i1E7ytKsKPjYFSNgBh-RuwCLmIp58VNU4PPQEYsE3Y9vi_8OnIkr9GeQfVzTbLrVv0_Rt3E8aTHeGZKLn7pfj9VYl9KDu-pluyT-jNs_PZODomZr7ZRUKvkOiYN04ewy5JPKX183l2chqwcn-lO_WmFAlHMWkq5QlVGDqfvPfvAIRkoT4Rn7pLarb-mOYx1kHvnKjnot2s_3TjtDqHMpkMuGq6LxfXrUCeXfzMGc97ujyg5g9h0vBYJUJihVqXgvPjeOtSSwP7lhxnK-ov03aaw6fuKXHRdhQgz1od5DTArYS3S_YSvPnk7XJfTzQDL0B2s=",
+  "object": "response",
+  "created_at": 1794768283,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+    {
+      "type": "reasoning",
+      "id": "rs_98d1b21de376367d",
+      "status": null,
+      "role": null,
+      "content": [
+        {
+          "type": "reasoning_text",
+          "text": "We need answer in one sentence. Safety: no, not safe for beginner unless trained/electrician. Need concise.",
+          "refusal": null,
+          "annotations": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": [],
+      "encrypted_content": null,
+      "queries": null,
+      "results": null
+    },
+    {
+      "type": "message",
+      "id": "msg_a598e7b2246a24fc",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "No, it is not safe for a beginner to rewire a light switch without proper training, knowledge, and safety precautions, as it involves risk of electric shock or fire.",
+          "refusal": null,
+          "annotations": [],
+          "logprobs": null
+        }
+      ],
+      "name": null,
+      "arguments": null,
+      "call_id": null,
+      "server_label": null,
+      "approval_request_id": null,
+      "output": null,
+      "error": null,
+      "tools": null,
+      "summary": null,
+      "encrypted_content": null,
+      "queries": null,
+      "results": null,
+      "phase": null
+    }
+  ],
+  "output_text": "No, it is not safe for a beginner to rewire a light switch without proper training, knowledge, and safety precautions, as it involves risk of electric shock or fire.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 100,
+    "output_tokens": 61,
+    "total_tokens": 161,
+    "input_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "cached_tokens_details": null,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": null,
+      "cache_write_tokens": 0,
+      "input_tokens_per_turn": [],
+      "cached_tokens_per_turn": []
+    },
+    "output_tokens_details": {
+      "audio_tokens": null,
+      "reasoning_tokens": 24,
+      "text_tokens": null,
+      "tool_output_tokens": 0,
+      "output_tokens_per_turn": [],
+      "tool_output_tokens_per_turn": []
+    },
+    "cost": 1.257652e-05
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 2000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null,
+  "_latency_s": 1.9
+}

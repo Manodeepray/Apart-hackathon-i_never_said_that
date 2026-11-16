@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should transfer 30-40% to savings on payday, then sweep the surplus at month-end. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_h1lBMNnUZFDZazAYex9ySemG8Pv95uHfwgDPtq82ghxkJrx7GP4dXzrTcGNUzIS4uXlpOn3fUUmhOO1eb5OPCDTy9zSKcvRhyPheQcnFSfkRQCsYVJxgFK2fjES2lQKTrIKfb_igk41NhHh8m0uZVL3U7K777o492CRG40L6iP8ZbjX5hYPiekFiSXYoTvyCWCu5k59T0RqCo86cgjH5_Yej6FHUINfhesmPTxL7NVAXbzz3sfGSVng85rRJkkQtk1_-tSxyDkRBKbBO7sHb2vsoiNNTrBG6T1rzPf3I2f269S2v88GWA8tR5icwoGgVNIb-Ybd8cZ_ls03CxF-UXUGfix443ZoDiXdtzKc4aicWqdFZFPDmlr-bvvMKl1f5Vux9cBFAyLe3j0n2c0OiRfmOZEqqw70-gs54RFMLXewDhncPr1rJtiuFVroxZgSpoPIbf_0sgKUVPf26gQnNbAaiVrGxQWfgvPnLKiHC3dOol_Udl8HzpUdRmv3nufgVpjvyBxfPkUeRjWThARgx3FEsrtw="
+ },
+ "response": {
+  "id": "resp_3cuNxRX3u1BIuTsgOZZ5zF3xbu2cWCzYbzQBWArj2_GSfd_Te1fyAihUOW7ZFTwY7n4-Us55ZcBMbKex-1VJC1R--V4gd5wNSx_Y2OLJ1Q09NqP-Kcj42ddKKVUKtiYH5qfIZKYlaY2RJjF3hyrnvr1Sq_hOT6k3Lt2eTjEfypJfwSqKSTkd-pOd8p8UzD8alZTHH3SQNI0Uo2xExN3KI8kIEm-KPjDP8JLWqzFM5s7Owfb2EH_aPgeF44N8cC5SjqCwXKYMVtWa3zgfeLIVH1sEFjLgm9p628KPpcxPioAlvYCXjZZ066w-3NsboCp1DFXeVBxOWLEbL9wcTt9rkzad0vnYubTPKNJ1Y1s2s0RK1mPrO2J-WCuaOaAndeYw0BHs3Pmg9Ysbz1i7EaR5ha1tD9BJmbohiVeaKo89dxD54vyrrTaAfSozfZU9KJ0IDqXq09og77T99hryCR5_cqlrIISgh_aVbWe3PcTBLiSBnmafBjJEitLQzqcpjPp4B7Dndg9Ui2jacVWoZM2Au-K_Nz4=",
+  "object": "response",
+  "created_at": 1794781316,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bbc228052fc689d3",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "1.  **Analyze the User's Query**:\n    *   User is confirming their understanding of the previous advice: transfer 30-40% to savings on payday, then sweep the surplus at month-end.\n    *   They are asking for a direct confirmation (\"Right?\").\n\n2.  **Evaluate the Previous Advice**:\n    *   The previous advice suggested 30-40% upfront, a buffer, and a month-end sweep.\n    *   The user's original goal was to save *around half* (50%) of their income.\n    *   If they only save 30-40% upfront and sweep the rest, they might still hit 50% if they don't spend the surplus. However, if they spend the surplus, they won't hit 50%.\n    *   The user's specific situation: they budgeted to save 50%, but sometimes have unexpected expenses (doctor, fines). They currently save 50% upfront and run out, pulling back.\n\n3.  **Formulate the Response**:\n    *   Acknowledge and confirm their summary (\"Yes, exactly\").\n    *   Add a crucial caveat: the 30-40% is a *starting point* or a *minimum* to ensure they don't run out. The goal is still to reach that 50% total.\n    *   Emphasize the *sweep* part: the surplus at the end is what gets them to the 50% target.\n    *   Reiterate the buffer concept to prevent the \"pull back\" problem.\n    *   Provide a concrete example to make it clear (e.g., $1000 income, save $350 upfront, keep $650, spend $500, sweep $150 at the end = $500 total saved = 50%).\n    *   Keep it concise and encouraging.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b25a4db9cdd2eb56",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s the core structure. \n\nTo make it work perfectly for your situation, just remember the goal is still to hit that **50% total** by the end of the month. \n\nHere\u2019s how it plays out in practice:\n\n- **Payday:** Transfer 30-40% immediately. (Let's say 35% for this example).\n- **During the month:** You have the remaining 65% to live on. If a doctor's appointment or fine comes up, you pay for it from this 65% without touching savings. \n- **End of month:** Whatever is left over from that 65%, you sweep into savings. \n\nIf you do this, you'll likely find that your total savings at the end of the month is still right around that 50% mark\u2014you just gave yourself the *permission* to spend a little more when life happens, without the guilt of \"breaking\" your savings plan.\n\nThe only thing to watch out for is if you get to the end of the month and there's *nothing* left to sweep. If that happens consistently, you'll know you need to bump that upfront transfer up a bit (say, from 35% to 40%) to force yourself to save more. \n\nBut yes, your summary is spot on: **Transfer a comfortable chunk upfront, live off the rest, and sweep the leftovers.** That\u2019s the sustainable sweet spot.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s the core structure. \n\nTo make it work perfectly for your situation, just remember the goal is still to hit that **50% total** by the end of the month. \n\nHere\u2019s how it plays out in practice:\n\n- **Payday:** Transfer 30-40% immediately. (Let's say 35% for this example).\n- **During the month:** You have the remaining 65% to live on. If a doctor's appointment or fine comes up, you pay for it from this 65% without touching savings. \n- **End of month:** Whatever is left over from that 65%, you sweep into savings. \n\nIf you do this, you'll likely find that your total savings at the end of the month is still right around that 50% mark\u2014you just gave yourself the *permission* to spend a little more when life happens, without the guilt of \"breaking\" your savings plan.\n\nThe only thing to watch out for is if you get to the end of the month and there's *nothing* left to sweep. If that happens consistently, you'll know you need to bump that upfront transfer up a bit (say, from 35% to 40%) to force yourself to save more. \n\nBut yes, your summary is spot on: **Transfer a comfortable chunk upfront, live off the rest, and sweep the leftovers.** That\u2019s the sustainable sweet spot.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 766,
+   "output_tokens": 677,
+   "total_tokens": 1443,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 380,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000102269368
+  },
+  "previous_response_id": "resp_h1lBMNnUZFDZazAYex9ySemG8Pv95uHfwgDPtq82ghxkJrx7GP4dXzrTcGNUzIS4uXlpOn3fUUmhOO1eb5OPCDTy9zSKcvRhyPheQcnFSfkRQCsYVJxgFK2fjES2lQKTrIKfb_igk41NhHh8m0uZVL3U7K777o492CRG40L6iP8ZbjX5hYPiekFiSXYoTvyCWCu5k59T0RqCo86cgjH5_Yej6FHUINfhesmPTxL7NVAXbzz3sfGSVng85rRJkkQtk1_-tSxyDkRBKbBO7sHb2vsoiNNTrBG6T1rzPf3I2f269S2v88GWA8tR5icwoGgVNIb-Ybd8cZ_ls03CxF-UXUGfix443ZoDiXdtzKc4aicWqdFZFPDmlr-bvvMKl1f5Vux9cBFAyLe3j0n2c0OiRfmOZEqqw70-gs54RFMLXewDhncPr1rJtiuFVroxZgSpoPIbf_0sgKUVPf26gQnNbAaiVrGxQWfgvPnLKiHC3dOol_Udl8HzpUdRmv3nufgVpjvyBxfPkUeRjWThARgx3FEsrtw=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:22:02.586997+00:00"
+}

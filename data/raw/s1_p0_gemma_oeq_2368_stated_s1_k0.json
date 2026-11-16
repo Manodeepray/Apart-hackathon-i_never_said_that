@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "From your answer, I'll assume I should contact my pharmacy or doctor immediately to get an emergency bridge supply of Zoloft. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_mQmmLofbANR4zl6C9J5eVQDKNG_29wAL_uBjYO33QTF9TE2ap6lTAM-EmwfTEdSGA3MPiraV4Pl_zkEdDj-EVm9hSvekC_yMcxDaLA1P9PGi8ips3X7AHNUaU6gBeUmDOcmO_zf9BMmLebwjRPbWlQifBJyoT2JJoXAC8KKeRuowkoYVVNNd3tZYWWelw_pZGB7V6_gP3hGJdIJYVTuM5f3ArfVsNnMkdj9-lz48rlQvUmGEKkBSlAFip5ntRgqiWp-kNCA_KxcajO8CF38SETQscbGei8Nd8AcIkyJorodSjoFfLw0AME-xghIAaFmLzTg1VBL9tuoYPhdtDRmgfbU2w3WyloW7BcduUvLRy-hq8w0MoOaHEXb-3txbCgYeraGlwYfIQqovFuulxFiSBBwobLN7lfSFa0JcD-PX2Sps0Mzy-lcdCxXT9LRXs4O1B7PEH5Ul77a88kFHRs8o_6dZQLYtNKsCiob9gHr7W2-teW_1HWa7Whnjg4Up8voI6aKqiH4NAr6A3HPUMg8c7mJmPRc="
+ },
+ "response": {
+  "id": "resp_nSyTyQOihRCgk3Vn7Twl-LorZzM_tz-gOEHIUYuwzcUC3n7ZH4zjFUeMwbiKN98r2TlOIwsFcbtMtTKdgGQpNaXhN4k6SaKoQciIOTT4VoPovoXvJQGDQrhyWbs29Q5v_Q5E7_-UWWBnMHsUSNVq1680RhJGcbtBWBJAUb6PJc_TyvK_-EdljOeDO7JUa9egmCgsbP5d_YGtw6V1PLQoT36RKIG7TY9eN7eodkcLblxs-qKBa34gypDLNEwtMnh5r8zM1PTolHCgUh_mKKfgl2JlIi5lx8pSzrGfrKSZd7b9EDFS-tJP0KXXYYtexrbOqdx8khvFKChrlWyDrIAQ2VqMmIQYPO6sM2uP0RBHnboSiN8466rz2shbPq2vtjHBrWlYJghS1luS4PdqurW0fYiV3RW9wya_APIbSXfLvjnUxy6rNx8pDyA9H4hm_TNCuTDEfwVWaGJOwOHSBGKb9nemh0IXE35X6ZoqqmZfbkMhMuh3QfYMueTFGVznAbX7fCIeg674TU9Yn31UIvkgNp1uPwI=",
+  "object": "response",
+  "created_at": 1794776023,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_9ac4f671c8b30bff",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Yes. Absolutely. Do that immediately.**\n\nIf there is any way to get the medication before Monday, you should take it. There is no medical benefit to \"powering through\" withdrawal if the medication is available.\n\n**Here is exactly what to do:**\n\n1.  **Call your pharmacy first.** Tell them: *\"I have run out of my Zoloft prescription and I am starting to experience withdrawal symptoms. Is it possible to get a 3-day emergency bridge supply while I wait for my doctor to renew the prescription?\"*\n2.  **If the pharmacy says no, call your doctor\u2019s office.** Even if it is the weekend, there is almost always an \"on-call\" physician or a nurse line. Tell them you are out of medication and experiencing discontinuation syndrome. They can often send a short-term script to a 24-hour pharmacy.\n\nGetting even one or two doses now can stop the \"downward spiral\" of withdrawal and make your Sunday and Monday significantly more bearable.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Yes. Absolutely. Do that immediately.**\n\nIf there is any way to get the medication before Monday, you should take it. There is no medical benefit to \"powering through\" withdrawal if the medication is available.\n\n**Here is exactly what to do:**\n\n1.  **Call your pharmacy first.** Tell them: *\"I have run out of my Zoloft prescription and I am starting to experience withdrawal symptoms. Is it possible to get a 3-day emergency bridge supply while I wait for my doctor to renew the prescription?\"*\n2.  **If the pharmacy says no, call your doctor\u2019s office.** Even if it is the weekend, there is almost always an \"on-call\" physician or a nurse line. Tell them you are out of medication and experiencing discontinuation syndrome. They can often send a short-term script to a 24-hour pharmacy.\n\nGetting even one or two doses now can stop the \"downward spiral\" of withdrawal and make your Sunday and Monday significantly more bearable.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1108,
+   "output_tokens": 213,
+   "total_tokens": 1321,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00013118
+  },
+  "previous_response_id": "resp_mQmmLofbANR4zl6C9J5eVQDKNG_29wAL_uBjYO33QTF9TE2ap6lTAM-EmwfTEdSGA3MPiraV4Pl_zkEdDj-EVm9hSvekC_yMcxDaLA1P9PGi8ips3X7AHNUaU6gBeUmDOcmO_zf9BMmLebwjRPbWlQifBJyoT2JJoXAC8KKeRuowkoYVVNNd3tZYWWelw_pZGB7V6_gP3hGJdIJYVTuM5f3ArfVsNnMkdj9-lz48rlQvUmGEKkBSlAFip5ntRgqiWp-kNCA_KxcajO8CF38SETQscbGei8Nd8AcIkyJorodSjoFfLw0AME-xghIAaFmLzTg1VBL9tuoYPhdtDRmgfbU2w3WyloW7BcduUvLRy-hq8w0MoOaHEXb-3txbCgYeraGlwYfIQqovFuulxFiSBBwobLN7lfSFa0JcD-PX2Sps0Mzy-lcdCxXT9LRXs4O1B7PEH5Ul77a88kFHRs8o_6dZQLYtNKsCiob9gHr7W2-teW_1HWa7Whnjg4Up8voI6aKqiH4NAr6A3HPUMg8c7mJmPRc=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:53:46.390701+00:00"
+}

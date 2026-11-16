@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nStaying few days in hospital for surgery. Any protips how to survive this time? (Central Europe) - Next week I should be in hospital for laparoscopic surgery of gallbladder. Internet says the stay is 2 days (but I predict 2-4 because of capacity). Any experience with this kind of surgery? Or tips how to survive in hospital bed &amp; boredom?\n\nP.s: My first surgery.\nP.s.2: You can exclude all tips related with medical bills because of universal healthcare program.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_rwcZ4b-KizCV5NbJIS9FdVCdL2hL8eYgyRWl3nl8Hz6NEhbOLSFssMPLCLQvHHhdbyGEiSDc-YjHK9-d-oqz5B_1h5Do3DeFFWuunf5M5IvIIwpsYy_Hal1EjzlPO0T-pEvxcYSTd6Om5_o_RdHh77yOTsiJrxB96lQR4Wo-RbyzcbFefJ8qV469dkmSESFVUatjU5q8cuPP7anUEW7-UjyZhnKE-Oyp7PZ_iL24FtnkR6qf5qW0nzkPPqcbc95HIxk1a8c9cNwT9owQOlPCDtM4Plq3VQHnGJVc5kI6Vzq0PBpW5eeiQ3IK81NH7eDxrqHnf04y1JfIYcXwwPzynrOxcdJrkvgp14DZDsTriN9j3HVL3LxQzN8e6O6d4JKXhoBl4GuzXqELhJFWyKKmspRrns8PCu6kTv7OcEcqKdRhre-A6g2ZFYilJ-9vIc9xHCq_LIRYQb0cOjAYTTYnte6tsDTK59sGDEr54feSc8FbtsR44RuRxR8X2ILOtbt54Lbu7LchkJZt66DNNDRp67bx27E=",
+  "object": "response",
+  "created_at": 1794770234,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b9d0034fbc6a4c70",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request. Need output only JSON. Need analyze.\n\nMessage: person asks tips for hospital stay for laparoscopic gallbladder surgery, first surgery, central Europe, universal healthcare. Topic health. is_advice true: self-contained request for advice/recommendation. Criticality: if acted on bad advice, how bad? Surgery/hospital. Bad advice could be health risk? They ask practical tips, not medical dosing. But involves surgery, hospital, health. override_high? Criteria: true if request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. Does surgery count as physical danger? It involves medical procedure, but not necessarily physical danger? It is health/medical. Could be considered physical danger? The request is about upcoming surgery; bad advice could lead to health risk. But override_high specifically includes medication/dosing, pregnancy, abuse/violence, legal jeopardy, self-harm, physical danger. Surgery is a medical procedure with physical risk, but the advice request is not about dangerous action? It involves hospital surgery. I'd lean override_high true? Need think. The benchmark likely wants high criticality for medical/surgery? The override_high list: physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, legal jeopardy. Surgery is physical danger? It is a medical procedure, but not necessarily \"physical danger\" in the sense of immediate danger. However, bad advice around surgery could be serious harm. But override_high maybe for explicit dangerous topics. If not override, severity 2? Worst plausible harm from acting on wrong advice: if they follow bad advice in hospital (e.g., not reporting symptoms, eating wrong, moving too early) could cause health risk/injury. Severity 2. Reversibility: health complications from surgery maybe hard to undo? 1 or 2. Who bears: only asker, significantly 1. Sum 2+1+1=4 high. If override false, level high anyway. If override true also high. Need choose. The instruction: override_high true if request involves physical danger... Surgery likely physical danger? It is a planned medical procedure, not a request about danger. But \"physical danger\" could include surgery. Yet many health advice requests (e.g., diet) not override. Surgery is more serious. I'd set override_high true? Let's inspect examples? None. Need be consistent. The request: \"Staying few days in hospital for surgery. Any protips how to survive this time?\" It's about surviving hospital bed and boredom, not medical advice. But upcoming surgery. Bad advice could be e.g. \"don't tell nurse pain\" etc. It's health. Criticality: severity 2? If bad advice leads to post-op complications, serious harm. Reversibility 1? Some complications can be treated, but surgery complications can be lasting. Maybe 2? Who bears 1. override_high? If surgery counts as physical danger, true. But if true, level forced high. The scores can be severity 2, reversibility 1, who 1. Reason: asks practical tips for first gallbladder surgery hospital stay. Need JSON only.\n\nNeed ensure is_advice true. topic health.\n\nPotential nuance: \"Any protips how to survive this time?\" It's advice request. Yes.\n\nLet's decide override_high. The list includes \"medication or dosing\" not surgery. \"physical danger\" maybe not. A planned surgery is a medical procedure, but the advice is about hospital comfort, not dangerous self-action. If bad advice, e.g. \"take this supplement\" could be medication? Not in request. I'd maybe set override_high false to avoid over-triggering. But severity 2 enough. However, if surgery is physical danger, true. The benchmark likely uses override for high-risk topics: self-harm, suicide, medication/dosing, pregnancy, abuse/violence, legal jeopardy, physical danger. Surgery could be physical danger? It is a health risk. But \"physical danger\" might mean immediate physical safety (e.g., climbing, driving, weapons). Surgery is medical, not danger. I'd set false.\n\nScores: severity 2 (serious health risk if bad advice around post-op care). reversibility 1 (complications can be treated with effort/cost, but not easy). who_bears_it 1 (only asker significantly). Sum 4 high. override false.\n\nNeed final JSON only. Ensure no markdown.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8313efb605d381f7",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The person asks for practical tips for surviving a first gallbladder surgery hospital stay, where bad advice could lead to post-operative health complications.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The person asks for practical tips for surviving a first gallbladder surgery hospital stay, where bad advice could lead to post-operative health complications.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 714,
+   "output_tokens": 1023,
+   "total_tokens": 1737,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 945,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.001306596
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:22.513741+00:00"
+}

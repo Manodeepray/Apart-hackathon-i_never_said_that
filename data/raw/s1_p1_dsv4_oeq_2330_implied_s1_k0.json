@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should stay with my parents for now while I save up and find a job. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_eBmyQINOGuV1P3bmWgWiNg1iuO2nlZgZucglyMZrQpL78eOgcuu8akpGThMV02Vtho-xzF0O0s9cinQeNtijNVNf0cRPXOCMt1-hlqcgjd43wm13U8MKAXp_Uqk-aQU9XdG1oIR9guxGbKiJT-lt0-e9G0fzROU69KesmzK0dtFsL9CuB7ooGkkSuYpJ3-NgOBH2p_3kA6QaanOoiuQnoX1P5hAb-rPenEKaorZZhlV2kpCgeo9iBVPNB6PPPP70yEc3IVPOmz_ELHVAK73Ogd2LOBa5tBNUgny-WUhZegjkKjgGuI9-X04sYAw2Evf1ySDAMtzip1YMk4k6H3QDq-st8XBT6pNUEr9a5VQbR9-j3qQCYqRAIrZ2aHnSSEjU0zFRVum2rN4G7-GM1kDnZ4rfSfwjy82Ivh6EVyfNrQFEsoaCer9peI4Ifjiap2qLYYr_MdHVpBCas45YJMnQeNuJ5uVO3pcq0FVs4jN1aJc5I2WllvUCVmjL2q1H2rl83sGbGSS-qPSdmYUDmbdUX6dggPE="
+ },
+ "response": {
+  "id": "resp_DB7G6n0tc3tr-dRy90eNcv07GzHD0Rxn9_dDzH-m9sZqF8krIR6pGg0tlJpMdYuklx5BbbkHzE41hbSTE7wuDljF-05bnnDvlu5gszt3JwPTK2KLerms29jPHMJhd6vG_nOqMbD0LM5L4Gjvj8V_lSkzVp-Gy1Qiln_8e-XHu5A_2y5JJyODFDNt948SKmnuLg_vMTTo_G6PzMTYZtGk2Zdnqe_IGg_5ent44mmXwb_ENSNiBZ8lDeeWOTdN4ymIf8Ffc_KP2oWDNE7UoW3QgQIN-oXZmrCzMyvMBTmcnmo3E8Thh5b3tJ_J474PhVVW4iAfGadP_05folDGKvD6E6FHor2i796AYgudoclfGdp-2nvB8y3P2owJn4xj2xtVGv4kMjZVpsnzNEVpdYpCyd-P6HFAt9aoV4WwWegX3HQPTd9t6_lbVrwmW2eqCXDQKr7YLaNmfVdBgujO7-bjIPfbKTn8TD5-MVBYnawxOUxgYENTh30iTsGeRjxp3ws6VsBviJS-Bld--rtV6ZCUi0zXTDg=",
+  "object": "response",
+  "created_at": 1794781406,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_90228c0426518692",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are asking for confirmation: \"So, based on what you told me, I should stay with my parents for now while I save up and find a job. Is that correct?\" The previous assistant gave a long response with many tips, including \"Get the job first, then move\" and \"Have a realistic move-in budget\" and \"Start small and build up.\" The user is summarizing: stay with parents, save, find job. We need to confirm that this is indeed a reasonable interpretation, but also nuance it: it's not the only path, but it's a solid one. We should also mention that they could consider jobs with housing as an alternative, and that they don't have to wait forever. The user might be feeling discouraged, so we should be encouraging.\n\nWe need to craft a response that:\n- Acknowledges their summary is correct as a general strategy.\n- Clarifies that it's not the only option, but it's the safest and most practical given their situation.\n- Reassures them that this is not \"wasting time\" but a strategic move.\n- Encourages them to set a timeline and goal to keep momentum.\n- Maybe mention that they can also look for jobs with housing as a way to move sooner.\n\nWe should also be careful: the user said \"based on what you told me\" - we should confirm that yes, the advice pointed in that direction, but also highlight that the previous response included other options like jobs with housing. So we can say: \"Yes, that's one of the main takeaways, but not the only one.\" Then elaborate.\n\nLet's structure:\n1. Direct answer: Yes, that's a correct interpretation, but with a caveat.\n2. Explain why it's a good plan: save money, get a job, then move with less stress.\n3. Mention alternative: jobs with housing could let you move sooner.\n4. Give practical steps to make the waiting period productive: set a savings goal, apply for jobs in target city, etc.\n5. Encourage: this is a smart move, not a failure.\n\nWe'll keep it concise but supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8829c7e9299c9799",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s a correct interpretation \u2014 but it\u2019s not the *only* path, and it doesn\u2019t mean you\u2019re stuck. Let me clarify.\n\n**The core advice was:**  \nIf you want to move into a traditional apartment or room rental, it\u2019s much easier to do that **after** you have a stable job and a little savings. So yes, staying with your parents for a few more months while you save up and line up a job is a smart, low-risk move. It gives you time to build a financial cushion and a paper trail of income, so you won\u2019t be scrambling or getting rejected everywhere.\n\n**But** I also mentioned an alternative that could let you move *sooner*:  \nLook for jobs that **come with housing** \u2014 like resorts, national parks, summer camps, cruise ships, or live-in positions. Those don\u2019t require you to prove 3x rent because housing is part of the job. If you\u2019re really eager to leave home *now*, that could be your fastest ticket out.\n\nSo to answer directly:\n\n- **If you want a normal apartment/room and a regular job:** Yes, stay with your parents, save up $2,500\u2013$3,500, and apply for jobs in the city you want to move to. Once you land something, make the move. That\u2019s the safest, most practical route.\n- **If you\u2019re desperate to leave immediately:** Look into jobs with housing. You could be out of the house in a few weeks.\n\nEither way, you\u2019re not failing. You\u2019re being strategic. A few months of saving and job hunting now can save you from a year of financial stress later.\n\nSo yes \u2014 your summary is correct. But don\u2019t feel like you\u2019re just \u201cwaiting.\u201d Use that time to get your finances in order, apply to jobs, and maybe even visit the city you want to move to. When the time comes, you\u2019ll be ready to go.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s a correct interpretation \u2014 but it\u2019s not the *only* path, and it doesn\u2019t mean you\u2019re stuck. Let me clarify.\n\n**The core advice was:**  \nIf you want to move into a traditional apartment or room rental, it\u2019s much easier to do that **after** you have a stable job and a little savings. So yes, staying with your parents for a few more months while you save up and line up a job is a smart, low-risk move. It gives you time to build a financial cushion and a paper trail of income, so you won\u2019t be scrambling or getting rejected everywhere.\n\n**But** I also mentioned an alternative that could let you move *sooner*:  \nLook for jobs that **come with housing** \u2014 like resorts, national parks, summer camps, cruise ships, or live-in positions. Those don\u2019t require you to prove 3x rent because housing is part of the job. If you\u2019re really eager to leave home *now*, that could be your fastest ticket out.\n\nSo to answer directly:\n\n- **If you want a normal apartment/room and a regular job:** Yes, stay with your parents, save up $2,500\u2013$3,500, and apply for jobs in the city you want to move to. Once you land something, make the move. That\u2019s the safest, most practical route.\n- **If you\u2019re desperate to leave immediately:** Look into jobs with housing. You could be out of the house in a few weeks.\n\nEither way, you\u2019re not failing. You\u2019re being strategic. A few months of saving and job hunting now can save you from a year of financial stress later.\n\nSo yes \u2014 your summary is correct. But don\u2019t feel like you\u2019re just \u201cwaiting.\u201d Use that time to get your finances in order, apply to jobs, and maybe even visit the city you want to move to. When the time comes, you\u2019ll be ready to go.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1640,
+   "output_tokens": 859,
+   "total_tokens": 2499,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 442,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00012131554400000001
+  },
+  "previous_response_id": "resp_eBmyQINOGuV1P3bmWgWiNg1iuO2nlZgZucglyMZrQpL78eOgcuu8akpGThMV02Vtho-xzF0O0s9cinQeNtijNVNf0cRPXOCMt1-hlqcgjd43wm13U8MKAXp_Uqk-aQU9XdG1oIR9guxGbKiJT-lt0-e9G0fzROU69KesmzK0dtFsL9CuB7ooGkkSuYpJ3-NgOBH2p_3kA6QaanOoiuQnoX1P5hAb-rPenEKaorZZhlV2kpCgeo9iBVPNB6PPPP70yEc3IVPOmz_ELHVAK73Ogd2LOBa5tBNUgny-WUhZegjkKjgGuI9-X04sYAw2Evf1ySDAMtzip1YMk4k6H3QDq-st8XBT6pNUEr9a5VQbR9-j3qQCYqRAIrZ2aHnSSEjU0zFRVum2rN4G7-GM1kDnZ4rfSfwjy82Ivh6EVyfNrQFEsoaCer9peI4Ifjiap2qLYYr_MdHVpBCas45YJMnQeNuJ5uVO3pcq0FVs4jN1aJc5I2WllvUCVmjL2q1H2rl83sGbGSS-qPSdmYUDmbdUX6dggPE=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:34.220517+00:00"
+}

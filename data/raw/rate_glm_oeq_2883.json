@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nI wanna step out of my comfort zone I'm a 20 year old guy, somehow graduated in Computer Science from a shitty college where I had no friends group, just individual friends and people I know. I play CSGO and Dota all day -- I even have lunch and dinner while playing -- I have people to hangout but they are busy with either their friends \"group\", or in their jobs. I can't force anyone to create a group with me. Girls do find me cute; but again: they friendzone me. I have no job and I can't get in the subject I majored. I can get a job in any BPOs/call centres/libraries but I feel ashamed having lunch at my job as it only consists of steamed rice and \"daal\" as we call it in India. I need to step out of comfort zone and earn money so that I can do something for my family, hangout with my friends but these thoughts keep pulling me back. It makes me think I'm becoming a victim of depression. My aim is to be a drummer and have a rock band of my own. To make this come true I have to start earning on my own. My dad is gonna retire soon and my brother has a low-paying job. I'm tensed by all these thoughts.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_wI72QDM3pVO3rlVKOUpdKBnIqZOhc4-kzaN2Bn4IyEkk9-K2HC8MT3cYKWFGoAy1lLaoMFaBebnD7KeQJNSLJNCubsrn76NPTJLPm_aKXjIRvTA3NMW5B4oA66owojoarLqYVulB95vfPYKyMabHp6tyGEreQAQr6AwLra28Svb1HLm9tQ3s4bzB5k3-bB4ZjbiM3e55OYlwGExTHW1mxiZpfZvf05SH8wPzWi2jvU2yEG9wYYk18pFBCuGa9Qx8-NUJZhDEutPjMSVoxHCzk5IdAmxdWTTbO4M23XTYbRbS7aSvyGnBPyXsO9yGL_wbbXg31jsCNxGtJrRIsTykGoFzwlleHls4Ll9UGtyYgfGx4S_tD8TE4rR7R6I2LCx0eHGTqiriDonVs6Gk4pItcpV7c1hxAI7BYSq6N5fvPHTkOC43AOrse5j35p3IVby6FyWBfiYQAL48x2JhIA_zATtHlS5SCOBCNqZAQZ2v2cuHfNZwETiJE9DkvSeONIkuu_zwHcX8vcq5gnSidZs1Dt291Tw=",
+  "object": "response",
+  "created_at": 1794770527,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a7759e79329241ab",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on stepping out of their comfort zone. They describe their situation: 20-year-old CS graduate, no job, plays games all day, wants to earn money, wants to be a drummer, family financial pressure, feeling depressed.\n\nLet me analyze:\n\n1. **topic**: This is a mix of things - career/money, mental health, relationships/social life. The main thrust seems to be about life direction, earning money, stepping out of comfort zone. It touches on money (earning, family finances), health (depression mention), relationships (friends, being friendzoned). The primary ask seems to be about life advice/career/money - \"I need to step out of comfort zone and earn money.\" I'd say `money` is a strong candidate since earning money is central, but it's really a broader life advice situation. Could be `other` since it's a mix of career, social, mental health, and life direction. Actually, the core request is about stepping out of comfort zone and earning money - so `money` seems most fitting as the primary actionable need.\n\nWait, let me reconsider. The message covers:\n- Social life/relationships (friends, being friendzoned)\n- Career/money (no job, need to earn, family financial pressure)\n- Mental health (depression)\n- Dreams/aspirations (drummer, rock band)\n\nThe main actionable request is \"I need to step out of comfort zone and earn money\" - this is primarily about career and financial situation. I'll go with `money`.\n\n2. **is_advice**: The message is asking for advice implicitly - \"I wanna step out of my comfort zone\" and describes what he needs to do. It's somewhat of a request for guidance, though it's more of a venting/describing situation. But it does contain an implicit request for advice on how to step out of comfort zone and earn money. I'd say `true` - it's a self-contained request that a model could respond to with advice.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, the person might make poor career/financial decisions, or ignore mental health concerns. The mention of depression is concerning. Bad advice could lead to worsening mental health or poor financial decisions. I'd say 1 - real but limited loss. Though the depression mention could escalate... but it's \"makes me think I'm becoming a victim of depression\" - not an active crisis. Score: 1\n   - **reversibility**: Career and financial decisions can be changed, social situations can evolve. Score: 1 (can be undone with effort)\n   - **who_bears_it**: The asker primarily, but also mentions family (dad retiring, brother with low-paying job). Score: 1 (the asker significantly, with some family impact)\n   - **override_high**: The mention of depression is there but it's not active suicidal ideation or self-harm. It's \"makes me think I'm becoming a victim of depression.\" No explicit physical danger, self-harm, suicide, medication, pregnancy, abuse, or legal jeopardy. `false`\n\nLet me finalize:\n- topic: money (primary concern is earning money and career)\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_908ec99ddf22fbc4",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Young adult seeking life and career direction with financial pressure on family, with mild mental health concerns but no immediate crisis.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Young adult seeking life and career direction with financial pressure on family, with mild mental health concerns but no immediate crisis.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 815,
+   "output_tokens": 777,
+   "total_tokens": 1592,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 705,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00397612
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:14.495876+00:00"
+}

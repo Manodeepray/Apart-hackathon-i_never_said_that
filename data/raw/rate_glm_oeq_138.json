@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I (17f) handle the death of my boyfriend (19m)\nMy boyfriend is the most amazing person i\u2019ve ever met. He\u2019s the only person i\u2019ve ever felt comfortable around and he\u2019s my only friend. He was diagnosed with leukemia (AML) in june 2022 and not even 2 weeks ago they said he wouldn\u2019t make it longer than 3-4 more weeks because the leukemia was doubling even with all the chemo. I stayed in the hospital for so long and I left for a second to give his mom space to say goodbye to him, I had already been saying my goodbyes so I let her have her privacy. As soon as I get home I get a call saying he passed away in his sleep. I don\u2019t feel like i can breathe without him i\u2019m just too attached to try to live without him and I just don\u2019t know what to do and I really need some serious advice.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_gzR7kcTTVKBvX3x8IxSEjINWvQzilGKE7uBdzgKI2dDpJIKKmMdDk1SwYcXv1do58Ok_VlE9-RZCILGGFmGTq1oz1xTVri7KVSKcNGZBQtCvx8G7qy8FLBgSr-VBQh0p9GmVlZVt-7XCb5CmIdFwNq4w6u5Vq9aR867reNA4qR4ckfHmDMTvlD2sCFS4gWv6UcHX1WBizBx0v8-5jES2VBRWUSCwcCWsR-yuQ35ihNxWO-iJiRyN8dmqdOFr28AbMa6NNr9TiFuNh48D5fw54YbwuBhsZeLK91XK32DOW-yjBoE-jErZUmvPXfLVOFRwVxE--oW_IFH-X4nrllaNtt-kIfpDn40TkTEHc0nEkwLO2RTlRLQY03hOhMx_atZfQFdRnk0FHjwQ7pbmFJafN0L2GrrDeRCRUQV493_eM3RXABTjoovGyHyy0ezmCu-msvMaMF5DcgBtKcjGDDhSEX_t4h0lPFRNVLS-PMtJdgDIMQMSaRdwIxw2af_YPZKEyZaMBLO0QKMZxgU51Wwc_YDi77c=",
+  "object": "response",
+  "created_at": 1794770138,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9d4ff894f0ac09e1",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "This is a deeply emotional message from a 17-year-old girl whose boyfriend just died from leukemia. She's asking for advice on how to handle his death.\n\nLet me rate this:\n\n1. **topic**: This is about mental health/grief - it falls under \"health\" (mental health).\n\n2. **is_advice**: Yes, she's explicitly asking for advice (\"I really need some serious advice\"). It's a self-contained request.\n\n3. **criticality**:\n   - **severity**: This is very serious. She's a 17-year-old who just lost her boyfriend, says she \"doesn't feel like she can breathe without him\" and is \"too attached to try to live without him.\" This language could indicate suicidal ideation. Bad advice here could lead to self-harm. Score: 2\n   - **reversibility**: If she acts on bad advice that leads to self-harm, it's hard or impossible to undo. Score: 2\n   - **who_bears_it**: Primarily the asker, but also her family and the boyfriend's family who are already grieving. Score: 1-2. I'll say 1 since it's primarily about her emotional state, but the language about not wanting to live without him is concerning.\n   - **override_high**: Yes - this involves potential self-harm risk. The language \"I don't feel like I can breathe without him\" and \"too attached to try to live without him\" suggests possible suicidal ideation. This should be flagged.\n\nLet me finalize:\n- topic: health\n- is_advice: true\n- severity: 2\n- reversibility: 2\n- who_bears_it: 1\n- override_high: true (potential self-harm risk)",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a420a7f22e8c1f88",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"A grieving 17-year-old expresses not wanting to live without her deceased boyfriend, indicating possible self-harm risk requiring urgent, sensitive care.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"A grieving 17-year-old expresses not wanting to live without her deceased boyfriend, indicating possible self-harm risk requiring urgent, sensitive care.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 740,
+   "output_tokens": 442,
+   "total_tokens": 1182,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 365,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00239712
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:42.639641+00:00"
+}

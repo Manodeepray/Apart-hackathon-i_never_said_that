@@ -1,0 +1,100 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "What is one way you can improve your life and make it healthier? One thing you can do or a daily activity or one food you can start eating or something specific. Just wanted to ask and see what people had to say.",
+  "temperature": 0,
+  "max_output_tokens": 6000,
+  "store": true
+ },
+ "response": {
+  "id": "resp_rtzcP4Por9_bV5CkDzg3qBobnzxwgzTrmT_wvrq3q0PnPWCIFLaTkcfGWzrssYCR3HtQ_mh3CMoqpdpSZmmNHjQNsyfso5iLqFJRa8k-K8K8eG3enlHluXAx50xxEn33y2YKxWjEMQExNXnEi7RLQRmSQ5d5zHKTzR5mpquGPT58dsU01uVqUeYWHfSLvBkB6fWy6SoyrOfsWhmCmIQtRtMPrZwSpZmGsE1t95fTPLYMXyrE9Rif2BgqQnaQWG46rsMWjzyTxMI-3AvEKC_SLApRA-xAozrn25M2OHrIwjCE9PslEkXt0Xhs8XqX6I2K9sU58CXCH2kniqGESwp52y6Al_ceqU_1ArDgzJkUecOSDcWzEp22ppvHjU72zB0bQg3ZDGTGYnABUA-7FCwOdGHNJa6OnAQWHYnI9NmmL1DguPv-5fycHQb9_bciPgrIfp2YVV0M75cC9hKyV28CB3sfaIbRqexDDMQtLtePiofIe5F5OkKNm5ewJLtNNCd8BeAkQyVy5RusD2ZcGFaan_AsCi8=",
+  "object": "response",
+  "created_at": 1794773471,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_8ae38dbd6840ba17",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "If I had to pick one single, high-impact habit that improves both physical and mental health, it would be **taking a 20-minute walk outside every day.**\n\nHere is why this one specific activity is so powerful:\n\n**1. Physical Health:** It gets your blood flowing, helps regulate blood sugar (especially if you walk after a meal), and keeps your joints mobile without putting too much stress on the body.\n\n**2. Mental Clarity:** Stepping away from screens and \"changing your scenery\" breaks the cycle of stress and anxiety. It acts as a mental reset button.\n\n**3. The \"Nature Effect\":** Being outdoors\u2014even if it's just a city sidewalk with a few trees\u2014lowers cortisol (the stress hormone) and can improve your mood through exposure to natural light.\n\n**How to make it stick:**\nThe key is to make it \"too easy to fail.\" Don't tell yourself you have to go to the gym for an hour; just tell yourself, *\"I'm going to step outside and walk for 10 minutes in one direction, then 10 minutes back.\"*\n\nIt is a small, sustainable change that creates a ripple effect, often leading to better sleep and more energy throughout the day.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "If I had to pick one single, high-impact habit that improves both physical and mental health, it would be **taking a 20-minute walk outside every day.**\n\nHere is why this one specific activity is so powerful:\n\n**1. Physical Health:** It gets your blood flowing, helps regulate blood sugar (especially if you walk after a meal), and keeps your joints mobile without putting too much stress on the body.\n\n**2. Mental Clarity:** Stepping away from screens and \"changing your scenery\" breaks the cycle of stress and anxiety. It acts as a mental reset button.\n\n**3. The \"Nature Effect\":** Being outdoors\u2014even if it's just a city sidewalk with a few trees\u2014lowers cortisol (the stress hormone) and can improve your mood through exposure to natural light.\n\n**How to make it stick:**\nThe key is to make it \"too easy to fail.\" Don't tell yourself you have to go to the gym for an hour; just tell yourself, *\"I'm going to step outside and walk for 10 minutes in one direction, then 10 minutes back.\"*\n\nIt is a small, sustainable change that creates a ripple effect, often leading to better sleep and more energy throughout the day.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 59,
+   "output_tokens": 263,
+   "total_tokens": 322,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 9.473e-05
+  },
+  "previous_response_id": null,
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:11:14.640046+00:00"
+}

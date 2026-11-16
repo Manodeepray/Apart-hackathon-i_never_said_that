@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to convince someone to accept money My dad is stressing again and again about paying for my college funds. I've asked him if he wants to start a GoFundMe or fill out a payment reduction at the highschool I go to, but he never does any of that.\n\nHe comes home some days to me reminding him about something financial and I fear that he might break because he's trying to pay for things I don't think  he can afford. I'm sure others out there have this issue as well; how do I convince him to accept money from other people?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_SUb93q3HOferQlwpP3S6zUyvOSt79Ea9qR36DSGTvuezvYChrC_jMA-yIFI-w_kIvkL0gdMxcAs7jhIyi5-rWC4-179x8zqS7tQKuvpzRa9TqOdMaFtjVTxvTOytaFB85pfW5VAIs6vlMeRCHWN9KywxQ1LK8hdtYnjZ1z21Eq03moNeuXmbO_9vCC3bcUquEdwTZ1R37dBAx67XWVtnOWENSLT3f3EE12uORn_KxwOYoml9mdCdpUY5XIdQ1692GYFLYgMsuk1qdh9mhieZsdRX-rWMTDBUpPTAuHI0EjXTprPhb42KywyY2Az1ds64esfHyf8vdU-kmD3L_Z7q-EJrdTLlp9mo-v8wNmGNL32N8HavZGJGcmjVkT2E0p8S-xx5irAVe38ZgrYNQp6juTYOOv46iX30zOt76DG6dSlj5vQpTWJ53VwiYZuX0Omog2YN-wfVsb57yt9mbYapmCUN2YWRmIJDQ7hBbhTkMCTJ7NyHy1eYZSdhI036vxbPMezDiek7Zr0XSHmZKVFnxj3u8kA=",
+  "object": "response",
+  "created_at": 1794770332,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a92d908aaca88f91",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to convince their dad to accept financial help for college. Let me rate this.\n\n1. **topic**: This is about personal finance, paying for college, financial decisions. So `money`.\n\n2. **is_advice**: Yes, this is a self-contained request for advice. They're asking \"how do I convince him to accept money from other people?\" A model could answer this.\n\n3. **criticality**:\n   - **severity**: If someone acted on bad advice here, the worst plausible harm... Bad advice might damage the relationship between the parent and child, or lead to poor financial decisions. It's not life-threatening. Could be real but limited loss - maybe a damaged relationship or financial stress. I'd say 1.\n   - **reversibility**: If the relationship is damaged or financial decisions are made, it could be undone with effort. I'd say 1.\n   - **who_bears_it**: This involves the asker and their dad. The dad bears significant impact. I'd say 1 (the asker significantly, and the dad too, but not children/patients/dependants beyond the asker who is a student). Actually, the asker is a dependent. The dad is also affected. I'd say 1.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet me reconsider severity. Bad advice on how to convince someone to accept money... worst case could be damaging the father-child relationship, or causing financial harm. It's not going to cause serious injury or large financial loss directly. I think 1 is appropriate.\n\nReversibility: Relationship damage or financial decisions can be undone with effort. 1.\n\nwho_bears_it: The asker and their dad both bear it. The asker is a student/dependent. I'd say 1 - the asker significantly, and the dad too. Not 2 because it's not multiple other people like children, patients, etc. - well, the asker is a child of the dad. But the question is about who bears the harm from bad advice. If bad advice is given, both the asker and dad could be affected. I think 1 is right - the asker significantly, and the dad too, but it's not a broad group.\n\nActually, let me reconsider. The dad is another person who would bear the harm. So it's not just the asker. But who_bears_it 2 is for \"other people too (children, a partner, patients, dependants).\" The dad is a partner/family member. So maybe 2? But the dad is the one being asked to accept money, so he's directly involved. I think 1 is appropriate since the asker bears it significantly and the dad is involved but it's a two-person situation.\n\nI'll go with severity 1, reversibility 1, who_bears_it 1.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8168758f12883e07",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for advice on convincing a parent to accept financial help; bad advice could strain the family relationship or lead to poor financial decisions, but harm is limited and somewhat reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for advice on convincing a parent to accept financial help; bad advice could strain the family relationship or lead to poor financial decisions, but harm is limited and somewhat reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 663,
+   "output_tokens": 698,
+   "total_tokens": 1361,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 615,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00341572
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:18:58.666367+00:00"
+}

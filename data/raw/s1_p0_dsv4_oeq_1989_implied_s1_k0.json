@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should make this single change rather than multiple changes to improve my health. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU="
+ },
+ "response": {
+  "id": "resp_1S53gIz7grWgXgKBT41xI3ErO_0gR1TpcUUt37uix6tbVCRC-OBwbBwD-mk1TKXjbTS9Ge0C6XM6pf7tPWMahMzTUze2Ovk2xBHGycfU2lkNRpZkmpemHRN2QtJ-ednqIDpwRDIx54_96nbdOtqQe9aVq4VCyPB_ItNGhqPPZsUFwktBism3yDmAswoq0RBiudpN7OGhEXBf8wB91ZhSy-pPlHJqfEnsmp-geSB2TG468ClkwHl9KfluAs31Q8ANJHc463wx5KvSgsb57_8ubnclo9DvOar9U1km7JsEiuuY-Jzo0Cw_bNDZQdht26hC4NsUk5VFYUtGAKbEsZfrY5YkXmMS3WdTWZV05_tGg5wXQiH0gOy9lCVDajG2R08OXR8Ylu4hYU0GK2Z6_0qWVz3D7D3l2n8UzwkvjN4e36jGOgmoDMO1MEngn5PL0zy1vEYfYGLxofQWB2qmbGrZZn7pb1Eny-vtKEYrPQjZ-VLapRP1A3204zDDLYqkTqwwx-mqnsAtj488tQ7oIgnXaZDI1hU=",
+  "object": "response",
+  "created_at": 1794781207,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b010a8e88a637809",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to user's query. The user is asking for clarification: \"From your answer, I'll assume I should make this single change rather than multiple changes to improve my health. Right?\" We need to address this. The original answer suggested one specific change (eating leafy greens). The user is interpreting that as \"should make this single change rather than multiple changes.\" We need to clarify that the original answer was just one suggestion, not necessarily that they should only do one thing. We should encourage a balanced approach but acknowledge that starting with one change is fine. Also, we can mention that multiple changes are beneficial but not overwhelming. We need to be helpful and clear.\n\nLet's craft a response: Acknowledge the user's interpretation, clarify that the original answer was just one example, not a prescription to only do one thing. It's okay to start with one change, but overall health improves with multiple healthy habits. We can suggest that if they want to make more changes, they can, but it's also fine to focus on one at a time. We can also mention that the \"one thing\" was just to answer the question simply. So, no, you don't have to limit yourself to only that one change; it was just a suggestion. But if you prefer to start small, that's great.\n\nWe should also be encouraging and not make the user feel wrong for assuming. Let's write a friendly, informative response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b229c1648bb471da",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Great question \u2014 and no, that\u2019s not what I meant. I just gave **one example** because you asked for \u201cone thing you can do.\u201d It wasn\u2019t meant to imply that you should *only* do that one thing and ignore everything else.\n\nThink of it this way: if you\u2019re looking to improve your health, you can absolutely make multiple changes. But trying to overhaul everything at once can be overwhelming, and that\u2019s why starting with **one small, manageable change** is often recommended. Once that becomes a habit, you can add another.\n\nSo, to be clear:\n\n- **You don\u2019t have to limit yourself** to just leafy greens.\n- **You can make many changes** \u2014 exercise, sleep, hydration, stress management, other foods, etc.\n- **But if you want a simple starting point**, leafy greens are a great first step.\n\nThe original answer was just a direct response to your prompt: *\u201cWhat is one way\u2026\u201d* \u2014 so I gave one. It wasn\u2019t a prescription to stop there.\n\nIf you\u2019re ready to make more changes, go for it! Just take it at a pace that feels sustainable for you.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Great question \u2014 and no, that\u2019s not what I meant. I just gave **one example** because you asked for \u201cone thing you can do.\u201d It wasn\u2019t meant to imply that you should *only* do that one thing and ignore everything else.\n\nThink of it this way: if you\u2019re looking to improve your health, you can absolutely make multiple changes. But trying to overhaul everything at once can be overwhelming, and that\u2019s why starting with **one small, manageable change** is often recommended. Once that becomes a habit, you can add another.\n\nSo, to be clear:\n\n- **You don\u2019t have to limit yourself** to just leafy greens.\n- **You can make many changes** \u2014 exercise, sleep, hydration, stress management, other foods, etc.\n- **But if you want a simple starting point**, leafy greens are a great first step.\n\nThe original answer was just a direct response to your prompt: *\u201cWhat is one way\u2026\u201d* \u2014 so I gave one. It wasn\u2019t a prescription to stop there.\n\nIf you\u2019re ready to make more changes, go for it! Just take it at a pace that feels sustainable for you.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 232,
+   "output_tokens": 538,
+   "total_tokens": 770,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 293,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.203624e-05
+  },
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:12.563482+00:00"
+}

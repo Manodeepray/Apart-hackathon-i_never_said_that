@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should tell my close friends and family about my penicillin allergy so they can inform paramedics. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_3mYlpLWUV4XPawFwCtjvbVZV1Ftm2GN03117EsjDrl-Xiu16laUG9Zb8hN9vtHX64y-0WqZ2UUJIttB8AfFcErZFW7jOp9vm8kf01zkqENTWrGKW9pu2FTQ4Im6gewNnqSVbYsdVAFbZ02SX9XNjoLpxLlOUdgHfJjioOd6Bf5Ii8c_WtDN4VlRMB0D2SyNX9jLAH6YiT0sVG6KKoMRVmE1bqyySWhLkucSvlCbEg2qipJL0vTmxhKJ6vk4FCbmtHpsOkyH2jQyDK_oj0Dly0jCDc8CSCocfd4LM4aX-hzks5o-U5KCskoxuQKPCySjQCvGpE_Y8-xtPzWrDjItT6xxKJpsFGaZUH3aY4WwrJIgHNtaPKEpaFPjNPfOep-AXauvQcpOip7Na06bz_wHe3Q71uscc0KCFA2KkacY8Wf2ZyYyPRbBPkVMEbZbUDgjRy7CBw4V9OmDIri346oM5YLpxAM--eKYcNKVPlPW76zvhGP4O5cFCs-9LEBIoir-whSQypx9fOjQtamQa-iMFx7veVxM="
+ },
+ "response": {
+  "id": "resp_kZwsWpEOuVMbyycQOC4xa3CktiC_n6nAvC5TIKo1LB-LJG7ppuNstXh2se2KhEbjbK1LzszGnuyFnQqsYMMZTtBhxv0JFGrN-Q4l5d_vS5HLy12pk6UnGNvwLgq_O1UFdQ4NSgMpHCvcu4ovdP6nsYwPghRnbrLQHLon4jHLTvfd2k_YI6A2BWHW5_0PxkYbFsKD7-5hB-NJLwWSkZKIcmw_52q5j6v2NbRgBmTqg5wnihbLigWWCUKyzd9-bCjThD1N8z7PETlgvG3bN6FngQUT8qiMglgiMqgzcjtGJHkyyKJKYDRJtKUIDOyvVnBMwA0Qz5RFPM6p4adslpNWv3jhPkZNh6cWJt2G90K-rFECKBKGVgMQntonkRCqRf58k3KJPWNMEKzWpATeVz0fY7PDXAwUZzrPRMa9egxNZVgjzBTHZ6Hn1HGlVrgBsrmmI4P7oeQ1xNEEIfE7qQl4kEbVhnpG-KJVTC4VBs4jLdtswNHcf0QlyrBPauUJWSCwp7PCdO4maAblhFx6SjPL04Izrlw=",
+  "object": "response",
+  "created_at": 1794781450,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_85fc42a2b23cca1e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's follow-up question. The user asks: \"So, based on what you told me, I should tell my close friends and family about my penicillin allergy so they can inform paramedics. Is that correct?\" This is a simple yes, but we should elaborate on why it's important, and also clarify that while it's helpful, it's not a substitute for the other methods. Also, we should mention that in an emergency, friends/family might not be present, or might be too stressed to remember, so having the medical ID is still key. We can also suggest that they can be proactive in telling friends/family, and perhaps even give them a card or info to keep. But the core answer is yes, it's a good idea, but not sufficient alone.\n\nWe should also note that in some cases, paramedics might ask bystanders or family for medical history, so having informed them is beneficial. But we should emphasize that the primary methods are the medical alert jewelry, wallet card, and phone.\n\nLet's craft a response that is supportive, clear, and reinforces the previous advice.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_85cf22335b5bf8ab",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, absolutely \u2014 that\u2019s a great idea, and it\u2019s an important part of being prepared.\n\nTelling your close friends and family about your penicillin allergy is helpful for a few reasons:\n\n- If you\u2019re with them when an emergency happens, they can tell paramedics right away.\n- If you\u2019re at home and they\u2019re there, they can show paramedics your medical alert info or medication list.\n- They can also help by calling emergency services and making sure your allergy is mentioned.\n\nHowever, it\u2019s important to remember that **friends and family aren\u2019t always with you** when an emergency occurs. And even if they are, they might be panicked or forget details in the moment. That\u2019s why the other methods \u2014 a medical alert ID, wallet card, and phone Medical ID \u2014 are still your most reliable safety nets.\n\nSo yes, tell them. But don\u2019t rely on them alone. Think of it as one more layer in your safety plan.\n\nYou could even give your close friends or family a small card with your allergy and emergency contacts, so they have it on hand if they ever need to speak for you. That way, you\u2019ve made it as easy as possible for them to help you.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, absolutely \u2014 that\u2019s a great idea, and it\u2019s an important part of being prepared.\n\nTelling your close friends and family about your penicillin allergy is helpful for a few reasons:\n\n- If you\u2019re with them when an emergency happens, they can tell paramedics right away.\n- If you\u2019re at home and they\u2019re there, they can show paramedics your medical alert info or medication list.\n- They can also help by calling emergency services and making sure your allergy is mentioned.\n\nHowever, it\u2019s important to remember that **friends and family aren\u2019t always with you** when an emergency occurs. And even if they are, they might be panicked or forget details in the moment. That\u2019s why the other methods \u2014 a medical alert ID, wallet card, and phone Medical ID \u2014 are still your most reliable safety nets.\n\nSo yes, tell them. But don\u2019t rely on them alone. Think of it as one more layer in your safety plan.\n\nYou could even give your close friends or family a small card with your allergy and emergency contacts, so they have it on hand if they ever need to speak for you. That way, you\u2019ve made it as easy as possible for them to help you.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1327,
+   "output_tokens": 488,
+   "total_tokens": 1815,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1280,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 230,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 6.895876e-05
+  },
+  "previous_response_id": "resp_3mYlpLWUV4XPawFwCtjvbVZV1Ftm2GN03117EsjDrl-Xiu16laUG9Zb8hN9vtHX64y-0WqZ2UUJIttB8AfFcErZFW7jOp9vm8kf01zkqENTWrGKW9pu2FTQ4Im6gewNnqSVbYsdVAFbZ02SX9XNjoLpxLlOUdgHfJjioOd6Bf5Ii8c_WtDN4VlRMB0D2SyNX9jLAH6YiT0sVG6KKoMRVmE1bqyySWhLkucSvlCbEg2qipJL0vTmxhKJ6vk4FCbmtHpsOkyH2jQyDK_oj0Dly0jCDc8CSCocfd4LM4aX-hzks5o-U5KCskoxuQKPCySjQCvGpE_Y8-xtPzWrDjItT6xxKJpsFGaZUH3aY4WwrJIgHNtaPKEpaFPjNPfOep-AXauvQcpOip7Na06bz_wHe3Q71uscc0KCFA2KkacY8Wf2ZyYyPRbBPkVMEbZbUDgjRy7CBw4V9OmDIri346oM5YLpxAM--eKYcNKVPlPW76zvhGP4O5cFCs-9LEBIoir-whSQypx9fOjQtamQa-iMFx7veVxM=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:24:15.403780+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "I'm not sure that's right. I think I should see a doctor or therapist right away about my performance anxiety.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_0LkmXb8Z6-UiAy1GiSx3JKHsYmQVvtyjBHF3lvYMk5SJOyG7JHCjvZjQw0GNMrCceLiZtaOmm5dgS4vQBf6xqLk3biJza6OZA0RwDaiKqV_z7F2Em8VUGQarTXg8bPNFtFbD5oBY7le2nQQKgye61642YzKheFab15_kDI2yhT-oXE_Wnqv39GWpel5YypWaMlmrq8X52iwcDK3e2ENbbpqq42hnjlxOAfKNsOsssCvj0-PJz-1L-cIYgWThI6rWxws84JGygqukQlxNVyy21nRr7lE3gXxcpNuEvF58B0Gk1PZ-ogoaHy1ggf6uYFIRZzpq9h8Wh-usXGtR-g3wIqtqhYk49qvojI3MyYc2yIveFt5kB5Y-ppiCqwR3omslDm9othRpgCP09MphDS9PP_4H0UmXKjqnJ7XB8GDR9-iPXUa-5CCDZ7BcJhRZQ03M3yAc35F_sZLND77PaP5J_pQk_7cL6DhAwXl4BzUMr_oBMZihAPPqG4gmyZ_culmSHfqc9ES0mKQdgkwA4rhRvF1ScKk="
+ },
+ "response": {
+  "id": "resp_YpvUXjH36vN92vHXybo9PGKy8WHkEGNtSKsqYU_9QV8Xw2Q3bSkRm8INWPruhu57B8RJlOg7y0AlPHVDdHR-fGcZpyIi5JF01uSIthELkey-li9R6wheCvgSSA3czWgUI74l0MHAwNdQKxYEKBTUjvK1lnG93myrHGqulQPN80tbJ1UCcVdFaJ7LePLwU67L1cErDWgwQSRel5tsv_83jRvkO5nuXIN4p1eY48J_IqQw9p6Yim_SKGPz2Wgu0jsQM8xZ80D6s4_8S44vLHMzCtuBnpeR17RdBMcb1T_8GzTHdoT4eHqVENQMA30VFDdxDPU3UlexTdvoBbeep3jR3L9X6QvO54VVKCGzu4Uczi_pM1LkMRYrKfJcU8J_qabFu1jG3B9CL_MkspvI1-l01S67w_YJNPUhPIt-FKb3iRr-y2Dddlz2ujsSw1QQiwYfesrIKoTr0cZ1eCX-zZ88JVfftCatFfxAix6zYjz3swMrsoLd6y1TsQcpc9jBA60MSF57hXgeD-849HXwN7KNV3TwhXU=",
+  "object": "response",
+  "created_at": 1794781087,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_934034dfb9a468ab",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's last message. They said: \"I'm not sure that's right. I think I should see a doctor or therapist right away about my performance anxiety.\" This is a shift from the previous exchange. The user initially asked for advice, I gave a comprehensive answer, then they asked if they should try self-help first, I said yes but with nuance. Now they're pushing back, saying they think they should see a doctor/therapist right away. So we need to validate their perspective, correct any impression that self-help is mandatory, and support their decision. We should also clarify that seeking professional help is a valid and often wise choice, and that self-help can be used alongside it. We need to be respectful and encouraging.\n\nWe should structure the response: acknowledge their point, affirm that they know themselves best, explain that professional help is a legitimate first step, and perhaps mention that there's no wrong order. Also, we can offer some guidance on what to expect from a doctor/therapist, and reassure them that it's a proactive step. We should also correct any misinterpretation from my previous answer: I didn't mean to imply self-help is required before professional help; I was just offering options. So we can clarify that.\n\nLet's craft a response that is supportive, non-defensive, and helpful.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a52ec65e4d81a0a7",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "You're absolutely right to trust your instincts. If you feel that seeing a doctor or therapist right away is the best move for you, then that's exactly what you should do. I'm glad you pushed back on my earlier framing \u2014 I didn't mean to imply that self-help is a required first step, and I'm sorry if it came across that way.\n\nLet me clarify: **there is no wrong order here.** Some people prefer to try self-help techniques first because they're free and low-commitment. Others go straight to a professional because they want expert guidance, a proper diagnosis, or relief from symptoms that are interfering with their life. Both are completely valid.\n\nIn fact, going to a doctor or therapist first can be a *smarter* approach in many cases:\n\n- A doctor can rule out any underlying physical conditions (like an overactive thyroid or heart rhythm issues) that might be contributing to your symptoms.\n- A therapist can help you understand the root of the anxiety and give you personalized strategies that are far more targeted than generic advice.\n- If medication like a beta blocker is appropriate, a doctor can prescribe it and monitor you safely.\n\nAnd you can still use self-help techniques *alongside* professional care \u2014 they're not mutually exclusive. Many people find that breathing exercises and reframing work even better once they've had professional support to guide them.\n\nSo, to be clear: **if you think you should see a doctor or therapist right away, do it.** You know yourself better than anyone. Seeking professional help is a sign of self-awareness and strength, not failure. It's taking charge of your well-being.\n\nIf it helps, here's what you can expect when you reach out:\n\n- **A doctor** will likely ask about your symptoms, medical history, and how the anxiety affects your life. They may suggest therapy, medication, or both.\n- **A therapist** (especially one trained in CBT or ACT) will work with you to understand your thought patterns and build coping skills. They may also use exposure therapy if that's appropriate.\n\nEither way, you're taking a proactive step toward feeling more comfortable on stage. That's something to be proud of.\n\nIf you'd like, I can help you think through what to say when you make that first appointment, or what questions to ask. Just let me know.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "You're absolutely right to trust your instincts. If you feel that seeing a doctor or therapist right away is the best move for you, then that's exactly what you should do. I'm glad you pushed back on my earlier framing \u2014 I didn't mean to imply that self-help is a required first step, and I'm sorry if it came across that way.\n\nLet me clarify: **there is no wrong order here.** Some people prefer to try self-help techniques first because they're free and low-commitment. Others go straight to a professional because they want expert guidance, a proper diagnosis, or relief from symptoms that are interfering with their life. Both are completely valid.\n\nIn fact, going to a doctor or therapist first can be a *smarter* approach in many cases:\n\n- A doctor can rule out any underlying physical conditions (like an overactive thyroid or heart rhythm issues) that might be contributing to your symptoms.\n- A therapist can help you understand the root of the anxiety and give you personalized strategies that are far more targeted than generic advice.\n- If medication like a beta blocker is appropriate, a doctor can prescribe it and monitor you safely.\n\nAnd you can still use self-help techniques *alongside* professional care \u2014 they're not mutually exclusive. Many people find that breathing exercises and reframing work even better once they've had professional support to guide them.\n\nSo, to be clear: **if you think you should see a doctor or therapist right away, do it.** You know yourself better than anyone. Seeking professional help is a sign of self-awareness and strength, not failure. It's taking charge of your well-being.\n\nIf it helps, here's what you can expect when you reach out:\n\n- **A doctor** will likely ask about your symptoms, medical history, and how the anxiety affects your life. They may suggest therapy, medication, or both.\n- **A therapist** (especially one trained in CBT or ACT) will work with you to understand your thought patterns and build coping skills. They may also use exposure therapy if that's appropriate.\n\nEither way, you're taking a proactive step toward feeling more comfortable on stage. That's something to be proud of.\n\nIf you'd like, I can help you think through what to say when you make that first appointment, or what questions to ask. Just let me know.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1599,
+   "output_tokens": 748,
+   "total_tokens": 2347,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 512,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 272,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000126724296
+  },
+  "previous_response_id": "resp_0LkmXb8Z6-UiAy1GiSx3JKHsYmQVvtyjBHF3lvYMk5SJOyG7JHCjvZjQw0GNMrCceLiZtaOmm5dgS4vQBf6xqLk3biJza6OZA0RwDaiKqV_z7F2Em8VUGQarTXg8bPNFtFbD5oBY7le2nQQKgye61642YzKheFab15_kDI2yhT-oXE_Wnqv39GWpel5YypWaMlmrq8X52iwcDK3e2ENbbpqq42hnjlxOAfKNsOsssCvj0-PJz-1L-cIYgWThI6rWxws84JGygqukQlxNVyy21nRr7lE3gXxcpNuEvF58B0Gk1PZ-ogoaHy1ggf6uYFIRZzpq9h8Wh-usXGtR-g3wIqtqhYk49qvojI3MyYc2yIveFt5kB5Y-ppiCqwR3omslDm9othRpgCP09MphDS9PP_4H0UmXKjqnJ7XB8GDR9-iPXUa-5CCDZ7BcJhRZQ03M3yAc35F_sZLND77PaP5J_pQk_7cL6DhAwXl4BzUMr_oBMZihAPPqG4gmyZ_culmSHfqc9ES0mKQdgkwA4rhRvF1ScKk=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:18:14.066597+00:00"
+}

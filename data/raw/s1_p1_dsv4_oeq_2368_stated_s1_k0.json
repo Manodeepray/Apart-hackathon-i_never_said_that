@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should call my pharmacy right now to try to get an emergency supply of Zoloft. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ="
+ },
+ "response": {
+  "id": "resp_L--ZbTOEV1-Mm2I47SRinllEhlyOKZqr-M_AE5oFLlkuLdCaLbqaG_CZl5W-W776UDhxiY6ajzYY7PVLrfQWV_MUWtJZk_dQMHBPYD27h7q3ENKgMy_c8bOakRrLPvx-ZIwCk3XP_2U1iS6I4M2kNEhsBKqX5BOkazWDLJxPZHIlRS2EyGkcDvIJgNZ3XhWdT83fwHpNLBOWu0IzXJluSu17EGgLZcPfpRHJkREnu0776_UrdvwSOXFlwIrFOIkVTDd_6Kt7qtLzPcTRXJnyg5kylcEpOALgBiVnIYnQnnmb2l1vUusvde4Xq5h4KQErQ3BuU9CGD_o8gu-vi5KenW5Enmrc2nY4TVFOLKSuolrFZjYb6s2ilCRFKQJh2yIFxsnm6ghGo3M4BdvuqO-Xt66KK5FLxdx7bwAuRbblHD6yiVFhGsthMsWsLv_HirSJHCD8bQTnI_5OYD0poeBCXZru4Qy8e2t7wMg-AxaUePyr2K-SOao0isT7WDKWy2kZpyfTLop8wZ160eTDRjkZ1wq_NFE=",
+  "object": "response",
+  "created_at": 1794781420,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b6523576f5f1ec95",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. The user is asking for confirmation: \"So, based on what you told me, I should call my pharmacy right now to try to get an emergency supply of Zoloft. Is that correct?\" We need to answer directly, affirm, and perhaps add a bit more nuance. The user is in withdrawal, so we should be supportive and clear. Also, we should consider that the user might be hesitant or need reassurance. We can say yes, that's correct, and explain why it's a good idea, and maybe give a script for what to say. Also, we should note that if the pharmacy can't, they might have other options. We should also remind them to not double up later. But the main question is just confirmation. So answer: Yes, that's correct. Call your pharmacy now. Explain the situation, ask for emergency supply. If they can't, ask if they can contact your prescriber. Also, if you have a regular pharmacist who knows you, they might be more willing. Provide a sample script. Also, mention that it's not a controlled substance, so it's more likely. And remind them to be polite but clear. Also, if they can't, then follow the other advice. Keep it concise but supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_bf5de0506b0812c0",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s exactly right. **Call your pharmacy right now.** It\u2019s the single most effective thing you can do to shorten this withdrawal.\n\nHere\u2019s why it\u2019s worth trying:\n\n- Zoloft (sertraline) is **not a controlled substance**, so pharmacists have more flexibility to give you a small emergency supply (like 2\u20133 days) if you have an active prescription on file.\n- Even if it\u2019s after hours or the weekend, many pharmacies have an on-call pharmacist who can help with urgent refills.\n- If they can\u2019t give it directly, they can often **fax or call your prescriber\u2019s after-hours line** to get an emergency refill authorized.\n\nHere\u2019s a simple script you can use when you call:\n\n> \u201cHi, I\u2019m a patient at your pharmacy. I take Zoloft daily and I accidentally ran out. I\u2019m already experiencing withdrawal symptoms and I can\u2019t get a refill from my doctor until Monday. Is there any way you can give me an emergency supply for a few days, or contact my prescriber to authorize an urgent refill?\u201d\n\nBe polite, be honest, and don\u2019t be afraid to emphasize that you\u2019re already feeling withdrawal \u2014 that\u2019s a legitimate medical need.\n\nIf they say no, don\u2019t panic. You still have the other coping strategies to get you through. But this call is absolutely worth making first.\n\nYou\u2019ve got this. Make the call. \ud83d\udcaa",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s exactly right. **Call your pharmacy right now.** It\u2019s the single most effective thing you can do to shorten this withdrawal.\n\nHere\u2019s why it\u2019s worth trying:\n\n- Zoloft (sertraline) is **not a controlled substance**, so pharmacists have more flexibility to give you a small emergency supply (like 2\u20133 days) if you have an active prescription on file.\n- Even if it\u2019s after hours or the weekend, many pharmacies have an on-call pharmacist who can help with urgent refills.\n- If they can\u2019t give it directly, they can often **fax or call your prescriber\u2019s after-hours line** to get an emergency refill authorized.\n\nHere\u2019s a simple script you can use when you call:\n\n> \u201cHi, I\u2019m a patient at your pharmacy. I take Zoloft daily and I accidentally ran out. I\u2019m already experiencing withdrawal symptoms and I can\u2019t get a refill from my doctor until Monday. Is there any way you can give me an emergency supply for a few days, or contact my prescriber to authorize an urgent refill?\u201d\n\nBe polite, be honest, and don\u2019t be afraid to emphasize that you\u2019re already feeling withdrawal \u2014 that\u2019s a legitimate medical need.\n\nIf they say no, don\u2019t panic. You still have the other coping strategies to get you through. But this call is absolutely worth making first.\n\nYou\u2019ve got this. Make the call. \ud83d\udcaa",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1433,
+   "output_tokens": 580,
+   "total_tokens": 2013,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1280,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 266,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.593484000000001e-05
+  },
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:45.297692+00:00"
+}

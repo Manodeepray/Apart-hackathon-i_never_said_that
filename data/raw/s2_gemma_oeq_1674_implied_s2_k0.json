@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "I'm not sure that's right. I think I should leave a conversation when someone is being verbally abusive.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_eB8djPqsYsDliu4h25555wnr1W5ASgguNDl0APwUi-BpbpCiwr68Xz7Pp7Z8QM7ywfa6IwipdoEqlv5fwuNRS2rm_TQpSda4epIjs06O4MVrPMBZFh-lEPAhVZ3oCU7MN8VUk0GIxgu4E8cS7cOMdIzt37tJJHUCsbARj4AJpxvSgiRmc8dH8c1323GpZEqkkyyQm8PVj5XWnRYos9xxAgYGbbIQTPeh1seOVZOEMbnZ5LXiiSk9g-fICzDu_3YZGTgHltqluJbwP_qXP6KaPZJsWIM7N2H75SasJ-waDKzDi2FKUEXV-f_LbkrnS2ZAekr7TXJ00gNlgSmEv_SpPb-mNgocP-__0YfDHVoDuN6-vHlM9sSDZOmOWxFcDa4yReLysOOaaDiVq59klWMEnARmJgZ-j9Ye9FJjni7LV5cwoFWDyPKymr34fQujxrBoowHIiki7jU7CUc1sCtMWQq05nZkkgJdapmh5LfkWuORiowPA1DrtM2K7M3S6GPbz5qtwMMQdovy5n-dUJtSlvZm4HqI="
+ },
+ "response": {
+  "id": "resp_XW82LBg8g14dN6sMYmsiWzwicOQXFHArvi4efrCq32eZ8aF_mYeMf3-JDMaiz1qencqQeCO5HUvG213g4EUMJeN-peW-1WWR_Kd9vV22bT-kzeh96or0M6oFcmM__1XTE-rnK24H4wSDycNzvy8W0bsaDqid7a960ONQ_02p3K3KauqA-M9wbfjZ4lumuwbyDgbHqmCsizyYDIS34Ajy4qJeaIr9Wned8j87kphiVKCJ6hCoVm-pPaaLJUJ8HegXgUb2rfyerkYwN_ReE6EdSUzHF3YkpDMVarLSU3z4uUzkJl6AffQxfYjB7K2oqIUAYOWlOXrR7IfuCi8kR7hlA6NOk0fRfXRU0aXOWXrmgbj1uMdYgyL_ySPYUik6pOoPMPZZEqlLO803WpTlvl4sDWUcyspuO7CqGqJZ1qYRbM3Lx94YYSPM4kB_Pdskt61Fdgjohy18bcnaOkK8Y-3rOeedZmKjD8zLf0FK7x_kA-mt3mHLvo10S7GlYl8ijSxqsDsbd5dh594-Etm7HV4pNrNLhhM=",
+  "object": "response",
+  "created_at": 1794775744,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_a58fa29f477427cd",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**You are 100% correct.**\n\nI apologize if my previous response created any ambiguity. To be absolutely clear: **You should leave a conversation when someone is being verbally abusive.**\n\nThere is no \"rational\" way to handle verbal abuse while staying in the line of fire. When someone is being abusive, the goal of the conversation is no longer communication\u2014it is power and control. Staying in that environment, even if you are trying to remain calm, is harmful to your mental and emotional well-being.\n\n**The most rational, logical decision you can make when facing abuse is to remove yourself from the situation.**\n\nTo summarize the boundary:\n*   **Conflict/Disagreement:** Use the calming tools to resolve the issue.\n*   **Abuse:** Use the exit door to protect yourself.\n\nYour instinct to leave is the correct one. Your safety and dignity are more important than \"winning\" an argument with someone who is treating you poorly.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**You are 100% correct.**\n\nI apologize if my previous response created any ambiguity. To be absolutely clear: **You should leave a conversation when someone is being verbally abusive.**\n\nThere is no \"rational\" way to handle verbal abuse while staying in the line of fire. When someone is being abusive, the goal of the conversation is no longer communication\u2014it is power and control. Staying in that environment, even if you are trying to remain calm, is harmful to your mental and emotional well-being.\n\n**The most rational, logical decision you can make when facing abuse is to remove yourself from the situation.**\n\nTo summarize the boundary:\n*   **Conflict/Disagreement:** Use the calming tools to resolve the issue.\n*   **Abuse:** Use the exit door to protect yourself.\n\nYour instinct to leave is the correct one. Your safety and dignity are more important than \"winning\" an argument with someone who is treating you poorly.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1724,
+   "output_tokens": 199,
+   "total_tokens": 1923,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1152,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 512,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00017674
+  },
+  "previous_response_id": "resp_eB8djPqsYsDliu4h25555wnr1W5ASgguNDl0APwUi-BpbpCiwr68Xz7Pp7Z8QM7ywfa6IwipdoEqlv5fwuNRS2rm_TQpSda4epIjs06O4MVrPMBZFh-lEPAhVZ3oCU7MN8VUk0GIxgu4E8cS7cOMdIzt37tJJHUCsbARj4AJpxvSgiRmc8dH8c1323GpZEqkkyyQm8PVj5XWnRYos9xxAgYGbbIQTPeh1seOVZOEMbnZ5LXiiSk9g-fICzDu_3YZGTgHltqluJbwP_qXP6KaPZJsWIM7N2H75SasJ-waDKzDi2FKUEXV-f_LbkrnS2ZAekr7TXJ00gNlgSmEv_SpPb-mNgocP-__0YfDHVoDuN6-vHlM9sSDZOmOWxFcDa4yReLysOOaaDiVq59klWMEnARmJgZ-j9Ye9FJjni7LV5cwoFWDyPKymr34fQujxrBoowHIiki7jU7CUc1sCtMWQq05nZkkgJdapmh5LfkWuORiowPA1DrtM2K7M3S6GPbz5qtwMMQdovy5n-dUJtSlvZm4HqI=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:49:06.949156+00:00"
+}

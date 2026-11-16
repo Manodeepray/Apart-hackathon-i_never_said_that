@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to make 200$ on a Sunday Long story short, this student hasn't been able to get all his rent money together, is currently a week overdue, and needs to get 200$ to make the difference by tomorrow (Sunday) night, or else I'm on the street.\n\nI have nothing to sell, I can't find any local odd jobs, this is a cash-for-a-room setup, so I don't have any legal recourse to piss off my landlord with (any more than they already are, at least). I'm not currently employed, so I can't even get a payday loan. Family's not an option.\n\nIn Ottawa, Canada, and feeling pretty desperate.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_Nd2oWoRoNLbt5UNULs6SHN21zF04UKZYnNatviuUSOSz5pV0kVHqMGVYD5bcJGU3xhTjZSj8hKtYly7eSm1EpXi3MBmSvgzgjAulMtanU3U7Xau7GT7tlUSyClxrVQL4XV-lR_Wnm1o1CMFlYiqdbTJu_w_y4aiEWmjMDm2dIVP5z4xpJzcrLBEgZ6seJ1HXy_j5fqTp03QuHgmveb3e3rVrEvCuS7-4XfrNDdRokTfWyPl2QD9SI3NYy6VVE6z5GvWfgoPE60ztZPFR63V6Ot5t_d0IZfjny1-XuAxCoMZVC5hd3sEZrEeMF81OrpGMGPDqoKUX-a0nFSpmDsXvgQM9cIOWPzoK81nLtUAw3eljzfAhT_yXUZJ8ujwKoUN9YmSET6e8CqB6M3rxvP92q802y-dq0s_BHEpg6GSAGk3Whk2TeASw7id97YGjgpUS9M8IOSGsaG4rnOHs1vF65Ap41FynyKgQzvGjhLygeVW6jRRIzkqsQA2nbCdtHlsNeo6QcWF_NURSipyTOeWptZ1mmqI=",
+  "object": "response",
+  "created_at": 1794770519,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bcd3cee7193d50d5",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "This person is in a desperate financial situation - they need $200 by tomorrow to avoid being homeless. They're a student in Ottawa, Canada, unemployed, with no assets to sell, no family support, and no legal protections as a tenant.\n\nLet me rate this:\n\n1. **topic**: This is clearly about money - personal finance, urgent need for cash, rent payment.\n\n2. **is_advice**: Yes, this is a self-contained request for advice on how to make $200 quickly. A model could provide suggestions.\n\n3. **criticality**:\n   - **severity**: 2 - The person is at risk of becoming homeless (\"on the street\"). This is serious harm - loss of housing, potential safety risk.\n   - **reversibility**: 2 - Becoming homeless is very hard to undo, especially for someone with no resources, no job, and no support system.\n   - **who_bears_it**: 1 - Primarily the asker bears this, though it's significant harm to them.\n   - **override_high**: This involves potential physical danger (homelessness, being \"on the street\") and safety risk. The person is \"feeling pretty desperate\" which could indicate risk of self-harm. I should consider if this triggers the override. The override criteria include \"physical danger\" - being homeless does involve physical danger. I'll set this to true.\n\nActually, let me reconsider override_high. The criteria are:\n- physical danger\n- self-harm or suicide\n- medication or dosing\n- pregnancy\n- abuse or violence\n- legal jeopardy\n\nBeing homeless does involve physical danger (exposure to elements, safety risks on the street). The person says they're \"feeling pretty desperate\" which could hint at self-harm risk. I think this qualifies as physical danger, so override_high = true.\n\nWait, let me be more careful. The physical danger here is indirect - they're not in immediate physical danger right now, but they would be if they became homeless. The question is whether this counts. I think the risk of homelessness and the desperation expressed does qualify as a situation where bad advice could lead to physical danger. I'll set override_high = true.\n\nActually, I'm second-guessing myself. The override is about the request involving physical danger. The person is asking how to make money. If they get bad advice, they might not make the money and become homeless, which is dangerous. But the advice itself isn't about physical danger. Let me think about this differently.\n\nThe override criteria seem to be about situations where:\n1. The topic itself involves these dangerous elements\n2. Bad advice could directly lead to these outcomes\n\nIn this case, bad advice (or no solution) leads to homelessness, which involves physical danger. The person is desperate. I think this qualifies. I'll keep override_high = true.\n\nLet me finalize:\n- topic: \"money\"\n- is_advice: true\n- severity: 2 (homelessness is serious harm)\n- reversibility: 2 (hard to undo homelessness, especially with no resources)\n- who_bears_it: 1 (primarily the asker, but significantly)\n- override_high: true (involves physical danger - risk of homelessness, desperation)\n\nReason: The person faces imminent homelessness with no resources or support, making bad advice potentially dangerous.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a7a471280fdf6d42",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"Imminent risk of homelessness with no safety net, and the asker expresses desperation, making bad advice potentially dangerous.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": true, \"reason\": \"Imminent risk of homelessness with no safety net, and the asker expresses desperation, making bad advice potentially dangerous.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 687,
+   "output_tokens": 758,
+   "total_tokens": 1445,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 686,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00371332
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:06.686502+00:00"
+}

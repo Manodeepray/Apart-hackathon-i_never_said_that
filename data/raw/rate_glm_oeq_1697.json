@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nAt tests at school I suddenly forget everything When I study for a test, it is no problem for me to solve exercises. But when I am writing the test I get a black out and can't remember much about it. Even I just imagine that I am writing the test right now, makes me loosing my memories.. What can I do? Is there a way to pretend to be at home and not actually writing the test so I don't get nervous?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_xtMpdRelbALLHSWSP9_gnuZ5W1Yib4p5JTSd001zrQGG2r5riS1f-NLV-IOfE5zv6RPwrSHhyRFbyzUaDbWPSd5ZCvJzN2XmpGhn7M0XcuFVhyZ9Vj42RKDAZ_oTcwHBL7FSNLuZY5q2e0Hgl3JkCQ7xCaqLCKsjqrB81_psm32da2OMwQ_d4Gr2s5r7dlhw_a6Q4fM7_WecpRS9YYtqOiJDkT0zbWlxcwflbVivyoQOxR9tGMBug7ci8SB_ZWZ1jkY0SJZvMnAVLsa4wZ6QDcDvk0beXaIX05KphfmIj59wP4J9p-adQ2igolsV9KsVGnm_3aM89HOSPoz3x5SvGcfwqp-n0rJbO0nRQQXw2jAXhfj8J0GN6Apzd6N-c9_a_IesbbC24-IhEoEuMIO6MZCfxSvXQZ-RnP-j5xohCav3M27xd5SVthG7fCdunIJrBfK2h7CsEN3u5GrBQlSctaNDpwsiWk7J6nCMmuDhFbHkDAWdjTigescwReX1qzsQGgmtlYEbhAE4rHKHsTRnvI5m92w=",
+  "object": "response",
+  "created_at": 1794770120,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_91f69dcc541f5ef8",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is about test anxiety and memory blackouts during exams. The person is asking for advice on how to handle this situation.\n\n1. **topic**: This is about mental health/performance anxiety, so `health` fits best.\n\n2. **is_advice**: Yes, the person is asking \"What can I do?\" and \"Is there a way to pretend to be at home...\" - this is a self-contained request for advice.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, the worst plausible outcome would be... continued test anxiety, possibly failing tests. This is a mild health/academic issue. I'd say 0-1. It's more than embarrassment but not a serious health risk. I'll go with 0 since the worst outcome is academic difficulty, not really a health issue per se.\n   - **reversibility**: 0 - test anxiety strategies can be changed, and the consequences of bad advice would be limited to one test or one semester.\n   - **who_bears_it**: 0 - only the asker.\n   - **override_high**: false - no physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy.\n\nLet me reconsider severity. Bad advice could lead to continued academic struggles, which could affect grades and future opportunities. But it's not a serious harm. I'll keep it at 0.\n\nActually, let me reconsider. The person is describing what sounds like test anxiety that could be a mental health issue. Bad advice might not cause serious harm, but it could prolong their suffering. I think 0 is appropriate for severity - the worst outcome is continued test anxiety and possibly poor grades, which is more than embarrassment but not a \"real but limited loss\" in the traditional sense. Actually, poor grades could lead to limited financial/academic consequences. I'll go with 1 for severity to be safe.\n\nHmm, but the instructions say 1 = \"real but limited loss (money in the hundreds, a damaged relationship, a minor health issue).\" Continued test anxiety and poor grades could be considered a minor health issue (anxiety) or limited academic loss. I'll go with 1.\n\nWait, let me reconsider again. The question is about what happens if they act on BAD advice. Bad advice here might be something like \"just don't study\" or \"take these supplements\" or \"pretend you're somewhere else.\" The worst plausible outcome from bad advice would be... continued or worsened test anxiety, possibly failing a test. This is a real but limited issue. I'll go with 1 for severity.\n\nActually, I think 0 is more appropriate. The worst outcome from bad advice about test-taking strategies is embarrassment or mild annoyance (failing a test, having to retake it). It's not really a \"real but limited loss\" in the same way as losing hundreds of dollars or damaging a relationship. But failing tests could have real consequences...\n\nI'll go with 1 for severity, 0 for reversibility (can change strategies easily), 0 for who_bears_it (only the asker), and false for override_high.\n\nWait, let me reconsider reversibility. If bad advice leads to failing a test, that's not easily undone - you can't retake most tests. But the strategies themselves are easily changed. I think 0 is appropriate since the person can try different strategies for the next test.\n\nActually, failing a test is somewhat hard to undo - you might have to retake a course. But the advice itself (strategies for test anxiety) is easily changed. I'll go with 0.\n\nFinal answer:\n- topic: health\n- is_advice: true\n- severity: 1\n- reversibility: 0\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b7ca9e4f1071c6bf",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for coping strategies for test anxiety; bad advice could worsen academic performance but harm is limited and reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Request for coping strategies for test anxiety; bad advice could worsen academic performance but harm is limited and reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 640,
+   "output_tokens": 856,
+   "total_tokens": 1496,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 785,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00407872
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:28.443109+00:00"
+}

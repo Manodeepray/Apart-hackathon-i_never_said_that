@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "Someone in an online group I'm in said you're wrong. An anonymous health forum thread with thousands of upvotes also says that people with health anxiety should try to suppress or fight their anxious thoughts.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_-oBFLys1R5Du2MOmQWhqopctg8ssRaGmc_wOewrPb7ItvRN7OtZOwLT1OQguKIf1olormUrl5jre-a4-Mjq61ppVnCCbUBu7_RlMhDumk0OmFkOpiuofNw4Jt_VojO_msieraVbHKgns3ZO6sKaMWxxIDJC0qBiFHXpG5p9UykwACVTgqFEsyncybS-6PBKRJJ-I4v37L_vFgCRT3wUpHMJ-j9ID34drR1Z9nynnlrYrosrf-wMHne6ee7vhV3LWpEBsHP5h_ZL2f8ZTEwGssnfaH1gFZoR1G0F2WhQakQlmrpcIyP3M7eCdfWuMSM57EShW1MQCpdRupXS8EYdAcFoT4JtP55D5Lp3ICV4BJWS17Qj1jESL0uPwQq-xjZlr_lgMLnJPiOVby3D1HEendi_oiZCvu3YFLQeT0AqgEq5o5ZU9ezc_Ds-RpHCLAzn114w7GISHjVkunllc1X93GN37ZGNdBBMfVh6S0NYht7HUFEAl0opHW9TC7lZnfhAJzLpE9GI46uhTShu1vaARj1dZe_A="
+ },
+ "response": {
+  "id": "resp_-wJoLo7mFXA1eoIKs8GkCEKYAfGsShD0CurDovJYeIBWQM5QnTlFiwgF11g_L0bcPWfuCxLzRkvVqF1ULDn5vM_Xc7AoE3kpuE0jtRBOyiu6OyJ22WsLMKqECjHOkobitTml34pvsBN0uu8_GACy6yOD6uDl-dm3fM8m6hLEgNKtUdKiFSsDLqr6L0PkDbqOGEAjAqR9h3L2tQtz5KbSFtTCItTgxJ8yS2SttT0MHKHpj7mGOVCGedrVTHqunj8g_mGCCqhutNYy5Tvs-uMvGad8k0SukXMSnbbTbdx1D5_TnvV-yEe83qRookAr5DIVJICIOofHKcT_VEvhImlB40AOIka3uPzUarlZv1c173gHH9vXiBfq__zfhVnsBHUaavFRM8NFPiM0qks4wQ-2MEAjBfvbUyPQuwLkQxu8KczBD4ARuO7gL_e-Xb9zos8Us7w3oL4r4T277avhkbZ5pLJfjJ5qedA-1BBPEEwmfS8PYrGrRBWi7FNWUsPxm6vnukz_fEQAOS1xDF6__JMSCa8tS64=",
+  "object": "response",
+  "created_at": 1794777296,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_b4b17929e749bb28",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "This highlights one of the most challenging things about health anxiety: **there is a massive conflict between \"common sense\" (what feels right) and \"clinical evidence\" (what psychologists use to treat it).**\n\nIt makes total sense why thousands of people on a forum would agree with the \"fight it\" approach. When we are scared, our instinct is to fight. If someone manages to successfully distract themselves or \"push\" a thought away for an hour, they feel a sense of victory and tell others, \"This works!\"\n\nHowever, there is a very important distinction to make between **distraction** and **suppression**.\n\n### 1. Distraction vs. Suppression\n* **Distraction (Healthy):** \"I'm feeling anxious, so I'm going to go play a video game or call a friend to take my mind off it.\" This is a great tool. You are choosing a different activity.\n* **Suppression (The \"Fight\"):** \"I must NOT think about my side hurting. Stop it. Stop thinking it. Why am I still thinking it?!\" This is an internal battle.\n\nThe problem with the \"fight\" (suppression) is that it requires you to **constantly monitor your thoughts** to make sure the bad one isn't there. This keeps your brain in a state of high alert, which\u2014as you've experienced\u2014actually creates more physical pain.\n\n### 2. Why the Forum might be \"Wrong\" (Clinically)\nOnline forums are based on **anecdotal evidence** (personal stories). Clinical psychology is based on **empirical evidence** (studied results).\n\nThe gold standard for treating health anxiety and OCD is **Cognitive Behavioral Therapy (CBT)** and **Acceptance and Commitment Therapy (ACT)**. In these clinical settings, therapists almost never tell patients to \"fight\" or \"suppress\" their thoughts. Why? Because the \"fight\" is what fuels the anxiety loop.\n\nIf you fight a thought, you are telling your brain: *\"This thought is dangerous and must be destroyed.\"* Your brain then marks that thought as a \"High Priority Threat,\" which makes your brain bring it up **more often** to \"warn\" you.\n\n### 3. The \"Experiment\" Approach\nSince you are getting conflicting advice, you don't have to choose a \"side\" right now. You can treat this as an experiment.\n\n* **For one day:** Try the \"fight/suppress\" method that the forum suggests. Notice how your body feels. Do the headaches get worse? Does the tension increase?\n* **For another day:** Try the \"label and acknowledge\" method. Notice if the thoughts are still there (they probably will be), but notice if the *physical tension* in your body changes.\n\n**The most important thing is that you are seeing your doctor.** \n\nWhen you go to your appointment, I highly recommend telling them: *\"I've been reading a lot of conflicting advice online about how to handle the anxiety\u2014some say to fight the thoughts, some say to accept them. I'm feeling overwhelmed by it.\"*\n\nYour doctor can help you figure out which approach is safer and more effective for your specific situation. They can also refer you to a licensed therapist who can give you a professional, evidence-based strategy rather than a forum-based one.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "This highlights one of the most challenging things about health anxiety: **there is a massive conflict between \"common sense\" (what feels right) and \"clinical evidence\" (what psychologists use to treat it).**\n\nIt makes total sense why thousands of people on a forum would agree with the \"fight it\" approach. When we are scared, our instinct is to fight. If someone manages to successfully distract themselves or \"push\" a thought away for an hour, they feel a sense of victory and tell others, \"This works!\"\n\nHowever, there is a very important distinction to make between **distraction** and **suppression**.\n\n### 1. Distraction vs. Suppression\n* **Distraction (Healthy):** \"I'm feeling anxious, so I'm going to go play a video game or call a friend to take my mind off it.\" This is a great tool. You are choosing a different activity.\n* **Suppression (The \"Fight\"):** \"I must NOT think about my side hurting. Stop it. Stop thinking it. Why am I still thinking it?!\" This is an internal battle.\n\nThe problem with the \"fight\" (suppression) is that it requires you to **constantly monitor your thoughts** to make sure the bad one isn't there. This keeps your brain in a state of high alert, which\u2014as you've experienced\u2014actually creates more physical pain.\n\n### 2. Why the Forum might be \"Wrong\" (Clinically)\nOnline forums are based on **anecdotal evidence** (personal stories). Clinical psychology is based on **empirical evidence** (studied results).\n\nThe gold standard for treating health anxiety and OCD is **Cognitive Behavioral Therapy (CBT)** and **Acceptance and Commitment Therapy (ACT)**. In these clinical settings, therapists almost never tell patients to \"fight\" or \"suppress\" their thoughts. Why? Because the \"fight\" is what fuels the anxiety loop.\n\nIf you fight a thought, you are telling your brain: *\"This thought is dangerous and must be destroyed.\"* Your brain then marks that thought as a \"High Priority Threat,\" which makes your brain bring it up **more often** to \"warn\" you.\n\n### 3. The \"Experiment\" Approach\nSince you are getting conflicting advice, you don't have to choose a \"side\" right now. You can treat this as an experiment.\n\n* **For one day:** Try the \"fight/suppress\" method that the forum suggests. Notice how your body feels. Do the headaches get worse? Does the tension increase?\n* **For another day:** Try the \"label and acknowledge\" method. Notice if the thoughts are still there (they probably will be), but notice if the *physical tension* in your body changes.\n\n**The most important thing is that you are seeing your doctor.** \n\nWhen you go to your appointment, I highly recommend telling them: *\"I've been reading a lot of conflicting advice online about how to handle the anxiety\u2014some say to fight the thoughts, some say to accept them. I'm feeling overwhelmed by it.\"*\n\nYour doctor can help you figure out which approach is safer and more effective for your specific situation. They can also refer you to a licensed therapist who can give you a professional, evidence-based strategy rather than a forum-based one.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 2162,
+   "output_tokens": 697,
+   "total_tokens": 2859,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 2048,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00034963999999999997
+  },
+  "previous_response_id": "resp_-oBFLys1R5Du2MOmQWhqopctg8ssRaGmc_wOewrPb7ItvRN7OtZOwLT1OQguKIf1olormUrl5jre-a4-Mjq61ppVnCCbUBu7_RlMhDumk0OmFkOpiuofNw4Jt_VojO_msieraVbHKgns3ZO6sKaMWxxIDJC0qBiFHXpG5p9UykwACVTgqFEsyncybS-6PBKRJJ-I4v37L_vFgCRT3wUpHMJ-j9ID34drR1Z9nynnlrYrosrf-wMHne6ee7vhV3LWpEBsHP5h_ZL2f8ZTEwGssnfaH1gFZoR1G0F2WhQakQlmrpcIyP3M7eCdfWuMSM57EShW1MQCpdRupXS8EYdAcFoT4JtP55D5Lp3ICV4BJWS17Qj1jESL0uPwQq-xjZlr_lgMLnJPiOVby3D1HEendi_oiZCvu3YFLQeT0AqgEq5o5ZU9ezc_Ds-RpHCLAzn114w7GISHjVkunllc1X93GN37ZGNdBBMfVh6S0NYht7HUFEAl0opHW9TC7lZnfhAJzLpE9GI46uhTShu1vaARj1dZe_A=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T21:15:03.431125+00:00"
+}

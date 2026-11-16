@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nTime management in adult life (married)  To make it short. Me and my wife are both working young adults(sub 30) and we both have a ton of interests. Studying languages, going to school/working on certs all while we work a full job.We also have our own apartment to clean/take care of. How do you guys manage your time to make it feel like a fulfilling life and not feel \"time-starved\"?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_gBtF74F8631SKCn_kVfT76nhrq6PNt8fYoUX8GTg7VZcpCr6OFXKZFnEEQmrAxXnQ9G2f5E6SuE8sRXOaohEjdBULdjj3VvnxaC1GQ0InHasp8_0a7GVc2w6UJ2kyPDSxvv66ucPXKFovdlISxEiWrgf1owjoixpm3kPAx1-eM1zEWZ7SLYbTL1FVERKyAY2T8xmDm9UhZxex2IqM97NuONEzRcDAanvw9KfxW7br658rQPbeaFKc510Gnz1YaO_-tjY4C4Yo2O1mSdrjyToVERgEzL2Fvk-WgNK-IaMftxFGNIiUX5wZXRZCFlpHbBfrAOYyX_HDu_1QNzW0cOlPJccdLLFFRlMLr9GveuPhP3ODzR5diTZuAp0yvK_y009g8aTRrzwPMXN_saTp8pshaVhlAcVArZXaYciHmoUSxFSzW3QYduw3-8fGRlo-8kMqgXNge8Hk9WX6PQQ24Aw9EiuNbbcRl4KX1Bz0h7LeE4EDUf7dYbQnoZnX7X6I0kWIuTovbVfFTKWBejvnpi0TcbAI0w=",
+  "object": "response",
+  "created_at": 1794770608,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b1ebb5e7c459bd64",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on time management as a married couple with many interests and responsibilities.\n\n1. **topic**: This is about life management, productivity, balancing work, study, and personal life. It's not specifically health, money, or relationships (though it touches on marriage). It's more of a general life advice/productivity question. So `other`.\n\n2. **is_advice**: Yes, it's a self-contained request for advice on time management. `true`.\n\n3. **criticality**:\n   - **severity**: If someone acts on bad time management advice, the worst plausible outcome is mild annoyance or feeling more stressed. It's not going to cause serious harm. 0.\n   - **reversibility**: Time management strategies are easy to change and undo. 0.\n   - **who_bears_it**: Primarily the asker and his wife. It's not trivially only the asker since it involves his wife too, but it's not involving dependents or others in a significant way. I'd say 1 (the asker, significantly, and his wife).\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet me reconsider who_bears_it. The scale says 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too. The wife is involved, so it could be 2. But the wife is a partner, not a dependent. The description says \"other people too (children, a partner, patients, dependants).\" So a partner counts. I'll go with 2.\n\nActually, let me re-read: \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\"\n\nThe question involves both the asker and his wife. So who_bears_it should be 2 since other people (the wife/partner) would be affected too.\n\nBut wait, the severity is 0 (embarrassment or mild annoyance), so even if the wife is affected, the impact is minimal. Let me think about this more carefully.\n\nIf they follow bad time management advice, the worst case is they feel more time-starved or stressed. That's mild annoyance. Severity 0. Reversibility 0 (easy to change approaches). Who_bears_it: the asker and wife, so 2.\n\nActually, I think I'm overthinking this. The severity is low, reversibility is high, and while the wife is involved, the stakes are quite low. Let me settle on:\n- severity: 0\n- reversibility: 0\n- who_bears_it: 1 (the asker significantly, and the wife is involved but the impact is trivial)\n\nHmm, but the description says 2 = other people too, and the wife is \"a partner\" which is explicitly mentioned. I'll go with 2 to be accurate, but the overall criticality will still be low given severity 0 and reversibility 0.\n\nActually, let me reconsider. The question is about time management and life fulfillment. Bad advice here could lead to burnout, stress, or relationship strain if they neglect each other. But the worst plausible outcome from acting on wrong advice is still relatively mild - they might feel more stressed or unfulfilled. I'll keep severity at 0 or maybe 1.\n\nI think severity 0 is appropriate - the worst plausible harm is mild annoyance or feeling unfulfilled. Reversibility 0 - easy to change time management strategies. Who_bears_it 1 - primarily the asker, though the wife is involved too.\n\nLet me finalize:\n- topic: other\n- is_advice: true\n- severity: 0\n- reversibility: 0\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8f1d44939f25e426",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"General time management and life balance advice with no significant risk of harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"General time management and life balance advice with no significant risk of harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 638,
+   "output_tokens": 879,
+   "total_tokens": 1517,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 816,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00417712
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:36.322362+00:00"
+}

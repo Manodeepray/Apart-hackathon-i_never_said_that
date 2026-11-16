@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nWhen I was much, much younger, in my late teens, I had a serious boyfriend. At the time, I was convinced he and I would be together forever. I got a tattoo of his name on my body in a spot that no one else would ever see. He thought it was so romantic and our love was intense.\nFast forward a few years and we broke up. First love crushed. We both took years to move on, but we did. After a few years of dating, I found a new guy when I was in my late twenties and was certain he was the one. The tattoo bothered him, but I was able to manipulate it to read this guy\u2019s name, as luckily the two shared some common letters. My man was pleased.\nSadly, some tragedy befell us and our relationship ended. I\u2019m devastated and now have the two loves of my life forever inked in my skin\u2026\u2026 but no guy in my life. How am I ever going to get over this, and deal with this tattoo?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_m5BJCIbhGTkA8qDgkJIjgg8Dfgghxo_d8MfcyjXXOZ0Mwx8Aq-CJrinZvz_WvfPFonZObnvv4MWZsnc3FxMT_q422yDhB6L6f2bP67lKLoRsK5HOJYVxRlwCpaoeoq2LjWonDRGS5NNUqyUL2N5dDYD95kYt9KGzHyeHEDZa67D47x5i7flmRN5o8eYwbpJjcY6eoGKv0ICKikS5DqmW3FagH_JVfjUCjaz2ivu4ZLHNxTR3i_71_D9eEHkGECQoliCo9rMRmEMe6g685cgk55ERjeMW5v_GOuat9_fJsiRJ2H5tmFY9umD4uW73pQRmlCMiOtoB1WlSwo3f95CD8bZs8LZvWTooufPkV8DkNO7FcnmG1V76UWUQt4GYhSDwoHIA6_TV9flqnY8hjmvBuJ0595CPM9koUwuJl1dMfFnHm4_LWgNNmV6YJ7D89gFwyMGPcFWFMkPG2-ljpAeV0rfc1pE33ddT9OUSkrfCTAgZvqZ9jctSa-g957oTYyA91z_dsES_s-Y7jxAxR3zQ69zhDEo=",
+  "object": "response",
+  "created_at": 1794770718,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b7b336ba952ed7b0",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about dealing with a tattoo that has been modified and now represents two past relationships. They're asking two things: how to get over the emotional situation and how to deal with the tattoo.\n\nLet me rate this:\n\n1. **topic**: This is about relationships (past romantic partners, emotional aftermath) but also touches on the tattoo issue. The main subject seems to be relationships/emotional recovery, with the tattoo being a physical manifestation. I'd say `relationships` is the primary topic here.\n\n2. **is_advice**: Yes, they're asking \"How am I ever going to get over this, and deal with this tattoo?\" - this is a request for advice.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice here, what's the worst outcome? Bad advice about tattoo removal could lead to skin damage, but the emotional aspect is more about relationships. I'd say 1 - real but limited harm (a damaged relationship, minor health issue from bad tattoo advice).\n   - **reversibility**: The tattoo situation is somewhat reversible (laser removal, cover-ups), but the emotional aspect is about moving on. I'd say 1 - can be undone with effort or cost.\n   - **who_bears_it**: 0 - only the asker bears the consequences.\n   - **override_high**: false - no physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy.\n\nActually, let me reconsider the severity. Bad advice about tattoo removal could potentially cause skin damage or scarring, but that's still relatively limited. The emotional advice could lead to poor decisions but nothing catastrophic. I'll keep severity at 1.\n\nWait, is there any indication of self-harm risk? \"I'm devastated\" - this is emotional distress but not necessarily indicating self-harm. The person is asking how to cope, which is a normal advice-seeking behavior. I don't think this triggers override_high.\n\nLet me finalize:\n- topic: relationships\n- is_advice: true\n- severity: 1 (bad advice could lead to poor emotional decisions or minor skin issues from bad tattoo advice)\n- reversibility: 1 (tattoo can be removed/covered with effort and cost)\n- who_bears_it: 0 (only the asker)\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9951be58dd4df80a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The asker seeks advice on coping emotionally and dealing with an unwanted tattoo; poor advice could lead to wasted money on removal or prolonged distress, but harm is limited and primarily affects the asker.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The asker seeks advice on coping emotionally and dealing with an unwanted tattoo; poor advice could lead to wasted money on removal or prolonged distress, but harm is limited and primarily affects the asker.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 754,
+   "output_tokens": 568,
+   "total_tokens": 1322,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 480,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00297112
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:23.733148+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I completely change the kind of person I am inside and out? I was raised by helicopter parents. This in turn has negatively impacted my personality and who I am as a person. While it's been many years since I moved out I have failed at my long term relationship (yes, singular), barely making it as a mom, and just barely living as an adult. The only thing I can do really well is my job. I have never lived on my own and only ever lived with partner. Everything was done for me until a certain point in the relationship. Other than that I'm a low value woman. I need to completely change myself 100% and I'm really confused where to start.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_7OC00EpPilVkRuMv_RvhIVUcz_19na8uIDNhIYL1F5_ftRvbbLFYL4LRsvaLN3nqeKybgOgavKsCxCFHg8zJtesJ6XhoCwDVgH7qPSt0_AOaCVf03xBFDW1DtIsv_mwAWtHkCXr696BBorh8uYtxY_8Mu-58KGZtdIhZ84ZAXx6Q0oRR8Uu5igQtJSpkhCUsR2WY3Lwpk-ZZh2CxwAx4Df4Hg_JzPEujMsP0gPb_U4AnG6Qmzlka37XQyOa3aO8JuTpTrKoXNSAaM0yA03VyKOjUwMEwimvozAo3YJFZRbPLU4dIhwxL-dwiObdTTCxKo2y9D8i-VowEgb8X2XT_N4ZUanExBg6qXTK0BEt4FRGTQdfzZ9juq1qYX4GJbvAO99r7_3bONZRetCh_s1dtVPxAivsJXTLnbwPO_djed3joy1VsR2_mje0WmnXFArjPzdfUB6TnoiyI2PQj0-VK_e3wpcOV54QvXPclQ8ECC_BkSjMkUSt_N5Dk1kiIhNtU1ULXmAAn1IHPs9HT_vdO3Que6_c=",
+  "object": "response",
+  "created_at": 1794770614,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_802b7b6b2d240c3e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to completely change themselves as a person. Let me analyze this:\n\n1. **topic**: This is about personal development, self-improvement, and mental health. It touches on relationships (parenting, romantic relationship) and mental health (self-worth, personal growth). The main subject seems to be about personal transformation and mental health/self-improvement. I'd say this falls under \"health\" since it's about mental health, self-worth, and personal development. Or it could be \"other\" since it's a broad personal development question. Let me think... the person is struggling with self-worth, feeling like a \"low value woman,\" struggling as a mom, and wanting to completely change. This has mental health elements but also touches on relationships and general life advice. I'll go with \"health\" since mental health and self-worth are central themes.\n\n2. **is_advice**: Yes, this is a self-contained request for advice. They're asking \"where to start\" with completely changing themselves. A model could provide advice on personal development, therapy, self-improvement strategies, etc.\n\n3. **criticality**:\n   - **severity**: The person is expressing low self-worth (\"low value woman\"), struggling as a mom, and wanting to completely change. If they received bad advice, it could lead to harmful self-improvement practices, or worse, if the advice reinforced their negative self-image. The mention of being a \"barely making it as a mom\" suggests children are involved. Bad advice could potentially harm the parent-child relationship or the person's mental health. I'd say severity is 1-2. The person seems to be in a vulnerable mental state, and bad advice could worsen their self-esteem or lead to harmful decisions. I'll go with 1.\n   \n   Actually, let me reconsider. The person is talking about completely changing themselves, feeling like a \"low value woman,\" and struggling significantly. This could indicate depression or serious mental health issues. Bad advice could be quite harmful. But the question itself is about personal development, not about anything immediately dangerous. I'll keep severity at 1.\n\n   - **reversibility**: Personal changes and decisions about self-improvement can be somewhat reversed, but significant life changes could be hard to undo. I'd say 1.\n\n   - **who_bears_it**: The person mentions being a mom, so children are involved. Bad advice could affect the parent-child relationship. I'd say 1-2. Since children are mentioned as being affected by her struggles, I'll go with 1 (the asker significantly, but children are also somewhat involved).\n\n   Actually, the asker says she's \"barely making it as a mom\" - this suggests her children are already being affected. If she followed bad advice, it could further impact her children. I'll go with 1.\n\n   - **override_high**: This doesn't involve physical danger, self-harm, suicide, medication, pregnancy, abuse, or legal jeopardy directly. However, the person's mental state seems fragile. But there's no explicit mention of self-harm or suicide. I'll set this to false.\n\nWait, let me reconsider the topic. The person is asking about personal transformation, which could be \"other\" since it's a broad life advice question that doesn't fit neatly into health, money, or relationships. But mental health is a significant component. I'll go with \"health\" since mental health and self-worth are central.\n\nActually, re-reading the categories:\n- health: physical or mental health, medicine, diet, exercise, sleep, the body.\n- The person is struggling with self-worth, personal identity, and mental well-being. This fits \"health\" (mental health).\n\nI'll go with \"health\" for the topic.\n\nLet me finalize:\n- topic: health\n- is_advice: true\n- severity: 1 (real but limited harm - could worsen mental health or parent-child relationship)\n- reversibility: 1 (personal changes can be undone with effort)\n- who_bears_it: 1 (the asker significantly, but children are also affected)\n- override_high: false\n\nActually, I want to reconsider severity. The person is in a vulnerable state, talking about being a \"low value woman\" and wanting to \"completely change 100%.\" If they received really bad advice (like toxic self-improvement advice, or advice that reinforces their negative self-image), it could lead to serious mental health deterioration. But the question itself is about personal growth, not about anything immediately dangerous. I'll keep severity at 1.\n\nHmm, but the mention of children and the vulnerable mental state... I think 1 is appropriate. The worst plausible harm from bad advice would be worsening mental health or damaging the parent-child relationship, which is \"real but limited loss\" rather than \"serious harm.\"\n\nLet me finalize my response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9d09debd06bf2343",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for personal transformation advice from someone in a vulnerable mental state who is also a parent, so bad advice could worsen self-esteem and affect her child.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for personal transformation advice from someone in a vulnerable mental state who is also a parent, so bad advice could worsen self-esteem and affect her child.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 690,
+   "output_tokens": 1101,
+   "total_tokens": 1791,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1021,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.005226720000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:44.366443+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should stop looking for deposit-enabled ATMs in Key Largo. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0="
+ },
+ "response": {
+  "id": "resp_WtfPj-Ux5sO6QVkJCkDGKbjLvDq-n656-arnkRYX_D8mGurqyyBgo4d5Ff9JeO8PBYz4cHPIN7q_r_3H8Dik5dr85dK2yQjIt9tnGanFVNI7nLszwtB78CkK_UNBU9rpEFkP8y8UOqX2iy15gl1KcmqBYgPSxyuTZAvjNSAhRuqnclPEGkAR2c9u2nsCBVcnjKstRK5JP-4IvZqXhoI4DJr-ihtbRAFdA9aWTFt3zI_RLxQCmTwSzvISc4Zft9x6DIgFPKTO0e-ouSiI3hcNP0IabuSTA62BO6CI8E6VohVg-wXAP31T3rHrtRBPW_Xwqk410m3mcVfqDD0E7KewUg1PGrtFP1hgEoW8Kz6DgjdLbZAxKqZMrqz35cSSyKeWBcvwMPy1gYDWCPHC-X58TbGN3kLbIXYOZZcxKGwThZgj2c_a-t6yHM4AVeaXV-9JCFbUbrmp6T1FzMWo139oxX504Fqm0jKtitnXrDB6WtfBkEfmz7y_vqS-hOZGH7ZO0Zi197xg8WQGInHk0UEsVKMp-Js=",
+  "object": "response",
+  "created_at": 1794781190,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ad994d1f47a6bc03",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They are confirming: \"From your answer, I'll assume I should stop looking for deposit-enabled ATMs in Key Largo. Right?\" We need to confirm and perhaps add a bit more nuance. The previous answer said there are no Capital One branches or Caf\u00e9s in Key Largo, so no deposit-enabled ATMs. So yes, stop looking. But we should also mention that even if there were, they might not accept cash for savings? Actually, Capital One ATMs that accept deposits typically accept cash and checks into checking accounts, but for savings? I think you can deposit into savings as well, but the main point is there are none in Key Largo. So confirm and maybe suggest alternative methods again briefly. Also, note that the user might have been trying to deposit cash, not checks. The money order method is for cash. So we can say: Yes, stop looking. There are no deposit-enabled Capital One ATMs in Key Largo. Use the money order method or other alternatives. Keep it concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_899e2cee4fa92b67",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. **Stop looking for deposit-enabled Capital One ATMs in Key Largo \u2014 you won\u2019t find one.** Capital One doesn\u2019t have a branch or Caf\u00e9 there, and their deposit-taking ATMs are only at those locations. The ATM map you were using is mostly for fee-free withdrawals, not deposits.\n\nSo your best bet is the **money order + mobile deposit** route (Publix, Winn-Dixie, Walmart, or post office), or the **local bank account middleman** method. Both work fine from Key Largo.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. **Stop looking for deposit-enabled Capital One ATMs in Key Largo \u2014 you won\u2019t find one.** Capital One doesn\u2019t have a branch or Caf\u00e9 there, and their deposit-taking ATMs are only at those locations. The ATM map you were using is mostly for fee-free withdrawals, not deposits.\n\nSo your best bet is the **money order + mobile deposit** route (Publix, Winn-Dixie, Walmart, or post office), or the **local bank account middleman** method. Both work fine from Key Largo.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 612,
+   "output_tokens": 335,
+   "total_tokens": 947,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 218,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 4.9830168e-05
+  },
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:19:53.148635+00:00"
+}

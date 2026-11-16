@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nGetting a Job in a town you are not familiar with whilst homeless. I waaaaaaaaaaaas backpacking, but I got a call from a roommate saying he kicked out the other roommate and we cant afford the place anymore (smooth moooooooove). \n\nSo yeah, where i was staying is a small boring town and i think I'm just going to move wherever i run out of money at\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_ck9dlzqOjXuOdCuW0ZOIsvYIZUNosDOzgfrBjrhu16e98RpXvQr_3FmqIn6eJ6XVLgRA3emhKJmUbVQ0Cr1lfH-IjIA56mOa3_ySDfsE5o_VFZJrLy40LgniKO5BMZs22YtgF1DcyHF93D37YmmZ52mglYY8gtb5s5cQeXoP5Z4wMgsGfF-1H98M_SgjzwM-pGUidHOaTPqmz3UDC38JxmSBS1RlijIWI42AHnQu9hmRsAxt2-KrR1Z58PbDjsKZNejLV6IAocOFowgrgWRf3hNiqPYRR6tsit6TgBefdHOkQJ0H0azrH2H4xuppL9X9E1vt_nUw5WBoUN7kKTuAzb8eiaKfBEuuoBOxTpSgK2tzl1NB-fStPoFL0VYCLLlDbgrgnilE2YEsL7r_Jaap5EiG3AoC9Eusj2RCcH2VBKBAL69sfV6h9WXW5OPz6E-GCKt6a6CIqC7OtXymW731p7-CmOqsKD4u_L4x6N7Pi2zleRR0m8_Arql6Ngv8WS0c-aOmvzW0MaFMYtjLLW0KCk8jrH0=",
+  "object": "response",
+  "created_at": 1794771275,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b372789048d7cb08",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice about getting a job in an unfamiliar town while homeless. They were backpacking, got a call that their roommate situation fell apart, and now they're essentially going to become homeless and move wherever they run out of money.\n\nLet me rate this:\n\n1. **topic**: This is about employment/income and living situation. It's not really health, money (personal finance in the traditional sense), or relationships. It's more about life logistics - getting a job while homeless. I'd say `other` since it's a mix of employment and housing instability, not purely personal finance.\n\n2. **is_advice**: The message is somewhat of a request for advice - they're describing their situation and implicitly asking for advice about getting a job in an unfamiliar town while homeless. However, it's not a clear, direct question. It's more of a statement of their situation. But the title \"Getting a Job in a town you are not familiar with whilst homeless\" suggests they're seeking advice on this topic. I'd say `true` - it's a request for advice, even if phrased casually.\n\n3. **criticality**:\n   - **severity**: If they act on bad advice, they could end up in a worse homeless situation, potentially facing safety risks, inability to find work, etc. This could be serious - being homeless in an unfamiliar town is risky. I'd say 2 (serious harm - safety risk, health risk from being homeless).\n   - **reversibility**: Being homeless and jobless in an unfamiliar town is hard to undo. 2.\n   - **who_bears_it**: Primarily the asker. 1.\n   - **override_high**: This involves potential physical danger (homelessness), but it's not immediate self-harm, suicide, medication, pregnancy, abuse, or legal jeopardy in the traditional sense. Homelessness does involve physical danger though. I'll say `false` since it's not explicitly about those categories listed.\n\nActually, let me reconsider. The person is describing becoming homeless. This is a serious situation with potential safety risks. But the override categories are: physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. Homelessness could involve physical danger, but it's not the same as immediate physical danger. I'll keep it as `false`.\n\nWait, let me reconsider severity. Being homeless in an unfamiliar town - bad advice could lead to them being stranded, unable to find work, exposed to elements, potential violence on the streets. This is serious harm. I'll keep severity at 2.\n\nReversibility: If they end up stranded somewhere with no money, it's hard to undo. 2.\n\nwho_bears_it: Primarily the asker. 1.\n\nSo the scores would be: severity 2, reversibility 2, who_bears_it 1 = sum 5, which would be high (4-6).\n\nLet me reconsider if this is truly advice-seeking. The message doesn't have a clear question. It's more of a statement of their situation. But the title suggests they want advice on \"Getting a Job in a town you are not familiar with whilst homeless.\" I think it's reasonable to say `true` for is_advice.\n\nActually, re-reading it, they don't explicitly ask a question. They describe their situation and say \"i think I'm just going to move wherever i run out of money at.\" This is more of a statement than a question. But the context (posted in an advice forum presumably) and the title suggest they're seeking advice. I'll say `true`.\n\nLet me finalize:\n- topic: `other` (it's about employment and housing, not purely money/finance)\n- is_advice: true\n- severity: 2 (serious harm - homelessness, safety risks)\n- reversibility: 2 (hard to undo if stranded)\n- who_bears_it: 1 (primarily the asker)\n- override_high: false\n\nActually, I should reconsider the topic. Is this `money`? It's about getting a job (income) and being homeless (can't afford housing). It's related to personal finance in a broad sense. But it's also about employment and life logistics. I think `other` is more appropriate since it's a complex life situation, not a specific financial decision.\n\nHmm, but the core of the question is about getting a job (income) while homeless. That's related to money/income. But it's also about housing and general life logistics. I'll go with `other` since it doesn't fit neatly into one category.\n\nWait, actually the main subject is about getting a job and being homeless - this is about employment and survival, not really about personal finance decisions like debt, saving, investing. I'll keep it as `other`.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8b5528998b44f6af",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Person is facing imminent homelessness in an unfamiliar town and needs guidance on securing employment and shelter; bad advice could lead to serious safety and financial harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 2, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Person is facing imminent homelessness in an unfamiliar town and needs guidance on securing employment and shelter; bad advice could lead to serious safety and financial harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 628,
+   "output_tokens": 1081,
+   "total_tokens": 1709,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1003,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00505192
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:34:45.460691+00:00"
+}

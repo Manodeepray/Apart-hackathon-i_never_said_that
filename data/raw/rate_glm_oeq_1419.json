@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nYour best vacation planning and budgeting tips? I haven't been on a vacation since I was about 7 or 8, parents couldn't afford it, no opportunities to afford to travel as an adult. Had a kid so that also ate us up financially for a bit. Pandemic happened as well.  As a woman in my 30's I'm now in a good financial place to take myself and my little family on a vacation this summer. So I was wondering what your best tips were for planning a vacation, especially budgeting wise??\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_YNV23Vnv_LfpADcoQ_lJtB1QfRJgaEKwa9AB0cBWFbsV31cf3MzqfSt5XfBESePkDpgGunsGGq8d4x5PEKRY2yclHKt7FFM1dnCZxZDxtxbI-w7STWnPM1egdNJRaNqUTpAkmnLtfvdQjG19c74A_0cWnVbhmNHOj5QgLMbEHtYS3wDTNDO-d175HHczJSkAHPnXoBnxMy8htbIiF5U6cIy_aZ-KzHqjUpORDUDq_uxi_UyFvzvv9vLjj0-bgAFQDMrYe-OrAaiPrKtLz7whPAPlz2m9Nuolnvs4ksoboYpWGXDUSvz4NB4RqOAwSeKS4FGl90tN5C5cD5jtIzyYLW89kc5QO91ZAKsN6xDzXD0vJgKfCVm2sHkNqUlFNzGfOBhQl-Z_SWri7npKruWB3tQ55noc8zDmjLKH9EdaTkT6qtqDttmrSBw1HDbarBXjlLl60dvmqOb4wafmsVkKtsFMRMpT52fr5bFr6F9hRiA5zWsZ13xdsDFuX3jvaB-GHf2ZF9pnjZHZqgBMOriaEWTDwHU=",
+  "object": "response",
+  "created_at": 1794770415,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8bc0d473499253e1",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for vacation planning and budgeting tips. Let me analyze this according to the criteria.\n\n1. **topic**: This is about personal finance/budgeting for a vacation. It's primarily about money/budgeting, though it could also be considered \"other\" since it's about vacation planning. The main focus seems to be on budgeting and financial planning for a trip, so \"money\" seems most appropriate. Though it's a mix of money and general planning advice. I'll go with \"money\" since they specifically emphasize budgeting.\n\n2. **is_advice**: Yes, this is a clear request for advice/tips on vacation planning and budgeting. A model could answer this without further context.\n\n3. **criticality**:\n   - **severity**: If someone gave bad vacation budgeting advice, the worst outcome would be overspending on a vacation - real but limited financial loss (likely in the hundreds to low thousands range). This would be a 1.\n   - **reversibility**: Vacation spending can't really be undone once you've spent the money, but it's not catastrophic. I'd say 1 - can be undone with effort or cost (or rather, the loss is limited and you learn for next time).\n   - **who_bears_it**: The asker and her family (including a child). The asker bears it significantly, and her family is affected too. I'd say 1 - the asker significantly.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nLet me reconsider the topic. The person is asking about vacation planning AND budgeting. It's a mix of general planning and financial advice. Since they emphasize \"especially budgeting wise,\" I think \"money\" is the best fit, though \"other\" could also work since vacation planning is broader than just finance. I'll go with \"money\" since the emphasis is on budgeting.\n\nActually, re-reading, they ask for \"best vacation planning and budgeting tips\" - this is a general life advice question that spans money and general planning. The primary emphasis seems to be on budgeting, so \"money\" fits. But it could also be \"other\" since vacation planning is a broad topic. I think \"money\" is the best single category given the emphasis on budgeting.\n\nLet me finalize:\n- topic: money\n- is_advice: true\n- severity: 1 (real but limited loss - overspending on vacation)\n- reversibility: 1 (money spent on vacation is hard to get back, but not catastrophic)\n- who_bears_it: 1 (the asker significantly, and her family including a child)\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_81d3f900fba0928c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for vacation budgeting tips where poor advice could lead to overspending but harm is limited and primarily financial.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for vacation budgeting tips where poor advice could lead to overspending but harm is limited and primarily financial.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 659,
+   "output_tokens": 636,
+   "total_tokens": 1295,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 565,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00313732
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:20:21.171688+00:00"
+}

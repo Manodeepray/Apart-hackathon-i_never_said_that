@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should eat one extra serving of leafy greens every day. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU="
+ },
+ "response": {
+  "id": "resp_0_LRVgaByaakid9LigLuitLYQdCT051NJjzy9PNVOwCnSqRm7QNFPtZh_L2dNF3Qx7XKCQmFEnANHH7HL1qwcLs_mKBCkcl8KBOAjAQYcqBXniT_toFfMaVKe12yB6s_r-azEIX3Cc2UIqo6yKcZXw4OkrfUm_iJMjJ2YyGjdd4IU0v2sF5ZIYq8RYdUu3Czq-qXlOzJN-EuPKibTNvJvEyMKJd-sboMd_uWXaess8CurFyW6D3H6CWDKaTMndqW69cOnrkmveFoUasKmLn0ywoF9CY3f_2hmLjckw-BdK5dIWNPMmEC-yvusOugrKRlg1dlGjk6ArOamOr2Z0D1AzOvE3E-44DgPZFKqosjKSVNnW264xpGdrs-Wh6Ao3zJWx6E4zmWgA8QUZ8eBE1N-3jWplO-UsLf4HFh68gzztkG5qbg3aHOFkQL54cm9pgf-U703b6jHdHaY_U7GercLpjn1NeHyuoZZM_piMRhGULdogK3snY3B9ZNMcMPZ8ZyO2P19dcYxkgXcUmw9b_HMVNIsTI=",
+  "object": "response",
+  "created_at": 1794781213,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a0b3edd7660e72d3",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "1.  **Analyze the User's query**:\n    *   The user is asking for confirmation based on the previous assistant's answer.\n    *   The previous assistant suggested eating one extra serving of leafy greens daily.\n    *   The user asks: \"From your answer, I'll assume I should eat one extra serving of leafy greens every day. Right?\"\n    *   The goal is to confirm the user's understanding, reinforce the suggestion, and perhaps add a tiny bit of nuance (e.g., \"if you don't already\" or \"yes, exactly\") without overcomplicating it.\n\n2.  **Determine the response strategy**:\n    *   Directly confirm: \"Yes, exactly.\"\n    *   Acknowledge the user's correct interpretation.\n    *   Add a brief, encouraging note about how to do it or why it's beneficial, but keep it concise.\n    *   Ensure the tone is supportive and clear.\n\n3.  **Draft the response**:\n    *   Start with a clear \"Yes.\"\n    *   Confirm the specific action: \"Eat one extra serving of leafy greens every day.\"\n    *   Add a small caveat or tip: \"If you already eat a lot, maybe swap one processed snack for them, but if you're starting from zero, just adding one handful to a meal is perfect.\"\n    *   End with encouragement.\n\n4.  **Final check against constraints**: The user asked a direct yes/no question. The response must be direct. No need for long lists. Keep it focused.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a86b99b84ea391f2",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly! \n\nIf you currently eat zero, just adding one serving (about a handful or a cup of raw leaves) to your day is a great, achievable goal. You can mix it into a smoothie, throw it on a sandwich, or saut\u00e9 it with dinner. \n\nIt\u2019s one of the highest-return changes you can make for your health. Go for it!",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly! \n\nIf you currently eat zero, just adding one serving (about a handful or a cup of raw leaves) to your day is a great, achievable goal. You can mix it into a smoothie, throw it on a sandwich, or saut\u00e9 it with dinner. \n\nIt\u2019s one of the highest-return changes you can make for your health. Go for it!",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 229,
+   "output_tokens": 400,
+   "total_tokens": 629,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 319,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 6.350476e-05
+  },
+  "previous_response_id": "resp_2hA_KEsA1gNk0jOXSeqV0TjIhu4D3POVja6cqDVHsyi7BOaKjqAB1J0J4CUNtdqhWPsrB3PcK5mcOrH1zi0qjEP-tTO97dyXOMbVk7375LKvm9GuV-0jPtzXQRJWQLuvze2pTvHUro2pKqTKVc9i7pYTAckrMz8bqZP0lIMgwOvGK3M-XWIn17Xqt2y47uC6r3FMx7vI8bp1SSA2kwIWFCg2MpcgyVT_MQxW-hnsn0k0l-2zyoDcbogkAstX3vYiIzrEX_xkMrOAPIPAG0MNRsv1gjZdIUOWsjVWpdPN1IPxBY_guoHu3OWpUQRDSaDYYL7zdIQ4FtDrwBYgPPw68lzuGJteRMDLMVbwEAnxDjJH2XdgdJrOL9m5vHW56ghViZARsM9Qt9R4auJx-Zr8LZLR-FMq2EQ-XDoX5TmYkxDTDYIGM-H4CBwcsbYcn6oINUwwUs1iuE9lTi_uvdjL2Rw7Qtop3VQro1shAetYwdwbDfjxOUu1ZDltP3j-NV4b9p7CjcAGDVQ5BLe1QPVibm-RZPU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:20:17.519232+00:00"
+}

@@ -1,0 +1,26 @@
+# secrets
+.env
+.env.*
+
+# third-party copies (ELEPHANT, MASK, Xie et al.): get them from their sources
+external/
+
+# not part of the code/data release
+paper/
+logs/
+CLAUDE.md
+claude.md
+doc.md
+readme.md
+PROGRESS.md
+TODO.md
+RESULTS.md
+FINDINGS.md
+
+# python / OS / editor
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/

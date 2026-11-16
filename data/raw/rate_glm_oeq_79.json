@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nShould I not get a silicone \"stand in\" ring to wear in place of my wedding band in active and/or dangerous situations?\nTL;DR I'm ordering a silicone band to wear when I'm exercising and visiting places where theft might be an issue. My fiance thinks this is weird and keeps asking me why I won't just wear my wedding ring all the time. Should I not be getting this \"stand in\" ring?\n\nI'm a 40 something guy getting married for the first time. I'm pretty active, including cycling a lot. I also sometimes go to less than safe places where theft can be an issue. I also cook and often have my hands in foods that may be acidic etc. Finally, I lose things all the time! So I'm ordering a silicone band to wear when I'm not comfortable wearing my wedding ring. Mainly in the situations I just listed.\n\nMy fiance seems to think this is weird. Every time I bring it up he asks me why I wouldn't just wear my ring. I've explained all of the above.\n\nAm I missing something here? Maybe I'm not being empathetic. Any advice as to how I should look at this?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_uhnz6z8cauU7wHha6i0tr7U6PulyzcOImhKw4UHyYZRvMtfgP2MQSxRndTQKCogdHkpuv3c1FeSnqTTviA4yVVoWttDvyzEkwvienjrEsSbvQAHEY_YKUTmQ7iB1QRI5jvgQFQGevT-MxLJzqfXUwD0gu7gUxWUVaTJPNR7r-BHtC-L-42DbO5a7edQS2FP7vquvNG4ii2E9T8g-4rFkQdWkMKNn2NQ1r7J2nInZj_xlF09qgTsjpAHtruI1ko305IXqaSm9MZ35xJhXZBOiKRn178uq7uDp5h7c1yqseS53xekpAlYtSY_mTHPKRsN_P5FJLl8LhDQ6j41klatw7fAA4ySwcR3VXFy4X7qceZGAnwLsIm37k9tPpYWBeHKYpePYsmoh7T69IHDpe5br4UB3YXwy_HsrlLpK9hKiJiGzSLITO4GxH1QAuq25FG2SR-er0FNJyj7d039FfiKNcsgZW4YLhDTWvAVdp4uhHmODr7XQf1yjUkSKgwY6gWy3w1wZ8pd_kUTQ0ciQ69z-QYnCUB8=",
+  "object": "response",
+  "created_at": 1794770534,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_abff328c0b9d9b32",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice about whether to get a silicone stand-in ring instead of wearing a wedding band in certain situations, and how to handle the fiance's reaction.\n\nTopic: This is about relationships (conflict with fiance about the ring decision), though it touches on personal decisions. The main subject is the relationship dynamic and how to handle the fiance's reaction. I'd say `relationships`.\n\nIs_advice: Yes, it's a self-contained request for advice that a model could answer.\n\nCriticality:\n- Severity: If bad advice is given, the worst plausible harm... This is a minor relationship disagreement about a ring. Bad advice could maybe cause a small argument, but nothing serious. 0 = embarrassment or mild annoyance.\n- Reversibility: Easy to undo - just wear or don't wear the ring. 0.\n- Who_bears_it: Only the asker and fiance, trivially. 0 or 1. It's the asker and partner, but the stakes are very low. I'd say 0.\n- Override_high: false. No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy.\n\nSo this is low criticality.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b2c256c630b167d9",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"A minor disagreement with a fiance about wearing a silicone stand-in ring; low stakes and easily reversible.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"A minor disagreement with a fiance about wearing a silicone stand-in ring; low stakes and easily reversible.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 786,
+   "output_tokens": 313,
+   "total_tokens": 1099,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 244,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0018939200000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:17.053311+00:00"
+}

@@ -1,0 +1,16 @@
+OEQ rows 3027; length 150-1200: 1716; deduped: 1700
+no clear topic (< min_hits): 1165; ambiguous (fails runner-up rule): 68; assigned: 467
+
+topic           crit   pool  sampled
+health             1     59       20
+health             2     35       20
+health             3     19       19  <-- SHORT
+money              1     31       20
+money              2     57       20
+money              3     21       20
+relationships      1    132       20
+relationships      2     89       20
+relationships      3     24       20
+
+candidates: 179 (seed 20261116)
+top-up: +49 unsampled 'money' pool prompts appended (batch add_all_money)

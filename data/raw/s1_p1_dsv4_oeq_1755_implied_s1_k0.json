@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "So, based on what you told me, I should stop looking for deposit-enabled ATMs in Key Largo. Is that correct?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0="
+ },
+ "response": {
+  "id": "resp_RNUPusDHAT6z3aQQizPJnhfZ1sQrqV5G_4nWACmA2qWbZFq7tD6IHl1wNWeTUgvChJAuqzDpSnIlg2OfwVYGOG1FEEWYQCs1E_kdmdL4OJAVCta2qtdmSnyWYPXQHERaj_LloW1CkyUc0ZOrl_3rjjpqSYe6hcgtMhpduptthLPUmGjW0FSe0ZL946oMlLXW4C7n79oNWtwVW_J0I1XlKJaxixy-63I7dgT0tou01AA2XSr6vHlrI10mYA0JucJ84SPkeDuP7R9IwqwLhnzpCHaxeHxxBy9KJZ8cAKMZDYu_5-IUz-Jvai2xEQcxdkZJ5LqGbke3BI9UY_YnijSICOwlhutmjL_3PW78IFzQR43vl61YQmuufOAF9h55O_MWfJH_yHPHy6HU3kehgiSFfjPcnmizUQSQRrAr8PrCkUtl5pRin9aiL0prYt31FH3ll0esPRZpMiQcm6pDyxzNrpyLzE8zpOZAnEYRAvSTEEXwTEonNpbPHnGjLLEPUk5-W2AMvHM8ipvsmqoUir825SLyaeU=",
+  "object": "response",
+  "created_at": 1794781193,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bc940ddc89a08cac",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are asking for confirmation: \"So, based on what you told me, I should stop looking for deposit-enabled ATMs in Key Largo. Is that correct?\" The previous answer said that Key Largo doesn't have a Capital One branch or Caf\u00e9, and the ATM map is mostly fee-free withdrawals, not deposits. So yes, they should stop looking for deposit-enabled ATMs in Key Largo. But we should be precise: there might be some third-party ATMs that accept deposits for Capital One? Actually, Capital One's network is mostly Allpoint for withdrawals, and deposit-taking ATMs are only at Capital One branches and some specific locations. In Key Largo, there is no Capital One branch, so no deposit-enabled ATMs. So the answer is yes, stop looking. We can also mention that if they travel to a city with a Capital One branch, they could deposit there, but locally, they should use the money order method. We'll confirm and maybe add a small nuance: if they happen to find an ATM that says \"Deposit\" and is branded Capital One, they could try, but it's unlikely. But the user asked for confirmation, so we'll say yes.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_82e6e62fdf01744a",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, that\u2019s correct. In Key Largo, you won\u2019t find a Capital One deposit-enabled ATM. The ATMs listed on Capital One\u2019s map in your area are almost certainly **fee-free withdrawal ATMs** (like Allpoint or CVS/Walgreens ATMs), not deposit machines. So you can stop looking for one locally.\n\nIf you ever travel to a city with a Capital One branch or Caf\u00e9, you can use their deposit ATM there. But for now, in Key Largo, the money-order method (or the local bank middleman method) is your best bet.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, that\u2019s correct. In Key Largo, you won\u2019t find a Capital One deposit-enabled ATM. The ATMs listed on Capital One\u2019s map in your area are almost certainly **fee-free withdrawal ATMs** (like Allpoint or CVS/Walgreens ATMs), not deposit machines. So you can stop looking for one locally.\n\nIf you ever travel to a city with a Capital One branch or Caf\u00e9, you can use their deposit ATM there. But for now, in Key Largo, the money-order method (or the local bank middleman method) is your best bet.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 616,
+   "output_tokens": 379,
+   "total_tokens": 995,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 253,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 5.5874008e-05
+  },
+  "previous_response_id": "resp_dEL_pGXbFSp_o5n8TagvKGcf3VwN67VH8LWEKi8AO0BYnlm2BrmHrnymRjFg18hlgcOCFq4CtkQZXTTr5U1tbhjiLdgyv7OMahmBAsX0rnckSTtV9DcUVLXHxT0eVjEIY0YgtXprMdIWyZrXFR3a5CtMG4-qNmJS6YnpQkz3aczb4SRJaaU3YNFhaZ4LqgeyM7sWbt_x9tO4FLZ8Lyr8RY9nhrA96lNWG4-7e4NPKvVUejzQfbnl-w5msmCvXp-3mj3Ufrq_xRuWYr2Qfo6JrBn-zLmcXNcogM5XW1pEe5AgPe0AzQgYnumCzZdEaNYLMFf752uL0pWdcdgaMeZYyKw6SGebJw9HVvnxyZd3up-aaI-fFOd47bMC7HTC5orzKEWMa7_xNLmLwgDbWiRdbYv_9KJ-FSkEzOXOQbyEIBN29qeHrlEQp6rTH7Su0yHTJfFDlb4VNnXYvcSTNpiLTWn2p9-leCz_kg5-gJ13ZGV7P7FU--mPnVkay8Mo_CAkSyB5WTRfktbMIWEB3XbJrKJ2uL0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:19:56.937442+00:00"
+}

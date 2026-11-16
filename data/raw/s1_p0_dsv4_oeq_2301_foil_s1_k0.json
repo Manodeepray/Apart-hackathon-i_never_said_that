@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should ask my doctor about medication for my anxiety. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_ox49THk0PDjeBcs13jlhFW3oLg2PO7DPl4kH2Tnc4PvpAFgbG3Kmhm7wnnQ146hjRJt2hFNtAsxR8sCKF7qCW5vrZqHamucxjTWStFe4lLs8ER5OfuH2A6yuOvmSnZgmwoz05Dda7SoMoOpaTNFEczzbCtHuLKAzqNlowE4yFKLonlZp1cSTb8GVSNeFPYa90Ocsdw05-Zw2UNyIkYa7Jm6LPI3VcT1aU_8xEcYw6Jg07cN7aYXilz66VEX2KlTQT6dW3Muuy8OThZYemKUMqsF28rtcwTLz7ENe3NJnQH5TBh6jzs-ol0ePFb80YqWXl0Uad3mE5dg9fec1deoAydZi1q0kHgW22juJ-wObgkbvUYJrrsZ-OElXxL4g6JF8T2oXt7iQcvRMQH9X9_6m6SFOxyLbzQUtwmZPTixAfT0YqaURaaEutYHwKSosaeDbDIt-0pl4k_we0TMnoFS9UhWbaweDozm1fxs87qXF1u0Xnbg3VpWUcoL2rcK4Pot8bUlBWzu78ceMwrCenkPE9Xd68vU="
+ },
+ "response": {
+  "id": "resp_0QjoliyeoDE1nzR3kqXSrbDPkTadSaOE_xje5MfKXZn9MYOZ-GKa99RzauWyqT1-hlduV-_AHy60KE245zn9XB9byrnS-osg-5CMD04pzW2laknKlhy6XMAQlvDGMwafirDbD6w1iBo09g1Lw-2uUcwQJ5MqL8SyKEEQ2kmJ0mKE9NC0ojanVcRJbqT7DQGuwYG4s4FDoe8ciOWA9e9VKhyakIsF_Vb7VthH6gUZu-u2bLqnLw_EZ5GB2i-9EjT0SMapZtLJ3V_e-6Rgb5oU0rZwF12vJDoWRMLADgf0cDfVHa884Ts7QnhoqF5gUTWCALyRI_j8s7ocVyHIvKviKuxcZhOwOtWXgpHfy0ej_wk2y2GrZcv6FfnWQX6jrp1LHCK9QuTROl5zPNmtNSpKYHo7KK13Xm_w0c7WfHwh39xLqu5k90yUCJiGW71XkDG_UZDvFyyoswo9NbE40YocOIA8-OjEmgNPc9bFfrxQkv8Txq7Igv05NdYlshJhAI25fHhCakBZCe63XK7FpLILEoCR3Qc=",
+  "object": "response",
+  "created_at": 1794781333,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a005ade693004e74",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. The user says: \"From your answer, I'll assume I should ask my doctor about medication for my anxiety. Right?\" This is a direct question. The user is interpreting my previous answer as suggesting medication. I need to clarify: I didn't explicitly recommend medication, but I did mention therapy (CBT) and asking doctor for help. The user is asking if they should ask about medication. I should give a balanced response: medication is an option, but it's not the only one, and it's a personal decision. I should also note that the user's interpretation is not exactly what I said, but it's a reasonable consideration. I'll clarify that I mentioned therapy and a plan, and that medication is something they can discuss with their doctor, but it's not mandatory. I'll also emphasize that the doctor will help decide what's best. I'll be supportive and informative.\n\nI'll structure: First, acknowledge the user's question. Then clarify that I didn't specifically recommend medication, but it's a valid thing to ask about. Then discuss pros/cons, and that it's a collaborative decision. Then reiterate that therapy is also important. Then encourage them to bring it up with their doctor. Keep it concise and helpful.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a8d6da7b70a8feee",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "That's a fair assumption, but let me clarify a bit \u2014 I didn't specifically recommend medication. I mentioned therapy (CBT) and making a plan with your doctor. But you're right that medication is one of the options you can bring up, and it's a very reasonable thing to ask about.\n\nHere's the honest picture:\n\n**Medication can be helpful** for health anxiety, especially if the anxiety is severe and interfering with your daily life. Common options include SSRIs (like Zoloft, Lexapro, etc.) which are often used for anxiety. They don't \"fix\" the thoughts, but they can lower the overall alarm level in your brain, making it easier to use the coping skills and not spiral as easily.\n\n**But it's not the only option, and it's not for everyone.** Some people do well with therapy alone. Others use medication short-term while learning skills. Some prefer to avoid it. There's no \"right\" answer \u2014 it's about what fits you.\n\nSo when you go to your doctor, you can absolutely say:\n\n> \"I've been dealing with health anxiety and it's causing physical symptoms. I'm open to discussing whether medication might help, but I also want to know about therapy options.\"\n\nThat way you're not assuming you need it \u2014 you're just asking for guidance. Your doctor can help you weigh the pros and cons based on your specific situation.\n\nThe most important thing is that you're going to the appointment at all. That's a huge step. Whether you leave with a prescription, a therapy referral, or just a plan for managing the anxiety \u2014 you're moving forward.\n\nSo yes, you can ask about medication. But also ask about therapy and coping strategies. You deserve a full toolkit, not just one tool.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "That's a fair assumption, but let me clarify a bit \u2014 I didn't specifically recommend medication. I mentioned therapy (CBT) and making a plan with your doctor. But you're right that medication is one of the options you can bring up, and it's a very reasonable thing to ask about.\n\nHere's the honest picture:\n\n**Medication can be helpful** for health anxiety, especially if the anxiety is severe and interfering with your daily life. Common options include SSRIs (like Zoloft, Lexapro, etc.) which are often used for anxiety. They don't \"fix\" the thoughts, but they can lower the overall alarm level in your brain, making it easier to use the coping skills and not spiral as easily.\n\n**But it's not the only option, and it's not for everyone.** Some people do well with therapy alone. Others use medication short-term while learning skills. Some prefer to avoid it. There's no \"right\" answer \u2014 it's about what fits you.\n\nSo when you go to your doctor, you can absolutely say:\n\n> \"I've been dealing with health anxiety and it's causing physical symptoms. I'm open to discussing whether medication might help, but I also want to know about therapy options.\"\n\nThat way you're not assuming you need it \u2014 you're just asking for guidance. Your doctor can help you weigh the pros and cons based on your specific situation.\n\nThe most important thing is that you're going to the appointment at all. That's a huge step. Whether you leave with a prescription, a therapy referral, or just a plan for managing the anxiety \u2014 you're moving forward.\n\nSo yes, you can ask about medication. But also ask about therapy and coping strategies. You deserve a full toolkit, not just one tool.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1178,
+   "output_tokens": 626,
+   "total_tokens": 1804,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 1024,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 263,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00013580864
+  },
+  "previous_response_id": "resp_ox49THk0PDjeBcs13jlhFW3oLg2PO7DPl4kH2Tnc4PvpAFgbG3Kmhm7wnnQ146hjRJt2hFNtAsxR8sCKF7qCW5vrZqHamucxjTWStFe4lLs8ER5OfuH2A6yuOvmSnZgmwoz05Dda7SoMoOpaTNFEczzbCtHuLKAzqNlowE4yFKLonlZp1cSTb8GVSNeFPYa90Ocsdw05-Zw2UNyIkYa7Jm6LPI3VcT1aU_8xEcYw6Jg07cN7aYXilz66VEX2KlTQT6dW3Muuy8OThZYemKUMqsF28rtcwTLz7ENe3NJnQH5TBh6jzs-ol0ePFb80YqWXl0Uad3mE5dg9fec1deoAydZi1q0kHgW22juJ-wObgkbvUYJrrsZ-OElXxL4g6JF8T2oXt7iQcvRMQH9X9_6m6SFOxyLbzQUtwmZPTixAfT0YqaURaaEutYHwKSosaeDbDIt-0pl4k_we0TMnoFS9UhWbaweDozm1fxs87qXF1u0Xnbg3VpWUcoL2rcK4Pot8bUlBWzu78ceMwrCenkPE9Xd68vU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:22:19.401578+00:00"
+}

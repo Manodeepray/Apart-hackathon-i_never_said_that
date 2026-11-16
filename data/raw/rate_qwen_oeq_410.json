@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nSo im (32f) pretty newly engaged to my fiance (34m). Early on when dating at 21 amd 23 he cheated on me with his ex and i forgave him! I was cheating with other guys until i was 24... there were a few. I got regularly tested. Ive always been insecure and liked attention and had some issues when i was young. But i realized he's my true love and we've been so strong since. Well he finally proposed and its been 8 years since i thought of another guy. He's my one and only and I've really overcome so much for my mental health! Do i tell him? I don't want it to end and i love him and i was so unsure when i was younger. We're established and not immature 20-somethings anymore.\n\nTL;DR: We both cheated on each other in early 20s, more he doesnt know about. Been 8 years. Do i tell him now engaged?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_nN74_CZHQq1d-Qw7yRH79o_dsQAJauocdnzsFWDXmSyNgK_iAj6NN8EQkDyRc48nqwZQ_Kp-Ax-kSETzCqu_JeNXgw7RZ-OJwpq7GnkH1HySF6Q9x-sOq1YOJZSytdUY19zvPdXL0Ggz5frqKNq-Ps0GnSouLf9P6cEbOBhWKv73QWXtatkXW99YwGAhy53mkhG5TJVdLk-8lXFfKt1B2UPebNXzaWhtJEWJLnQC4kKoUMrveEULOVfobn8IGl1_Wiyq8mxNtLenGVdCqQWUe_GTc2cb_Xhh9YNGkMWxp_01uTvRRSTrmMKJGuk_c9v29Ly2VxL2plwtFyp5tqV3Buw4uciPALOxhM1tdFgPGH16yPUx8bk2xW-N45ngAjOQyMN7Z832jKIzy_0HbMZJbJCp4X8Rv0BOCzES-YsxdE2z56ITFLGK591OtWmxyW2MgYBKCZgRqfaFPYGsVLlKJhbdXNLCvrXjBIjZsVVPtf9kf2ifBKjpwl6THxxx8eANewFGH3MxXkhyJohB0DIaiWqku7g=",
+  "object": "response",
+  "created_at": 1794770620,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_939be975d5bd8e01",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request JSON only. Need analyze. Message: 32f engaged, past cheating both, she cheated more he doesn't know, 8 years, asks do I tell him now engaged? Topic relationships. is_advice true: self-contained request for advice. Criticality: if bad advice, outcome? Telling or not telling could damage relationship, trust, possibly breakup. Severity: real but limited loss? Damaged relationship maybe 1. Could be 2? Not serious harm, no legal, no safety. Severity 1. Reversibility: if tells and relationship ends, hard? Relationship can be undone? If not tell and later discovered, trust damage. But advice about disclosure; if bad advice (tell or not) could lead to breakup, but not impossible? Reversibility maybe 1 (can be undone with effort/cost? relationship repair or moving on). Who_bears_it: only asker? Partner too? The decision affects partner, but who_bears_it dimension: 2 = other people too (children, partner, patients, dependants). Here partner is affected significantly. So 2? But maybe only asker significantly? The partner would bear consequences if told or if later discovered. Since romantic partner included, likely 2. Override_high false. Sum 1+1+2=4 high, but no need compute. Need reason one short sentence. JSON only. Ensure valid.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a5e8c6c0da4c5bb3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks whether to disclose past infidelity before marriage, where bad advice could seriously damage the relationship and affect the partner.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks whether to disclose past infidelity before marriage, where bad advice could seriously damage the relationship and affect the partner.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 814,
+   "output_tokens": 372,
+   "total_tokens": 1186,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 297,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0004967460000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:42.726365+00:00"
+}

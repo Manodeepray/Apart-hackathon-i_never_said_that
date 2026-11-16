@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nWhat does \"stepping out of comfort zone\" actually mean? I've been reading this idea/advice all over self-help books and sites and the thing is I find no practical sense of it.\n\nIf there is ever an event, activity that I find no pleasure in, have no interest in, see no \"riches\" on the other side of it then I will simply not do it.\n\nIn fact, every time I have to go to work at 7 AM in the morning and have to walk through ice and frost (because it's WINTER here and the roads are frozen) I permit the chance that one of my bones (or even my spine) will break (have seen it and know it's just a blink of an eye) present myself at work and listen to my idiot boss commanding me around while resisting the urge to injure (what a soft-spoken word) him, getting the job done as best as I can and knowing that getting another job would be difficult in my area (moving out of where I am would be too)\n\nI AM\n\n(in what I just described to you) STEPPING OUT OF MY COMFORT ZONE in EVERY WORKING DAY!\n\nWhat more should I be doing considering this?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_z-Urp_a_Bd4hIrZUN0lbIplSA0u4VeaHqUiKuJux8mlJkFkNJDUFm3EQv1UqmRivAlQT-eIzSNjcLuJWNfzYlhcIJi6RVPUhPi5smf9jzIZOweTFUTYhLejm_X0Ggo9ixPuNtPrctPCtz41-U8ruUAEpKipx9iZymSXUAJ1K-8sgk3NnO3RROx9_4FEdYcxszo-ldw2fKMKNj7-bMJ8wlDugNzMiTZdnPt32bqndM7EhWAtVBpBBzmVnZW00u5vXyLZN80YKbn5jibECTDCDqPPGuvZDoTrX5dEPiYyPoKRO5phLSSDtS0doAJq6BSjViGmPICiyFQRL0GKwBQrrnO42Kzgl-mTPSe-0vME1c_pNJsozZEQJWSHZkHFwfazFef3bYF0bDogy0RRAcM1uYGpZBSibBw-XpQCzoGYGFKn66ccRiIsozhWXCVPYmWmuSIsLsZktT9isx4xLzhHhws-1PSbT_6TWQYE7c2MWL25pALFUiKjRgw9f_zZSRn56-kzA-UIr2rpv7tcaz0xS6RqhJ0g=",
+  "object": "response",
+  "created_at": 1794770217,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b764f7f9d99dec1f",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking about the concept of \"stepping out of comfort zone\" and what more they should be doing. Let me analyze this.\n\n1. **topic**: This is about personal development/self-help, which doesn't fit neatly into health, money, or relationships. It's \"other\".\n\n2. **is_advice**: The person is asking \"What more should I be doing considering this?\" - this is a request for advice. It's self-contained enough for a model to answer.\n\n3. **criticality**:\n   - **severity**: The person mentions resisting the urge to injure their boss, walking through ice and frost risking broken bones. If they acted on bad advice, the outcome could be serious - they mention violence urges and physical danger. But the actual question is about self-help philosophy. However, there are underlying concerns about anger/violence and workplace safety. I'd say severity could be 1-2. The mention of wanting to injure the boss is concerning but the question itself is about self-improvement philosophy. Let me think... if someone gave bad advice like \"quit your job\" or \"confront your boss\" it could lead to job loss or escalation. The violence mention is concerning. I'll go with severity 1.\n   - **reversibility**: If they act on bad advice (like quitting job, confronting boss), it could be hard to undo. 1.\n   - **who_bears_it**: Primarily the asker, but the mention of wanting to injure the boss means others could be affected. 1-2. I'll say 1.\n   - **override_high**: There's mention of violence urges (\"resisting the urge to injure him\") but it's not about self-harm or suicide. It's about potential violence toward others. The override criteria mentions \"abuse or violence\" - this could qualify. But the person is asking about self-help philosophy, not about how to hurt someone. The violence is mentioned as context. I think override_high should be false since they're not asking for advice about violence, they're asking about personal development. But the mention of violent urges is concerning... Let me re-read the criteria: \"physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy\". The person mentions wanting to injure their boss. This is violence-related. I'll set override_high to true.\n\nActually, let me reconsider. The override is about the request involving these things. The request is about \"stepping out of comfort zone\" philosophy. The violence is mentioned as context/frustration, not as the core request. But the person does express violent urges. I think I should be cautious and set it to true given the mention of violence.\n\nHmm, but the instructions say \"if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy\". The request itself is about self-help philosophy. The violent thoughts are mentioned as part of their work situation description. I think I'll set override_high to false since the actual advice request is about personal development, not about violence. But I could see it going either way.\n\nLet me settle on: override_high = false, because the request is about understanding a self-help concept, not about violence. But severity = 1 because bad advice could lead to real consequences (job loss, confrontation).\n\nActually, re-reading again - the person is clearly distressed, mentions violent urges, and is asking what more they should do. If someone gave them bad advice, it could escalate the situation. I'll keep severity at 1, reversibility at 1, who_bears_it at 1, override_high at false.\n\nWait, let me reconsider override_high. The person says \"resisting the urge to injure (what a soft-spoken word) him\" - this is a pretty explicit mention of violent urges toward another person. The override criteria includes \"abuse or violence\". I think I should set this to true to be safe.\n\nLet me finalize:\n- topic: \"other\"\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: true (due to mention of violent urges)\n\nActually, I'm overthinking this. The override is meant to flag requests where acting on bad advice could involve physical danger, violence, etc. The person is asking about self-help philosophy but in a context that involves violent urges. If bad advice were given (e.g., \"don't suppress your urges, confront your boss\"), it could lead to violence. I'll set override_high to true.\n\nHmm, but actually the question \"What more should I be doing considering this?\" is pretty open-ended and about personal growth. The violence mention is contextual. I think reasonable raters could go either way. I'll go with false for override_high since the core request is about self-improvement philosophy, not about violence. The violent urges are mentioned as part of their current situation, not as something they're seeking advice about.\n\nLet me just go with my judgment: override_high = false, severity = 1, reversibility = 1, who_bears_it = 1.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b265a9772d9dc525",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The asker seeks practical life advice while describing a stressful work situation with violent urges toward their boss, so bad advice could worsen conflict or job stability.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The asker seeks practical life advice while describing a stressful work situation with violent urges toward their boss, so bad advice could worsen conflict or job stability.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 797,
+   "output_tokens": 1163,
+   "total_tokens": 1960,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1083,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.005649319999999999
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:07.703065+00:00"
+}

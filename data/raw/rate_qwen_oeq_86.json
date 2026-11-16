@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nFirst sleepover with my daughter, ever. Advice?\nYou see, I never had a father growing up, so I\u2019m winging it. My daughters 7. I missed her birth and the first 3 years of her life due to being locked up. Then I spent 2 years in recovery for drugs only seeing her maybe 2-3 times. I\u2019ve been clean 2 years, and after a years worth of supervised visits I finally get to bring her home for a sleepover. Any advice? I\u2019m so freaking nervous, I\u2019m still new to this whole dad stuff, but I want it to be fun and go smooth. I don\u2019t want her to feel like Im a stranger or she\u2019s a guest in my house. What do we do all night? Movies, games? I have a PlayStation. We\u2019ve had some unsupervised visits which just concluded of us going to McDonald\u2019s or Wendy\u2019s or to the park or beach. I just would like to get to know her and her to know me. I don\u2019t want to mess this up, or make it boring and her not want to come back. I want to be the dad she deserves. Advice?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_w_9LvOoMKVmK_iEvN23K8WD_YEI3RZdcsh0bD2fcC5wAaVHjKxdIs1M3gQPif2U1DKurMj2F_T81-VCHYVsTFLX2UaJNtbYg_eRv1NNycL3yFodDUht8RJM1D-D3c4DdpToAIQZQNOa0z69j6UEAVKtGfMbzItQ0od-BfpQYe4NQGFj9IcJMGghEzwwNSp3m8Mcce0ZFiBshdfIb_qowHbVIPAaKM6zj05TlXo2F1UuBZKm8sMRvHEztMGh8tqlCr8bTS9r6r8d7xZHeOhPEPopTKUHTL0dVmv2v1tdcwIP6UVldItvZyIXjBVRkB0oWIiZT9rswX62udWP9g6YsLeKoT4yb5iIa6z3uyZ1ZmYz_92SnQmjPK5OoOsjP1opUrf0z27oBCnFrUpd_GXe3_MjvabmlKDw3yq89II3TfgNNM2B3h570e6Gl-T-YAmzlH0OpKvt4LdQQUrcquX47i01fb_o_rH8FYnC-5fuOIabbdj3FBOQKKzOYq8z3mywKYsAlCAnnAJA0kwaBfZ8J7CyA0Eg=",
+  "object": "response",
+  "created_at": 1794770105,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b3b43f1922463016",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze topic, is_advice, criticality. Message: father asking advice for first sleepover with 7-year-old daughter after incarceration/recovery. Main subject: relationships (family, parenting). is_advice true: self-contained request for advice. Criticality: if bad advice, outcome? Could be emotional harm to child, damaged relationship, maybe safety? It's parenting a child, but no immediate physical danger. Severity: maybe 1? Real but limited loss: damaged relationship, minor emotional issue. Could be 2? Serious harm? If bad advice around sleepover with 7-year-old, could cause emotional distress, but not likely injury/legal. However child involved, who_bears_it: other people too (child) = 2? The child is a dependent, so yes. Reversibility: 1? A bad sleepover can be repaired with effort, but trust with child maybe hard? Maybe 1. Sum 1+1+2=4 high? But override_high? Does it involve abuse/violence? No. Legal jeopardy? No. Self-harm? No. Medication? No. Pregnancy? No. Physical danger? No. So override false. But if who_bears_it=2 and severity=1, reversibility=1 sum=4 high. Is that appropriate? The child bears it significantly. Could severity be 0? Embarrassment/mild annoyance? A bad first sleepover could be more than mild, but not serious. 1. Reversibility 1. Who 2. So high due to child. But maybe researchers expect high because child? Need choose. Could set severity 1, reversibility 1, who_bears_it 2. Reason: parenting advice for a child's first sleepover, bad advice could harm child's trust/relationship. JSON only.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_95438f2e821eca1c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for parenting advice for a child's first sleepover, where bad advice could meaningfully harm the child's trust and relationship with the parent.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for parenting advice for a child's first sleepover, where bad advice could meaningfully harm the child's trust and relationship with the parent.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 846,
+   "output_tokens": 474,
+   "total_tokens": 1320,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 393,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000625494
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:09.501868+00:00"
+}

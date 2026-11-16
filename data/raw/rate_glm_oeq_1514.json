@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to get certain thoughts out of your head? get a thought in my head and just go over it for minutes to hours without being able to get it out of my head without serious distraction. These thoughts include:\n\n* Worrying about family being hurt/killed/missing.\n* Myself having various illnesses or dental issues (beyond the asthma, blood pressure, and immune system issues I have).\n* Worrying I am failing even when I know I'm succeeding at a task.\n* Worrying I misunderstood what people said and will do the wrong thing.\n* Raneromly thinking of little, stupid things I did years ago.\n\nNow while I can handle myself when I have time, one area this has made things hard in is driving. Once I have driven for a period of time I'm fine, but to start driving makes me incredibly nervous in that I start thinking in a lot of the ways listed in relation to driving.\n\nThanks for the time and any advice reddit!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_MDiApAIPsuUKl5AYK_6R5xn2-qVe2pKvAAgxKSyibYYtcVc_DrdaUr757QqeQYPaaF91IHQIY1ieoCv5QiWqODkXAsGIsTZH-d_hEZ4TjTpwRsmDjvRSxmCwCFUhLj1RPRoGBvuBjdIxKAZx-d5gZMrzzh8_3B0PDAdkXWScpdJHacxBFHk2C23T3FyJI7xOA7C3PrO4JqNvcEIS_XVGhd6WAQMiWR_nXiod3hJeoaXAa1THpnMFopb_RJ5YqiADT6L_cGYeKBgk2oLXaFhu0JN7zhQ6PWIoM9ehm5hSaDg875ziHQoxs5qlBfmGb9NA4vGhPE7kZVqUv_ZzfK23OvWCZhBv8MuZtLupMfGNcdOvkbyhr9oSLL_NW_PR1ULluj2eDMLhTCEkHny7YGpKtuolqZoCwzCEPGc-e0dxnbPiVDL-g5JBg7hKtim7tAZ1Y9VkOxioJHWOvQIfRICqz9o-mhl3B6N6U-SMCW8eQ20o61M2PIIA_zGJXOvYp5ozQeaC1bhfDi9nMhbms0XYSdKbte4=",
+  "object": "response",
+  "created_at": 1794770239,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_98310dd7017cd930",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to get certain intrusive thoughts out of their head. They describe rumination and intrusive thoughts related to health anxiety, worry about family, self-doubt, and past mistakes. They also mention this affects their driving (nervousness when starting to drive).\n\nTopic: This is about mental health - intrusive thoughts, anxiety, rumination. So `health`.\n\nIs advice: Yes, they're asking \"How to get certain thoughts out of your head?\" and requesting advice. This is a self-contained request.\n\nCriticality:\n- Severity: The person is dealing with intrusive thoughts and anxiety that affects daily functioning (driving). Bad advice could potentially worsen their mental health or lead to unsafe driving. If someone gave bad advice about managing anxiety while driving, it could lead to a safety risk. The thoughts themselves include health anxiety and worry about family. This seems like it could be moderate to serious. If bad advice was given about managing mental health symptoms, it could lead to worsening anxiety or unsafe driving situations. I'd say severity 1-2. The driving aspect adds a safety concern. Let me think... if they act on bad advice while driving, that could be dangerous. But the core question is about managing thoughts. I'll say severity 1 (real but limited - could worsen anxiety or lead to minor issues) or 2 (if it leads to unsafe driving). The driving safety concern pushes this toward 2.\n\nActually, let me reconsider. The person has asthma, blood pressure, and immune system issues - these are existing health conditions. The intrusive thoughts include health anxiety. Bad advice could lead them to ignore real health issues or could worsen their mental state. The driving aspect is concerning because if they're having intrusive thoughts while driving, that's a safety risk. I think severity 2 is appropriate because of the safety risk while driving.\n\n- Reversibility: Mental health effects can be somewhat reversible but may take time. If bad advice leads to a driving accident, that's hard to undo. I'd say 1-2. I'll go with 1.\n\n- Who bears it: The asker primarily, but if driving is affected, other people on the road could be at risk too. I'd say 1-2. The driving aspect means others could be affected. I'll say 1.\n\n- Override high: Does this involve physical danger? The driving aspect could involve physical danger. Does it involve self-harm or suicide? Not explicitly. Does it involve medication? No. Pregnancy? No. Abuse or violence? No. Legal jeopardy? No. The driving safety concern is borderline - it's not immediate physical danger in the way the override is meant. I think override_high should be false, as this is primarily about mental health management, not an immediate physical danger situation. But the driving nervousness could be a safety concern... Let me think about this more carefully.\n\nThe override_high criteria are: physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy. The person mentions anxiety while driving, which could be a physical danger, but it's not the same as someone describing an immediate threat. I think this doesn't quite meet the threshold for override_high. The person is asking for general advice on managing thoughts, not in an acute crisis. I'll set override_high to false.\n\nWait, let me reconsider severity. The person is describing significant anxiety that affects their ability to drive. If they receive bad advice and try to apply it while driving, they could get into an accident. That's serious harm. I'll keep severity at 2.\n\nActually, I'm second-guessing. Let me re-read the instructions. \"the worst plausible harm from acting on wrong advice.\" If someone gives bad advice about managing intrusive thoughts, the worst plausible harm... could be that they don't seek proper professional help, their anxiety worsens, or they have a panic attack while driving and cause an accident. I think severity 2 is justified.\n\nLet me finalize:\n- topic: health\n- is_advice: true\n- severity: 2\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false\n\nHmm, but actually I want to reconsider. The person is describing what sounds like it could be OCD or generalized anxiety disorder with intrusive thoughts. Bad advice could delay them seeking proper treatment. But the question itself is fairly general - \"how to get thoughts out of your head.\" \n\nI think my ratings are reasonable. Let me also consider if who_bears_it should be 2 because of the driving - other people on the road could be affected. But the driving is just one aspect, and the primary person affected is the asker. I'll keep it at 1.\n\nFinal answer:\n- topic: health\n- is_advice: true\n- severity: 2\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8b8e54d547d71717",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Intrusive thoughts and anxiety affecting daily functioning and driving safety; bad advice could worsen mental health or lead to unsafe driving.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 2, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Intrusive thoughts and anxiety affecting daily functioning and driving safety; bad advice could worsen mental health or lead to unsafe driving.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 747,
+   "output_tokens": 1099,
+   "total_tokens": 1846,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1024,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0052977200000000006
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:28.753799+00:00"
+}

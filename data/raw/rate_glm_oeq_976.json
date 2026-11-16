@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nSo my (m22) girlfriend (17f) asked me to stop smoking weed yesterday because she doesn't like how I \"act\" when I'm high. She says I don't pay enough attention to what she is saying, and when I'm sober I'm super attentive to her.\n\nI don't understand what she means by this so we argue about this for some time. This weed issue has come up before. She got into a fight with my best friend over weed because of something I can't remember. She has complained about me smelling like smoke before as well.\n\nAnyway, back to the fight. We argue and end up compromising that I should only smoke 2 days a week. She started with smoking every other day but 2 days is where we compromised. So here is my issue. I've never asked her to chance anything. Yet she is asking me?\n\nWhat is going on here? Am I over reacting? Thank you for the input.\n\nTL;DR Girlfriend asked me to stop smoking weed for at least 2 days a week. I think she might be trying to manipulate and change me. Advice please?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_JmBEm5nGmJNBWp_XCx92iWvkO-GmdZ0kyA9bVA6jOCrxPlU8w9lc0mMZihAzWTkqNUqZ_wgfRTU6Bz7QNFXX3q6xM-XMPGJ496k7GlediuPFp7UoMvlG2T8E5BDlrIJjciVs3kU7TX-RLVEfROvtkatBhg0gfeugc7tHCjCiKHwefiw-ke3XgGdtVboPxs-4XmQUT93_VXaO9QkshbwTie_QHsJmTDT7BwUB_CREgBywUZPc-80L2NWh6HZWFjVc5zlX3yABhlFbN5NO7oPGZZbHyT52dyqKktnrxamUNWs5HuOmy1hy4ZtKvAJIQ4ZCQJHBUsnUbueZfDC_rWmMRp4P4iPMV4iHIpLl3YT0ssgFwP8WRtS4m0C_UtxBaLVTRh7-il3sbKqDV8jihCAWIzgcmEUCfVYIdVdvooPHf4OLdPgZurmsrA1zIPl_-zanT6X1eWT39nkNU5lWnL8V10IWu1-X1opLgbY96iOBtk6mxTGw5TQZRdYrlmUopAvh4Utv_i3sXsCkuGUstAhcebsk_98=",
+  "object": "response",
+  "created_at": 1794770730,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a5cdf24edba8e248",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "Let me analyze this message carefully.\n\n1. **topic**: This is about a relationship conflict between the person and their girlfriend regarding smoking weed. The core issue is about the relationship dynamic - the girlfriend asking him to change behavior, him questioning if she's manipulating him. This is primarily a `relationships` topic, though there's a secondary health element (weed/smoking). The main subject is the relationship conflict.\n\n2. **is_advice**: Yes, the person is asking \"Am I over reacting?\" and \"What is going on here?\" and \"Advice please?\" - this is a self-contained request for advice about a relationship conflict.\n\n3. **criticality**:\n   - **severity**: Let me think about this. If someone gave bad advice here, what could happen? The worst plausible outcome... The relationship could end, or the person could continue/stop smoking in a way that harms the relationship. There's also a concerning age gap issue (22M with 17F) that could have legal implications depending on jurisdiction. If bad advice led to ignoring the girlfriend's concerns or escalating conflict, the relationship damage would be real but limited. However, the age gap (22 and 17) could potentially involve legal issues depending on jurisdiction. But the advice being asked is about the weed/relationship dynamic, not about the age gap. I'd say severity is 1 - real but limited loss (a damaged relationship).\n   \n   Actually, wait - the age gap is significant. A 22-year-old with a 17-year-old could involve statutory rape laws depending on the jurisdiction. But the person isn't asking about that - they're asking about the weed issue. Still, if bad advice normalized this relationship dynamic... I think severity should be 1 for the relationship aspect.\n\n   - **reversibility**: Relationship decisions are generally reversible. If he stops smoking and they break up anyway, he can start again. If he keeps smoking and she leaves, he can find another relationship. I'd say 1 - can be undone with effort or cost.\n\n   - **who_bears_it**: The asker bears it, but also the girlfriend (who is 17, a minor in many jurisdictions). The girlfriend is significantly affected by the advice outcome. I'd say 1 - the asker significantly, but the girlfriend is also affected. Actually, since the girlfriend is 17 (potentially a minor), this could be 2 - other people too. But the question is about who bears the harm from bad advice about the weed/relationship issue. The girlfriend would be affected by the relationship dynamics. I'll say 1.\n\n   - **override_high**: Does this involve physical danger, self-harm, suicide, medication/dosing, pregnancy, abuse, violence, or legal jeopardy? The age gap (22M, 17F) could potentially involve legal jeopardy depending on jurisdiction regarding age of consent laws. This could be considered legal jeopardy. I'll set this to true.\n\n   Actually, let me reconsider. The override_high is about the request involving these things. The person is asking about a relationship conflict over weed. The age gap is present in the background but isn't what they're asking about. However, the relationship itself could involve legal jeopardy (age of consent). I think I should set override_high to true because the relationship involves a potential minor (17) with an adult (22), which could be legal jeopardy.\n\n   Hmm, but the advice being requested is about the weed smoking and relationship dynamics, not about the legality of the relationship. The override is meant to flag when bad advice could lead to serious harm in these specific areas. If someone gave bad advice about the weed issue, it wouldn't directly lead to legal trouble. The legal issue exists regardless of the advice given.\n\n   I'll set override_high to false since the actual advice topic (weed/relationship conflict) doesn't directly involve these critical areas, even though the age gap is concerning in the background.\n\n   Wait, let me reconsider again. The instructions say \"if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy.\" The relationship itself involves a potential legal issue (age of consent). The request is about this relationship. I think I should flag it.\n\n   Actually, I'll be more conservative. The person is asking about a relationship conflict over weed. The age gap is a detail in the background. The advice they're seeking doesn't directly involve legal jeopardy - they're asking about whether they're overreacting to their girlfriend's request. I'll set override_high to false.\n\n   But actually, thinking about it more - if someone gave advice that encouraged continuing or deepening this relationship without acknowledging the potential legal issues, that could be harmful. The relationship itself involves potential legal jeopardy. I think I should flag it.\n\n   Let me settle on: override_high = true, because the relationship involves a 22-year-old with a 17-year-old, which could constitute legal jeopardy depending on jurisdiction, and any advice about this relationship should consider this.\n\n   Actually, I'm overthinking this. Let me re-read the instructions: \"override_high: true if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise false.\"\n\n   The request is about a relationship conflict. The relationship involves a 22M and 17F. In many jurisdictions, this could be illegal (age of consent). The request \"involves\" legal jeopardy in the sense that the relationship itself may be legally problematic. I'll set it to true.\n\n   Hmm, but one more consideration - in many jurisdictions, 17 is above the age of consent. In many US states, the age of consent is 16 or 17. In many countries, it's 16. So this might not actually be illegal. The age gap is concerning from a power dynamics perspective but may not constitute legal jeopardy.\n\n   I think I'll set override_high to false, as the actual advice topic (weed smoking, relationship communication) doesn't directly involve the listed critical categories. The age gap is concerning but may not be illegal, and the person isn't asking about that aspect.\n\n   Let me finalize:\n   - severity: 1 (damaged relationship is a real but limited loss)\n   - reversibility: 1 (relationship decisions can be undone with effort)\n   - who_bears_it: 1 (the asker significantly, but also the girlfriend)\n   - override_high: false\n\n   Actually, I want to reconsider severity. If bad advice was given and the person continued smoking weed and ignored their girlfriend's concerns, or if the advice escalated the conflict... the worst outcome is a breakup, which is a real but limited loss. I'll keep severity at 1.\n\n   Final answer:\n   - topic: relationships\n   - is_advice: true\n   - severity: 1\n   - reversibility: 1\n   - who_bears_it: 1\n   - override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_86704649487076de",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Relationship conflict over weed use and communication; bad advice could damage the relationship but outcomes are largely reversible and limited to the couple.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Relationship conflict over weed use and communication; bad advice could damage the relationship but outcomes are largely reversible and limited to the couple.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 775,
+   "output_tokens": 1516,
+   "total_tokens": 2291,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1442,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0071717199999999995
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:44.107039+00:00"
+}

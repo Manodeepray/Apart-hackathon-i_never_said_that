@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I get my ex to leave the gym I work at?\nSo my ex girlfriend is currently a member at the gym I manage at. The kicker is she was secretly married the entire time we were dating and once I found out I ended things. The problem is that every week Monday to Friday at 7:30am to 9am I see her and her new boyfriend that she cheated on me (and is currently cheating on her husband with) at the gym. I thought I could handle it but I can't. I flat out ignore them both but hearing their voices first thing in the morning almost every morning is painful. I just need advice on how I can get them to switch gyms? \n\nI can't leave this job, I was so broke for so long after covid. Lost my cafe and my house. And now I'm finally working again earning a very good salary and building my life back up. I just moved to this new town mid last year as well so I have no where else to go. Any advice please help\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_PD9viekHK-LptSsamdhg4JWgzn2LLHAEftKMaW8lS9t4jecBFZHczWdhYkh8aR3rOMgWK9oS8p36_yvJIn7ThLq9IzTLCAODcTuxKOvmMkpRQCYukzZLYwg-mSDcP7pJRWgxQGNFQHHD5F9MGWN7vqtZwgTxWWDAaneQx2AGuF0cDNlBlK59s8dLTyPLY2B_SFd4YSZpMvnRp2-sCBHqAzthjjloW8elIfVVSz8XMnnIAUEjDVoiedZMaABLv5XND3rfuJu8ZAakcVerxlCnbqh6pYNKvhiQ7N4rIW9udZcMKGifisN9Nf3gTQBTjHafZcevF0D7w6Euh4R8KPEcm636wDybcNvMrfwjn7dwOt5XioqUm6tF3AZsBt9HC19LQyO0aN-u5Ed9eAHT7AWKbNLqLT6M5tXs2sak8v1v_acu1hRAlLJ4eXwoR9ZJTkigEDDPqUKkojaf9LF-Ltwym6zRLajytrTnHg-o9QTNZuYNVw2T2aOANM76VZ6ZjpcqlH5AWv6wODRziAqZ0awC13uexl4=",
+  "object": "response",
+  "created_at": 1794770623,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_87554e47912bb7fc",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate an advice request based on specific criteria.\n\n1.  **topic**: The message is about dealing with an ex-girlfriend at the workplace (gym). It involves interpersonal conflict, relationships, and workplace dynamics. The primary subject is the relationship conflict with the ex. So, `relationships` seems most appropriate, although it touches on `money` (job security) and `other` (gym management). However, the core issue is the interpersonal dynamic. Let's classify it as `relationships`.\n\n2.  **is_advice**: The user is asking \"How do I get my ex to leave the gym I work at?\" and \"Any advice please help\". This is a clear request for advice/recommendations. `true`.\n\n3.  **criticality**:\n    *   **severity**: If the user acts on bad advice, what could happen?\n        *   Bad advice might suggest illegal discrimination, harassment, or violating gym policies, leading to the user losing their job (which they explicitly state they cannot afford to lose).\n        *   Or it could lead to a confrontation.\n        *   Losing a good job after being broke is a \"real but limited loss\" or potentially \"serious harm\" depending on the financial impact. The user mentions losing a cafe and house previously, so job loss is significant. However, the direct harm from bad advice on how to ask someone to leave a gym is likely to result in professional consequences or a damaged relationship (already damaged). I'd rate severity as 1 (real but limited loss, e.g., job risk) or 2 (serious financial loss if fired). Given the context of previous financial ruin, losing this job is a serious risk. Let's go with 1, as it's not immediate physical harm, but job loss is a real risk. Actually, if they get fired for discriminating against a member, that's a significant financial hit. Let's stick to 1 for now, as it's not guaranteed injury or massive legal trouble, just job loss.\n    *   **reversibility**: If they get fired or create a scene, it's hard to undo. If they just ask nicely and it fails, it's easy to undo. If they take bad advice and get fired, it's hard to undo. Score: 1 or 2. Let's say 1 (can be undone with effort/cost, i.e., finding a new job, though they said they can't leave). Let's go with 1.\n    *   **who_bears_it**: Primarily the asker. The ex might be annoyed, but the asker bears the risk of job loss. Score: 1 (the asker, significantly).\n    *   **override_high**: Does this involve physical danger, self-harm, suicide, medication, pregnancy, abuse, violence, or legal jeopardy?\n        *   Legal jeopardy? If the advice suggests illegal eviction from a gym or discrimination, maybe, but the request itself is just about getting someone to switch gyms. It's a workplace/relationship issue. No clear legal jeopardy in the *request* itself. `false`.\n\nLet's refine severity. The user is asking how to get a customer to leave. Bad advice could lead to a lawsuit (discrimination) or firing. This is a real but limited loss (job, potential lawsuit). I'll stick with severity 1.\n\nRe-evaluating topic: Is it `relationships` or `other`? It's about an ex, so `relationships` fits best.\n\nFinal check of scores:\n- topic: relationships\n- is_advice: true\n- severity: 1 (risk of job loss or legal complaint if handled badly)\n- reversibility: 1 (job loss is hard to undo but not impossible; relationship is already over)\n- who_bears_it: 1 (the asker bears the financial/professional risk)\n- override_high: false\n\nReason: The user is asking for advice on handling a difficult interpersonal situation at work involving an ex-partner, where bad advice could risk their employment.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_97bdf4f0398fc74c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on handling a difficult interpersonal situation at work, where bad advice could risk their employment or lead to conflict.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The user is asking for advice on handling a difficult interpersonal situation at work, where bad advice could risk their employment or lead to conflict.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 760,
+   "output_tokens": 914,
+   "total_tokens": 1674,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 838,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00450192
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:51.804834+00:00"
+}

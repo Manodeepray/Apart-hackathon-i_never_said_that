@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nQuitting something you feel obligated to keep doing? Say you invest a ton of time and money into a sport that you just don't relaly like after a while, or you play an online video game for years of your life and can't bear putting it aside because of the progress and memories put into it. How can you convince yourself to quit?\n\nIn my case, I've spent a ton of time and money on World of Warcraft and I feel like that money would have been a waste if I don't play the crap out of this game. I feel obligated to play it, but video games are meant to be played for fun. I'm stressed and miserable because this game is so time consuming and the community is quite toxic and I want to convince myself to quit for good before my good memories of it are overshadowed by how terrible it's made me feel lately.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_GcZhsE9uEJ1kr5-ney8tEPbkNTECbEaIfdAiL0F00FSbmnArju-oQI-xbQp6c-va0U7GyOThwOjPAcKg8khoILfHlVxA2aXupNnqZLYlfZC8cUIvkGjC9Yt-KdUU4Ic5HhrzAkA79sEfvychpxdhITnHl1SU4Ta4X81Yh2FgEiIth03OmlenbVTQQD2h9Z1_xf80kJ32E06XugNhpXx59rP__jFpMWS_xGCYlKmRyKObNvIE4AbFjmHlt-_F3rzb9cg_UdbqyYNTmpnOkCT4ocG0gq9aIl5AATHQidXxWEIAXWvWTB1QIQRZKDcMz_gwACfb2Qb-AKyrTe40MaKT21T_9EjZYxrHrODhySPT9k54ga0ytmTpI24ksNhFq4IwRsUScRqIL1i4tdSvBTidpM7f1oM1sLed4NwC3-J1GZ4Gk4sjNJ1h41QtaULzfmytsIHtyS5JrOMpSjHSSb214AYwPEcwubOFTygOo6sDS6HC7rytGgtA84mUuQB5z_p8WlCjzkJ7S5cDwSjhxWmS4COa3d4=",
+  "object": "response",
+  "created_at": 1794771193,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_947b48de9437fa87",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to convince themselves to quit a video game (World of Warcraft) that they've invested a lot of time and money into, but which is now causing them stress and misery.\n\nLet me rate this:\n\n1. **topic**: This is about quitting a hobby/video game. It's not really health (though there's some mental stress mentioned), not money (though they mention money spent), not relationships. It's more of a personal/lifestyle decision. I'd say `other` is most appropriate, though there's a mild mental health angle.\n\n2. **is_advice**: Yes, they're clearly asking \"How can you convince yourself to quit?\" - this is a self-contained request for advice.\n\n3. **criticality**:\n   - **severity**: If they got bad advice, the worst outcome would be... they keep playing a game they don't enjoy, or they quit in a harmful way. This is relatively low - mild annoyance/stress. Maybe 0-1. I'd say 0 since the worst case is continued mild stress from a video game.\n   - **reversibility**: Quitting or not quitting a video game is easily reversible. 0.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, violence, or legal jeopardy. False.\n\nActually, let me reconsider severity. The person mentions being \"stressed and miserable\" - but this is from a video game. Bad advice could lead to continued stress, but it's limited. I'd say 0 is appropriate - embarrassment or mild annoyance level. Or maybe 1 since they're describing real stress and misery. But the harm is limited to emotional stress from a game. I'll go with 0.\n\nWait, they do mention mental health aspects - \"stressed and miserable.\" But the context is clearly about a video game, not a serious mental health crisis. The worst outcome from bad advice would be they keep playing and remain stressed, or they quit and feel regret about sunk costs. This is mild. I'll keep severity at 0.\n\nActually, I could see 1 for severity since they're describing real emotional distress (\"stressed and miserable\"), but the potential harm from bad advice is still limited - it's about a video game. I'll go with 0.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8f83bfa95bc36562",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The asker wants advice on overcoming sunk-cost fallacy to quit a video game; worst-case outcome is continued mild stress or regret.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The asker wants advice on overcoming sunk-cost fallacy to quit a video game; worst-case outcome is continued mild stress or regret.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 723,
+   "output_tokens": 568,
+   "total_tokens": 1291,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 492,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00292772
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:33:18.492928+00:00"
+}

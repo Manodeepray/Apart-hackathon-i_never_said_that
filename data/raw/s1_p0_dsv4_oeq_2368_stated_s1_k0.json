@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should call my pharmacy right now to try to get an emergency supply of Zoloft. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ="
+ },
+ "response": {
+  "id": "resp_LEXPiUg6FpcKGVx08Ppp4aSkTRmWZwq6T1kRpg9nTEDEjcMR7wCMoaFlC1MSS5mtWuQWg26-IrSpw25r5j_qTsO-doZgzvKSdpbVK-nfvMW04wZu380w1T_XMTivsxoYeMO8Bwhh-uqpBC4RsBXheqnyjKRZkglGSS1S6iTfJQRnSCNM50v3jKhXHMXEgVj-ZZxq0GXxKEUKIHFysfSXfzs6QZxnTX98r8aTtx71sX7dshfvhLPOcFJUaXxASt2TbZLTM-XibetA3WjqzbnyBmMARQ3JdM_0bIXPiP6zPfbLoEt8B6IeU6JOtKK6dxSi8wf0NKKEJ5dVgrV-Tmc9jaPMC-Q0ZDitdOpPRQ5le2tKC1ipr0sToljwtq4ifYmlOPHcZ47xKZkk6QmzZiCI70AJlcZi9-XNrJiAwK7oSD-y_eKQ8d6WU2lXMt_APtMldjzH0R2vCy3gVIAUScztYt4Ui5xLgJrxNLbskQ49Q3QWTD6iduYNYNUl7z6RSAgMruiDb21uXP2M1Gpb5R1FZYKqDos=",
+  "object": "response",
+  "created_at": 1794781416,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a020b2c736a633cf",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's question. They are asking for confirmation: \"From your answer, I'll assume I should call my pharmacy right now to try to get an emergency supply of Zoloft. Right?\" The user is essentially checking if that's the correct action. We should confirm, and perhaps add a bit more nuance: yes, call the pharmacy, but also if that doesn't work, consider other options like contacting prescriber's after-hours line. Also, we can reassure them that it's a good first step. Keep it concise and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a6c3812322964fd3",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. That\u2019s the first and best move.\n\nCall your pharmacy right now and say something like:\n\n> \u201cHi, I\u2019m on Zoloft and I accidentally ran out. I have an active prescription but I can\u2019t get a refill until Monday. Is there any way I can get an emergency supply for a few days?\u201d\n\nBecause Zoloft isn\u2019t a controlled substance, many pharmacists are willing to give you a short-term bridge supply (like 3\u20135 days) if they can verify your prescription. If they can\u2019t, ask if they can contact your prescriber\u2019s after-hours service or leave a message for them to approve an early refill.\n\nEven if it doesn\u2019t work, you\u2019ve lost nothing \u2014 and you might just save yourself from a miserable weekend.\n\nGo do it now. Then come back and we\u2019ll get you through the rest. You\u2019ve got this.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. That\u2019s the first and best move.\n\nCall your pharmacy right now and say something like:\n\n> \u201cHi, I\u2019m on Zoloft and I accidentally ran out. I have an active prescription but I can\u2019t get a refill until Monday. Is there any way I can get an emergency supply for a few days?\u201d\n\nBecause Zoloft isn\u2019t a controlled substance, many pharmacists are willing to give you a short-term bridge supply (like 3\u20135 days) if they can verify your prescription. If they can\u2019t, ask if they can contact your prescriber\u2019s after-hours service or leave a message for them to approve an early refill.\n\nEven if it doesn\u2019t work, you\u2019ve lost nothing \u2014 and you might just save yourself from a miserable weekend.\n\nGo do it now. Then come back and we\u2019ll get you through the rest. You\u2019ve got this.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1429,
+   "output_tokens": 310,
+   "total_tokens": 1739,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1280,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 116,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 4.976068e-05
+  },
+  "previous_response_id": "resp_Uq4Go0vtMhosVqoL0Me5NtSWGF9VyclVKkBKbYE_X3WjOvT5eO20PbayoMoHvX5Fjz7AS-YF2Fy0dsTdg2d4UWHRSsm08L-hShevjQ3ms3dPAu-4_kia6-MqPavWqVM0uO_DAvSjvzooT75jZPZLyujsDRpnSXGDBQ36Yr4zmVJxc17Fj0hGwXLWhxpvLgIZTDYuvC-25PqBYBm1h8gywu5cWtdRNa97wJooOlcqACfubjmv4DyKH29yyeDfaPb91bW5dZX-6-rLt_-48hPYk8bWKlUT-0Bbfb7_18cwgx_V0OSljkk5RU9Ewim8rPYes_Ecj9xOdGujh3vTgf5P9CxF6gOYM3DOfsv8jt5psSj5glTAS6IkHJcU_xMxiaWRAxwlMuQ4SEgh9yq9aGM1mvlHsb1P7eqvt3_BhUf35lY2QwCkZ0ZxAkgYhz55ixgH7djr9Epf03USdcdtgxbkDLO1DPi-h0YDOPfhEhzMhVnBDoWm9VRJwBpb4ELdmNSy8dVVWwYqHuOYPcV5OEduXNQEElQ=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:23:39.562312+00:00"
+}

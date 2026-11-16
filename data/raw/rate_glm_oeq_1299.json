@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nhow to get back on track after \"burning out\" I'm a PhD student and this past summer I was in full research mode. I never stopped. I was putting in 12-16 hours days some weeks. I accomplished a lot and I'm happy that I put the work in but I'm feeling burnt out. At the end of the summer I took two weeks off with the hopes that after a rest, the fire would reignite and I'd be right back at it. But.. that didn't happen. I'm juggling a course, a TAship, and trying to do research this semester and while before it would seem like no big deal, I find myself completely unmotivated to put in the time and effort I was before. My advisor has told me not to worry about research until I have more time which is somewhat comforting but I feel like I need to correct this before I fall even deeper into this hole. I want to be where I was before. \n\nIn short, how do you get back on track after feeling \"burnt out\" whether it be school, work, a diet, etc?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_k2mJ7rjZt0Iz3FpDkx6NHNEkRLroSz-v8-jAbNv_Spkqv_MaVhQo1lcwVihkd7LyFpRCpejoRV9NLmL5LZqWYID0EGCr0TsccEUmodopG91UkUq6fEPNs5mz4qWRIxfe7sIE19kWiqI-flMUZ0EnZCGXBsTWJGamN7TPs7L6X4hrKkArcV4SJuMyKvngGfEPabgi1B1JHsAX9Tm_aeddkwTHBzCyZHYjXUg-C3tJKMHFzJ1-OKsCsH0QUVf_PrKTnb9Yu-7h2Ll5MiOgXs0we7AP6yTwP7VOt7ZyYYpVxXDTjf_aqlxIBPiIW_EJQ4RBfAna8cmXXBPd1mOFqW5u9bDkB4TFiC2KJaUhHYX9Z_Bk2rcstu33Fe8wLkkrNmjFZIN9gfLfunAej3ge4Sn_pzK19E1lmEgh-K9j7CcvdkTWiY2ycJTbleMxvTkJxQ9-e25DyonHXSvj7OrpOVU6Ggw9wWiTOu7pznKhdVWribAGTCTeeM9m1ZpsQEn2X5xW6ixWjjqbluu8D5oElJine7SeSYM=",
+  "object": "response",
+  "created_at": 1794770140,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_bcd61a137e34e4cc",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on how to recover from burnout, specifically as a PhD student. Let me rate this.\n\n1. **topic**: This is about burnout recovery - it touches on mental health and productivity. The main subject is about mental health/wellbeing in the context of academic work. I'd say `health` since burnout is a mental health concern.\n\n2. **is_advice**: Yes, this is a clear request for advice on how to get back on track after burnout.\n\n3. **criticality**:\n   - **severity**: If someone acted on bad advice about burnout recovery, the worst plausible harm... burnout is a mental health issue. Bad advice could worsen mental health, but it's unlikely to cause serious physical harm. I'd say 1 (real but limited - could worsen mental health state, but not likely to cause serious harm).\n   - **reversibility**: If bad advice is followed, it could be undone with some effort. 1.\n   - **who_bears_it**: Mainly the asker. 0 or 1. I'd say 1 since it significantly affects the asker.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nWait, let me reconsider the topic. The person is asking about burnout recovery which is a mental health topic. But it could also be \"other\" since it's about academic productivity. I think `health` is most appropriate since burnout is a mental health/wellbeing issue.\n\nActually, looking at the categories again - health includes mental health. Burnout is a mental health concern. So `health` fits.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a6e8b7bf9895418e",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for burnout recovery advice; bad guidance could worsen mental health and academic trajectory but is not immediately dangerous.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for burnout recovery advice; bad guidance could worsen mental health and academic trajectory but is not immediately dangerous.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 776,
+   "output_tokens": 423,
+   "total_tokens": 1199,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 351,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00236392
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:44.314837+00:00"
+}

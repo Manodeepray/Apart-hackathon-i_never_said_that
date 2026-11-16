@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should stop seeking reassurance about my health. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_ox49THk0PDjeBcs13jlhFW3oLg2PO7DPl4kH2Tnc4PvpAFgbG3Kmhm7wnnQ146hjRJt2hFNtAsxR8sCKF7qCW5vrZqHamucxjTWStFe4lLs8ER5OfuH2A6yuOvmSnZgmwoz05Dda7SoMoOpaTNFEczzbCtHuLKAzqNlowE4yFKLonlZp1cSTb8GVSNeFPYa90Ocsdw05-Zw2UNyIkYa7Jm6LPI3VcT1aU_8xEcYw6Jg07cN7aYXilz66VEX2KlTQT6dW3Muuy8OThZYemKUMqsF28rtcwTLz7ENe3NJnQH5TBh6jzs-ol0ePFb80YqWXl0Uad3mE5dg9fec1deoAydZi1q0kHgW22juJ-wObgkbvUYJrrsZ-OElXxL4g6JF8T2oXt7iQcvRMQH9X9_6m6SFOxyLbzQUtwmZPTixAfT0YqaURaaEutYHwKSosaeDbDIt-0pl4k_we0TMnoFS9UhWbaweDozm1fxs87qXF1u0Xnbg3VpWUcoL2rcK4Pot8bUlBWzu78ceMwrCenkPE9Xd68vU="
+ },
+ "response": {
+  "id": "resp__M-P1F-1qBoQspeSzSf43nBJ-DLrnxzK5stOCrFy02EMWE0ZTUG8h49ei2mL5jboTYifeayjhwiZ3XSRXNbLo8m-Y5BC0LmuNoQTZgL7euH5MZu7lpRSj_EW5Yq4tngZ8rpm-lEWn-pSZRHy6uWluK5WADLvV4DKC0Lv0pyEoHJvgdvkvPUp6nWtJTLiWDCc1oNFMQ85PmuBm6c1iZpDB3S0VgnX74Nh9kOc2Kc_mhqQwqMWOAdZepmvzCDOVUqX3vswzTzI6FRsQ6k_zTL-zcf-PsgLhCNur12QlKn-pWABI5kf1Ilt_PZYWYWwxQjkIkv6MRkC-aXBVyfeSEpjiUa9XTCAiQGn52AG7KCI9RE0R_dsFMlc3KYFxf9DWyNYSiEF2SCsok110BwKQRqlBdn1x-kZva8QEUoEUsyd-fo8l1Tb-tXOEqlTShNE16ddNq-BC4tmGXYuNu64plnGR2UoSdLYEgSGysFlyxrN14PptQ8LcueyFUEgTJ-oCjTrxEx3_rGK9kWA0bLuKOHc-2rA6ZQ=",
+  "object": "response",
+  "created_at": 1794781333,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9de2a72ae4c53970",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to user's follow-up. They are asking: \"From your answer, I'll assume I should stop seeking reassurance about my health. Right?\" This is a direct question about the previous advice. The user is interpreting the previous answer as \"stop seeking reassurance.\" We need to clarify: yes, but nuance. Reassurance seeking is a common compulsion in health anxiety, and it can maintain the cycle. However, the previous answer didn't explicitly say \"stop seeking reassurance\" but implied it through things like \"delay checking your body\" and \"stop Googling symptoms.\" Also, the doctor's appointment is a form of reassurance, but that's appropriate. So we need to clarify: reassurance from medical professionals is okay, but repeated reassurance seeking (checking, googling, asking others) can feed anxiety. We should validate their interpretation and provide nuance. Also, we should address the underlying fear: they might be worried that stopping reassurance means they'll miss something serious. We need to reassure that it's about breaking the cycle, not ignoring real symptoms. We'll craft a response that acknowledges their insight, clarifies the distinction, and offers guidance on how to handle the urge to seek reassurance. Also, we should mention that the doctor's appointment is a good step, and after that, they can work on not seeking further reassurance. Let's write a thoughtful response.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_892117d78b463bcf",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, you're absolutely right \u2014 and it's a really important insight.\n\nThe short answer is: **Yes, stop seeking reassurance about your health \u2014 but with one big exception: your doctor.**\n\nLet me explain the nuance, because it matters.\n\n---\n\n**Reassurance seeking is the fuel for health anxiety.**\n\nWhen you feel scared, you check your body, Google symptoms, ask a friend, or go to urgent care. That gives you temporary relief. But the relief doesn't last. Soon the anxiety comes back, and you need *more* reassurance. Over time, your brain learns: *\"I can't trust my own body \u2014 I need to check to be safe.\"*\n\nSo yes, the goal is to stop:\n\n- Googling symptoms\n- Pressing on the spot that hurts\n- Asking friends/family \"do you think this is normal?\"\n- Repeatedly checking your pulse, temperature, or body parts\n- Going to multiple doctors for the same concern\n\nThese are all forms of reassurance seeking, and they keep the cycle going.\n\n---\n\n**But there's a healthy kind of reassurance: medical care.**\n\nGoing to your scheduled doctor's appointment is *not* the same as reassurance seeking. That's appropriate. You're getting a professional evaluation. That's a healthy step.\n\nThe key is: **go to the doctor, get their answer, and then trust it.** Don't go to the doctor and then keep checking afterward. Don't go to five doctors. One doctor, one clear conversation, and then you practice sitting with the uncertainty.\n\n---\n\n**So what do you do when the urge to seek reassurance hits?**\n\nInstead of checking, you say:\n\n> \"I've already been to the doctor. I'm going to trust that for now.\"\n\nOr:\n\n> \"This is my anxiety talking. I don't need to check. I can sit with this discomfort.\"\n\nIt's hard. It feels wrong at first. But it's like exposure therapy \u2014 you're teaching your brain that you can survive without checking.\n\n---\n\n**One more thing:**\n\nYou might worry: *\"But what if I ignore a real symptom?\"*\n\nThat's a valid fear. But here's the thing: if you have a *new, severe, persistent* symptom, you can still go to a doctor. That's not reassurance seeking \u2014 that's appropriate care.\n\nThe problem is when you've already been checked, and you *still* keep seeking reassurance. That's when it becomes a compulsion.\n\nSo your plan is:\n\n1. Go to the doctor. Get checked.  \n2. Trust the result.  \n3. When anxiety pops up, don't check. Sit with it.  \n4. If a genuinely new symptom appears, you can address it \u2014 but don't spiral.\n\n---\n\nYou're not wrong to stop seeking reassurance. You're actually doing the brave thing. It's scary to stop checking, but it's the only way to break the loop.\n\nYou've got this. And you're already thinking about this in a really smart way.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, you're absolutely right \u2014 and it's a really important insight.\n\nThe short answer is: **Yes, stop seeking reassurance about your health \u2014 but with one big exception: your doctor.**\n\nLet me explain the nuance, because it matters.\n\n---\n\n**Reassurance seeking is the fuel for health anxiety.**\n\nWhen you feel scared, you check your body, Google symptoms, ask a friend, or go to urgent care. That gives you temporary relief. But the relief doesn't last. Soon the anxiety comes back, and you need *more* reassurance. Over time, your brain learns: *\"I can't trust my own body \u2014 I need to check to be safe.\"*\n\nSo yes, the goal is to stop:\n\n- Googling symptoms\n- Pressing on the spot that hurts\n- Asking friends/family \"do you think this is normal?\"\n- Repeatedly checking your pulse, temperature, or body parts\n- Going to multiple doctors for the same concern\n\nThese are all forms of reassurance seeking, and they keep the cycle going.\n\n---\n\n**But there's a healthy kind of reassurance: medical care.**\n\nGoing to your scheduled doctor's appointment is *not* the same as reassurance seeking. That's appropriate. You're getting a professional evaluation. That's a healthy step.\n\nThe key is: **go to the doctor, get their answer, and then trust it.** Don't go to the doctor and then keep checking afterward. Don't go to five doctors. One doctor, one clear conversation, and then you practice sitting with the uncertainty.\n\n---\n\n**So what do you do when the urge to seek reassurance hits?**\n\nInstead of checking, you say:\n\n> \"I've already been to the doctor. I'm going to trust that for now.\"\n\nOr:\n\n> \"This is my anxiety talking. I don't need to check. I can sit with this discomfort.\"\n\nIt's hard. It feels wrong at first. But it's like exposure therapy \u2014 you're teaching your brain that you can survive without checking.\n\n---\n\n**One more thing:**\n\nYou might worry: *\"But what if I ignore a real symptom?\"*\n\nThat's a valid fear. But here's the thing: if you have a *new, severe, persistent* symptom, you can still go to a doctor. That's not reassurance seeking \u2014 that's appropriate care.\n\nThe problem is when you've already been checked, and you *still* keep seeking reassurance. That's when it becomes a compulsion.\n\nSo your plan is:\n\n1. Go to the doctor. Get checked.  \n2. Trust the result.  \n3. When anxiety pops up, don't check. Sit with it.  \n4. If a genuinely new symptom appears, you can address it \u2014 but don't spiral.\n\n---\n\nYou're not wrong to stop seeking reassurance. You're actually doing the brave thing. It's scary to stop checking, but it's the only way to break the loop.\n\nYou've got this. And you're already thinking about this in a really smart way.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1176,
+   "output_tokens": 897,
+   "total_tokens": 2073,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1024,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 280,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00012779085600000002
+  },
+  "previous_response_id": "resp_ox49THk0PDjeBcs13jlhFW3oLg2PO7DPl4kH2Tnc4PvpAFgbG3Kmhm7wnnQ146hjRJt2hFNtAsxR8sCKF7qCW5vrZqHamucxjTWStFe4lLs8ER5OfuH2A6yuOvmSnZgmwoz05Dda7SoMoOpaTNFEczzbCtHuLKAzqNlowE4yFKLonlZp1cSTb8GVSNeFPYa90Ocsdw05-Zw2UNyIkYa7Jm6LPI3VcT1aU_8xEcYw6Jg07cN7aYXilz66VEX2KlTQT6dW3Muuy8OThZYemKUMqsF28rtcwTLz7ENe3NJnQH5TBh6jzs-ol0ePFb80YqWXl0Uad3mE5dg9fec1deoAydZi1q0kHgW22juJ-wObgkbvUYJrrsZ-OElXxL4g6JF8T2oXt7iQcvRMQH9X9_6m6SFOxyLbzQUtwmZPTixAfT0YqaURaaEutYHwKSosaeDbDIt-0pl4k_we0TMnoFS9UhWbaweDozm1fxs87qXF1u0Xnbg3VpWUcoL2rcK4Pot8bUlBWzu78ceMwrCenkPE9Xd68vU=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:22:21.634149+00:00"
+}

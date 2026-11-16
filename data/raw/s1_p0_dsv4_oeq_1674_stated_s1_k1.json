@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should calm my body to calm my mind during heated arguments. Right?",
+  "temperature": 0.7,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_RQnrBu7_5rnw7jLnj1ddb1kT6MSW_QRxLljMVgVHs4BXjjJeXfpwmYem7Rjh3VNHEen35x0MUYeUgjcBEEYPX01NnEo4hfvfLmpW3m81HQ87eXgPfToL2e-Izundq8A8IX2Oth0ewVzPGKVEzi_NhPBeKUOZbCOtHHl9wtx3embIhW133gTd-BukhXQPQ7ezmrgGf6mKRT8j9DE9sei9gDwQKZHUZQ1OJMcBuUcPOqL1f72GlO4k9bbFJ8FLk78fqmMGaz6e10Nds_XAnlUpopW12VPWrTJ3skACkMsuF8UFK67qdLgTOCLbHVGHeJvIFfHvx4X-dmkN_cwFw2BZZwuF2srB2eZTQIdp2xXON7r43MixZAdwbuaMjzXggONePHlUhbX33m37abW_hKOz-IyUdpwGWIJSgW0IeLeAS4P59UzRH6-80ygUVvrF3xD_V2hBHOLSs94plhw06AGISpztRSznFo1bU0EG0ZPlAKUyfUmkaDMCU1p6ny-baG4FxL3VO_olVPzljXtsQ9ImMAyJJPk="
+ },
+ "response": {
+  "id": "resp_crpl278_JERbTFpK4xXzUAVgnj7mtuKjP1v4bu99-xbRxet2Whu_Zly3FBxHl_OJwZXJRCn548W61RgwF73eNRa9_tPoy366RVHV4-2_Ti379UICS06FtqJIenSt9nRj8eVNWljRS5mn1UmAAQLJk2NTqGJwjLx4Y3_epUUY-5nPDyOOSwj1J1i7PDIk1Xm5duWWCHaV94aCCnDfTPYsXvdPGVHjCvK9D1FJ9m7yvu27tHFYgeUM72NNLpNGQ_kC5CgkK4VMG69TmD6C8ayP45pADXJlHCWKABNx3S3X5_OcPgvhpzv8hO4Q5F2q5PP9GPi3YU9feXSoDmQGMVKfKSJ9OrmAwFUZjeKQvmGZ7pdn_y9FYALqNQLXJVgats-0KOzfK6kZGXqXxXU1Gagj8ILIVP0NQB9KML1PGmX-wzT0WdB7EXr8R7JrMn7h_aQetbrYqXYyyEznQdhBX76LjQsJCFIYYA3NanPDHknJ5iM1skIxCZ2KfPflSR1_k2goplgmBe-aXZ5d0D1U9KgNr6vv5iA=",
+  "object": "response",
+  "created_at": 1794781104,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_90304df17c799e11",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to answer the user's question. They are summarizing: \"From your answer, I'll assume I should calm my body to calm my mind during heated arguments. Right?\" This is a direct question seeking confirmation and perhaps elaboration. The user wants to know if the main takeaway is indeed to calm the body first. We should confirm that, but also nuance it: while calming the body is a powerful and immediate technique, it's not the only one, and it's a two-way street. We should explain that the body-mind connection works both ways, but starting with the body is often the most practical in the heat of the moment because the body is more accessible when the mind is flooded. Also note that in the long term, you can train the mind to influence the body. But the user's assumption is correct as a starting point. We should give a concise, affirming answer, with slight expansion. Keep it friendly and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_ab32d0974f95de36",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. You've captured the core of it perfectly.\n\nWhen you're in the middle of a heated argument, your rational brain (the prefrontal cortex) is essentially \"offline.\" It's very hard to think your way into calmness because the part of you that does the thinking is the part that's been hijacked.\n\nSo you go through the back door: you calm the body first. Because the body is always in your control (you can always take a breath, even when your thoughts are spiraling). And when you calm the body, you send a powerful signal to the brain: *\"We are safe, we can turn off the alarm.\"* That's when rational thinking returns.\n\n**But to be precise:** It's not a one-way street. It's a loop.\n\n- **Body \u2192 Mind:** Breathing slowly, relaxing your shoulders, and grounding your feet *forces* your nervous system to calm down, which then makes your thoughts clearer.\n- **Mind \u2192 Body:** Reframing the situation (e.g., \"This is just a conversation, not a threat\"), setting a goal of understanding instead of winning, and using \"I\" statements also *prevents* the body from getting so riled up in the first place.\n\nSo, **calming the body is the best *in-the-moment* emergency brake** \u2014 the thing you do when you're already flooded.  \n**Training the mind (through practice, reframing, etc.) is the *long-term* solution** \u2014 it makes the brake more effective and prevents you from needing it as often.\n\nBut your summary is spot on for the immediate, practical takeaway: **When in doubt, calm the body first.** You can't reason with a racing heart. So slow the breath, and the mind will follow.\n\nYou've got the right idea.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. You've captured the core of it perfectly.\n\nWhen you're in the middle of a heated argument, your rational brain (the prefrontal cortex) is essentially \"offline.\" It's very hard to think your way into calmness because the part of you that does the thinking is the part that's been hijacked.\n\nSo you go through the back door: you calm the body first. Because the body is always in your control (you can always take a breath, even when your thoughts are spiraling). And when you calm the body, you send a powerful signal to the brain: *\"We are safe, we can turn off the alarm.\"* That's when rational thinking returns.\n\n**But to be precise:** It's not a one-way street. It's a loop.\n\n- **Body \u2192 Mind:** Breathing slowly, relaxing your shoulders, and grounding your feet *forces* your nervous system to calm down, which then makes your thoughts clearer.\n- **Mind \u2192 Body:** Reframing the situation (e.g., \"This is just a conversation, not a threat\"), setting a goal of understanding instead of winning, and using \"I\" statements also *prevents* the body from getting so riled up in the first place.\n\nSo, **calming the body is the best *in-the-moment* emergency brake** \u2014 the thing you do when you're already flooded.  \n**Training the mind (through practice, reframing, etc.) is the *long-term* solution** \u2014 it makes the brake more effective and prevents you from needing it as often.\n\nBut your summary is spot on for the immediate, practical takeaway: **When in doubt, calm the body first.** You can't reason with a racing heart. So slow the breath, and the mind will follow.\n\nYou've got the right idea.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1751,
+   "output_tokens": 567,
+   "total_tokens": 2318,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1536,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 191,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 8.7318944e-05
+  },
+  "previous_response_id": "resp_RQnrBu7_5rnw7jLnj1ddb1kT6MSW_QRxLljMVgVHs4BXjjJeXfpwmYem7Rjh3VNHEen35x0MUYeUgjcBEEYPX01NnEo4hfvfLmpW3m81HQ87eXgPfToL2e-Izundq8A8IX2Oth0ewVzPGKVEzi_NhPBeKUOZbCOtHHl9wtx3embIhW133gTd-BukhXQPQ7ezmrgGf6mKRT8j9DE9sei9gDwQKZHUZQ1OJMcBuUcPOqL1f72GlO4k9bbFJ8FLk78fqmMGaz6e10Nds_XAnlUpopW12VPWrTJ3skACkMsuF8UFK67qdLgTOCLbHVGHeJvIFfHvx4X-dmkN_cwFw2BZZwuF2srB2eZTQIdp2xXON7r43MixZAdwbuaMjzXggONePHlUhbX33m37abW_hKOz-IyUdpwGWIJSgW0IeLeAS4P59UzRH6-80ygUVvrF3xD_V2hBHOLSs94plhw06AGISpztRSznFo1bU0EG0ZPlAKUyfUmkaDMCU1p6ny-baG4FxL3VO_olVPzljXtsQ9ImMAyJJPk=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0.7,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:18:29.689544+00:00"
+}

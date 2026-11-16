@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should call the restaurant and ask the manager for a refund. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0="
+ },
+ "response": {
+  "id": "resp_P8chlXWkz7eiNKHUFnwROoe9_VG7VOHtaB-A6OlcSudpbzOMrzNaRu4Z5lRgbyte6aaoo0dyH_pOJbZQl_B-s98OcVwqH9P40YqzKE-RlLS39NpUKnq9TH2mS9SkmklrOaJFpdtGvUZTI1fuamTupWpX_4cmkhElbS_iL7QGPTR9p_wDoLEsoMK9th0FzhJREyUgVA07rGxPigU8uINxMnyh-egts_QNDUvJM8ZH_x-lm1co9zKRfhW9B8wchhTZr9nsmB4LV6iXzIR4toCH3bp4y52Onks2isHTZniPFG7-zZm3PD25MtiCIe3M1Fp0vCGusJky66PqwnWvU0EspmNNsBkRdnZr7D6Hw1BHJOdrgTgBeZSdRExbK9M8HyCIu7EQkmiOglb_KCQ1_0W9rtq5WExvJQ8xk3XBdKry4gsraYFv_KruwD2py0KljLpykkuYjXtk1pu2MQHdh5hsZ02X6Fz4C5vTxg7YjnXPZk1JPeAIlK6wYMifSyosluQ-I13T8wx1aVbQsa7dMageh_e_fKo=",
+  "object": "response",
+  "created_at": 1794781639,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_8be4a54bf343ff70",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's clarification. The user is asking: \"From your answer, I'll assume I should call the restaurant and ask the manager for a refund. Right?\" So we need to confirm that yes, that's the primary action, but also reiterate that if that fails, there's not much else. Also maybe mention that they could try Chase but likely won't succeed. Keep it concise and supportive.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_839c425f488efa7b",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. **Call the restaurant and ask to speak to the manager.** That\u2019s your best and most realistic shot at getting your $15 back.\n\nHere\u2019s a quick script you can use:\n\n> \u201cHi, we came in today and ordered [dish]. Unfortunately, the food was so bad we couldn\u2019t eat it \u2014 we took one bite and had to spit it out. We didn\u2019t want to make a scene at the time, but we felt we should let you know. Is there any way you could refund that charge?\u201d\n\nBe polite, calm, and honest. Many small restaurants will refund rather than risk a bad review or a scene.\n\nIf the manager says no, then you can try calling Chase \u2014 but as I said, don\u2019t expect much. And if that fails, you\u2019re out $15, but you\u2019ll have learned a lesson: for small amounts, it\u2019s often better to say something *before* paying, even if it\u2019s awkward.\n\nGood luck \u2014 I hope the manager makes it right.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. **Call the restaurant and ask to speak to the manager.** That\u2019s your best and most realistic shot at getting your $15 back.\n\nHere\u2019s a quick script you can use:\n\n> \u201cHi, we came in today and ordered [dish]. Unfortunately, the food was so bad we couldn\u2019t eat it \u2014 we took one bite and had to spit it out. We didn\u2019t want to make a scene at the time, but we felt we should let you know. Is there any way you could refund that charge?\u201d\n\nBe polite, calm, and honest. Many small restaurants will refund rather than risk a bad review or a scene.\n\nIf the manager says no, then you can try calling Chase \u2014 but as I said, don\u2019t expect much. And if that fails, you\u2019re out $15, but you\u2019ll have learned a lesson: for small amounts, it\u2019s often better to say something *before* paying, even if it\u2019s awkward.\n\nGood luck \u2014 I hope the manager makes it right.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 574,
+   "output_tokens": 304,
+   "total_tokens": 878,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 87,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 4.400852800000001e-05
+  },
+  "previous_response_id": "resp_Bfydtccn3X0pS_APZk7WqTLyJP6N-wCMvYH2r42gUrWzBzVDCt9YB5lK-2zRdBql-_CnsZj_7Jzjo24ZZo4TnxK7cuYwAatHZVfSyiowC_-nVl0sxy-tOG8EH1a0QGtn3Bnzg8DENRxS0IaBMeZTlbfNDxlRskqSLG4HX99e4Gt9Dq8mDyns1CtTO-dTjcMggYEBgW9uG4DxEeTX2AJpBUfpvz8pdBf098HMSmVYU2M5ilxdTr-17QtYrS_wd2RInGpO1Ehh6qPaUBVpqSHEWqhmRGWqx32957bvEHGr7JGAcqJPEJdjCclUqDYUj0niJT1RFt9zzWvN1O9efnvGl56KxH6_nGnrn-Iz9ti6N_ixOJfgG_63LREHqDmbG0-JLLxGj_yUBqCCOdISVCIBDhGpO7dQFvTKOFan6PXIKemIhUL8IcH6XN0_eeGnZprLoU0oO2rrqcWHf-dpkphpFko6KPJEeKvdd3LWoJACLwst5KNhOe8vkvdcnVXfhKF2bfGO6c5edUjJCBDKd7HcRvO64G0=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:27:21.980893+00:00"
+}

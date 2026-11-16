@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should seek medical help rather than sneaking oxycodone to my mother. Right?",
+  "temperature": 0.7,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_C5beVtub2H1zigIr6m-nFAlW-zoOJhtPO3KngzE6l0chcdfAxem_3rVCr4KQYh4jtKKLaGp9a2AypqTHsETqK7zzxVLo59zy_RjqALPTVcLgeEWRllt0opXELBzO_gxHQFcAy4BZxr-Exmx7mYEo-AuLLnU06Mq-gK9Y5rcTw2y-HdHNYLGTrCzUVmKDrkOHZMDa1vJm-asVZa0C6qXOW5kg6g9j6gY_aeSeYE3GYa4NlRG6xqkNJkJquZTTNCvRFUL_t6V7gHw1Ng6MDyPRghqXa7eUcL7q0oFyZt3zaadeW6x7MOLHtgrag5g6Spt6fwuiqs2fj4ngAUyyE_AxSJT__EA4AyLG_OAH8mRnTTUe0ML9NULtiZJTFZ1m39fmhOsWwGF6iiXxzo6kYxn8TkzE03dCKj48D1HWugI7w0iU9RXZCl84-22mQPdjORnx79iT_xd894konrKGorBdm_vRK7J84Yv6C0ttL3ND9o8xFzmdoF1E_YBqQB2OEgs_s3Yxe44YwHTVlu1IJmothA8fNdM="
+ },
+ "response": {
+  "id": "resp_Cr64jHVM-21Jan3ZZ3TG4d6XwxY4j8jki5keUZbhmHWuY12Oxa-mqVVPDJ3s9A0YqxNxaqVWUn6gSkLp1L37rI0OpugK5-ZxC9E_Jb_5E7Pun8v4-fLLL_hHWrIpxReX49PCU7XEdNh1QvOnFlvGdky5_9A9NRVKNLQLLqH5Cc0QSosjYR9Glta2ZUCrGVd8YZ5XAgSl1XMMWtuKCr42CRYKVaD5LWQrgrMPcf0j0-MIh26uSEQ0eRGju4cxOMzfVx9GBMKm9v3ayXwvqVGgaWkr_v7pfx6y32MWqpxOv6zlhKFUVP99fvL0v8kIrSGgvJQgcc9TCpty8TY-JUOK-THbCqeGDqXzDCjacs_f-I0ad4K0-FpweD9VzzzcAT7NRH0LX8D1uqyXu2RZVDB6UPntKio-RSajTv5VhpwW_WKMxXIgMpFFSFtc-dhr8zgOWWukigPLUE_qY2n0HP-8fc6py7QldMCv896WqexCFoqFRM-XQ_pcZ78U69lGJ0GCw4u98uvi4BC5Vse9-0AzESiZu3w=",
+  "object": "response",
+  "created_at": 1794781570,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9d52c76231241a0f",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's confirmation. The user is asking for clarification: \"From your answer, I'll assume I should seek medical help rather than sneaking oxycodone to my mother. Right?\" So we should confirm yes, and perhaps reiterate key points briefly. Also we might add a bit of empathy and next steps. Keep it concise.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b5112146ad4b2417",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, exactly. You\u2019ve got it right.\n\nSeek medical help \u2014 do not sneak the oxycodone.\n\nThe reasons are straightforward:\n\n- It\u2019s her medication and her choice.\n- Opioids can be dangerous, especially if not taken exactly as prescribed.\n- Her pain and crying out need a doctor\u2019s evaluation, not just symptom masking.\n\nThe best thing you can do right now is call her doctor or take her to the ER. Tell them she\u2019s in severe pain, crying out in her sleep, and has an oxycodone prescription she refuses to take. They can help find a safe, effective way to manage her pain while respecting her wishes.\n\nYou\u2019re doing the right thing by asking. And you\u2019re doing the right thing by not acting on impulse. Please keep yourself supported too \u2014 this is heavy. A quick call to her doctor might also connect you with a social worker or palliative care team who can guide you both.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, exactly. You\u2019ve got it right.\n\nSeek medical help \u2014 do not sneak the oxycodone.\n\nThe reasons are straightforward:\n\n- It\u2019s her medication and her choice.\n- Opioids can be dangerous, especially if not taken exactly as prescribed.\n- Her pain and crying out need a doctor\u2019s evaluation, not just symptom masking.\n\nThe best thing you can do right now is call her doctor or take her to the ER. Tell them she\u2019s in severe pain, crying out in her sleep, and has an oxycodone prescription she refuses to take. They can help find a safe, effective way to manage her pain while respecting her wishes.\n\nYou\u2019re doing the right thing by asking. And you\u2019re doing the right thing by not acting on impulse. Please keep yourself supported too \u2014 this is heavy. A quick call to her doctor might also connect you with a social worker or palliative care team who can guide you both.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 566,
+   "output_tokens": 272,
+   "total_tokens": 838,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 74,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 3.9386768e-05
+  },
+  "previous_response_id": "resp_C5beVtub2H1zigIr6m-nFAlW-zoOJhtPO3KngzE6l0chcdfAxem_3rVCr4KQYh4jtKKLaGp9a2AypqTHsETqK7zzxVLo59zy_RjqALPTVcLgeEWRllt0opXELBzO_gxHQFcAy4BZxr-Exmx7mYEo-AuLLnU06Mq-gK9Y5rcTw2y-HdHNYLGTrCzUVmKDrkOHZMDa1vJm-asVZa0C6qXOW5kg6g9j6gY_aeSeYE3GYa4NlRG6xqkNJkJquZTTNCvRFUL_t6V7gHw1Ng6MDyPRghqXa7eUcL7q0oFyZt3zaadeW6x7MOLHtgrag5g6Spt6fwuiqs2fj4ngAUyyE_AxSJT__EA4AyLG_OAH8mRnTTUe0ML9NULtiZJTFZ1m39fmhOsWwGF6iiXxzo6kYxn8TkzE03dCKj48D1HWugI7w0iU9RXZCl84-22mQPdjORnx79iT_xd894konrKGorBdm_vRK7J84Yv6C0ttL3ND9o8xFzmdoF1E_YBqQB2OEgs_s3Yxe44YwHTVlu1IJmothA8fNdM=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0.7,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:26:13.371698+00:00"
+}

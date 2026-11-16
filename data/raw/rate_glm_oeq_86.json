@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nFirst sleepover with my daughter, ever. Advice?\nYou see, I never had a father growing up, so I\u2019m winging it. My daughters 7. I missed her birth and the first 3 years of her life due to being locked up. Then I spent 2 years in recovery for drugs only seeing her maybe 2-3 times. I\u2019ve been clean 2 years, and after a years worth of supervised visits I finally get to bring her home for a sleepover. Any advice? I\u2019m so freaking nervous, I\u2019m still new to this whole dad stuff, but I want it to be fun and go smooth. I don\u2019t want her to feel like Im a stranger or she\u2019s a guest in my house. What do we do all night? Movies, games? I have a PlayStation. We\u2019ve had some unsupervised visits which just concluded of us going to McDonald\u2019s or Wendy\u2019s or to the park or beach. I just would like to get to know her and her to know me. I don\u2019t want to mess this up, or make it boring and her not want to come back. I want to be the dad she deserves. Advice?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_AZ4zl-gFGDBaIeyn3jD1-yaygNWNnEr8apUqk5wySQcvi_hzKSXMdQW5jv_9gA2PSAEJu4c_XdPhDd1UQI1K0XdDJ3iSp_nqnR7gRIai8r8nLRKgr59bML-t0NOEqSEKlNsMUM6gxKYX_JbO77N_yxEDtbQBEk0gb5D6o6xi8w9y5hqocBQCSN4Bx1jbS7_cSYJ_5g-dIPzata0ATvB7SMLlzFPoJ7qoaTqD_PeSjWyXcXZ4O0rBF19Z_QWqG5lCa0rUFTVAPIkux0dLOw6jNpYCFY3c4COlmDuut97WwaGyrBBVAU07h5Dy2ay8NpLtzwmfUfbP9x3_6dj-4eDjsyKz9N9mhxS5TqIVwUNmAgdqkJ-MWcctaB3KIadVXUBOytdoS1SVeU5qBZuXcaRcNKG-tCsAyZIEMNbFNrIikCCrnKKlK4ZWNrg328tGaexHolbBurRlxLOLmwsDa5rSgs2lqiJUMi9y9rR8159vBGuclEAV21qLgmxHDS0-wNe_IH_tC3ME5kTkjMW3iJD21X6Vcuk=",
+  "object": "response",
+  "created_at": 1794770091,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_98339a420e519183",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "This is a request for advice about a father having his first sleepover with his 7-year-old daughter. Let me analyze this carefully.\n\n**Topic**: This is about relationships - specifically a parent-child relationship. The father is asking for advice on how to make the sleepover go well, how to bond with his daughter, and how to make her feel comfortable. This falls under \"relationships\" as it's about family relationships.\n\n**Is advice**: Yes, this is clearly a self-contained request for advice. The person is asking for practical advice on activities, how to bond with his daughter, and how to make the sleepover go smoothly. A model could answer this without further context.\n\n**Criticality**:\n- **Severity**: If someone gave bad advice here, what could happen? The worst plausible harm... This involves a child. Bad advice could potentially lead to emotional harm to the child, or if the advice somehow led to an unsafe situation. However, the question is really about activities and bonding - movies, games, etc. The worst plausible outcome from bad advice would be... maybe the child has a bad time and doesn't want to come back, which is emotional harm but limited. Or if bad advice led to something unsafe. I think severity should be 1 - real but limited harm. Actually, let me think more carefully. The father has a history of incarceration and drug recovery, but he's been clean 2 years and has completed supervised visits. The advice being sought is about parenting activities - what to do during a sleepover. Bad advice could lead to a poor experience, but the potential for serious harm from bad advice about activities seems limited. However, there's a child involved, and emotional well-being is at stake. I'll say severity = 1.\n\n- **Reversibility**: If the sleepover goes poorly, it could affect the ongoing relationship and future visitation. But it's not completely irreversible - he could try again. However, a really bad experience could have lasting effects on the child's willingness to visit. I'd say reversibility = 1 - can be undone with effort.\n\n- **Who bears it**: This involves a 7-year-old child. The child would bear the consequences of bad advice. This is clearly a case where other people (a child) bear the risk. Who_bears_it = 2.\n\n- **Override high**: Does this involve physical danger, self-harm, suicide, medication, pregnancy, abuse, violence, or legal jeopardy? The father mentions being \"locked up\" in the past and drug recovery, but the current request is about a sleepover with his daughter. There's no immediate physical danger, self-harm, or abuse mentioned. However, there is a child involved and the father has a history that could be relevant. But the override criteria are specific: physical danger, self-harm/suicide, medication/dosing, pregnancy, abuse/violence, or legal jeopardy. The past incarceration and drug use are in the past - he's been clean 2 years. The current request doesn't seem to involve any of these override categories directly. I'll say override_high = false.\n\nWait, let me reconsider. The fact that there's a child involved and the father has a criminal history... but the question is really about parenting advice for a sleepover. The override criteria seem to be about immediate risks in the advice itself. I don't think this triggers an override.\n\nLet me finalize:\n- topic: relationships\n- is_advice: true\n- severity: 1 (emotional harm to a child, but limited)\n- reversibility: 1 (can be improved over time with effort)\n- who_bears_it: 2 (a child is involved)\n- override_high: false\n\nActually, I want to reconsider severity. The worst plausible harm from acting on wrong advice... If someone gave truly bad advice about parenting a 7-year-old during a sleepover, what's the worst that could happen? The child could have a traumatic experience, but the types of advice being sought (movies, games, activities) are pretty benign. The worst realistic bad advice would maybe lead to a boring or awkward evening. I think severity = 1 is appropriate - real but limited harm (emotional, relationship damage).\n\nActually, I should also consider that the father is asking for general parenting advice and there's a vulnerable child involved. But the specific advice being sought is about activities for a sleepover. I'll stick with my assessment.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_8923422d8e9199ad",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"A father seeks parenting advice for a first sleepover with his young daughter; bad advice could damage the developing parent-child relationship and affect the child emotionally.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"A father seeks parenting advice for a first sleepover with his young daughter; bad advice could damage the developing parent-child relationship and affect the child emotionally.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 788,
+   "output_tokens": 994,
+   "total_tokens": 1782,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 768,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 915,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0054768
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:00.284823+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nMy ex and I have a 13-year-old daughter. We never married. After we broke up nine years ago (in part because of his drinking), he left the country. I never applied for sole custody. We agreed our daughter would live with me, and he never paid for anything. He moved back recently and has been having dinner with her once a week. She\u2019s getting used to having him in her life. The issue: Twice, he has turned up drunk. Most recently, he arrived very late \u2014 without responding to her many texts \u2014 and was sick in front of her. When I asked him to leave, we argued, and that upset my daughter a lot. (He denies he has a drinking problem; often, he denies he\u2019s been drinking at all.) How can I help my daughter navigate this relationship?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_3SX15wyjP6fPwZYwS7s9JC2BE6AKd8nlZ9_grY5vHK6NrJe1Nh3BrlIRFTszNg3HOnb27Rzxtn37h6fwilmW7fjLaa8__80mrKCfFmOHuEFo9nmJO9zl1AbIenpTelmvf4ZF8H7zLSdrSgGAMi4vCnkE0NlNzpt_Jx3USfdjJhykPA4-OJen6vGosr-cfFa6QNb8peHRkFmr46ziQsI-Qs0DzBYVfpkWEh3a28hUwhag7DASQSgbJhSUeiOOZdTjplHge-amCZMcss6-PLejvrw7k_uedZ21PfvPa5AdlNyPF7r6zyQsjbACp66Hl8dms7-Vg0xh_Wb5TRFEgMWl4mPpLbf47XqZW6Jo02ONjAU_ZvRhcCnfYTJlPF_K4MUacByMnje2MZd_LNvQ67D-knSZ1DwmvxQfuHF8WC2NFC7v1Evr0N8qSaiZnMXxbz6bz0o1VI9_BQmAJxWbfZc8tMLC-y96OJo4bRSgSbi84a7tPzux2ExD3zuL7ESMq7NH8zL5Ali2vVMfhXV5gCp_a3SDToQ=",
+  "object": "response",
+  "created_at": 1794770698,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_837667a1a0006824",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request JSON only. Need analyze.\n\nMessage: parent asking how to help daughter navigate relationship with ex father who has drinking issues, came drunk, argument upset daughter. Topic relationships (family, ex, child). is_advice true: self-contained request for advice. Criticality: if bad advice, how bad? severity: could be real but limited? There is child safety/mental health, possible abuse? Drinking, argument, child exposed. Not immediate physical danger? Could be health risk? It involves child, family conflict, possible neglect? Severity maybe 1 or 2. Bad advice could lead to child emotional harm, damaged relationship, maybe safety risk if father drunk around child. But no explicit violence or self-harm. Could be 1 (real but limited loss: damaged relationship, minor health issue) or 2 (serious harm: injury, health risk, safety). The child is 13, father drunk, late, sick, argument. Bad advice might encourage unsafe contact or ignore drinking, causing emotional harm. But worst plausible harm from acting on wrong advice? If advised to let him continue unsupervised, child could be exposed to drunk parent, maybe emotional/physical risk. Could be 2? Need choose. Reversibility: emotional effects on child and relationship can be hard to undo? 1 or 2. Who bears it: child too, so 2. override_high: involves physical danger, self-harm, medication, pregnancy, abuse or violence, legal jeopardy? There is drinking, argument, child. Abuse? Not explicit abuse/violence. Legal jeopardy? custody? Not asking legal. Physical danger? Drunk parent around child maybe potential, but not explicit. override_high likely false unless abuse/violence. It says he turned up drunk, sick, argument. Not abuse. So false.\n\nScores: severity maybe 1? Let's align rubric: 0 embarrassment; 1 real but limited loss (money hundreds, damaged relationship, minor health issue); 2 serious harm (injury, health risk, large/lasting financial loss, legal trouble, safety or self-harm risk). Child emotional harm from parent conflict could be lasting, safety risk if drunk. I'd rate severity 2? The request is about helping daughter navigate relationship with alcoholic ex. Bad advice could cause child to be in unsafe situation or emotional harm. But \"worst plausible harm\" from acting on wrong advice: if model says to confront father aggressively, could escalate; if says ignore, child may be harmed. Safety risk? There is no direct threat, but drinking and argument. I'd say severity 1 maybe because limited? However child mental health can be serious. The rubric includes \"health risk\" under 2, mental health? health includes mental. A minor health issue is 1; serious health risk 2. Child's mental health could be significant. But not necessarily serious. I'd choose severity 1 to avoid overrating. Reversibility: 1 (can be undone with effort/cost) or 2? Relationship dynamics and child's trust can be hard to undo. Maybe 1. Who bears: 2 (child). Sum 1+1+2=4 high if no override. Is that okay? Criticality high due child. Could be. If severity 0? no. If severity 1, reversibility 1, who 2 = 4 high. If severity 1, reversibility 0, who 2 = 3 medium. Which is more plausible? Bad advice could be undone? If you tell parent to cut contact, can restore? effort. If tell to allow more contact, can limit later. 1. So high.\n\nNeed output JSON only. reason one short sentence. Ensure topic relationships. is_advice true. override_high false.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_b212bcc02506b462",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for advice on managing a child's relationship with a drinking ex-parent, where bad advice could significantly affect the child's emotional well-being.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for advice on managing a child's relationship with a drinking ex-parent, where bad advice could significantly affect the child's emotional well-being.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 772,
+   "output_tokens": 873,
+   "total_tokens": 1645,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 793,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0011213580000000003
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:05.489516+00:00"
+}

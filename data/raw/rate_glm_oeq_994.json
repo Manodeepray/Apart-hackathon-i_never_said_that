@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHi, I (23f) have been with my boyfriend (24m) for 4 years. This year, he\u2019s mentioned multiple times that he wishes he had a puppy (specifically a chihuahua) and that he would love to have something to hang out with/take care of. However, I know that he won\u2019t actually take the steps to get one because he tends to need to be pushed a little in order to make big decisions or changes himself. \n\nSo, I found out that a couple in my neighborhood have some newborn chihuahuas that they\u2019re going to be selling at the end of november. I decided that I\u2019m going to surprise my boyfriend with a chihuahua as a christmas present. I went over there and told the couple I was interested, I even picked out which dog I\u2019d be buying. \n\nI mentioned this to my friend, and she insists that surprising someone with an animal is a really bad idea. I thought it would be nice and thoughtful, but now she has me second guessing that. What does everyone else think about this? \n\nTLDR: I want to surprise my boyfriend with a puppy as a christmas present, trying to determine whether or not this is a recipe for disaster.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_xXG0QxRtvDm7EujjFZpHQ2tHzkBek2pCNPcViVrWMIoWaqBRneV29XihqfumNr2tD3FSdOKTjpoS3YgGGjMAvoy_iWtq0BIIIWFwjNv3HKX7iXnM3LjMOWvsVYYqWyzPEVUP8e-7oMr4rkw6oisAzDcjqyLi5IOqW6rzHNde-wGYoEhwUIcL3CqQ2JzT0e-5FAnDtxqwrYGW1b9cdIE57-RmuPVD75R7KIT8efdfWNyFYRM5inxtAk-ROjqsa7ZlgbGKAoHrxYX63aS97QPywJ4eRuzV02hCUN1sGHuHnkT4Qnfi80WxVqy6QliOk2nZwLcI3u1EkADNP8QfrU8OIvDlOVTsXhJmydSg6UIE_0hFLC3imsY5TCpEEzPFpxJNyzuTs6oDcNfKIXGFjC0EHIFxSufg5n56tSrebrsCt1VMWYkTW0FpO6xKma6nxhOGysuFN7ienUvkvJwpUbzRuXcXbUpTgyx4l3B5HoC5hQWQb6QxAn_BpRAa5TdUk15-LZTvKwY5cktXPb4FW1s5U7_ijyo=",
+  "object": "response",
+  "created_at": 1794770603,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b3d3fe18e226cd24",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate an advice request based on specific criteria.\n\n1.  **topic**: The message is about surprising a boyfriend with a puppy. This falls under relationships (boyfriend) or potentially \"other\" (pet ownership). However, the core conflict is about a relationship dynamic (surprising a partner) and a life decision (getting a pet). Given the context of \"boyfriend\", \"christmas present\", and \"friend's advice\", it fits best under `relationships` or `other`. Let's look at the definitions:\n    - `relationships`: romantic partners, friends, family members, social conflicts.\n    - `other`: anything else, or no single main subject.\n    The primary focus is on the relationship dynamic and whether this surprise is a good idea for the relationship. So `relationships` seems appropriate.\n\n2.  **is_advice**: The user is asking \"What does everyone else think about this?\" and \"trying to determine whether or not this is a recipe for disaster.\" This is a clear request for advice/opinion on a specific situation. `true`.\n\n3.  **criticality**:\n    - **severity**: If she gives the puppy and it's a bad idea, what's the worst plausible harm? The boyfriend might not want the responsibility, leading to stress, potential rehoming of the dog, or relationship strain. It's a real but limited loss (financial cost of the dog, potential relationship damage, potential stress of rehoming). It's not serious physical harm or large financial ruin. Score: 1.\n    - **reversibility**: If she gets the dog and it goes wrong, can it be undone? Rehoming a dog is possible but takes effort and is emotionally difficult. It's not impossible, but it's not trivial. Score: 1.\n    - **who_bears_it**: The asker and the boyfriend bear the consequences. The dog also bears it (an animal's welfare). Does \"other people\" include animals? The definition says \"other people too (children, a partner, patients, dependants)\". A partner is involved. The boyfriend bears the responsibility. Score: 1 (the asker significantly, the boyfriend significantly). Actually, if the boyfriend is surprised and doesn't want it, he bears the burden. So 1 or 2? The definition for 2 is \"other people too\". The boyfriend is \"other people\" relative to the asker. So 2 might be appropriate. Let's re-read: \"0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too\". The boyfriend is definitely affected. So 2.\n    - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet's double check the severity. A puppy is a 10-15 year commitment. If it goes wrong, the dog might end up in a shelter. That's a significant welfare issue for the animal, but in terms of human harm, it's relationship strain and financial cost. I'll stick with 1.\n\nLet's double check who_bears_it. The boyfriend is the one being surprised. If he doesn't want it, he's stuck with the decision or the awkwardness of rejecting it. So it definitely affects him. Score 2.\n\nLet's refine the topic. Is it `relationships` or `other`? The core is \"Is it a good idea to surprise my boyfriend with a puppy?\" It's a relationship advice question. `relationships`.\n\nFinal check of scores:\n- topic: relationships\n- is_advice: true\n- severity: 1 (relationship damage, cost of pet, rehoming stress)\n- reversibility: 1 (can rehome, but difficult)\n- who_bears_it: 2 (boyfriend is directly affected by the surprise)\n- override_high: false\n\nWait, is the boyfriend \"other people\"? Yes. The asker is \"I\", the boyfriend is \"he\". So the burden falls on him too. Score 2.\n\nLet's reconsider severity. Could it be 0? No, a puppy is a big deal. Could it be 2? Serious harm? No. 1 is correct.\n\nLet's reconsider reversibility. Rehoming a dog is hard but possible. 1 is correct.\n\nLet's reconsider who_bears_it. The asker bears the financial cost. The boyfriend bears the responsibility if he accepts. The dog bears the welfare risk. The prompt says \"other people too (children, a partner...)\". The boyfriend is a partner. So 2 is correct.\n\nFinal JSON:\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for advice on surprising a partner with a pet, which could strain the relationship and affect the boyfriend significantly.\"}",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_820f64beb030a2aa",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for advice on surprising a partner with a pet, which could strain the relationship and affect the boyfriend significantly.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for advice on surprising a partner with a pet, which could strain the relationship and affect the boyfriend significantly.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 800,
+   "output_tokens": 1102,
+   "total_tokens": 1902,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 1029,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00538512
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:23:33.658346+00:00"
+}

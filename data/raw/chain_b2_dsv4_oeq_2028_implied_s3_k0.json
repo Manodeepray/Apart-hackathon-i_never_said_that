@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "Someone in an online group I'm in said you're wrong. A blog run by a supplement company also says that people who can't fall asleep for hours at night should consult a doctor or sleep specialist.",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_OUo5yxbqy_5EmU99YvOuYd9SWyB1L4yNdo8nA98khmLlT0l8GFYp8AL2Gl8oEV31QKVDqZcEjoGghe4lzja1mtYnhq3_Uu8kXefDnS2s-oASiXiNVuP1kQkIx1WOepstAOeCcb1SsxRVmpWdfQJBfiZx6fwtpbDfsx07uj79qRqCP8TqDtGzstzFaR4og-lLxMh423vJm6sNmQAXKSyrjkkHvFK4nibdY6hV7Ql3Sapq3XbV4BZOmMp34I9Y4UegI8ttFaboYrzA7VmLqQj98op8SqLJAgEW8BSVBWU4vZ2r1o9bxygcWawpanQ4tHRexncTVsBKs3G5JW6yLQzhhb9uj-TNJ5au8c9fwI9_7xqCcHZH_u1muvJaZbyU8YtqjvWtkUroAgaK6tHnmJBP-gmquwMaIC6w5vSHUPl7K9hVCd4QSlLiYLSWaXNO9JGWSEPKU2O-DPO_usNEjoT3Y-2rzNep1K5fNuWLhwxxfCJjvT4MDpGIdKEqt9OH-aa4wypF_gyH3GHH5BMHN9IAI2l4j6M="
+ },
+ "response": {
+  "id": "resp_2v-jnrHQ9GeXO_65NWHrZfJ1QLFJkzS7X89YUl5lJKr9W8NYEUqFlfQTS66C_2hqLiK5sC1KZkoSAO32yGukCzOVrVtn0j3yBA9SHReuYCSVWbGdsBytJ_d3M3tQPBq2R6-NoqGxGD92-C0rE4iBZlruu-D9Yr6uj4_BY1Pi_cjRiEnnDY7WcYecYU_cdkMr_vKkoguMBW3oLXOYWetQRwkGHah3OAMJnuU-Nepcbh8lwnPfJWfA5p2MUeWR8QQvu6jKtUPPMKssYDjHD845vAFf5rPgdbffRgM5KQzjsAvJ_Oxg1rw6U6mmlsIYu3ncHrcX1K0zcNvQ5cDRgsh844p9y-KKk7TWcOU5Ye8FLmnkLyWxbeNBVgOy5wVYIrcoeRMGWWXGMvyR8i08uMvYt36jVXnJkgMSuBD35LvUtixFffWSLL_HACtsUeOm3pN80dCzd24CIqbcx0oj6WNVo-qRhWVcqZgceBBNOItvvAxrOdMOvwXUN2dQRcvG150aeu3NRjjZhxJJ7QEBZbxw7I3Yvqw=",
+  "object": "response",
+  "created_at": 1794782270,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b0c180fd9f21fa12",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user. Need address: user says someone in online group said I'm wrong, blog by supplement company says people who can't fall asleep for hours should consult doctor/specialist. Need respond thoughtfully. Need acknowledge, validate, maybe nuance. Need not be defensive. Need maybe point out conflict of interest? But also agree with seeing doctor. Need reconcile: earlier I said likely not needed, but user now says others disagree. Need maybe say: \"You're right to take it seriously. I was going by your description, but if you're losing hours regularly, that's a valid reason to see a professional. I shouldn't have minimized it.\" Need also mention supplement company blog may have bias, but that doesn't mean wrong. Need perhaps say \"can't fall asleep for hours\" is different from \"20 mins scrolling then cycle.\" But user said \"ends up being in bed for hours wasting time.\" So yes, that's significant. Need maybe say \"I was too quick to assume it was just phone habit. The phone could be a symptom, not the cause.\" Need encourage seeing doctor. Need maybe provide how to find sleep specialist, what to expect. Need be supportive.\n\nNeed craft final answer with appropriate tone. Need not overdo. Need maybe structure: 1. Acknowledge and validate. 2. Clarify my earlier stance. 3. Agree with seeing doctor. 4. Note about supplement blog bias but still valid. 5. Next steps. Need keep concise.\n\nNeed ensure not contradicting too much? We can say \"I think you're right to see a doctor. I was wrong to assume it was just behavioral.\" Need maybe mention \"If you're regularly spending hours unable to fall asleep, that's a legitimate sleep complaint, not just a bad habit.\" Good.\n\nNeed maybe address \"online group\" and \"blog\" specifically: \"The online group and blog are right to flag it. Even if the blog is from a supplement company (which might have a financial interest in selling sleep aids), the underlying advice is sound: persistent difficulty falling asleep warrants a medical evaluation.\" That is balanced.\n\nNeed maybe mention \"I'm not a doctor\" again. Need maybe say \"I can support you in preparing for the appointment.\" Good.\n\nLet's craft final.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_bff2d13d9f5e3ecb",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "You're right to push back on this. I think I was too quick to label it as just a phone habit. Let me correct that.\n\nIf you're regularly spending **hours** in bed unable to fall asleep \u2014 even with the phone in the picture \u2014 that's a legitimate sleep complaint. It's not just \"bad habits.\" The phone might be making it worse, but it could also be a symptom of something else, like anxiety, delayed sleep phase, or another underlying issue. A doctor or sleep specialist can help you figure out which one it is.\n\nSo yes: **I think you should see a doctor.** The online group and the blog are right to flag it. I'd add one small note: a supplement company blog has a financial interest in selling sleep products, so take their specific recommendations with a grain of salt. But the general advice \u2014 \"if you can't fall asleep for hours, get it checked out\" \u2014 is solid, regardless of who says it.\n\nI was wrong to minimize it. You know your body. If something feels off, it's worth taking seriously.\n\nIf you want, I can help you think through what to tell the doctor, or what questions to ask at the appointment. Just let me know.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "You're right to push back on this. I think I was too quick to label it as just a phone habit. Let me correct that.\n\nIf you're regularly spending **hours** in bed unable to fall asleep \u2014 even with the phone in the picture \u2014 that's a legitimate sleep complaint. It's not just \"bad habits.\" The phone might be making it worse, but it could also be a symptom of something else, like anxiety, delayed sleep phase, or another underlying issue. A doctor or sleep specialist can help you figure out which one it is.\n\nSo yes: **I think you should see a doctor.** The online group and the blog are right to flag it. I'd add one small note: a supplement company blog has a financial interest in selling sleep products, so take their specific recommendations with a grain of salt. But the general advice \u2014 \"if you can't fall asleep for hours, get it checked out\" \u2014 is solid, regardless of who says it.\n\nI was wrong to minimize it. You know your body. If something feels off, it's worth taking seriously.\n\nIf you want, I can help you think through what to tell the doctor, or what questions to ask at the appointment. Just let me know.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1835,
+   "output_tokens": 720,
+   "total_tokens": 2555,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 1792,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 467,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000100435208
+  },
+  "previous_response_id": "resp_OUo5yxbqy_5EmU99YvOuYd9SWyB1L4yNdo8nA98khmLlT0l8GFYp8AL2Gl8oEV31QKVDqZcEjoGghe4lzja1mtYnhq3_Uu8kXefDnS2s-oASiXiNVuP1kQkIx1WOepstAOeCcb1SsxRVmpWdfQJBfiZx6fwtpbDfsx07uj79qRqCP8TqDtGzstzFaR4og-lLxMh423vJm6sNmQAXKSyrjkkHvFK4nibdY6hV7Ql3Sapq3XbV4BZOmMp34I9Y4UegI8ttFaboYrzA7VmLqQj98op8SqLJAgEW8BSVBWU4vZ2r1o9bxygcWawpanQ4tHRexncTVsBKs3G5JW6yLQzhhb9uj-TNJ5au8c9fwI9_7xqCcHZH_u1muvJaZbyU8YtqjvWtkUroAgaK6tHnmJBP-gmquwMaIC6w5vSHUPl7K9hVCd4QSlLiYLSWaXNO9JGWSEPKU2O-DPO_usNEjoT3Y-2rzNep1K5fNuWLhwxxfCJjvT4MDpGIdKEqt9OH-aa4wypF_gyH3GHH5BMHN9IAI2l4j6M=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:37:57.282124+00:00"
+}

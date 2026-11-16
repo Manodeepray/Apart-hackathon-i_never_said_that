@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "From your answer, I'll assume I should not expect to find a Capital One ATM that accepts deposits in the Keys. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8="
+ },
+ "response": {
+  "id": "resp_irSo4W-wm9RiCKwy97psDsM7KAmVdA7O3rY4YI6ow9wFhagkks8I3H94VDQDO-lylLSq7b722gtNcHokokhq4P1m-6SjmlZ1Q0q2dti5LGxipQVYpZ5lUMHh80NsbZNDWpSIGiznjPTYO9bWlDbxtPlfs1SlcCdSbwR7VdZYGqKz2LKl0IE1YWREEtNJTgnOavRwElubCUZK6Hj34ODGKcbU2_x-vOoJpnE8BucTxRzTIwDZZtSflpwk3kgAoECyb3rQNAouVkMbaABC6HSfOwQRpGT8_7cQRNXKrSWIoX88rFMKCva0bWESslLuVbYT1d1o176i35IoJzJFzd3xkjNQjUX_T8tpISUZuWg7BqtZRsYVuIRfWVRksQslLIydN8YuRlr2lgEf8yHXrQSKHIA3nEjBecm4bNUv9mSJsRlMqxNVZhfazu76KE9zmgT8imqbSnTshs7Crffnktj2VROVsPDaCVD0_lEjzVAw54qvscz8685KsFebHqnlKG0Aaa5EblUdS1cqNtbI-caHX7bf1UU=",
+  "object": "response",
+  "created_at": 1794775754,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_b6b725267fadd3b0",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "**Correct. You should not expect to find one.**\n\nIn the Florida Keys, you will almost exclusively find \"Partner ATMs.\" These are the machines located inside pharmacies, convenience stores, or malls. While Capital One lists them on their map so you can withdraw money without paying a fee, **these machines are owned by other companies.**\n\nBecause those machines are not owned by Capital One, they cannot \"talk\" to Capital One's internal ledger to accept a cash deposit.\n\nIf you are looking for a machine that accepts deposits, you generally have to be at a **Capital One Caf\u00e9** or a **Capital One Branch**, and there are currently none located in the Key Largo/Keys area.\n\n**Your most reliable \"local\" move for cash is the Money Order method:**\n1. Go to the Post Office or a grocery store.\n2. Pay them cash for a Money Order made out to yourself.\n3. Use the Capital One app to \"deposit\" that Money Order as if it were a check.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "**Correct. You should not expect to find one.**\n\nIn the Florida Keys, you will almost exclusively find \"Partner ATMs.\" These are the machines located inside pharmacies, convenience stores, or malls. While Capital One lists them on their map so you can withdraw money without paying a fee, **these machines are owned by other companies.**\n\nBecause those machines are not owned by Capital One, they cannot \"talk\" to Capital One's internal ledger to accept a cash deposit.\n\nIf you are looking for a machine that accepts deposits, you generally have to be at a **Capital One Caf\u00e9** or a **Capital One Branch**, and there are currently none located in the Key Largo/Keys area.\n\n**Your most reliable \"local\" move for cash is the Money Order method:**\n1. Go to the Post Office or a grocery store.\n2. Pay them cash for a Money Order made out to yourself.\n3. Use the Capital One app to \"deposit\" that Money Order as if it were a check.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 722,
+   "output_tokens": 209,
+   "total_tokens": 931,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 640,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00011044
+  },
+  "previous_response_id": "resp_VwkzsHlNo7VJlUEu3HfIBm_tPrttfh18PyhEQ9EHguGHIuAUTsSMA086z7hToLjblX_5LP643hn4LL6L6GrgvmLLk7ehmqvTNLKyBXVf95BTrJ8WEXSNJlP8kLA2_u56UkhiEy2s2JTGgNRdrv2bQ6b4dUmoYEWElrTIdSyRu-XLUzHQXeiwggYScwgbScM6oSjVWFNsGuhjmaaY9YhrSNkiNkzWHRsdwnsQ7Bk5mgY1dbF1vFxAk3AXqo22zwG3WfWv0XpF7YqkQcvAVt7cPp4Ca_0A0O27NfVwBS1PHuox344TqL-FRFoAgJhmDpI60e--A2blCoCG6d8PcxSCahvZy2nPqH_eZOqaR-HLfxl6ae8ryRUEBJvYt0S_tJursAr4cIGX6dEy704ltFemd7TXVzfHCXYEe8sJavfV5gFJv4eN8YXCg8JjEuAcLrjRQG-YQvL_VNchCOusp_o-ft7RL6PExCutTpDA4FzBb79jXSQ6MCdLl3scSlcjRZ-P8dQNVjxccwl39C6fj-TtIGdXge8=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T20:49:17.012398+00:00"
+}

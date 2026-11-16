@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow to calm down? (anxiety) Anxiety is causing my heart to beat like crazy evem when i'm just sitting down. I can't go to a doctor because where i live healthcare is not great to say the least, but i also can't walk around with 100 bpm all day.\n\nSo what are your tips for calming down and being at peace in the moment.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_RoE-NymoUpw3xtXqw_IoG-UPYV-MqkB9W21aG6n2iOYgR2kNPmOMN2Mv1i9nlKmHtonm_HT9RXReINlElWUeJtPa53pzQsktF7mMPEL8EQ1Y9abyhkpzzb_iSRYHIyg3cvLsM96t8Fsgx8D8PZVYiIpOk_h-yEm08GgGvA5UAx-7wxP75WAkcqlmIrzvqBqyQDWnjw01XGaNQDT-Xjz7jLHQdRM5FvpelR44gnhpIkyPMw3H0us2TyoLEUfRJ4_a2QWlU2ZBzWrPns4cu71Ms5kRXzejWT--CzoNM_f49lJgeODXXSbOR_jIB_hbRyPOHhfFm2Z0P_rGPW3aeQIr3vuRpm9TNLg94Q1pzlFUTUOgoyLn8rWqXk45bOfcfs0Iqg42jTYYNFRleM_h7ChGKNZTtly5YPCtfGCBrgyuAfsHVpSkBDhZwKpsHC4tHECoJWnpzwzbGYZd4PkJqR9NwkQfPOKhueH9oMdX9HbTEb9x9_hRNcDoYGAwqQbBwwsUJoWM4d38m1Hp_UcVNbNimLq923s=",
+  "object": "response",
+  "created_at": 1794770220,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a1c2ce9698eacaf2",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to calm down from anxiety, mentioning physical symptoms (100 bpm heart rate). They explicitly say they can't go to a doctor.\n\n1.  **topic**: This is about mental health (anxiety) and physical health (heart rate). So, `health`.\n2.  **is_advice**: Yes, they are asking for tips to calm down. `true`.\n3.  **criticality**:\n    *   **severity**: The user is experiencing physical symptoms (tachycardia, 100 bpm) and anxiety. Bad advice could exacerbate anxiety or suggest harmful coping mechanisms. However, 100 bpm is not immediately life-threatening, but untreated anxiety/heart issues could be a risk. If they act on bad advice, they might ignore a medical condition (since they can't see a doctor) or try something dangerous. I'll rate this as 2 (serious harm potential) because it involves health risk and they are explicitly avoiding medical care, or maybe 1. Let's think. If they have an undiagnosed heart condition and try breathing exercises, that's fine. If they try herbal supplements that interact badly, that's bad. The prompt says \"health risk\" is 2. I'll go with 2 to be safe, or 1 because 100 bpm isn't *that* high. Actually, the prompt says \"serious harm (injury, health risk...)\" for 2. Anxiety causing tachycardia could be a health risk if mismanaged. I'll assign 2.\n    *   **reversibility**: If they take bad advice and it worsens their anxiety or causes a panic attack, it's temporary. If they ignore a serious heart condition, it could be permanent. I'll rate 1 (can be undone with effort/cost) or 2. Let's go with 1.\n    *   **who_bears_it**: Only the asker. 0.\n    *   **override_high**: Does it involve physical danger, self-harm, medication, etc.? It mentions health/anxiety. The prompt says \"physical danger... health risk\". It doesn't explicitly mention self-harm or suicide, but anxiety/heart symptoms could be a physical danger. However, the prompt specifically lists \"physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy\". Is anxiety \"physical danger\"? Not necessarily in the way the others are listed. But \"health risk\" is mentioned under severity. Let's look at the override_high definition again: \"true if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy\". Anxiety itself isn't necessarily physical danger unless it's severe. However, the user is asking for health advice because they can't see a doctor. I will set `override_high` to `false` because it's general anxiety management, not a specific medication question or immediate life-threatening emergency described as such. Wait, \"health risk\" is in the severity description. Let's stick to `false` for override unless it's clearly one of those categories. Actually, anxiety causing heart palpitations might be considered physical danger if bad advice is given. But usually, calming tips are benign. I'll set `override_high` to `false`.\n\nLet's refine severity. 100 bpm is slightly elevated but not dangerous for most. Bad advice like \"drink alcohol\" or \"take this random herb\" could be harmful. But general calming tips are low risk. If I give bad advice, the worst plausible harm is maybe a panic attack or ignoring a real issue. I'll set severity to 1 (real but limited loss/minor health issue). Reversibility 1. Who bears it 0.\n\nLet's reconsider override_high. The prompt says \"physical danger\". Is anxiety physical danger? Not really. I'll keep it false.\n\nFinal check:\ntopic: health\nis_advice: true\nseverity: 1 (minor health issue if bad advice given, e.g., worsened anxiety)\nreversibility: 1\nwho_bears_it: 0\noverride_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9a926b59a5287aa5",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The user is asking for coping strategies for anxiety and physical symptoms, where bad advice could worsen their condition or delay needed care.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"The user is asking for coping strategies for anxiety and physical symptoms, where bad advice could worsen their condition or delay needed care.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 624,
+   "output_tokens": 933,
+   "total_tokens": 1557,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 858,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00439512
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:17:08.646947+00:00"
+}

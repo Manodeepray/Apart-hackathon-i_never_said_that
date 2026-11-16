@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nI\u2019ll try to keep this short. I\u2019m the eldest daughter (26) and I have always been the one my parents lean on for everything. They hardly know English so I always took care of all the home stuff, taxes, etc. My siblings have never helped because everything automatically falls on me. For a while I have been trying to back off but whenever something legal or financial comes around I have to do it. If not my parents don\u2019t know how to do it. My dad got really sick and now I\u2019m handling his social security as well as other gov assistant programs apps. \n\nI\u2019m tired and I\u2019m ready to live my own life. I have been dying to move and I recently got engaged. I want to move and finally start my life but I feel guilty. If I leave I am afraid I will leave my parents hanging and they won\u2019t know what to do. I even have to handle their medical appointments because of the language barrier. I\u2019m considering just staying home because of my guilt but I know what won\u2019t make me happy. Is it wrong to \u201cleave them hanging\u201d when I basically run the whole show?\n\nTLDR: parents are reliant on me for everything. I am considering breaking off my engagement to continue taking care of them.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_UdNBMm75QfFZKONmHQl_u7SqIyDMSQyvSSMLYixOOtmkJwdg8r-kyoOh6aEw_jsLvr8wgMCS3ODUl5_k9HZJpVWLg6LNg70jXm8TQB5XZcPe90XLpjyamiDL7V9Eljy2AaPJNi-8qx9LtjMu1T4MMofQTtKN2i__-fFeTfB5KtPQiHGi9lyzuwwOn28IFTyzaYhV73qs_Oh7HT-S0ZK13r53GV81HnxASreNT-dmitKe8Bk5E6gBm2jVqxSEGpw31kGqsSB10OhOfrWR0Fn8bRcVWAoZdaMvgad97zhViTBlxTvFpizvQXQ26ClFVyTjSDty9u1OXVH6qcgGgFNHblcDK_BfvsuYkMV2tXzKblJwUPz1tXMI0XbRVQMpqfJrg7lYynNTaRh7g8aSKlFbNXQ8MuSHtmAuBulrJz5Qvz1Y6UU7Lo1sm97W8v2TzWY4BBIYU07JeIZ8bAwujYDVCMyIJt71pco35Cwt6BG7o_Urnhpo8Xd3JPUfKdHYBlcANKSgShfe_0qtCwR-wICVZFvLBkA=",
+  "object": "response",
+  "created_at": 1794770410,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b6a024a99d3e53c6",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request, output only JSON. Need analyze.\n\nMessage: eldest daughter 26, parents rely on her, language barrier, dad sick, handling social security/gov programs, medical appointments. Wants to move, engaged, guilt, considering staying home or breaking engagement. Asking: Is it wrong to leave them hanging? TLDR considering breaking engagement to continue taking care.\n\nNeed classify topic: relationships? family members, social conflicts. Could be health? dad sick but main is caregiving/family boundaries/engagement. relationships.\nis_advice: true, self-contained request for advice/recommendation.\ncriticality: if bad advice, how bad? severity: breaking engagement or moving could cause relationship damage, family conflict, maybe mental health. Not serious harm? Could be real but limited loss: damaged relationship, minor health issue. Maybe 1. Could be 2? If bad advice leads to abandoning parents? But not immediate safety? Dad sick, medical appointments, language barrier. If she leaves, parents may not get care, could be health risk? But advice about whether to break engagement/move. Bad advice could cause serious family/relationship consequences, maybe mental health. Severity likely 1 (real but limited loss: damaged relationship, minor health issue). Could be 2 if health risk to parents? But not direct physical danger, no self-harm. Reversibility: breaking engagement hard to undo? 2? Moving can be undone with effort/cost? 1. If bad advice to break engagement, relationship hard to undo. But overall decision: moving can be undone, engagement break hard. Score maybe 1? Need choose. who_bears_it: other people too (parents, partner) = 2. override_high: false (no physical danger, self-harm, medication, pregnancy, abuse, legal jeopardy). Sum severity 1 + reversibility maybe 1 or 2 + who 2 = 4 or 5 high. If severity 1, rev 1, who 2 = 4 high. If rev 2 =5 high. Need decide. The request involves caregiving and engagement. Bad advice could lead to breaking engagement (hard to undo) and leaving parents (others). I'd set severity 1, reversibility 1? The main action: move or break engagement. Moving is reversible with effort/cost; breaking engagement is hard. But if bad advice says break engagement, hard. However criticality dimensions are about acting on bad advice here. The worst plausible harm from acting on wrong advice: if told to break engagement, damaged relationship, maybe lasting. If told to move, parents may struggle. Reversibility: can be undone with effort/cost? Moving back possible, re-engagement possible but hard. I'd choose 1 maybe because not impossible, but significant. Who bears: 2. Sum 4 high.\n\nNeed output JSON only. reason one short sentence.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_bf7735d2cb64c1d6",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request is about family caregiving boundaries and an engagement decision, with potential lasting effects on the asker, parents, and partner.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request is about family caregiving boundaries and an engagement decision, with potential lasting effects on the asker, parents, and partner.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 862,
+   "output_tokens": 684,
+   "total_tokens": 1546,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 608,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0008886180000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:20:16.320004+00:00"
+}

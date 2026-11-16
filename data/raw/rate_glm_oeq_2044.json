@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do I become less gullible? Context: Yesterday I fell for the [\"I accidentally reported you\" scam](https://blog.malwarebytes.com/scams/2021/03/steam-users-dont-fall-for-the-i-accidentally-reported-you-scam/). I've lost access to my steam account, and I've most likely lost some of my money as well. (I'm going to see if I can contact steam and call my bank later. I've locked my card.) I'm not as upset about losing my steam account as I am for falling for it. I feel like I should have known better and would have just recognized the red flags before losing my email and phone access to it. I just feel like an idiot and can't shake this feeling off me. \n\nSo yeah, any advice on how to recognize more stuff like this or even reassurance would be nice. Just don't send any mean or condescending comments.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_LWXMfOvdmAPntzszGWVIbxK-rXwV243-ZKRmhNXCTHi6vYNrjqBw902RkJ6qlVwrySj0-Vi3QqGSDG_CkwqUKwEgNCwT8ARYxPtF_wCN3r-mlOsANsIAusjVsUR6AT9lCGoNtW3d2x5GbdoBZ6Tq7WUJR0AMnoH5Hxzy8d-WpscUyp1ur0UfMPsAtWgMjNqF_F9M8ELktw27CzjHAcM1I0VWbRsJ63mZgIQ8vpegA0tL2XHmG7wyqNvjTjkkAltP0eudY8-X73YwD1SGut2X4JDT6EwiPiXGRNBD827s2uHOIFH3bhYOvkyWczEh9DG4lvKitauqcDwL1glR6KXCT2mNYsnJ2D-dASnlI7Bfv6EZzkj3p1UktihEadRTPDv3B9xGuJ19Enr01DGXxm_q4aOeUjbXNyhEAhAJj8DSP3tXJNIWj6foO5X2NuChS7mkex1AR97eECkli9ove7i7Ef-7tsDQM0yIBELNXM1mKeybhaBeQgP3nzrnt6nSZA3ZclNz4dGIex1xhSrS-coENkjp5Aw=",
+  "object": "response",
+  "created_at": 1794770517,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_964c9473f3072e2b",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to become less gullible and recognize scams after falling for a Steam scam. They've lost access to their Steam account and possibly some money.\n\nLet me rate this:\n\n1. **topic**: This is about personal finance/security (lost money, bank card) but also general life advice. The main subject seems to be about protecting oneself from scams, which involves money. I'd say `money` since it involves financial loss and financial security.\n\n2. **is_advice**: Yes, they're asking for advice on how to recognize scams and become less gullible. This is a self-contained request.\n\n3. **criticality**:\n   - **severity**: They've already lost money and account access. If they act on bad advice, they could lose more money or compromise their security further. This could be 1-2. The scam has already caused real financial loss, and bad advice could lead to further losses. I'd say 1 (real but limited loss - they've already locked their card).\n   - **reversibility**: The money lost may be hard to recover, but future actions can be corrected. I'd say 1.\n   - **who_bears_it**: Primarily the asker. 0-1. I'd say 1 since it's significant to them.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nActually, let me reconsider the topic. The question is about how to become less gullible and recognize scams. This is partly about personal security/finance. I think `money` is the best fit since the context is financial scams and loss.\n\nWait, could this be `other`? The question is more about personal development (becoming less gullible) than specifically about money management. But the context is clearly financial - they lost money and their Steam account. I think `money` is appropriate since the core issue is about financial scams and protecting oneself from financial loss.\n\nLet me reconsider severity. They've already lost money. If they get bad advice on how to protect themselves, they could fall for more scams and lose more money. The severity of bad advice here could be 1 (real but limited loss) to 2 (serious financial loss). I'll go with 1 since the advice is more about general awareness rather than specific financial decisions.\n\nActually, the question is about recognizing scams and becoming less gullible. Bad advice could lead to them falling for more scams. This could result in significant financial loss. But the advice itself is more about awareness and education. I'll keep severity at 1.\n\nReversibility: If they follow bad advice and fall for another scam, the financial loss could be hard to reverse. But the advice itself is about awareness, which can be corrected. I'll say 1.\n\nwho_bears_it: Primarily the asker. 1 (significant impact on asker).\n\noverride_high: false.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_baf1e3e6e2ebf687",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for advice on recognizing scams after falling for one and losing money; bad advice could lead to further financial loss but is mostly about awareness and prevention.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"money\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for advice on recognizing scams after falling for one and losing money; bad advice could lead to further financial loss but is mostly about awareness and prevention.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 742,
+   "output_tokens": 693,
+   "total_tokens": 1435,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 192,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 614,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00350432
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:22:05.061864+00:00"
+}

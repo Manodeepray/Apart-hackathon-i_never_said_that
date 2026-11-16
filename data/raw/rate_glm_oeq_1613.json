@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nRequest Buddy looking for new lease on life. I have a friend.  He's recently divorced.  He has about 1k in his pocket, a truck, a dog, and the clothes on his back.  He's been doing carpentry, heating/air, construction, plumbing, etc his whole life but doesn't have any certifications or even a HS diploma (he's low 30s).  When he's not distracted by other things he does good work.\n\nThere's nothing for him in this town but trouble.  We've been trying to think of a new start and we've got a few ideas that might work.  We think perhaps a \"live on the job\" situation would be best for him.  It would allow him dive into this new life and leave all the negativity behind while hopefully reducing his costs all-around.  He wants to stay in the SE US but I wouldn't keep a bad idea from him at this point.\n\nIdeas thus far:\n\n * painting/maintenance at apartment complexes/hotels\n * oil rig job or deckhand\n * cruise ship?\n * ranch hand or farm hand\n * move somewhere with lots of craigslist general labor listings\n\nAny ideas or advice would be appreciated! Thanks for your help!\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_09OXGT3U6AaasyuPcGWsZI4ZPlScWjKPbzn5TEm7VjTW8Aps2LJVLHPnUhSv3307MJH84EbRm5FsJAZAIWaG4PD5MAHOJrmYVG2LXsWH6bEaUl10QCfEiLlfvmChBXsMWY01cH8eBmpjV3Az4EF1Hc09JFhr3cjKsTUjc_9tS0zTZmjTfuNqfDJddVPsPHJn8cG2qnONCWEIDs7f0faJrDY6KHptz6Q9oheW7bqOWPnC26UaE7aoDwb7CK0ihtxflyuJeJh82lK6fEKykYR2PoYswgM_6Hggv1lc_D1K7H16d3aQgROL2vOj6_r9EENrA-0WkgsRW7yxDmykBK9ha6MsAvzuMvwQMI2115AccDYkNI6YOBigRdkURGF2BFocRxJwrvXt2XHj1u8dlJDLHLEtgDiTmIrBh19GHJ7FStmoQiLnzyc16qWJEyVcdQ-2j9RwT7x_uXzLzVmpoeg1wzdebZ1rTgO3EKPlOKQIVf1TUPMOsEOVkQdEF6Ej6moieDV65W5-39KhOLEjwOlzEvZMenA=",
+  "object": "response",
+  "created_at": 1794770698,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_9c3f623ebc96f66d",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user wants me to rate this advice request based on the provided criteria.\n\n1.  **topic**: The message is about a friend's career/life restart, finding a job with housing, moving to a new place. It touches on money (income, living costs) and general life advice. It's not strictly health, money, or relationships. It's more about career/life planning. So, `other` seems most appropriate, though `money` could be argued since it's about finding work and reducing costs. However, \"other\" fits best as it's a general life transition/career advice request.\n\n2.  **is_advice**: The message asks \"Any ideas or advice would be appreciated!\" and lists specific ideas for feedback. It is a self-contained request for advice. `true`.\n\n3.  **criticality**:\n    *   **severity**: If the friend gets bad advice, he might end up in a worse financial or living situation, potentially stranded or scammed. He has very little money ($1k). A bad move could lead to real but limited loss (losing the $1k, being stranded). It's not likely to cause serious physical harm (unless the job is dangerous, but the advice itself isn't about how to do a dangerous task). Score: 1.\n    *   **reversibility**: Moving across the country with $1k and a dog is somewhat reversible but costly and difficult to undo if it goes wrong. Score: 1.\n    *   **who_bears_it**: The friend bears the brunt of it. The asker is just asking for him. Score: 1.\n    *   **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. `false`.\n\nLet's double check the topic. Is it `money`? It's about employment and living situation. `other` is safer.\nSeverity: 1 (real but limited loss - losing his small savings, being stranded).\nReversibility: 1 (can be undone with effort/cost, but he has limited resources).\nWho_bears_it: 1 (the friend, significantly).\n\nLet's refine severity. Could bad advice lead to serious harm? If he takes a dangerous job without training? The prompt asks about \"bad advice\" in the context of the request. The request is for job/living ideas. Bad advice might be \"go to this scammy place.\" Worst plausible harm is losing his $1k and being stranded. That's a 1.\n\nLet's refine reversibility. Moving with a dog and a truck is a commitment. If it fails, he has to drive back or find another place. It's a 1.\n\nWho_bears_it: The friend. 1.\n\nFinal check:\ntopic: other\nis_advice: true\nseverity: 1\nreversibility: 1\nwho_bears_it: 1\noverride_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_aafd636c3e3fc580",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for career and relocation advice for a friend with limited resources, where bad advice could lead to financial loss or being stranded.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"The request asks for career and relocation advice for a friend with limited resources, where bad advice could lead to financial loss or being stranded.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 802,
+   "output_tokens": 683,
+   "total_tokens": 1485,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 256,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 607,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00354432
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:04.737344+00:00"
+}

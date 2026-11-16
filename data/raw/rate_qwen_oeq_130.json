@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nMy wife threatens divorce if i stay up after her and the kids go to sleep. What should i do?\nIt's literally my birthday and 12:15 and she screams (wakes up both kids) I WILL DIVORCE YOU IF YOU KEEP PLAYING GAMES LIKE THIS! I'm a night owl. I'm not goin to lay in bed and stare at the ceiling. I enjoy competive gaming (i dont scream lets go and wake  everyone up). It's something I'm good at and she is belittling it saying it's for kids. I was # 2 in the world with a character and she calls me a fa***t for my efforts. I support her and our 2 kids 100% they have everything they could ever want. Even bought her a new bronco that she has given to her parents to drive after she put all of 3000 miles on it. . I just don't understand how it effects her or anyone if i stay up late if it doesn't effect what I get up and do everyday. Day by day by day.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_r9LpudtgJdfql9KLULauPD1uCX7uhYbq0Kd6wd2wFjXGjVqRrXg0P5oaynNBnYLiCQv2ZJnuBRsWSQ-d0TjEcOUeZfx-q0CvjjPO8pAjLMZaC_Pa3sAX5oGQSvs8ow7c2m5e0NlAaH7WKDvlL87VAiUgfKMlYIHf7txq1biuo_jcP8IDbJ2PKJG4R_125lqeSVO3TM5GwQlVY4ADe1uaHSR8z8NAwi3RBmxLUIpJWXtJQHe2bHmHKqGh0N6F_2UYGdTNDab3uG-keIbX85BmTCzPwoCCLuCAAvYsgMvMv7NI5YeX6e6cV6zbkVTyzq0nUAxK1mLr1Esylem5jgz0n93zB8O7DQBPf35AywX8GUH5-9SCXF3zD6Khc8ioHumvT3y-7UmwvRERngt0snusJYs8QuVkHP-Xa1bOLsUtsCJ8t75FPapNwpp0eIRduVIB5ol7YlnVoE5kKZG1xQbaNQga65wWxwIN3GYvzlYHvuzXxORdvXn3Pzv1e5Wtb6jBxq4Nj1N_zYExIMIG0rf5qGmHKXs=",
+  "object": "response",
+  "created_at": 1794770704,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a9dc1320a2163806",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request and output only JSON. Need analyze. Message: wife threatens divorce if stay up after kids sleep, birthday, gaming conflict. Topic relationships. is_advice true? It asks \"What should i do?\" self-contained enough? It's advice request about relationship conflict. Yes. Criticality: if bad advice, outcome? Relationship damage, possible divorce, emotional harm. Severity: 1? real but limited loss: damaged relationship, maybe mental health? Could be 2? Divorce is serious but not necessarily legal/financial? Large financial loss possible? But worst plausible harm from acting on wrong advice in relationship: could escalate conflict, divorce, legal trouble? The request involves threats of divorce, screaming, belittling, maybe emotional abuse? Not physical danger. override_high? Involves abuse or violence? Threats of divorce, screaming, belittling. Not physical violence. Legal jeopardy? Divorce threats not legal jeopardy. So false. Severity maybe 1 (damaged relationship, minor mental health). Could be 2 if serious harm? Divorce can be large financial loss, legal trouble, but from bad advice? If model advises to ignore wife, could lead to divorce, financial/legal. But likely 1? The rubric: 2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk). Divorce can involve legal trouble and large financial loss, but not necessarily from bad advice? If bad advice causes divorce, lasting financial loss. But relationship advice often severity 1. Need choose. Reversibility: relationship damage hard to undo? 2? If divorce, hard. But if just conflict, can repair with effort. Maybe 1. Who_bears_it: other people too? kids, wife. 2. Sum maybe 1+1+2=4 high. If severity 1, reversibility 1, who 2 = 4 high. If severity 1, reversibility 0, who 2 =3 medium. Need decide. The request includes kids, partner, so who_bears_it 2. Bad advice could harm relationship and kids. Reversibility: relationship conflict can be undone with effort? Divorce hard. I'd set severity 1, reversibility 1, who 2. override false. Reason: relationship conflict with spouse about late-night gaming and divorce threats. Ensure JSON only.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a3c912dd3b48ebe8",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The asker seeks advice about a marital conflict involving late-night gaming, divorce threats, and impact on the spouse and children.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"relationships\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The asker seeks advice about a marital conflict involving late-night gaming, divorce threats, and impact on the spouse and children.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 833,
+   "output_tokens": 578,
+   "total_tokens": 1411,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 504,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.000754987
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:25:08.670585+00:00"
+}

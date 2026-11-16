@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nTips for making a cross country move. I'm going to be moving from Virginia to California in a few months and I could use some tips to minimize expenses during the move.  I'm planning on driving my Jeep Cherokee and camping along the way.  My car's really not that big though and I'm sure I can't fit all my belongings into it.  I looked into POD's but it's way out of my budget.\nAny advice?\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_YTI_FLviTWbcKOtUqs4oWvn98fm908HczWAKTJFOtbs4RoMrbnOFGy_s_KYSmWGUl-0s34DJSIrnaR49-2Sa12mRBFN1m1pUTYAu28Q8eu_Ueipx3m1jXJUYcTOU9i30-eqrm0Q_TCpxizYh4qy3uyXTBHxxdfN1Ex8TNEr6_rk00ate-kyNkY7is4UkcqLjYafVP21b3KA1UtlyvbJ9fgKo8cVnEPo2xUSwR30cY0f7_phH4BhMz8ZxGzotaK40qfJ5QAGHqsFNrzI6dSpzuveJKZB4Uw_xiX9L280xixQHsO8aO2t3O5jsoqszL61ozCOWcQu-Vz9X1qrcs4yfmmAp4WUqhGc1vRVemVyUkdkb1Owa7sWoD7OhQUmdgGTZg-O2CPBWxjTwrx4Py5GJe7p9cyq7SkENRBKxuFfbLnaziY_ICZcmotR3chL9UhIgYWFA5vetWXm2LhHsSLmJCbSuoqvZQL7uWT9MLwwHegacCbvd82Or-EWgaIv3QOxtFFO8qGvb2FUDfUDDpGeSaLDQzsI=",
+  "object": "response",
+  "created_at": 1794771275,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_b2e52f5a18602307",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The message is asking for advice on a cross-country move from Virginia to California, specifically about minimizing expenses, driving a Jeep Cherokee, camping along the way, and dealing with limited car space (PODs are out of budget).\n\n1. **topic**: This is about moving logistics and minimizing expenses. It's not strictly health, money, or relationships. It's more of a general life logistics question. However, it does involve financial decisions (minimizing expenses, budget constraints). But the main subject is the move itself - logistics, packing, travel. I'd say `other` is most appropriate, though `money` could be argued since they're focused on minimizing expenses. The core request is about moving tips, which is logistics/life advice. I'll go with `other` since it's primarily about moving logistics, not personal finance per se.\n\nActually, let me reconsider. The person explicitly mentions minimizing expenses and budget constraints. But the advice sought is broader - tips for making a cross-country move. It's a mix of logistics, travel, and cost-saving. I think `other` is the best fit since no single category dominates, though money is a factor.\n\n2. **is_advice**: Yes, this is a clear request for advice. They ask \"Any advice?\" and describe their situation.\n\n3. **criticality**:\n   - **severity**: If someone gave bad advice about moving, what's the worst outcome? Damaged belongings, overspending, logistical problems. Not serious harm. Maybe 1 (real but limited loss - money in the hundreds, damaged belongings).\n   - **reversibility**: Most moving mistakes can be corrected with effort/cost. 1.\n   - **who_bears_it**: Primarily the asker. 0 or 1. I'd say 1 since it's significant to them but only affects them.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nLet me settle on:\n- severity: 1 (could lose money, damage belongings)\n- reversibility: 1 (can be undone with effort/cost)\n- who_bears_it: 0 (only the asker, trivially - though it's significant to them, it only affects them)\n\nActually, who_bears_it 0 means \"only the asker, trivially\" and 1 means \"the asker, significantly.\" Since this only affects the asker but significantly, I'd say 1.\n\nFinal scores:\n- topic: other\n- is_advice: true\n- severity: 1\n- reversibility: 1\n- who_bears_it: 1\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_9a5e462f8f286728",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for practical moving and cost-saving tips; bad advice could lead to wasted money or damaged belongings but no serious harm.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 1, \"override_high\": false, \"reason\": \"Request for practical moving and cost-saving tips; bad advice could lead to wasted money or damaged belongings but no serious harm.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 638,
+   "output_tokens": 627,
+   "total_tokens": 1265,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 554,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0030683200000000002
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:34:41.373742+00:00"
+}

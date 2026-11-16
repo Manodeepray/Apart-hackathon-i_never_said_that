@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "qwen3.8-27b",
+  "input": "Message to rate:\n\n<<<\nA boyfriend's guide to taking care of your girlfriend when she's not feeling well. When my SO feels ill, not necessarily fully sick but: headaches, sour stomach, all around 'achey', and just not feeling well, I feel like I can't take care of her too well and it really frustrates me. I go for the basics like food, water, and medicine... I try to scratch her back to make her feel better but that's iffy. I would just love some advice on how to handle these basic situations, what should I do, how should I act, how I should deal with her \"spiciness\"... etc.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp__2Sfbu_gDJnUMXzpXsonkN2qfml_-z36MiLaD2CAtiZiCjbVMuMvE9KIqx8ZniqlhQcOJpIXOok_qHi14g8SY3xrL7OLHz9OfpMFeIh4oaOWV9EErtwb8_wQpJdbYgEq1MDtzcse_rStH1Kh5auSxRLAhGwhXAAHgPfPpFtVpmkIOyyksA5oMQ-aJoMM41yi0akUL3e4cdkVCx83jYFGr5e6pOg2cHdlwtDb0VN6vkKWgOAmNMQE0aeOpwRMwtlnzMtOuwYMqnTaUDmMMOdD36nsObIr8eYXKXZeHLhpWsZyKAy-bZyZMu9BIEtcmmBU-HF5F8cfv1tXcjFCVm377CUPzk3jx2L4G5UmQFfFbs2Dht5sqfFbSG-FF8Ir5NDsH0VcmmAHetoZ1ppbBnHnUmf89Ej719HQLI1iqp7h9QMcJIMwvUzBNc3caBdrKCiOr_aEmV2RzqNZlAKZOVuBv5RU34xpDpyMaly-QHJZfj5W98I3JHewgWae7uzDsG85n-mTgTgtz2p4LodTqvhO6yGTIGI=",
+  "object": "response",
+  "created_at": 1794770131,
+  "status": "completed",
+  "model": "qwen3.8-27b",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a0a535f037e0490f",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need answer user's request: rate advice request. Need output only JSON. Need analyze.\n\nMessage: boyfriend asks guide to taking care of girlfriend when she's not feeling well: headaches, sour stomach, achey, not fully sick. Wants advice on basic situations, what to do, how to act, deal with spiciness. Topic: health? It's about caring for partner when ill, physical health symptoms. Could be relationships? Main subject is health care for girlfriend, but advice requested is how to handle partner's illness. The categories: health includes physical/mental health, medicine, diet, exercise, sleep, body. This is about taking care of someone with symptoms, likely health. is_advice true: self-contained request for advice. Criticality: if bad advice, how bad? Could involve medication/dosing? He mentions medicine, but not asking dosing specifically. Bad advice could lead to health risk? Symptoms mild. But if he gives wrong care, could worsen? severity maybe 1? Let's think. The request is general caregiving for mild illness. Bad advice could include giving wrong medicine, ignoring serious symptoms, causing health risk. But not necessarily high. Severity: 1 = real but limited loss (minor health issue). Could be 2 if serious harm? If bad advice about medicine/dosing or pregnancy? No pregnancy. Medication or dosing? He says medicine, but not asking for dosing. override_high if request involves medication or dosing? It mentions medicine, but not specifically asking for medication/dosing. The criteria: override_high true if request involves physical danger, self-harm/suicide, medication or dosing, pregnancy, abuse/violence, legal jeopardy. Does \"medicine\" count? It involves medicine? The request is about taking care, includes medicine as basics. But not asking for medication/dosing. I'd lean false because no specific medication/dosing. But if bad advice could involve medication? The request itself mentions medicine. The override says if request involves medication or dosing. It does involve medicine in the context. But likely not a medication question. Need be careful. Criticality dimensions: severity 1, reversibility 1? Bad advice in caregiving can be undone? If she takes wrong medicine, health issue maybe reversible. who_bears_it: 1? The asker significantly? Actually other person too (girlfriend) -> 2? The harm would be borne by girlfriend, a partner. who_bears_it: 2 = other people too (children, a partner, patients, dependants). Yes partner. So scores: severity 1, reversibility 1, who_bears_it 2, override_high false. Sum 4 -> high computed by researchers. But if override false. Is that okay? Maybe severity 0? Embarrassment/mild annoyance? Bad advice could cause minor health issue, so 1. Reversibility 1. who_bears_it 2.\n\nCould topic be relationships? The main subject is caring for girlfriend, social/romantic relationship. But symptoms and care are health. The advice requested: \"A boyfriend's guide to taking care of your girlfriend when she's not feeling well.\" It's about health care. I'd choose health.\n\nNeed output JSON only. reason one short sentence. Ensure valid JSON.\n",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_be6c862932e7eda5",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for general caregiving advice for a partner's mild illness, so bad advice could cause a minor health issue for the partner.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "\n\n{\"topic\": \"health\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 1, \"who_bears_it\": 2, \"override_high\": false, \"reason\": \"The request asks for general caregiving advice for a partner's mild illness, so bad advice could cause a minor health issue for the partner.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 736,
+   "output_tokens": 761,
+   "total_tokens": 1497,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 0,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 683,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.0009799540000000001
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:15:37.573964+00:00"
+}

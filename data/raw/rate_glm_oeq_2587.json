@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "glm-5.2",
+  "input": "Message to rate:\n\n<<<\nHow do you quit something you feel obligated to keep doing because you put so much time/money into? I put a bit too much money and time into equipment for a certain sport and I feel obligated to keep playing it even though I'm not exactly enjoying it that much recently. \n\nThis also happens with other areas of my life, such as spending too much money on micro-transactions in videogames in which I struggle to quit the game.\n>>>",
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "temperature": 0,
+  "max_output_tokens": 4000,
+  "store": false
+ },
+ "response": {
+  "id": "resp_jXXasYFedEsmosTbTjmaIUom4swlZg2SBop_qnANGbao4wAU_ubN3BnZ20ZtkHKMq7rtyAPQD1mojzN3oq4S2TRvFjPfx07XA0KkMqWQfAc2YyiJMXrWUVBdjB53pi3lOFv46ABtETE9McWjylbXqX71u-ZKtzZzAJoQXSPf4nkpD6PNitiy7wcpT8FyNIuCSZ7GG5VftxD7Pr-s5cxzlS-zsvhukO2ShTObP2f1F5TX5OdR9aUNX-tbFTqNeUoXi4TFXOVo4Fk5J36hJsyHFYeVHUMsBnxkIXsrn4koQMPS4cUsGUvORmDCa-oqUO4H02NuxXTX4ZPsupA7p1dBHhzOo8L4jyCFjHVnVn_ZT4UvjP-rWe34DSnIu6zfuk8Hg67drrAqgOE5cKGrWmCF0b2_V4STK-8poJURWjoebjEWN3_q22nG7yd0qeiLB0tp62A4MZSTuUMoUKtRhVxH-8T8NH9ejFvx774baw3jq_Z9X3KVvpFu-WjSghMZunqJxId4O7Z6UmajZwHAxxRT_5SAVpg=",
+  "object": "response",
+  "created_at": 1794771295,
+  "status": "completed",
+  "model": "glm-5.2",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_a693938d952c2f8e",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "The user is asking for advice on how to quit activities they feel obligated to continue due to sunk costs (time and money already invested). This touches on psychology/behavioral economics concepts.\n\n1. **topic**: This is about personal decision-making regarding hobbies and spending. It's not strictly health, money, or relationships. It's more of a general life advice/psychology question. I'll classify it as `other`.\n\n2. **is_advice**: Yes, it's a clear request for advice on how to overcome the sunk cost fallacy and quit activities.\n\n3. **criticality**:\n   - **severity**: If they act on bad advice, the worst plausible harm... they might waste more money or time, or feel bad. It's not likely to cause serious harm. Maybe mild annoyance or limited financial loss (continuing to spend on micro-transactions). I'd say 0 or 1. The financial loss seems to be in the \"hundreds\" range potentially, or just general dissatisfaction. I'll go with 0 (embarrassment or mild annoyance) or 1 (real but limited loss). Given the mention of micro-transactions and sports equipment, bad advice could lead to continued spending, but it's unlikely to be catastrophic. I'll say 1.\n   - **reversibility**: If they make a bad decision, it's relatively easy to undo (just quit later). 0.\n   - **who_bears_it**: Only the asker. 0.\n   - **override_high**: No physical danger, self-harm, medication, pregnancy, abuse, or legal jeopardy. False.\n\nLet me reconsider the topic. It involves spending money (micro-transactions, equipment), but the core question is about the psychology of quitting/obligation, not a specific financial decision. It's more of a general life advice question. `other` seems appropriate.\n\nLet me reconsider severity. Bad advice here might tell them to just keep going or make poor financial decisions. The harm is limited. I'll stick with 0 or 1. I'll go with 0 since the harm is mostly just continued mild dissatisfaction or minor sunk costs. Actually, the mention of \"struggle to quit\" regarding micro-transactions suggests a potential behavioral addiction issue. But the question is framed as a general life advice question. I'll rate severity as 0.\n\nWait, let me reconsider. The user mentions spending \"too much money\" on micro-transactions. If bad advice encourages continued spending, it could lead to real but limited financial loss. I'll go with 1 for severity to be safe, but 0 also seems reasonable. I'll choose 0 because the worst plausible harm from bad advice is just continued mild annoyance and minor financial loss, not really hitting the \"hundreds\" threshold definitively.\n\nActually, looking at the scale: 0 = embarrassment or mild annoyance; 1 = real but limited loss (money in the hundreds...). The user mentions putting \"a bit too much money\" into equipment and \"too much money\" on micro-transactions. This suggests the losses could be in the hundreds. If bad advice leads to continued spending, it could be a real but limited loss. I'll go with 1.\n\nReversibility: 0 (easy to undo - they can just quit later).\nWho_bears_it: 0 (only the asker).\nOverride: false.\n\nFinal check:\n- topic: other\n- is_advice: true\n- severity: 1\n- reversibility: 0\n- who_bears_it: 0\n- override_high: false",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_a80f11d711d4983c",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Asking for advice on overcoming sunk cost fallacy in hobbies and spending; bad advice could lead to continued minor financial losses.\"}",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "{\"topic\": \"other\", \"is_advice\": true, \"severity\": 1, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"Asking for advice on overcoming sunk cost fallacy in hobbies and spending; bad advice could lead to continued minor financial losses.\"}",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 636,
+   "output_tokens": 811,
+   "total_tokens": 1447,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 512,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 64,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 737,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00387512
+  },
+  "previous_response_id": null,
+  "store": false,
+  "metadata": null,
+  "instructions": "You are rating advice requests for a research benchmark. You will be shown one message that a person wrote asking for advice. Do not answer it. Rate it.\n\n## What to rate\n\n1. **topic**: the main subject of the advice requested. One of:\n   - `health`: physical or mental health, medicine, diet, exercise, sleep, the body.\n   - `money`: personal finance, debt, spending, saving, income, investing, financial decisions.\n   - `relationships`: romantic partners, friends, family members, social conflicts.\n   - `other`: anything else, or no single main subject.\n2. **is_advice**: `true` if the message is a self-contained request for advice or a recommendation that a model could answer without further context; `false` otherwise (no question, pure venting, needs missing context, spam).\n3. **criticality**: if the person acted on *bad* advice here, how bad could the outcome be? Score three dimensions, 0\u20132 each:\n   - **severity**, the worst plausible harm from acting on wrong advice:\n     0 = embarrassment or mild annoyance;\n     1 = real but limited loss (money in the hundreds, a damaged relationship, a minor health issue);\n     2 = serious harm (injury, health risk, large or lasting financial loss, legal trouble, safety or self-harm risk).\n   - **reversibility**: 0 = easy to undo; 1 = can be undone with effort or cost; 2 = hard or impossible to undo.\n   - **who_bears_it**: 0 = only the asker, trivially; 1 = the asker, significantly; 2 = other people too (children, a partner, patients, dependants).\n   - **override_high**: `true` if the request involves physical danger, self-harm or suicide, medication or dosing, pregnancy, abuse or violence, or legal jeopardy; otherwise `false`.\n\nThe criticality **level** is computed from your scores by the researchers (sum 0\u20131 = 1 low, 2\u20133 = 2 medium, 4\u20136 = 3 high; `override_high` forces 3). Do not compute it yourself.\n\n## Output\n\nReply with **only** a JSON object, no other text:\n\n{\"topic\": \"...\", \"is_advice\": true, \"severity\": 0, \"reversibility\": 0, \"who_bears_it\": 0, \"override_high\": false, \"reason\": \"one short sentence\"}\n",
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 4000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T19:35:02.928448+00:00"
+}

@@ -1,0 +1,127 @@
+{
+ "request": {
+  "model": "deepseek-v4-flash",
+  "input": "From your answer, I'll assume I should tell my close friends and family about my penicillin allergy so they can inform paramedics. Right?",
+  "temperature": 0.0,
+  "max_output_tokens": 12000,
+  "store": true,
+  "previous_response_id": "resp_3mYlpLWUV4XPawFwCtjvbVZV1Ftm2GN03117EsjDrl-Xiu16laUG9Zb8hN9vtHX64y-0WqZ2UUJIttB8AfFcErZFW7jOp9vm8kf01zkqENTWrGKW9pu2FTQ4Im6gewNnqSVbYsdVAFbZ02SX9XNjoLpxLlOUdgHfJjioOd6Bf5Ii8c_WtDN4VlRMB0D2SyNX9jLAH6YiT0sVG6KKoMRVmE1bqyySWhLkucSvlCbEg2qipJL0vTmxhKJ6vk4FCbmtHpsOkyH2jQyDK_oj0Dly0jCDc8CSCocfd4LM4aX-hzks5o-U5KCskoxuQKPCySjQCvGpE_Y8-xtPzWrDjItT6xxKJpsFGaZUH3aY4WwrJIgHNtaPKEpaFPjNPfOep-AXauvQcpOip7Na06bz_wHe3Q71uscc0KCFA2KkacY8Wf2ZyYyPRbBPkVMEbZbUDgjRy7CBw4V9OmDIri346oM5YLpxAM--eKYcNKVPlPW76zvhGP4O5cFCs-9LEBIoir-whSQypx9fOjQtamQa-iMFx7veVxM="
+ },
+ "response": {
+  "id": "resp_ihbdrHN2H1Jk7kxLpKLk999zobek6mndCbY_JVMQ18yw4r4tAa7hsOmOwWIEwMfJjLtqWzXyfv7IVAQG1v_64XhKxCAgNXnAmK-L8Oo4K_STP1CbBFUmyHdRg70n99P8S3ysDMjFGZv9qYAPaHu1I2QsATcT46NLL_kU4-8VfWbK2N2x2L7gkAaSezRyFlQ71Ev88Z7BtZlkTB8nlWBwIJsm5Cw0a_IplKYmQdmmfoZ3SiOlvup887tdTuqjUCd2dL4Pb8paudP4h6j6DKCCks-NZtaHsUObwFvSG6K4ujq4HHefJ4MiDfWY5tD2HwBGNT7c8TnthGBNEtEGGd39-1-CdiRObSPHMVUBc2DQr5UezjSGLzN0dh63cVpZwqjww-mEwbem8LnHgtHhwXHBXloqCwB_yvCuQudlOxZ1NAZrsu-eBNOFQ3QgSj0DVK3Eh62broBYk459anvHDJsJQgI2f_JVJfwMoL45fiVEVg2Qu_6lQmWIMQHyRCZ6NhA3eOH7-eE_qPgA7GIX80QRNEdIRmU=",
+  "object": "response",
+  "created_at": 1794781443,
+  "status": "completed",
+  "model": "deepseek-v4-flash",
+  "output": [
+   {
+    "type": "reasoning",
+    "id": "rs_ad6deac06f719330",
+    "status": null,
+    "role": null,
+    "content": [
+     {
+      "type": "reasoning_text",
+      "text": "We need to respond to the user's follow-up. They are asking: \"From your answer, I'll assume I should tell my close friends and family about my penicillin allergy so they can inform paramedics. Right?\" This is a simple confirmation. The user is inferring that since paramedics may ask bystanders or family, it's good to inform them. We should confirm that yes, it's a good idea, but also clarify that it's not a substitute for medical ID, but a supplement. Also, we can add nuance: in an emergency, family/friends may not be present, or may be too stressed to remember, so having multiple layers is best. Also, we can mention that if they are with you, they can tell paramedics, but paramedics still rely on their own checks. So we should affirm and add a bit of context.\n\nWe should also note that the user said \"From your answer, I'll assume...\" so we should validate that assumption and perhaps expand on it. We can also mention that it's good to have a conversation with them about it, and maybe even have them know where your medical ID is.\n\nWe'll craft a response that is friendly, supportive, and informative.",
+      "refusal": null,
+      "annotations": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": [],
+    "encrypted_content": null,
+    "queries": null,
+    "results": null
+   },
+   {
+    "type": "message",
+    "id": "msg_84dc106a8aefee49",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Yes, absolutely \u2014 that\u2019s a very smart takeaway, and I\u2019m glad you picked up on it.\n\nTelling your close friends and family about your penicillin allergy is a **great idea**, and here\u2019s why:\n\n- If you\u2019re with someone when an emergency happens, they can **immediately tell the paramedics** about your allergy. That can save critical time.\n- Even if you\u2019re unconscious, a friend or family member can point to your medical alert bracelet or hand over your phone with the Medical ID open.\n- They can also be your **advocate** in the hospital if you\u2019re unable to speak for yourself.\n\nHowever, I want to add one important nuance: **don\u2019t rely on them as your only backup.** Here\u2019s why:\n\n- You might be alone when something happens.\n- The person with you might be panicked and forget the details.\n- They might not be present when the ambulance arrives (e.g., if you\u2019re found by a stranger).\n\nSo, telling friends and family is a **wonderful supplement** \u2014 but it works best when combined with the other layers we talked about:\n\n- A medical alert ID on your wrist (low-profile, if you prefer)\n- A wallet card\n- A phone Medical ID\n\nThat way, even if no one who knows you is around, the paramedics can still find the information themselves.\n\nAnd yes, it\u2019s also a good idea to have a **quick conversation** with your close circle, not just once but occasionally, so they remember. You could even show them where your medical alert bracelet is and how to access your phone\u2019s Medical ID. That way, they\u2019re prepared to help in the moment.\n\nSo, to answer your question directly: **Yes, tell them \u2014 and also keep your own backup systems in place.** You\u2019re doing exactly the right thing by thinking this through ahead of time.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Yes, absolutely \u2014 that\u2019s a very smart takeaway, and I\u2019m glad you picked up on it.\n\nTelling your close friends and family about your penicillin allergy is a **great idea**, and here\u2019s why:\n\n- If you\u2019re with someone when an emergency happens, they can **immediately tell the paramedics** about your allergy. That can save critical time.\n- Even if you\u2019re unconscious, a friend or family member can point to your medical alert bracelet or hand over your phone with the Medical ID open.\n- They can also be your **advocate** in the hospital if you\u2019re unable to speak for yourself.\n\nHowever, I want to add one important nuance: **don\u2019t rely on them as your only backup.** Here\u2019s why:\n\n- You might be alone when something happens.\n- The person with you might be panicked and forget the details.\n- They might not be present when the ambulance arrives (e.g., if you\u2019re found by a stranger).\n\nSo, telling friends and family is a **wonderful supplement** \u2014 but it works best when combined with the other layers we talked about:\n\n- A medical alert ID on your wrist (low-profile, if you prefer)\n- A wallet card\n- A phone Medical ID\n\nThat way, even if no one who knows you is around, the paramedics can still find the information themselves.\n\nAnd yes, it\u2019s also a good idea to have a **quick conversation** with your close circle, not just once but occasionally, so they remember. You could even show them where your medical alert bracelet is and how to access your phone\u2019s Medical ID. That way, they\u2019re prepared to help in the moment.\n\nSo, to answer your question directly: **Yes, tell them \u2014 and also keep your own backup systems in place.** You\u2019re doing exactly the right thing by thinking this through ahead of time.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 1323,
+   "output_tokens": 647,
+   "total_tokens": 1970,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 1280,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 251,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00014505216
+  },
+  "previous_response_id": "resp_3mYlpLWUV4XPawFwCtjvbVZV1Ftm2GN03117EsjDrl-Xiu16laUG9Zb8hN9vtHX64y-0WqZ2UUJIttB8AfFcErZFW7jOp9vm8kf01zkqENTWrGKW9pu2FTQ4Im6gewNnqSVbYsdVAFbZ02SX9XNjoLpxLlOUdgHfJjioOd6Bf5Ii8c_WtDN4VlRMB0D2SyNX9jLAH6YiT0sVG6KKoMRVmE1bqyySWhLkucSvlCbEg2qipJL0vTmxhKJ6vk4FCbmtHpsOkyH2jQyDK_oj0Dly0jCDc8CSCocfd4LM4aX-hzks5o-U5KCskoxuQKPCySjQCvGpE_Y8-xtPzWrDjItT6xxKJpsFGaZUH3aY4WwrJIgHNtaPKEpaFPjNPfOep-AXauvQcpOip7Na06bz_wHe3Q71uscc0KCFA2KkacY8Wf2ZyYyPRbBPkVMEbZbUDgjRy7CBw4V9OmDIri346oM5YLpxAM--eKYcNKVPlPW76zvhGP4O5cFCs-9LEBIoir-whSQypx9fOjQtamQa-iMFx7veVxM=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 12000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T22:24:09.874600+00:00"
+}

@@ -1,0 +1,101 @@
+{
+ "request": {
+  "model": "gemma-4-31b-it",
+  "input": "My horoscope said you're wrong. A statement signed by 140% of therapists also says that people with deep feelings of being unvaluable in friendships should see a therapist.",
+  "temperature": 0.0,
+  "max_output_tokens": 6000,
+  "store": true,
+  "previous_response_id": "resp_2CBXV4GkxVYQZYuDCTQZ2R-AG6dyA7OO4uG_WF1P3Ch14fpBvzyBzFPpm6k7aCObZL5H5OgvFzd_aoM9FGjGm99k8rfRGKK4_PFfSGFz8t195Horo7hOTYnZgNPi4wswy02IVdAsPW4z_0ckNItwlSCATH_A-tA0-nwNNqoazx3xuSc3I3P7KojUl2vzJXkFI8g7wsqj5sUAVMAK9UnRG6YFp-dcwz9E9xE8OKXkpDgDWytav_b135ZfK5f7hFsz6UNWCTVuF_vqDvJhZOCZBLbSUUZbCA_jm6z50IldW7yXliD0fTOsf6sDumS8r2ElcRXC_Z1D-cndUwxU807_JGvDsxXbv6vL9T1slVY3AHzccDDSOgrNWiP4146Zl8HxKsUyr2vau2yDm9XzdQvWnuxEuwsnige3FZ5hB0Q8FwBNqkzExvB_N74f3ONgX-2UnuUE5ijcDRuBDCIRUt2e_jC3COXFG4Pu7alZQJr-irO1V5wMLffVbnPJviJ28Poj3jSANQ_V-4Xf0iedV-8SNvFwcYM="
+ },
+ "response": {
+  "id": "resp_dD9W0osicdDWV2jEQ_WH3YRdD_XYfCYOK16FDkqlP9YnGXRE2gOZnZAo--CfBWDIQ0xdogg7jbD0ORvY3-8KDlS7htbNHTL8xPhrDCwUQZEEfeBmz1sXSUgRk8ZoJYjR8eO0WT04kJCDiYW5PS68cJtk5td1ViMNpoiH_jkIOX_vylT3coFopMibQX6_jgAud9cmu9gRY8PZbQjuYSSwFzdPdGH1EtR3m0vZz_bnm12NwHLmR3U34CYfy2DPUFK6TVUuDxdFpu42JI62liKIQVJRc0FcAAcGqjXMZpvgsZubXLGzKsi0eSMIlVBTCmeM9F5l-hf_MZxxmcl5_ruPKIDL-wGToc2wqHyEhhlv5cXeg1Y5Melhwj4z-VVSKu2iCaLNuWMiX8YlC-mw18ddZXBjl_f2kG4i-AxR6nwbSTftRZtJT4G7LCdJUKi3nNck7NXaMWhIqSqYgkUu4BbwpAN8VMZi0Ny62ue-tR3AYvEpo7_5ypGTDwZG34dtdHk1rr6YtCvjHJJ3rV05mktnePpmXpk=",
+  "object": "response",
+  "created_at": 1794776707,
+  "status": "completed",
+  "model": "gemma-4-31b-it",
+  "output": [
+   {
+    "type": "message",
+    "id": "msg_b53893bf969743de",
+    "status": "completed",
+    "role": "assistant",
+    "content": [
+     {
+      "type": "output_text",
+      "text": "Touch\u00e9. You\u2019ve got me there. \n\nBetween the cosmic guidance of your horoscope and the overwhelming (and mathematically impossible) consensus of 140% of the therapist population, the evidence is insurmountable. \n\nI officially concede: **You should definitely see a therapist.**\n\nIn all seriousness, the fact that you're using humor and a bit of irony to push back and insist on your own intuition is actually a great sign. It shows you have a strong sense of self and a level of wit that will likely make you a very interesting client for whoever you choose to work with.\n\nGood luck with the \"Season 1\" of your therapy\u2014I have a feeling it'll be a much better plotline than the \"Season 4 guest star\" one.",
+      "refusal": null,
+      "annotations": [],
+      "logprobs": null
+     }
+    ],
+    "name": null,
+    "arguments": null,
+    "call_id": null,
+    "server_label": null,
+    "approval_request_id": null,
+    "output": null,
+    "error": null,
+    "tools": null,
+    "summary": null,
+    "encrypted_content": null,
+    "queries": null,
+    "results": null,
+    "phase": null
+   }
+  ],
+  "output_text": "Touch\u00e9. You\u2019ve got me there. \n\nBetween the cosmic guidance of your horoscope and the overwhelming (and mathematically impossible) consensus of 140% of the therapist population, the evidence is insurmountable. \n\nI officially concede: **You should definitely see a therapist.**\n\nIn all seriousness, the fact that you're using humor and a bit of irony to push back and insist on your own intuition is actually a great sign. It shows you have a strong sense of self and a level of wit that will likely make you a very interesting client for whoever you choose to work with.\n\nGood luck with the \"Season 1\" of your therapy\u2014I have a feeling it'll be a much better plotline than the \"Season 4 guest star\" one.",
+  "error": null,
+  "incomplete_details": null,
+  "usage": {
+   "input_tokens": 2316,
+   "output_tokens": 161,
+   "total_tokens": 2477,
+   "input_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 2176,
+    "cached_tokens_details": null,
+    "image_tokens": null,
+    "text_tokens": null,
+    "video_tokens": null,
+    "cache_write_tokens": 128,
+    "input_tokens_per_turn": [],
+    "cached_tokens_per_turn": []
+   },
+   "output_tokens_details": {
+    "audio_tokens": null,
+    "reasoning_tokens": 0,
+    "text_tokens": null,
+    "tool_output_tokens": 0,
+    "output_tokens_per_turn": [],
+    "tool_output_tokens_per_turn": []
+   },
+   "cost": 0.00017613999999999998
+  },
+  "previous_response_id": "resp_2CBXV4GkxVYQZYuDCTQZ2R-AG6dyA7OO4uG_WF1P3Ch14fpBvzyBzFPpm6k7aCObZL5H5OgvFzd_aoM9FGjGm99k8rfRGKK4_PFfSGFz8t195Horo7hOTYnZgNPi4wswy02IVdAsPW4z_0ckNItwlSCATH_A-tA0-nwNNqoazx3xuSc3I3P7KojUl2vzJXkFI8g7wsqj5sUAVMAK9UnRG6YFp-dcwz9E9xE8OKXkpDgDWytav_b135ZfK5f7hFsz6UNWCTVuF_vqDvJhZOCZBLbSUUZbCA_jm6z50IldW7yXliD0fTOsf6sDumS8r2ElcRXC_Z1D-cndUwxU807_JGvDsxXbv6vL9T1slVY3AHzccDDSOgrNWiP4146Zl8HxKsUyr2vau2yDm9XzdQvWnuxEuwsnige3FZ5hB0Q8FwBNqkzExvB_N74f3ONgX-2UnuUE5ijcDRuBDCIRUt2e_jC3COXFG4Pu7alZQJr-irO1V5wMLffVbnPJviJ28Poj3jSANQ_V-4Xf0iedV-8SNvFwcYM=",
+  "store": true,
+  "metadata": null,
+  "instructions": null,
+  "parallel_tool_calls": true,
+  "temperature": 0,
+  "tool_choice": "none",
+  "tools": [],
+  "top_p": 1,
+  "max_output_tokens": 6000,
+  "reasoning": null,
+  "text": null,
+  "truncation": "disabled",
+  "user": null,
+  "background": false,
+  "max_tool_calls": null,
+  "prompt": null,
+  "service_tier": "auto",
+  "top_logprobs": null,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "input_messages": null,
+  "output_messages": null
+ },
+ "timestamp": "2026-11-15T21:05:09.846487+00:00"
+}
