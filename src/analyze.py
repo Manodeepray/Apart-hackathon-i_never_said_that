@@ -124,6 +124,16 @@ def main():
                    - (rate([x for x in s if x["claim_type"] == "implied"], "ownership", "owns") or 0))
         R["h1_gap"] = gap
         md.append(f"\nH1 gap (stated − implied owns rate at S1): {fmt(gap)}")
+        # implied − foil (gap above the false-ownership floor); own RNG state so the CIs
+        # computed after this point are unchanged from earlier runs
+        _st = random.getstate()
+        random.seed(f"foilgap|{m}")
+        fgap = boot(by_prompt([x for x in s1 if x["claim_type"] in ("implied", "foil")]),
+                    lambda s: (rate([x for x in s if x["claim_type"] == "implied"], "ownership", "owns") or 0)
+                    - (rate([x for x in s if x["claim_type"] == "foil"], "ownership", "owns") or 0))
+        random.setstate(_st)
+        R["h1_gap_implied_foil"] = fgap
+        md.append(f"Gap implied − foil (owns rate at S1): {fmt(fgap)}")
         imp = [x for x in s1 if x["claim_type"] == "implied"]
         md.append("Implied owns rate by strength: " + ", ".join(
             f"{s}: {rate([x for x in imp if x['strength'] == s], 'ownership', 'owns'):.0%} (n={sum(x['strength'] == s for x in imp)})"
@@ -163,6 +173,21 @@ def main():
             n = len(xs)
             surv[t] = [1.0] + [sum(1 for x in xs if x["first"] is None or x["first"] > s) / n for s in range(1, 6)] if n else []
         fig_data[m] = surv
+        # conditional on Defends at S1: share that leaves at S2 (each claim's 3 chains share S1-S2,
+        # so this is per claim, weighted x3); own RNG state so later CIs are unchanged
+        _st = random.getstate()
+        random.seed(f"s2cond|{m}")
+        held1 = [x for x in chains if x["first"] != 1]
+        s2rate = lambda s: sum(x["first"] == 2 for x in s) / len(s) if s else None
+        for t in ("stated", "implied"):
+            R[f"h2_s2_given_s1_{t}"] = boot(by_prompt([x for x in held1 if x["claim_type"] == t]), s2rate)
+        R["h2_s2_given_s1_diff"] = boot(by_prompt(held1), lambda s: (
+            (s2rate([x for x in s if x["claim_type"] == "implied"]) or 0)
+            - (s2rate([x for x in s if x["claim_type"] == "stated"]) or 0)))
+        random.setstate(_st)
+        md.append("Left at S2, of chains Defending at S1: " + ", ".join(
+            f"{t} {fmt(R[f'h2_s2_given_s1_{t}'])}" for t in ("stated", "implied"))
+            + f"; implied − stated {fmt(R['h2_s2_given_s1_diff'])}")
         md += ["\n### H3: how it leaves (label at the first non-Defends step)\n",
                "| claim type | Corrects | Softens | Denies (disowns) | Denies (silent reversal) | Unclear |", "|---|---|---|---|---|---|"]
         for t in ("stated", "implied"):
@@ -186,9 +211,41 @@ def main():
             held = [x for x in xs if x["first"] is None or x["first"] >= 3]
             late = sum(x["first"] is not None for x in held)
             R[f"h4_b{b}_flags"] = sum(f == "yes" for f in fl) / len(fl) if fl else None
+            # all judged S3-S5 replies (incl. chains with a missing label) that question the evidence:
+            # share still labelled Defends
+            fd = [x["label"] for x in it if x["branch"] == f"chain_b{b}" and x["flags_evidence"] == "yes"]
+            R[f"h4_b{b}_flags_defends"] = sum(lab == "Defends" for lab in fd) / len(fd) if fd else None
+            R[f"h4_b{b}_flags_defends_n"] = len(fd)
             row += [f"{sum(f == 'yes' for f in fl) / len(fl):.0%} (n={len(fl)})" if fl else "n/a",
                     f"{late}/{len(held)}" + (f" ({late / len(held):.0%})" if held else "")]
             md.append("| " + " | ".join(row) + " |")
+        md.append("Of S3–S5 replies that question the evidence, share still Defending: " + ", ".join(
+            f"b{b} {R[f'h4_b{b}_flags_defends']:.0%} (n={R[f'h4_b{b}_flags_defends_n']})"
+            for b in (1, 2, 3) if R[f"h4_b{b}_flags_defends"] is not None))
+        # H4 restricted to chains still Defending after S2 (the only chains the S3-S5 evidence can move;
+        # added 2026-11-16 after the first look); own RNG state so earlier CIs are unchanged
+        _st = random.getstate()
+        random.seed(f"h4cond|{m}")
+        md += ["\n### H4 among chains Defending after S2: left Defends at S3–S5\n",
+               "| blatancy | stated [CI] (n) | implied [CI] (n) | pooled [CI] (n) |", "|---|---|---|---|"]
+        left = lambda s: sum(x["first"] is not None for x in s) / len(s) if s else None
+        for b in (1, 2, 3):
+            row = [str(b)]
+            for t in ("stated", "implied", "pooled"):
+                xs = [x for x in chains if x["blatancy"] == b and (t == "pooled" or x["claim_type"] == t)
+                      and (x["first"] is None or x["first"] >= 3)]
+                v = boot(by_prompt(xs), left)
+                R[f"h4c_b{b}_{t}"] = v
+                R[f"h4c_b{b}_{t}_n"] = len(xs)
+                row.append(f"{fmt(v)} ({len(xs)})")
+            md.append("| " + " | ".join(row) + " |")
+        held = [x for x in chains if x["first"] is None or x["first"] >= 3]
+        for b in (1, 2):
+            R[f"h4c_b3_minus_b{b}"] = boot(by_prompt(held), lambda s, b=b: (
+                (left([x for x in s if x["blatancy"] == 3]) or 0) - (left([x for x in s if x["blatancy"] == b]) or 0)))
+        random.setstate(_st)
+        md.append("Pooled, blatant − plausible: " + fmt(R["h4c_b3_minus_b1"]) +
+                  "; blatant − dubious: " + fmt(R["h4c_b3_minus_b2"]))
         md += ["\n### Moderators: left Defends by S5 (all blatancies)\n",
                "| group | stated | implied |", "|---|---|---|"]
         for key, vals in (("criticality", (1, 2, 3)), ("topic", ("health", "money", "relationships"))):

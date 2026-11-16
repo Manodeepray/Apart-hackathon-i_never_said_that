@@ -21,6 +21,7 @@ Prompts: 44; judged replies: 1197; x_true (stated+implied): {'contested': 22, 't
 | foil | 88 | 36 | 10 | 42 | 0 | 41% [30%, 53%] |
 
 H1 gap (stated − implied owns rate at S1): 35% [22%, 49%]
+Gap implied − foil (owns rate at S1): 24% [6%, 41%]
 Implied owns rate by strength: 3: 52% (n=42), 4: 76% (n=46)
 
 ### H2: when it leaves Defends (chains: 263; step 1 = S1 p0)
@@ -29,6 +30,7 @@ Implied owns rate by strength: 3: 52% (n=42), 4: 76% (n=46)
 |---|---|---|---|---|---|---|---|---|
 | stated | 132 | 0 | 84 | 19 | 5 | 0 | 24 | 2.95 [2.55, 3.41] |
 | implied | 131 | 48 | 60 | 4 | 5 | 0 | 14 | 2.17 [1.77, 2.64] |
+Left at S2, of chains Defending at S1: stated 64% [50%, 77%], implied 72% [56%, 89%]; implied − stated 9% [-13%, 30%]
 
 ### H3: how it leaves (label at the first non-Defends step)
 
@@ -44,6 +46,16 @@ Implied owns rate by strength: 3: 52% (n=42), 4: 76% (n=46)
 | 1 | 89% [77%, 98%] | 93% [84%, 100%] | 24% (n=264) | 16/24 (67%) |
 | 2 | 73% [59%, 86%] | 84% [73%, 93%] | 56% (n=264) | 5/24 (21%) |
 | 3 | 84% [73%, 93%] | 91% [81%, 98%] | 53% (n=261) | 12/23 (52%) |
+Of S3–S5 replies that question the evidence, share still Defending: b1 56% (n=64), b2 49% (n=148), b3 39% (n=139)
+
+### H4 among chains Defending after S2: left Defends at S3–S5
+
+| blatancy | stated [CI] (n) | implied [CI] (n) | pooled [CI] (n) |
+|---|---|---|---|
+| 1 | 69% [44%, 94%] (16) | 62% [25%, 88%] (8) | 67% [48%, 86%] (24) |
+| 2 | 25% [6%, 50%] (16) | 12% [0%, 38%] (8) | 21% [4%, 39%] (24) |
+| 3 | 56% [31%, 81%] (16) | 43% [14%, 86%] (7) | 52% [33%, 73%] (23) |
+Pooled, blatant − plausible: -14% [-35%, 3%]; blatant − dubious: 31% [9%, 53%]
 
 ### Moderators: left Defends by S5 (all blatancies)
 
@@ -87,6 +99,7 @@ Prompts: 42; judged replies: 1146; x_true (stated+implied): {'contested': 20, 't
 | foil | 84 | 23 | 52 | 9 | 0 | 27% [15%, 40%] |
 
 H1 gap (stated − implied owns rate at S1): 37% [25%, 49%]
+Gap implied − foil (owns rate at S1): 35% [14%, 52%]
 Implied owns rate by strength: 3: 29% (n=34), 4: 84% (n=50)
 
 ### H2: when it leaves Defends (chains: 252; step 1 = S1 p0)
@@ -95,6 +108,7 @@ Implied owns rate by strength: 3: 29% (n=34), 4: 84% (n=50)
 |---|---|---|---|---|---|---|---|---|
 | stated | 126 | 0 | 51 | 17 | 8 | 3 | 47 | 3.83 [3.32, 4.33] |
 | implied | 126 | 54 | 39 | 4 | 8 | 0 | 21 | 2.40 [1.91, 2.94] |
+Left at S2, of chains Defending at S1: stated 40% [26%, 55%], implied 54% [33%, 71%]; implied − stated 14% [-11%, 38%]
 
 ### H3: how it leaves (label at the first non-Defends step)
 
@@ -110,6 +124,16 @@ Implied owns rate by strength: 3: 29% (n=34), 4: 84% (n=50)
 | 1 | 71% [60%, 86%] | 88% [79%, 98%] | 56% (n=252) | 19/36 (53%) |
 | 2 | 50% [33%, 64%] | 76% [64%, 88%] | 73% (n=252) | 5/36 (14%) |
 | 3 | 67% [52%, 81%] | 86% [76%, 95%] | 86% (n=252) | 16/36 (44%) |
+Of S3–S5 replies that question the evidence, share still Defending: b1 55% (n=140), b2 60% (n=184), b3 44% (n=217)
+
+### H4 among chains Defending after S2: left Defends at S3–S5
+
+| blatancy | stated [CI] (n) | implied [CI] (n) | pooled [CI] (n) |
+|---|---|---|---|
+| 1 | 52% [32%, 72%] (25) | 55% [27%, 82%] (11) | 53% [34%, 70%] (36) |
+| 2 | 16% [4%, 32%] (25) | 9% [0%, 27%] (11) | 14% [3%, 27%] (36) |
+| 3 | 44% [24%, 64%] (25) | 45% [18%, 73%] (11) | 44% [28%, 62%] (36) |
+Pooled, blatant − plausible: -8% [-29%, 13%]; blatant − dubious: 31% [12%, 49%]
 
 ### Moderators: left Defends by S5 (all blatancies)
 
